@@ -94,6 +94,40 @@ nav a:focus-visible {
   color: var(--text);
 }
 
+.nav-contact-group,
+.instagram-profile-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-contact-group {
+  gap: 0.6rem;
+}
+
+.instagram-profile-link {
+  flex: 0 0 auto;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1;
+}
+
+.instagram-icon {
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.instagram-icon-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
 .intro {
   padding-block: clamp(4rem, 9vw, 6rem) 0;
 }
@@ -219,6 +253,11 @@ h2 {
   object-position: center;
 }
 
+.project-media-sidequest img {
+  object-fit: cover;
+  object-position: 75% center;
+}
+
 .project-details {
   display: grid;
   gap: 0.35rem;
@@ -276,6 +315,22 @@ h2 {
   height: auto;
 }
 
+.youtube-short-embed {
+  width: min(100%, 21rem);
+  justify-self: center;
+}
+
+.youtube-short-embed h3 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+  line-height: 1.15;
+}
+
+.youtube-short-embed iframe {
+  aspect-ratio: 9 / 16;
+  height: auto;
+}
+
 .media-embed > a {
   display: inline-block;
   margin-top: 0.65rem;
@@ -320,6 +375,23 @@ footer a {
   font-weight: 600;
 }
 
+.contact-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+}
+
+footer .instagram-profile-link {
+  width: 2rem;
+  height: 2rem;
+}
+
+footer .instagram-icon {
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
 @media (min-width: 621px) and (max-width: 899px) {
   .project-showcase {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -345,6 +417,11 @@ footer a {
   main,
   footer {
     width: min(100% - 2rem, 48rem);
+  }
+
+  .project-card {
+    width: min(100%, 21rem);
+    margin-inline: auto;
   }
 
   .site-header {
@@ -390,6 +467,13 @@ footer a {
 }
 
 @media (max-width: 360px) {
+  nav {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: space-between;
+    row-gap: 0.5rem;
+  }
+
   footer p {
     font-size: 0.84rem;
   }
