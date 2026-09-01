@@ -101,6 +101,7 @@ nav a:focus-visible {
 }
 
 .nav-contact-group {
+  align-items: stretch;
   gap: 0.6rem;
 }
 
