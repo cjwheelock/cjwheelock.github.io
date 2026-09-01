@@ -107,15 +107,29 @@ nav a:focus-visible {
 .instagram-profile-link {
   flex: 0 0 auto;
   justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  color: #fff;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0 6%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  border-radius: 28%;
   line-height: 1;
+}
+
+.instagram-profile-link:hover,
+.instagram-profile-link:focus-visible {
+  color: #fff;
 }
 
 .instagram-icon {
   display: block;
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 1.35rem;
+  height: 1.35rem;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -433,13 +447,13 @@ footer a {
 }
 
 footer .instagram-profile-link {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 footer .instagram-icon {
-  width: 1.55rem;
-  height: 1.55rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 @media (min-width: 621px) and (max-width: 899px) {
