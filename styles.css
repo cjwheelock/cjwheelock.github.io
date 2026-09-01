@@ -105,6 +105,10 @@ nav a:focus-visible {
   gap: 0.6rem;
 }
 
+nav .instagram-profile-link {
+  transform: translateY(-0.25rem);
+}
+
 .instagram-profile-link {
   flex: 0 0 auto;
   justify-content: center;
