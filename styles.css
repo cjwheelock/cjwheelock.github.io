@@ -132,6 +132,56 @@ nav a:focus-visible {
   padding-block: clamp(4rem, 9vw, 6rem) 0;
 }
 
+.intro.hero-panel {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2045 / 1363;
+  padding: 0;
+  color: #fff;
+  background: var(--text);
+}
+
+.hero-panel-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-panel::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(8, 6, 18, 0.78) 0%, rgba(8, 6, 18, 0.42) 38%, rgba(8, 6, 18, 0.06) 68%, transparent 100%);
+  content: "";
+  pointer-events: none;
+}
+
+.hero-panel-copy {
+  position: absolute;
+  z-index: 1;
+  inset: 0 auto 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 46%;
+  padding: clamp(1rem, 4vw, 2.5rem);
+}
+
+.hero-panel h1 {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 0.98;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.32);
+  white-space: nowrap;
+}
+
+.hero-panel .intro-copy {
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.34);
+}
+
 h1,
 h2,
 p {
@@ -438,6 +488,21 @@ footer .instagram-icon {
 
   .intro {
     padding-top: 3.5rem;
+  }
+
+  .hero-panel-copy {
+    justify-content: flex-end;
+    width: 64%;
+    padding: 1rem;
+  }
+
+  .hero-panel h1 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .hero-panel .intro-copy {
+    font-size: 0.875rem;
   }
 
   .section-heading {
