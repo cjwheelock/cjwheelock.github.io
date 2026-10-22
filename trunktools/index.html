@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>GTM OS · Trunk Tools concept · CJ Wheelock</title>
+    <meta name="description" content="A working concept of the GTM operating system a founding GTM engineer would run at Trunk Tools, by CJ Wheelock.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231f201d'/%3E%3Ctext x='32' y='41' font-family='Arial, sans-serif' font-size='25' font-weight='700' text-anchor='middle' fill='%23f7f7f3'%3ECJ%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body class="locked">
+    <!-- Password gate -->
+    <div class="gate" id="gate">
+      <div class="gate-card">
+        <div class="gate-mark">CJ</div>
+        <h1>GTM OS for Trunk Tools</h1>
+        <p>A working concept from CJ Wheelock for the Founding GTM Engineer role. Enter the password to continue.</p>
+        <form id="gate-form" autocomplete="off">
+          <label for="pw" class="sr" style="position:absolute;left:-9999px">Password</label>
+          <input id="pw" type="password" placeholder="Password" autofocus>
+          <button type="submit">Open</button>
+        </form>
+        <div class="gate-error" id="gate-error" role="alert"></div>
+      </div>
+    </div>
+
+    <div class="app">
+      <!-- Sidebar -->
+      <aside class="side" aria-label="Sections">
+        <div class="brand">
+          <div class="brand-mark">GTM</div>
+          <div>
+            <div class="brand-name">GTM OS</div>
+            <div class="brand-sub">Trunk Tools · concept</div>
+          </div>
+        </div>
+        <div class="nav-label">Operate</div>
+        <button class="nav-btn" data-view="pulse" aria-current="page">
+          <svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Today<span class="count">6</span>
+        </button>
+        <button class="nav-btn" data-view="funnel">
+          <svg viewBox="0 0 24 24"><path d="M3 4h18l-7 8v7l-4 2v-9z"/></svg>Funnel &amp; attribution
+        </button>
+        <button class="nav-btn" data-view="signals">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19A10 10 0 0 1 5 5"/></svg>Signals<span class="count">12</span>
+        </button>
+        <button class="nav-btn" data-view="sequences">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Sequences
+        </button>
+        <div class="nav-label">Improve</div>
+        <button class="nav-btn" data-view="experiments">
+          <svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 19a1.5 1.5 0 0 0 1.3 2h13.4A1.5 1.5 0 0 0 20 19l-6-10V3"/></svg>Experiments<span class="count">8</span>
+        </button>
+        <button class="nav-btn" data-view="deals">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg>Pilots &amp; quote-to-cash
+        </button>
+        <button class="nav-btn" data-view="winloss">
+          <svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l-2 6h4zM19 8l-2 6h4zM5 8h14"/></svg>Win/loss &amp; competitive
+        </button>
+        <div class="nav-label">Build</div>
+        <button class="nav-btn" data-view="agents">
+          <svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01"/></svg>Agents &amp; stack
+        </button>
+        <button class="nav-btn" data-view="roadmap">
+          <svg viewBox="0 0 24 24"><path d="M4 6h10M4 12h16M4 18h7"/></svg>90-day roadmap
+        </button>
+        <div class="side-foot">
+          Built by <b>CJ Wheelock</b> for the Founding GTM Engineer role.<br>
+          <a href="https://cjwheelock.com">cjwheelock.com</a>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <div class="main" id="main">
+        <div class="topbar">
+          <div>
+            <div class="crumb" id="crumb">Operate</div>
+            <h1 id="view-title">Today</h1>
+          </div>
+          <div class="topbar-right">
+            <span class="updated">Synced 6:42 AM ET · HubSpot, Clay, call recorder</span>
+            <button class="sample-pill" type="button" aria-describedby="sample-tip">
+              Sample data
+              <span class="tip" id="sample-tip" role="tooltip">The customers, case-study results and competitors are real, from public sources. The pipeline, rep and test numbers are samples. Connect HubSpot, call recordings and product usage, and this runs on your data.</span>
+            </button>
+            <button class="agent-toggle" id="agent-open" type="button">
+              <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg>Ask
+            </button>
+          </div>
+        </div>
+
+        <div class="content">
+          <!-- TODAY -->
+          <section class="view active" id="view-pulse" data-title="Today" data-crumb="Operate">
+            <div class="view-intro">
+              <div>
+                <h2>Good morning. Six things need you today.</h2>
+                <p>What changed overnight across signals, pipeline and automations, ranked by the revenue at stake.</p>
+              </div>
+            </div>
+            <div class="grid g-4" id="kpis"></div>
+            <div class="grid g-21 mt">
+              <div class="card">
+                <div class="card-h"><h3>Action queue</h3><span class="sub">Auto-generated each morning · tick to clear</span></div>
+                <ul class="actions" id="actions"></ul>
+              </div>
+              <div class="card">
+                <div class="card-h"><h3>Automation health</h3><span class="right">last 24h</span></div>
+                <ul class="health" id="health"></ul>
+              </div>
+            </div>
+            <div class="card mt">
+              <div class="card-h"><h3>Pipeline created by week</h3><span class="sub">New opportunity value · last 12 weeks</span><span class="right" id="pipe-total"></span></div>
+              <div class="chart" id="pipe-chart"></div>
+            </div>
+          </section>
+
+          <!-- FUNNEL -->
+          <section class="view" id="view-funnel" data-title="Funnel & attribution" data-crumb="Operate">
+            <div class="view-intro">
+              <div>
+                <h2>Where pipeline comes from, and where it leaks</h2>
+                <p>Every opportunity carries a tracked first touch and a self-reported source. When the two disagree, trust what the buyer said.</p>
+              </div>
+              <div class="seg" id="seg-funnel" role="group" aria-label="Segment">
+                <button aria-pressed="true" data-seg="all">All</button>
+                <button aria-pressed="false" data-seg="strategic">Strategic</button>
+                <button aria-pressed="false" data-seg="mid">Mid-market</button>
+              </div>
+            </div>
+            <div class="grid g-2">
+              <div class="card">
+                <div class="card-h"><h3>Funnel</h3><span class="sub">Trailing 2 quarters</span></div>
+                <div class="funnel" id="funnel"></div>
+              </div>
+              <div class="card">
+                <div class="card-h"><h3>Sourced pipeline by channel</h3><span class="sub">Self-reported source</span></div>
+                <div class="hbars" id="channels"></div>
+              </div>
+            </div>
+            <div class="card mt">
+              <div class="card-h"><h3>Channel economics</h3><span class="sub">Where the next dollar should go</span></div>
+              <div class="table-wrap"><table id="channel-table"></table></div>
+            </div>
+          </section>
+
+          <!-- SIGNALS -->
+          <section class="view" id="view-signals" data-title="Signals" data-crumb="Operate">
+            <div class="view-intro">
+              <div>
+                <h2>Accounts showing buying signals this week</h2>
+                <p>Scored daily on fit (construction volume, Procore or ACC in use, project mix) and timing (project starts, hiring, leadership moves, site visits). Routed to an owner automatically.</p>
+              </div>
+              <div class="seg" id="seg-signals" role="group" aria-label="Filter">
+                <button aria-pressed="true" data-f="all">All</button>
+                <button aria-pressed="false" data-f="hot">Score 80+</button>
+                <button aria-pressed="false" data-f="unworked">Unworked</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="table-wrap"><table id="signals"></table></div>
+            </div>
+            <div class="grid g-3 mt" id="signal-sources"></div>
+          </section>
+
+          <!-- SEQUENCES -->
+          <section class="view" id="view-sequences" data-title="Sequences" data-crumb="Operate">
+            <div class="view-intro">
+              <div>
+                <h2>Project-start outbound: 3 emails, 9 touches, 14 days</h2>
+                <p>Triggered when a target GC breaks ground on a $75M+ project. Email does the explaining, calls and LinkedIn make it personal. Every step carries an A/B variant.</p>
+              </div>
+              <div class="seg" id="seg-persona" role="group" aria-label="Persona">
+                <button aria-pressed="true" data-p="ops">Ops leadership</button>
+                <button aria-pressed="false" data-p="field">Field leaders</button>
+              </div>
+            </div>
+            <div class="persona" id="persona"></div>
+            <div class="grid g-4" id="seq-kpis"></div>
+            <div class="card mt">
+              <div class="card-h"><h3>Sequence</h3><span class="sub">Click any step for copy, talk track and test results</span></div>
+              <div class="timeline" id="timeline"></div>
+            </div>
+          </section>
+
+          <!-- EXPERIMENTS -->
+          <section class="view" id="view-experiments" data-title="Experiments" data-crumb="Improve">
+            <div class="view-intro">
+              <div>
+                <h2>Experiment registry</h2>
+                <p>Each test is registered before launch with a hypothesis, a primary metric and a decision rule. High-volume stages use A/B tests. Deal stages are too small for that, so they use matched cohorts.</p>
+              </div>
+            </div>
+            <div class="grid g-4" id="exp-kpis"></div>
+            <div class="card mt">
+              <div class="table-wrap"><table id="experiments"></table></div>
+            </div>
+          </section>
+
+          <!-- DEALS -->
+          <section class="view" id="view-deals" data-title="Pilots & quote-to-cash" data-crumb="Improve">
+            <div class="view-intro">
+              <div>
+                <h2>Pilot health and quote-to-cash</h2>
+                <p>Trunk wins by proving value on a live project inside two weeks. This view scores every pilot on usage and multi-threading, and tracks every day between a verbal yes and cash.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-h"><h3>Active pilots</h3><span class="sub">Health = active users, questions per user, agents adopted, stakeholder coverage</span></div>
+              <div class="table-wrap"><table id="pilots"></table></div>
+            </div>
+            <div class="grid g-12 mt">
+              <div class="card">
+                <div class="card-h"><h3>Quote-to-cash</h3><span class="sub">Median days per stage</span></div>
+                <div class="hbars" id="q2c"></div>
+              </div>
+              <div class="card">
+                <div class="card-h"><h3>Auto-quote preview</h3><span class="sub">Draft generated from estimated construction volume</span></div>
+                <div id="quote"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- WIN LOSS -->
+          <section class="view" id="view-winloss" data-title="Win/loss & competitive" data-crumb="Improve">
+            <div class="view-intro">
+              <div>
+                <h2>Why we win, why we lose</h2>
+                <p>Pulled from every recorded call and every closed-lost note, then tagged by an agent and reviewed weekly. These reasons are hypotheses from public research until the real calls are connected.</p>
+              </div>
+            </div>
+            <div class="grid g-2">
+              <div class="card">
+                <div class="card-h"><h3>Loss reasons</h3><span class="sub">Share of closed-lost, last 2 quarters</span></div>
+                <div class="hbars" id="loss"></div>
+              </div>
+              <div class="card">
+                <div class="card-h"><h3>Win drivers</h3><span class="sub">Most-cited reason in closed-won calls</span></div>
+                <div class="hbars" id="wins"></div>
+              </div>
+            </div>
+            <div class="grid g-2 mt">
+              <div class="card">
+                <div class="card-h"><h3>Competitor mentions</h3><span class="sub">Win rate when named on a call</span></div>
+                <div class="table-wrap"><table id="comp"></table></div>
+              </div>
+              <div class="card">
+                <div class="card-h"><h3>Battlecard: "Our Procore AI does this"</h3><span class="right">Updated weekly</span></div>
+                <dl class="battle">
+                  <dt>What they'll say</dt>
+                  <dd>"Procore's agents already review submittals and draft RFIs, and we already pay for Procore."</dd>
+                  <dt>What's true</dt>
+                  <dd>Procore launched native agents in May 2026. They're good and they're already installed, so don't argue that point.</dd>
+                  <dt>Reframe</dt>
+                  <dd>Ask how they're billed. Credit-based pricing means every question costs money and field teams stop asking. Trunk is one flat annual price with unlimited users.</dd>
+                  <dt>Prove it</dt>
+                  <dd>Offer to run both on one of their real bulletins. 10 to 20% of meaningful revisions aren't clouded by the architect, so text-only review misses them.</dd>
+                  <dt>Rebuttal that's winning</dt>
+                  <dd><span class="tag good"><span class="dot"></span>"Run both on your drawings" · 41% stage advance</span></dd>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <!-- AGENTS -->
+          <section class="view" id="view-agents" data-title="Agents & stack" data-crumb="Build">
+            <div class="view-intro">
+              <div>
+                <h2>The agent layer and the stack under it</h2>
+                <p>HubSpot is the source of truth. Agents read from it and write back to it, and every output can be audited. Reps never need to open a new tool.</p>
+              </div>
+            </div>
+            <div class="agent-list" id="agents"></div>
+            <div class="card mt">
+              <div class="card-h"><h3>Stack</h3>
+                <span class="right">
+                  <span class="chip" style="border:0;background:none;padding:0"><span class="s live"></span>Confirmed</span>&nbsp;&nbsp;
+                  <span class="chip" style="border:0;background:none;padding:0"><span class="s rec"></span>Recommended</span>&nbsp;&nbsp;
+                  <span class="chip" style="border:0;background:none;padding:0"><span class="s plan"></span>Later</span>
+                </span>
+              </div>
+              <div class="stack" id="stack"></div>
+            </div>
+          </section>
+
+          <!-- ROADMAP -->
+          <section class="view" id="view-roadmap" data-title="90-day roadmap" data-crumb="Build">
+            <div class="view-intro">
+              <div>
+                <h2>First 90 days</h2>
+                <p>Follows the order in Trunk's job posting: demand gen first, then the full funnel, measured against pipeline, attribution and quote-to-cash.</p>
+              </div>
+            </div>
+            <div class="phases" id="phases"></div>
+            <div class="card mt">
+              <div class="card-h"><h3>What I'd want to learn in week one</h3><span class="sub">These questions need access, not research</span></div>
+              <ul class="actions" id="questions"></ul>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Agent pane -->
+      <aside class="agent" aria-label="Assistant">
+        <div class="agent-head">
+          <div class="agent-avatar"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></div>
+          <div>
+            <div class="agent-title">GTM Copilot</div>
+            <div class="agent-status">Ready</div>
+          </div>
+          <button class="agent-close" id="agent-close" type="button" aria-label="Close assistant">
+            <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+        <div class="thread" id="thread" aria-live="polite">
+          <div class="welcome">
+            <b>Ask about this concept.</b>
+            In the real build, this pane is the agent reps talk to: account briefs, deal risk, the next best action. Here it answers three questions about the work.
+          </div>
+        </div>
+        <div class="prompts" id="prompts"></div>
+      </aside>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
