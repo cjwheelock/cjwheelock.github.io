@@ -59,6 +59,9 @@
           <svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l-2 6h4zM19 8l-2 6h4zM5 8h14"/></svg>Win/loss &amp; competitive
         </button>
         <div class="nav-label">Build</div>
+        <button class="nav-btn" data-view="datalayer">
+          <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>Data layer · Upside
+        </button>
         <button class="nav-btn" data-view="agents">
           <svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01"/></svg>Agents &amp; stack
         </button>
@@ -79,7 +82,7 @@
             <h1 id="view-title">Today</h1>
           </div>
           <div class="topbar-right">
-            <span class="updated">Synced 6:42 AM ET · HubSpot, Clay, call recorder</span>
+            <span class="updated">Synced 6:42 AM ET · HubSpot, Upside, Clay, call recorder</span>
             <button class="sample-pill" type="button" aria-describedby="sample-tip">
               Sample data
               <span class="tip" id="sample-tip" role="tooltip">The customers, case-study results and competitors are real, from public sources. The pipeline, rep and test numbers are samples. Connect HubSpot, call recordings and product usage, and this runs on your data.</span>
@@ -121,7 +124,7 @@
             <div class="view-intro">
               <div>
                 <h2>Where pipeline comes from, and where it leaks</h2>
-                <p>Every opportunity carries a tracked first touch and a self-reported source. When the two disagree, trust what the buyer said.</p>
+                <p>Credit for every deal comes from its full buyer journey, rebuilt by Upside from HubSpot, calls and email, with a citation behind each touch. The self-reported source is the tiebreaker.</p>
               </div>
               <div class="seg" id="seg-funnel" role="group" aria-label="Segment">
                 <button aria-pressed="true" data-seg="all">All</button>
@@ -135,7 +138,7 @@
                 <div class="funnel" id="funnel"></div>
               </div>
               <div class="card">
-                <div class="card-h"><h3>Sourced pipeline by channel</h3><span class="sub">Self-reported source</span></div>
+                <div class="card-h"><h3>Pipeline by channel</h3><span class="sub">Multi-touch credit · Upside Pipedash</span></div>
                 <div class="hbars" id="channels"></div>
               </div>
             </div>
@@ -259,6 +262,68 @@
                   <dt>Rebuttal that's winning</dt>
                   <dd><span class="tag good"><span class="dot"></span>"Run both on your drawings" · 41% stage advance</span></dd>
                 </dl>
+              </div>
+            </div>
+          </section>
+
+          <!-- DATA LAYER -->
+          <section class="view" id="view-datalayer" data-title="Data layer · Upside" data-crumb="Build">
+            <div class="view-intro">
+              <div>
+                <h2>Buy the data layer, build the edge</h2>
+                <p>The slowest thing to build in GTM is a record of how each deal actually happened that everyone trusts. I'd buy that from <a href="https://www.upside.tech/" target="_blank" rel="noopener">Upside</a> and spend my time on the tools only Trunk needs.</p>
+              </div>
+            </div>
+
+            <div class="grid g-4" id="dl-kpis"></div>
+
+            <div class="card mt">
+              <div class="card-h"><h3>How data flows</h3><span class="sub">Upside sits between the sources and everything I build</span></div>
+              <div class="flow">
+                <div class="flow-col">
+                  <div class="flow-k">Sources</div>
+                  <div class="flow-item"><b>HubSpot</b><span>CRM and marketing</span></div>
+                  <div class="flow-item"><b>Call recorder</b><span>Gong, Fathom or Fireflies</span></div>
+                  <div class="flow-item"><b>Email threads</b><span>intros and referrals</span></div>
+                  <div class="flow-item"><b>Ads and web</b><span>LinkedIn, Google, site visitors</span></div>
+                  <div class="flow-item gap"><b>Event badge scans</b><span>I pipe these in</span></div>
+                  <div class="flow-item gap"><b>Trunk product usage</b><span>I pipe these in</span></div>
+                </div>
+                <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+                <div class="flow-col flow-core">
+                  <div class="flow-k">Upside</div>
+                  <div class="core-item"><b>Buyer-journey graph</b><span>Accounts, people, deals and every touch. Each touch is tagged as extracted, inferred or tracked, with a citation.</span></div>
+                  <div class="core-item"><b>Pipedash</b><span>Multi-touch attribution that always adds up to the deal value.</span></div>
+                  <div class="core-item"><b>Radiant</b><span>One set of definitions (pipeline, sourced, ICP, pilot) shared by people and agents.</span></div>
+                  <div class="core-item"><b>MCP</b><span>Lets my agents and Claude query the record directly.</span></div>
+                </div>
+                <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+                <div class="flow-col">
+                  <div class="flow-k">What I build</div>
+                  <div class="flow-item built"><b>Referral and champion radar</b></div>
+                  <div class="flow-item built"><b>Event ROI tracker</b></div>
+                  <div class="flow-item built"><b>Pre-call briefs v2</b></div>
+                  <div class="flow-item built"><b>Deal-path coach</b></div>
+                  <div class="flow-item built"><b>Win/loss with receipts</b></div>
+                  <div class="flow-item built"><b>Pipeline-measured experiments</b></div>
+                  <div class="flow-item built"><b>Channel budget miniapp</b></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mt">
+              <div class="card-h"><h3>Tools I'd build on top</h3><span class="sub">Each one uses part of Upside and adds something Trunk-specific</span></div>
+              <div class="tools" id="dl-tools"></div>
+            </div>
+
+            <div class="grid g-2 mt">
+              <div class="card">
+                <div class="card-h"><h3>How I'd roll it out</h3><span class="sub">Fits inside the 30-day plan</span></div>
+                <ol class="rollout" id="dl-rollout"></ol>
+              </div>
+              <div class="card">
+                <div class="card-h"><h3>What I'd ask on the Upside demo</h3><span class="sub">Gaps to close before signing</span></div>
+                <ul class="actions" id="dl-questions"></ul>
               </div>
             </div>
           </section>

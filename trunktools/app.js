@@ -27,7 +27,7 @@
     if (booted) return; booted = true;
     renderPulse(); renderFunnel("all"); renderSignals("all"); renderSequence("ops");
     renderExperiments(); renderDeals(); renderWinLoss(); renderAgents(); renderRoadmap();
-    renderPrompts(); wireNav();
+    renderDataLayer(); renderPrompts(); wireNav();
   }
 
   // ---------- Helpers ----------
@@ -439,7 +439,8 @@
       ["System of record", "where truth lives", [["HubSpot", "live"], ["Google Workspace", "live"]]],
       ["Signals and data", "who to talk to and when", [["Clay", "rec"], ["Dodge / ConstructConnect", "rec"], ["ENR lists", "rec"], ["Job-post scraping", "rec"], ["Website visitor ID", "rec"]]],
       ["Orchestration", "moves data between tools", [["n8n", "rec"], ["Python jobs", "rec"], ["Zapier (existing glue)", "rec"]]],
-      ["AI layer", "the agents", [["Claude", "live"], ["ChatGPT", "live"], ["MCP servers: HubSpot, calls, docs", "rec"]]],
+      ["Data layer", "the buyer-journey record", [["Upside: graph, Pipedash, Radiant, MCP", "rec"]]],
+      ["AI layer", "the agents", [["Claude", "live"], ["ChatGPT", "live"], ["MCP: Upside, HubSpot, docs", "rec"]]],
       ["Conversations", "what buyers actually say", [["Call recorder", "rec"], ["Microsoft Teams", "live"]]],
       ["Warehouse and BI", "with the data-engineering hire", [["BigQuery or Snowflake + dbt", "plan"], ["Hex", "plan"]]],
       ["Quote-to-cash", "from verbal yes to cash", [["HubSpot Quotes", "rec"], ["E-signature", "rec"], ["Billing sync", "plan"]]]
@@ -450,12 +451,61 @@
     }).join("");
   }
 
+
+  // ---------- DATA LAYER (Upside) ----------
+  function renderDataLayer() {
+    var k = [
+      ["Touches per won deal", "3.1 → 7.4", "HubSpot vs. the journey Upside rebuilt"],
+      ["Referral-sourced pipeline", "$0.9M → $2.6M", "Referrals found in call transcripts and email"],
+      ["Deals with an event touch", "38% → 61%", "After badge scans are piped in"],
+      ["Time to trusted attribution", "~1 week", "vs. a quarter of custom data work"]
+    ];
+    $("dl-kpis").innerHTML = k.map(function (x) {
+      return '<div class="card kpi"><div class="label">' + x[0] + '</div><div class="value num" style="font-size:20px;white-space:nowrap">' + x[1] + '</div><div class="delta">' + x[2] + "</div></div>";
+    }).join("");
+
+    var tools = [
+      ["Referral and champion radar", "Scans the graph for referrals mentioned on calls and in email (\"Mike at Gilbane told me about you\") and for former Trunk users who changed employers. Each hit becomes a warm-intro task for the account owner.", ["Extracted touches", "People graph", "Citations"], "Turns hidden word-of-mouth into pipeline", "Pipeline"],
+      ["Event ROI tracker", "Joins Groundbreak and Autodesk University badge scans to each account's journey, so every event shows sourced and influenced pipeline, not just badge counts.", ["Pipedash", "Tracked touches", "My event feed"], "Measures Trunk's likely biggest channel", "Attribution"],
+      ["Pre-call briefs v2", "Before each meeting, the research agent asks Upside over MCP for every touch the account has had: who came to the webinar, who referred them, what was said on past calls. The brief cites its sources.", ["MCP", "Citations", "Radiant"], "Reps walk in knowing the whole history", "Rep effectiveness"],
+      ["Deal-path coach", "Compares each open deal's journey to the path won deals took. For example, won deals had an exec touch by pilot week 2. It flags the steps that are missing.", ["Buyer-journey graph", "Radiant definitions"], "Catches stalls before the pilot slips", "Win rate"],
+      ["Win/loss with receipts", "Answers \"why did we lose this deal?\" with quotes and the touches behind them, then feeds themes into the weekly battlecard update.", ["Upside Agent", "Call transcripts"], "Loss reasons backed by evidence, not opinion", "Messaging"],
+      ["Pipeline-measured experiments", "Every sequence variant is logged as a tracked touch, so A/B tests are judged on pipeline created and not just replies.", ["Tracked touches", "Pipedash"], "Tests optimize for revenue", "Testing"],
+      ["Channel budget miniapp", "A small app built on Upside's live data. Marketing can see credited pipeline per dollar by channel and model a budget shift. A weekly digest goes to the CEO.", ["Miniapps", "Pipedash"], "Budget follows evidence", "Attribution"]
+    ];
+    $("dl-tools").innerHTML = tools.map(function (t) {
+      return '<div class="tool"><div class="tool-top"><span class="name">' + esc(t[0]) + "</span>" + tag("accent", t[4]) + "</div><p>" + esc(t[1]) + '</p><div class="uses"><span class="meta">Uses</span>' +
+        t[2].map(function (u) { return '<span class="chip">' + esc(u) + "</span>"; }).join("") + '</div><div class="outcome">' + esc(t[3]) + "</div></div>";
+    }).join("");
+
+    var roll = [
+      ["Days 1–2", "Connect HubSpot, the call recorder, email and ads over OAuth. Upside syncs overnight."],
+      ["Week 1", "Backtest two quarters of closed-won deals: what HubSpot credited vs. the journey Upside rebuilt. Buy only if it surfaces real referral or event pipeline HubSpot missed."],
+      ["Weeks 2–3", "Write the Radiant definitions (pipeline, sourced, influenced, ICP, pilot) with the sales and marketing leads. Pipe in badge scans and product usage."],
+      ["Week 4", "Point every agent at Upside's MCP. Pipedash becomes the attribution view on this dashboard."]
+    ];
+    $("dl-rollout").innerHTML = roll.map(function (r) {
+      return "<li><b>" + r[0] + "</b><span>" + esc(r[1]) + "</span></li>";
+    }).join("");
+
+    var qs = [
+      ["How do event scans and in-person meetings get in?", "Trunk's pipeline likely runs on conferences and jobsite visits, and the listed sources are digital."],
+      ["Can we push in Trunk product usage?", "Pilot health and expansion signals depend on it."],
+      ["What about Clay and Microsoft Teams?", "Neither is a listed integration."],
+      ["Pricing, and when do Mithril permissions ship?", "Pricing isn't public, and org-wide permissions are listed as coming soon."]
+    ];
+    $("dl-questions").innerHTML = qs.map(function (q) {
+      return '<li><button class="check" type="button" aria-label="Mark answered"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></button><div><div class="a-title">' + esc(q[0]) + '</div><div class="a-why">' + esc(q[1]) + "</div></div></li>";
+    }).join("");
+    $("dl-questions").querySelectorAll(".check").forEach(function (c) { c.addEventListener("click", function () { c.parentNode.classList.toggle("done"); }); });
+  }
+
   // ---------- ROADMAP ----------
   function renderRoadmap() {
     var phases = [
       ["Week 1", "Listen and map", ["Shadow two BDRs, two AEs, marketing and a CSM. Join a pilot kickoff.", "Audit HubSpot: lifecycle stages, source fields, duplicates, manual workflows.", "Get access to call recordings and product usage data."], "Every manual GTM workflow listed and ranked by hours lost."],
       ["Week 2", "First visible win", ["Event-to-pipeline: fall-conference scans enriched, scored and routed within 24 hours.", "Draft follow-ups that name each account's live projects.", "Account research briefs on every meeting's HubSpot record."], "Event leads worked within a day, and AEs opening the briefs."],
-      ["Week 3", "Trustworthy attribution", ["Required self-reported source on every demo form.", "UTM rules and campaign tags for events.", "The Today view running on real data."], "Every new opportunity has a source the team trusts."],
+      ["Week 3", "Trustworthy attribution", ["Connect Upside and backtest the last two quarters of closed-won deals against HubSpot.", "Required self-reported source on every demo form, plus event tags.", "The Today view running on real data."], "Every new opportunity has a source the team trusts."],
       ["Week 4", "Start the testing loop", ["Project-start sequence live for one segment, with its first A/B test registered.", "Signal scoring v0 for the ENR 400 and mid-market.", "Publish the GTM OS roadmap, ranked by pipeline impact."], "First test running, and a roadmap approved by sales and marketing leads."]
     ];
     $("phases").innerHTML = phases.map(function (p) {
@@ -532,6 +582,7 @@
       "- **What needs doing today, not totals.** The first screen is an action queue ranked by revenue at stake. Totals are one click away.\n" +
       "- **Every metric has an owner and a next step.** If nobody acts on a number, it doesn't belong on the dashboard.\n" +
       "- **HubSpot stays the source of truth.** Agents read from it and write back to it, so reps don't learn a new tool and leaders don't reconcile two systems.\n" +
+      "- **Buy the data layer, build the edge.** Upside rebuilds every buyer journey with citations. I build the Trunk-specific tools on top of it instead of spending months on plumbing.\n" +
       "### How it improves\n" +
       "- **Testing is built in.** Every sequence step carries its variant ID, and every test is registered before launch.\n" +
       "- **Honest statistics.** Deal stages are too small for real A/B tests, so they use matched cohorts and are labeled that way.\n" +
@@ -548,6 +599,7 @@
       "- **Event-to-pipeline:** every fall-conference badge scan enriched, scored and routed within 24 hours, with a draft follow-up that names the account's live projects.\n" +
       "- **Account research briefs** on every meeting's HubSpot record.\n" +
       "### Week 3: Make attribution trustworthy\n" +
+      "- Connect **Upside** and backtest two quarters of closed-won deals: what HubSpot credited vs. the full journey.\n" +
       "- A required self-reported source on every demo form, plus UTM rules and campaign tags for events.\n" +
       "- The Today view running on real data.\n" +
       "### Week 4: Start the testing loop\n" +
