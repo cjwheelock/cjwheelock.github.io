@@ -8,7 +8,6 @@
   var KEY = "tt-gtm-unlocked";
   var body = document.body;
   function unlock() { body.classList.remove("locked"); boot(); }
-  try { if (sessionStorage.getItem(KEY) === "1") { unlock(); } } catch (e) {}
   document.getElementById("gate-form").addEventListener("submit", function (ev) {
     ev.preventDefault();
     var v = document.getElementById("pw").value.trim().toLowerCase();
@@ -814,4 +813,6 @@
       })();
     }, 650);
   }
+  // Restore an unlocked session only after every var above is initialized.
+  try { if (sessionStorage.getItem(KEY) === "1") { unlock(); } } catch (e) {}
 })();
