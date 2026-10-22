@@ -453,9 +453,10 @@
   // ---------- ROADMAP ----------
   function renderRoadmap() {
     var phases = [
-      ["Days 1–30", "Map and quick wins", ["Shadow BDRs, AEs, marketing and CS. Ride along on a pilot kickoff.", "Audit HubSpot: lifecycle stages, source fields, manual workflows.", "Ship the event-to-pipeline engine for fall conference leads.", "Ship account research briefs to every AE.", "Stand up the Today view and the test registry."], "Event leads routed within 24 hours, reps using briefs and a baseline funnel for each segment."],
-      ["Days 31–60", "The pipeline engine", ["Signal → enrichment → scoring → routing for the ENR 400 and mid-market.", "Personalization agent in production, with variants tagged.", "Fix attribution: UTMs, a required self-reported source, event tags.", "The first 3–4 outbound and inbound tests running."], "More meetings per rep, and attribution trusted enough to compare channels."],
-      ["Days 61–90", "Mid-funnel and quote-to-cash", ["Call intelligence writing back to HubSpot.", "Pilot health score v1, built on product usage.", "Auto-quote and ROI builder piloted with two AEs.", "First win/loss synthesis, then publish the GTM OS roadmap."], "Faster verbal-to-quote, a data-backed list of loss reasons and an approved roadmap."]
+      ["Week 1", "Listen and map", ["Shadow two BDRs, two AEs, marketing and a CSM. Join a pilot kickoff.", "Audit HubSpot: lifecycle stages, source fields, duplicates, manual workflows.", "Get access to call recordings and product usage data."], "Every manual GTM workflow listed and ranked by hours lost."],
+      ["Week 2", "First visible win", ["Event-to-pipeline: fall-conference scans enriched, scored and routed within 24 hours.", "Draft follow-ups that name each account's live projects.", "Account research briefs on every meeting's HubSpot record."], "Event leads worked within a day, and AEs opening the briefs."],
+      ["Week 3", "Trustworthy attribution", ["Required self-reported source on every demo form.", "UTM rules and campaign tags for events.", "The Today view running on real data."], "Every new opportunity has a source the team trusts."],
+      ["Week 4", "Start the testing loop", ["Project-start sequence live for one segment, with its first A/B test registered.", "Signal scoring v0 for the ENR 400 and mid-market.", "Publish the GTM OS roadmap, ranked by pipeline impact."], "First test running, and a roadmap approved by sales and marketing leads."]
     ];
     $("phases").innerHTML = phases.map(function (p) {
       return '<div class="card phase"><div class="when">' + p[0] + "</div><h3>" + p[1] + "</h3><ul>" + p[2].map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") +
