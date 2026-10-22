@@ -27,7 +27,7 @@
     if (booted) return; booted = true;
     renderPulse(); renderFunnel("all"); renderSignals("all"); renderSequence("ops");
     renderExperiments(); renderDeals(); renderWinLoss(); renderAgents(); renderRoadmap();
-    renderDataLayer(); renderPrompts(); wireNav();
+    renderDataLayer(); renderBooth(); renderPrompts(); wireNav();
   }
 
   // ---------- Helpers ----------
@@ -451,6 +451,160 @@
     }).join("");
   }
 
+
+
+  // ---------- BOOTH NOTES (simulated Slack bot) ----------
+  var BOT_ICON = '<svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>';
+  var boothTimers = [];
+  function later(fn, ms) { boothTimers.push(setTimeout(fn, ms)); }
+  function waveHTML() {
+    var s = "", seed = 7;
+    for (var i = 0; i < 44; i++) { seed = (seed * 37 + 11) % 97; s += '<i style="height:' + (5 + seed % 20) + 'px"></i>'; }
+    return '<span class="wave">' + s + "</span>";
+  }
+  var transcript = "Day two recap. Three good ones. First, Dana Whitfield, VP of Ops at Northgate. They tried the Procore submittal agent and her PEs didn't trust it. She wants a demo on the spec book for their Columbus hospital job, next Tuesday or Wednesday. They're also looking at Nomic. Second, Luis Ortega, senior super at Keystone Ridge, running the new hospital tower. He wants to try TrunkText on site and said to loop in their VP of Ops, Karen something, it's on the card. Third, Marcus Bell, the new Director of AI and Innovation at Calder Webb. They're doing build versus buy in Q1. Send him the build versus buy guide and our security packet.";
+  var crmItems = [
+    ["C", "", "Contact created: <b>Dana Whitfield</b>", "VP Operations · Northgate Building Co. · matched to existing account"],
+    ["C", "", "Contact created: <b>Luis Ortega</b>", "Senior Superintendent · Keystone Ridge Construction"],
+    ["C", "", "Contact created: <b>Karen Liu</b>", "VP Operations · Keystone Ridge · name read from business card"],
+    ["C", "", "Contact created: <b>Marcus Bell</b>", "Director of AI & Innovation · Calder Webb Constructors"],
+    ["T", "task", "Task: <b>Book spec-book demo with Northgate</b>", "Priya S. · due Mon Oct 26 · offer Tue or Wed"],
+    ["T", "task", "Task: <b>Load Keystone Ridge hospital docs for a TrunkText trial</b>", "Devon K. · due Fri Oct 23"],
+    ["T", "task", "Task: <b>Warm intro to Karen Liu, referencing Luis</b>", "Maya R. · due Mon Oct 26"],
+    ["T", "task", "Task: <b>Send build-vs-buy guide + SOC 2 packet to Marcus Bell</b>", "Sam T. · due Fri Oct 23"],
+    ["S", "camp", "Northgate: <b>Groundbreak nurture → Demo requested</b>", "Removed from the post-show sequence so they don't get a generic email"],
+    ["S", "camp", "Keystone Ridge: <b>enrolled in Field leaders sequence</b>", "Variant B, \"try it on your docs\""],
+    ["S", "camp", "Calder Webb: <b>enrolled in Build-vs-buy track</b>", "Exec content, 3 touches"],
+    ["S", "camp", "<b>Groundbreak event touch logged</b> on 3 accounts", "Sent to Upside, so the event gets attribution credit"],
+    ["!", "intel", "Competitive intel: <b>Procore submittal agent</b> lost trust at Northgate", "Added as evidence to the Procore AI battlecard"],
+    ["!", "intel", "Competitor tagged: <b>Nomic</b> at Northgate", "Opportunity competitor field updated"]
+  ];
+
+  function msg(cls, avatar, who, time, inner) {
+    var d = document.createElement("div");
+    d.className = "cm " + cls;
+    d.innerHTML = '<div class="av">' + avatar + '</div><div><div class="who">' + who + '<span class="t">' + time + '</span></div><div class="body">' + inner + "</div></div>";
+    var chat = $("booth-chat"); chat.appendChild(d);
+    chat.scrollTop = chat.scrollHeight;
+    return d;
+  }
+
+  function resetBooth() {
+    boothTimers.forEach(clearTimeout); boothTimers = [];
+    $("booth-chat").innerHTML = '<div class="placeholder">Press <b>Play demo</b> to watch a rep at Groundbreak send a 2-minute voice note and three business cards.</div>';
+    $("crm-log").innerHTML = '<li class="empty">Nothing yet. The bot only writes after the rep approves.</li>';
+    $("crm-status").textContent = "Waiting for approval";
+  }
+
+  function playBooth() {
+    resetBooth();
+    $("booth-chat").innerHTML = "";
+    $("booth-play").textContent = "↺ Replay";
+    var cards = [
+      ["Dana Whitfield", "VP, Operations", "Northgate Building Co.", "-2deg"],
+      ["Luis Ortega", "Senior Superintendent", "Keystone Ridge Construction", "1.5deg"],
+      ["Karen Liu", "VP Operations", "Keystone Ridge Construction", "-1deg"]
+    ];
+    msg("rep", "PS", "Priya S.", "5:48 PM",
+      '<div class="txt"><span class="mention">@FieldNotes</span> day 2 recap, cards attached</div>' +
+      '<div class="clip"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>' + waveHTML() + '<span class="dur">2:07</span></div>' +
+      '<div class="cards-row">' + cards.map(function (c) {
+        return '<div class="bcard" style="--r:' + c[3] + '"><b>' + c[0] + "</b>" + c[1] + '<div class="co">' + c[2] + "</div></div>";
+      }).join("") + "</div>");
+
+    later(function () {
+      var m = msg("bot", BOT_ICON, 'FieldNotes<span class="bot-tag">APP</span>', "5:48 PM",
+        '<div class="status-line"><span class="thinking"><i></i><i></i><i></i></span>Transcribing 2:07 of audio and reading 3 business cards…</div>');
+      later(function () {
+        var body = m.querySelector(".body");
+        body.innerHTML = '<div class="status-line">Transcript</div><div class="transcript"></div>';
+        var t = body.querySelector(".transcript"), n = 0;
+        (function tick() {
+          n = Math.min(transcript.length, n + 7);
+          t.textContent = "“" + transcript.slice(0, n) + (n < transcript.length ? "" : "”");
+          $("booth-chat").scrollTop = $("booth-chat").scrollHeight;
+          if (n < transcript.length) later(tick, 16); else later(proposal, 700);
+        })();
+      }, 1500);
+    }, 900);
+  }
+
+  function proposal() {
+    var sec = function (title, rows, cls) {
+      return '<div class="sec ' + (cls || "") + '"><div class="sec-h">' + title + "</div>" + rows.map(function (r) {
+        return '<div class="row"><span class="ic">' + r[0] + "</span><span>" + r[1] + (r[2] ? ' <span class="sub">· ' + r[2] + "</span>" : "") + "</span></div>";
+      }).join("") + "</div>";
+    };
+    var html = '<div class="txt">Here\'s what I pulled out. <b>4 contacts, 4 tasks, 4 campaign updates, 2 intel notes.</b> Nothing is saved until you approve.</div>' +
+      '<div class="proposal">' +
+      sec("Contacts", [["+", "Dana Whitfield, VP Ops", "Northgate, existing account"], ["+", "Luis Ortega, Sr. Superintendent", "Keystone Ridge"], ["+", "Karen Liu, VP Ops", "Keystone Ridge, from card"], ["+", "Marcus Bell, Dir. AI & Innovation", "Calder Webb"]]) +
+      sec("Action items", [["→", "Book spec-book demo with Northgate (Tue/Wed)", "Priya S."], ["→", "Load Keystone Ridge docs for TrunkText trial", "Devon K."], ["→", "Warm intro to Karen Liu via Luis", "Maya R."], ["→", "Send build-vs-buy guide + SOC 2 to Marcus", "Sam T."]]) +
+      sec("Campaigns", [["↻", "Northgate → Demo requested", "leaves post-show nurture"], ["↻", "Keystone Ridge → Field leaders sequence", "variant B"], ["↻", "Calder Webb → Build-vs-buy track", ""], ["↻", "Log Groundbreak touch on 3 accounts", "Upside"]]) +
+      sec("Intel", [["!", "Procore submittal agent: PEs didn't trust it", "Northgate"], ["!", "Evaluating Nomic", "Northgate"]]) +
+      sec("Check these", [["?", "\"Karen something\" in audio. Used <b>Karen Liu</b> from the card.", ""], ["?", "Marcus Bell's card wasn't photographed. Email found via enrichment.", "confidence: medium"]], "flag") +
+      '<div class="btns"><button type="button" class="primary pulse" id="booth-approve">Approve all</button><button type="button" id="booth-edit">Edit</button><button type="button" id="booth-skip">Discard</button></div>' +
+      "</div>";
+    var m = msg("bot", BOT_ICON, 'FieldNotes<span class="bot-tag">APP</span>', "5:49 PM", html);
+    $("crm-status").textContent = "Waiting for Priya to approve";
+    m.querySelector("#booth-approve").addEventListener("click", approve);
+    m.querySelector("#booth-edit").addEventListener("click", function () {
+      $("crm-status").textContent = "In the real bot, Edit opens a form in Slack";
+    });
+    m.querySelector("#booth-skip").addEventListener("click", function () {
+      m.querySelectorAll(".btns button").forEach(function (b) { b.disabled = true; });
+      msg("bot", BOT_ICON, 'FieldNotes<span class="bot-tag">APP</span>', "5:49 PM", '<div class="txt">Discarded. Nothing was saved.</div>');
+      $("crm-status").textContent = "Discarded";
+    });
+    // auto-approve after a pause so the demo finishes even if nobody clicks
+    later(function () { var b = $("booth-approve"); if (b && !b.disabled) approve(); }, 9000);
+  }
+
+  function approve() {
+    var b = $("booth-approve"); if (!b || b.disabled) return;
+    b.closest(".btns").querySelectorAll("button").forEach(function (x) { x.disabled = true; });
+    b.textContent = "Approved";
+    $("crm-status").textContent = "Writing to HubSpot…";
+    $("crm-log").innerHTML = "";
+    crmItems.forEach(function (it, i) {
+      later(function () {
+        var li = document.createElement("li");
+        li.innerHTML = '<span class="k ' + it[1] + '">' + it[0] + "</span><div>" + it[2] + '<div class="d">' + esc(it[3]) + "</div></div>";
+        $("crm-log").appendChild(li);
+        if (i === crmItems.length - 1) {
+          $("crm-status").textContent = "14 changes · just now";
+          msg("bot", BOT_ICON, 'FieldNotes<span class="bot-tag">APP</span>', "5:50 PM",
+            '<div class="done-note"><span class="ok">✓ Done.</span> 4 contacts, 4 tasks assigned, 3 accounts moved into the right campaigns, Groundbreak credited in Upside. Owners got a DM with their tasks. Nice work today.</div>');
+        }
+      }, 180 * i);
+    });
+  }
+
+  function renderBooth() {
+    resetBooth();
+    $("booth-play").addEventListener("click", playBooth);
+    var steps = [
+      ["1", "Capture", "Rep tags the bot in a show channel with a voice clip and card photos. Works from a phone in the aisle.", "Slack app, audio clips, file uploads"],
+      ["2", "Transcribe and read", "Speech-to-text on the clip, plus vision on each card for names, titles, emails and phones.", "Transcription API, vision model"],
+      ["3", "Extract", "An agent turns the transcript into contacts, tasks, campaign moves and intel, using Trunk's definitions.", "Claude, Radiant definitions"],
+      ["4", "Match", "Finds existing accounts and contacts before creating anything, so there are no duplicates. Flags anything it isn't sure about.", "HubSpot search, Upside graph, Clay"],
+      ["5", "Approve and write", "The rep taps Approve. The bot writes to HubSpot, updates sequences, logs the event touch and DMs each owner.", "HubSpot API, Upside, Slack DMs"]
+    ];
+    $("booth-pipeline").innerHTML = steps.map(function (s) {
+      return '<div class="pipe-step"><span class="n">STEP ' + s[0] + "</span><b>" + s[1] + "</b><span>" + esc(s[2]) + '</span><span class="tools">' + esc(s[3]) + "</span></div>";
+    }).join("");
+    $("booth-why").innerHTML = [
+      "<b>Talking beats typing.</b> Two minutes in the aisle replaces 30 minutes of CRM entry at the hotel, which usually never happens.",
+      "<b>It lives where they already are.</b> Slack on their phone, no new app or login.",
+      "<b>Same-day follow-up.</b> Hot leads get tasks and the right sequence before the show ends, not a week later.",
+      "<b>Credit for the booth.</b> Every conversation becomes an event touch, so the Event ROI view finally shows what a show produced."
+    ].map(function (x) { return "<li>" + x + "</li>"; }).join("");
+    $("booth-guard").innerHTML = [
+      "<b>Nothing is written without approval.</b> One tap to approve, or edit first.",
+      "<b>Shows what it isn't sure about.</b> Unclear names, missing emails and low-confidence matches are listed separately.",
+      "<b>Matches before it creates.</b> Existing accounts and contacts are reused, so there are no duplicates.",
+      "<b>Every change is logged.</b> Each CRM write links back to the clip and transcript it came from."
+    ].map(function (x) { return "<li>" + x + "</li>"; }).join("");
+  }
 
   // ---------- DATA LAYER (Upside) ----------
   function renderDataLayer() {

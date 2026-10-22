@@ -7,7 +7,7 @@
     <title>GTM OS · Trunk Tools concept · CJ Wheelock</title>
     <meta name="description" content="A working concept of the GTM operating system a founding GTM engineer would run at Trunk Tools, by CJ Wheelock.">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231f201d'/%3E%3Ctext x='32' y='41' font-family='Arial, sans-serif' font-size='25' font-weight='700' text-anchor='middle' fill='%23f7f7f3'%3ECJ%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="app.css?v=3">
+    <link rel="stylesheet" href="app.css?v=4">
   </head>
   <body class="locked">
     <!-- Password gate -->
@@ -47,6 +47,9 @@
         </button>
         <button class="nav-btn" data-view="sequences">
           <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Sequences
+        </button>
+        <button class="nav-btn" data-view="booth">
+          <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>Booth notes<span class="count">New</span>
         </button>
         <div class="nav-label">Improve</div>
         <button class="nav-btn" data-view="experiments">
@@ -184,6 +187,43 @@
             <div class="card mt">
               <div class="card-h"><h3>Sequence</h3><span class="sub">Click any step for copy, talk track and test results</span></div>
               <div class="timeline" id="timeline"></div>
+            </div>
+          </section>
+
+          <!-- BOOTH NOTES -->
+          <section class="view" id="view-booth" data-title="Booth notes" data-crumb="Operate">
+            <div class="view-intro">
+              <div>
+                <h2>Talk for two minutes. Skip the CRM.</h2>
+                <p>At a trade show, reps tag a Slack bot with a voice note and photos of the cards they collected. The bot turns that into contacts, tasks and campaign updates. Nothing is written until the rep taps Approve.</p>
+              </div>
+              <div class="seg">
+                <button type="button" id="booth-play" aria-pressed="true">▶ Play demo</button>
+              </div>
+            </div>
+            <div class="grid g-21">
+              <div class="card chat-card">
+                <div class="chat-head"><span class="hash">#</span>groundbreak-2026<span class="meta">· Orlando · Oct 22</span></div>
+                <div class="chat" id="booth-chat" aria-live="polite"></div>
+              </div>
+              <div class="card">
+                <div class="card-h"><h3>What changed in the CRM</h3><span class="right" id="crm-status">Waiting for approval</span></div>
+                <ul class="crm-log" id="crm-log"><li class="empty">Nothing yet. The bot only writes after the rep approves.</li></ul>
+              </div>
+            </div>
+            <div class="card mt">
+              <div class="card-h"><h3>How it works</h3><span class="sub">Each step is a tool I'd build or wire up</span></div>
+              <div class="pipeline" id="booth-pipeline"></div>
+            </div>
+            <div class="grid g-2 mt">
+              <div class="card">
+                <div class="card-h"><h3>Why reps will actually use it</h3></div>
+                <ul class="plain" id="booth-why"></ul>
+              </div>
+              <div class="card">
+                <div class="card-h"><h3>Guardrails</h3></div>
+                <ul class="plain" id="booth-guard"></ul>
+              </div>
             </div>
           </section>
 
@@ -388,6 +428,6 @@
       </aside>
     </div>
 
-    <script src="app.js?v=3"></script>
+    <script src="app.js?v=4"></script>
   </body>
 </html>
