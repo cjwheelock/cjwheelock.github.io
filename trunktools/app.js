@@ -14,6 +14,7 @@
     if (v === "hired") {
       try { sessionStorage.setItem(KEY, "1"); } catch (e) {}
       unlock();
+      if (window.recordTrunkToolsAccess) window.recordTrunkToolsAccess();
     } else {
       var g = document.getElementById("gate");
       document.getElementById("gate-error").textContent = "That's not it. Try again.";
