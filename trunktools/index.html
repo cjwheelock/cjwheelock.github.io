@@ -7,7 +7,7 @@
     <title>GTM OS · Trunk Tools concept · CJ Wheelock</title>
     <meta name="description" content="A working concept of the GTM operating system a founding GTM engineer would run at Trunk Tools, by CJ Wheelock.">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231f201d'/%3E%3Ctext x='32' y='41' font-family='Arial, sans-serif' font-size='25' font-weight='700' text-anchor='middle' fill='%23f7f7f3'%3ECJ%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="app.css?v=6">
+    <link rel="stylesheet" href="app.css?v=7">
   </head>
   <body class="locked">
     <!-- Password gate -->
@@ -97,6 +97,162 @@
         </div>
 
         <div class="content">
+          <!-- AI-NATIVE RESUME -->
+          <section class="view resume" id="view-resume" data-title="AI-native résumé" data-crumb="About CJ" aria-labelledby="resume-title">
+            <div class="view-intro">
+              <div>
+                <h2 id="resume-title">AI-native résumé</h2>
+                <p>I combine sales experience with hands-on AI product and systems building. Across Hey Sammy, SideQuest and Hire Line Dancers, I’ve used AI to build data pipelines, apps, dashboards and commercial workflows.</p>
+              </div>
+            </div>
+
+            <div class="card resume-summary">
+              <div class="card-h"><h3>The combination I bring to Trunk Tools</h3></div>
+              <p>I’ve been an SDR and run successful outbound campaigns. I understand targeting, copy and the work it takes to turn a conversation into pipeline. I also build the systems behind that work: research, structured data, workflow automation and measurement.</p>
+              <p>I use AI throughout the process, and I own the decisions: what to build, where human judgment matters, what to measure and when added complexity is costing more than it helps.</p>
+              <div class="chips"><span class="chip">Sales &amp; outbound</span><span class="chip">AI orchestration</span><span class="chip">Product &amp; engineering</span><span class="chip">Measurement &amp; iteration</span></div>
+            </div>
+
+            <div class="resume-heading"><h2>Selected work</h2><span class="meta">Seven examples of how I build with AI</span></div>
+
+            <article class="card resume-case">
+              <div class="card-h"><span class="resume-number">01</span><h3>Hey Sammy · source-backed extraction</h3></div>
+              <p>I built a city-and-category research pipeline that turns scattered activity listings into structured inventory, with source evidence behind the facts.</p>
+              <ul class="plain">
+                <li><b>Separate discovery from extraction.</b> Find and rank sources first, then spend model calls on the strongest evidence. Different categories use different search playbooks.</li>
+                <li><b>Keep rules deterministic.</b> Code handles recurrence and upcoming dates; models extract the facts. Geography, deduplication and schedule checks keep weak candidates from becoming useful-looking records.</li>
+                <li><b>Operate it as a system.</b> Bounded concurrency, budget tracking, retries and resumable jobs support repeatable collection and targeted cleanup.</li>
+              </ul>
+              <div class="resume-relevance"><b>At Trunk:</b> the same pattern supports account research, enrichment and qualification with evidence a rep can inspect.</div>
+            </article>
+
+            <div class="card mt">
+              <div class="card-h"><h3>Hey Sammy extraction pipeline</h3><span class="sub">From source discovery to usable inventory</span></div>
+              <ol class="pipeline resume-pipeline" aria-label="Hey Sammy extraction stages">
+                <li class="pipe-step"><div class="n">01</div><b>Discover</b><span>City and category playbooks find relevant official, schedule and social sources.</span></li>
+                <li class="pipe-step"><div class="n">02</div><b>Collect evidence</b><span>Rank and deduplicate sources; fetch and compact promising pages.</span></li>
+                <li class="pipe-step"><div class="n">03</div><b>Extract</b><span>Models normalize activity facts and retain the supporting sources.</span></li>
+                <li class="pipe-step"><div class="n">04</div><b>Validate</b><span>Check location, duplicates and schedules; calculate recurrence in code.</span></li>
+                <li class="pipe-step"><div class="n">05</div><b>Review &amp; refresh</b><span>Review the shortlist, store inventory and refresh according to freshness risk.</span></li>
+              </ol>
+              <p class="resume-note">Cost and quality are separate checks. In a Long Beach benchmark, an alternative extraction setup reduced production-equivalent cost from more than $1.35 to $0.55. Its source grounding was weaker, so I treated it as an experiment rather than an equivalent-quality replacement.</p>
+            </div>
+
+            <article class="card resume-case mt">
+              <div class="card-h"><span class="resume-number">02</span><h3>SideQuest · a smaller app that loads what people need</h3></div>
+              <p>I challenged the assumption that every user should download every city’s artwork. The architecture now separates the initial app from content that can be downloaded when selected and retained for offline use.</p>
+              <ul class="plain">
+                <li><b>Preserve the first experience.</b> Keep featured onboarding artwork available while moving 1,492 other images out of the initial bundle.</li>
+                <li><b>Make delivery durable.</b> Versioned content, verified downloads, local caching and stale-selection protection support new editions without a new app binary.</li>
+                <li><b>Measure the result.</b> Compare actual app bundles and verify retained assets, rather than assuming an AI-generated refactor made the app smaller.</li>
+              </ul>
+
+              <div class="resume-chart" role="figure" aria-labelledby="size-chart-title" aria-describedby="size-chart-note">
+                <div class="card-h"><h3 id="size-chart-title">Local app size over time</h3><span class="tag good">47% smaller after on-demand artwork</span></div>
+                <div class="hbars">
+                  <div class="hbar"><span>Oct 20 · baseline</span><span class="track"><span class="fill alt" style="width:100%"></span></span><span class="val">406.2 MB</span></div>
+                  <div class="hbar"><span>Oct 21 · on demand</span><span class="track"><span class="fill" style="width:52.65%"></span></span><span class="val">213.9 MB</span></div>
+                  <div class="hbar"><span>Oct 24 · image encoding</span><span class="track"><span class="fill" style="width:42.18%"></span></span><span class="val">171.3 MB</span></div>
+                </div>
+                <p class="resume-note" id="size-chart-note">Unpacked local app bundles, measured in decimal MB. These are not Apple-processed download sizes. The 171.3 MB candidate was locally validated and had not been uploaded at this measurement checkpoint.</p>
+              </div>
+              <p class="resume-note">The second pass converted 33 opaque images to JPEG, saving 42.6 MB in image files. All 27 badge files stayed unchanged and original PNG masters were preserved. JPEG is lossy; reviewed comparisons showed no visible degradation.</p>
+              <div class="resume-relevance"><b>At Trunk:</b> control the cost, latency and complexity AI can introduce, and verify that the user experience still works.</div>
+            </article>
+
+            <div class="grid g-2 mt">
+              <article class="card resume-case">
+                <div class="card-h"><span class="resume-number">03</span><h3>Hey Sammy · app performance</h3></div>
+                <p>I used AI-assisted engineering to improve the app’s inventory-loading path: share concurrent lookups, fetch related data together, cache useful results and index the queries the app actually runs.</p>
+                <div class="resume-metric num">~37 → 11<span>database requests for three activity rows in an instrumented client test</span></div>
+                <p>The cache is scoped to account, ZIP and preferences. Delayed responses cannot replace a newer selection or restore another account’s data.</p>
+                <p class="resume-note">App-side changes were local at the validation checkpoint; the database indexes were applied live. Request counts are not a native launch-time measurement.</p>
+                <div class="resume-relevance"><b>At Trunk:</b> reduce repeated work and keep context correct as records, users and requests change.</div>
+              </article>
+              <article class="card resume-case">
+                <div class="card-h"><span class="resume-number">04</span><h3>SideQuest · partnership CRM</h3></div>
+                <p>I built a private React, Node and SQLite workspace for city, campus, creator and community partnerships.</p>
+                <ul class="plain">
+                  <li>CSV preview and transactional imports, contact deduplication and source provenance.</li>
+                  <li>Pipeline stages, notes, tasks, campaign drafts and recipient-specific review.</li>
+                  <li>Signed-event imports and separate definitions for link activity and verified redemption.</li>
+                </ul>
+                <p class="resume-note">The local CRM is implemented. Live email sending and production event connections require additional integration.</p>
+                <div class="resume-relevance"><b>At Trunk:</b> build tools around how a commercial team works, with trustworthy records and clear next steps.</div>
+              </article>
+              <article class="card resume-case">
+                <div class="card-h"><span class="resume-number">05</span><h3>Hire Line Dancers · marketplace workflows</h3></div>
+                <p>I built a marketplace spanning instructor applications, card setup, approval-based billing, private inquiry conversations and administrative workflows.</p>
+                <ul class="plain">
+                  <li>Webhook handling and durable notification jobs support recovery when delivery fails.</li>
+                  <li>Inquiry-response logic separates a reply from a delivery or read receipt.</li>
+                  <li>Fallback recommendations preserve the organizer’s choice of whom to contact.</li>
+                </ul>
+                <p class="resume-note">The newer inquiry and SMS flow was locally validated. Production rollout and provider configuration were still pending at that checkpoint.</p>
+                <div class="resume-relevance"><b>At Trunk:</b> design handoffs and quote-to-cash workflows around explicit states, recoverable jobs and human decisions.</div>
+              </article>
+              <article class="card resume-case">
+                <div class="card-h"><span class="resume-number">06</span><h3>Analytics · dashboards that answer the right question</h3></div>
+                <p>I built and refined product dashboards and PostHog funnels, including distinguishing an actual onboarding exit from a user taking another valid route.</p>
+                <p>I also built institutional reporting views with staff access, aggregate reporting and CSV exports while keeping private participant information out of those reports.</p>
+                <div class="resume-relevance"><b>At Trunk:</b> define qualification, source and conversion consistently before using a dashboard to make decisions. Instrumentation quality comes before claims of uplift.</div>
+              </article>
+            </div>
+
+            <article class="card resume-case mt">
+              <div class="card-h"><span class="resume-number">07</span><h3>Video &amp; campaign production</h3></div>
+              <p>I use AI-assisted workflows to turn footage into edited videos with timed captions, UI overlays and audio. Timestamped edit manifests and small render recipes make revisions reproducible.</p>
+              <div class="resume-relevance"><b>At Trunk:</b> support campaign and content production, then connect the asset and message to the audience, channel and downstream result.</div>
+            </article>
+
+            <div class="resume-heading"><h2>What I’ve learned about using AI well</h2></div>
+            <div class="grid g-3">
+              <div class="card resume-lesson"><h3>Set the constraint</h3><p>I asked for lower extraction cost without sacrificing quality, and smaller downloads without changing onboarding. The objective guides the implementation.</p></div>
+              <div class="card resume-lesson"><h3>Inspect the tradeoff</h3><p>Cheaper research can weaken evidence. Generated code and assets can add bloat. I compare outputs, costs and user behavior before accepting the change.</p></div>
+              <div class="card resume-lesson"><h3>Keep the work focused</h3><p>I challenge unnecessary steps and match validation to the size of the change. Reusable workflows help; a larger process is not automatically a better one.</p></div>
+            </div>
+
+            <div class="resume-heading"><h2>First builds for Trunk Tools</h2><span class="meta">Proposed pilots · scoped for a fast start</span></div>
+            <div class="card resume-pace">
+              <h3>I want to move faster than you expect.</h3>
+              <p>The <a href="https://jobs.ashbyhq.com/Trunk%20Tools/4cc452cf-f01f-49e3-92b3-95f0a7943d98" target="_blank" rel="noopener">role’s first-90-days outline</a> calls for quick wins, an end-to-end demand-gen workflow and an initial AI agent. My target is a useful first workflow in week one and measured pilots within the first 30 days. Days 31–90 should build on what the team has already used and learned.</p>
+              <p>Start with the approved stack and a narrow workflow. Access, data quality and seller feedback determine how quickly each pilot can expand.</p>
+            </div>
+
+            <article class="card resume-pilot mt">
+              <div class="card-h"><span class="tag accent">Start here</span><h3>1. Account research &amp; outreach briefs</h3></div>
+              <p>Give a rep the account history, a current reason to call and relevant Trunk customer proof in one sourced brief, with a call opener, LinkedIn angle and email draft to review.</p>
+              <div class="resume-workflow" aria-label="Account research workflow"><span>Account domain</span><i aria-hidden="true">→</i><span>CRM history + current sources</span><i aria-hidden="true">→</i><span>Buying roles + relevant proof</span><i aria-hidden="true">→</i><span>Rep-reviewed brief</span></div>
+              <ul class="plain">
+                <li><b>Pilot:</b> 20 accounts with two reps. Start with public account domains and approved public customer proof; add CRM history as access becomes available.</li>
+                <li><b>Measure:</b> research time, unsupported facts, rep usefulness, draft edits and cost per accepted brief.</li>
+              </ul>
+              <p class="resume-note">Pattern studied: <a href="https://www.clay.com/blog/cold-outbound-enterprise-accounts" target="_blank" rel="noopener">Clay’s internal account-research and outbound workflow</a>. For Trunk, adapt the brief to active projects, operational needs and the right field-search or submittal-review proof.</p>
+            </article>
+            <article class="card resume-pilot mt">
+              <div class="card-h"><h3>2. Inbound &amp; event-lead triage</h3></div>
+              <p>Turn one form or conference list into deduplicated records, evidence-based qualification and a clear owner with a next step. Put uncertain records in review.</p>
+              <div class="resume-workflow" aria-label="Lead triage workflow"><span>Lead or badge scan</span><i aria-hidden="true">→</i><span>Match + enrich</span><i aria-hidden="true">→</i><span>Qualify + route</span><i aria-hidden="true">→</i><span>Rep-reviewed next step</span></div>
+              <ul class="plain">
+                <li><b>Pilot:</b> 50 historical leads from one source, then a reviewed live cohort. Check existing owners and open opportunities before creating anything.</li>
+                <li><b>Measure:</b> missed qualified leads, seller agreement, duplicate and ownership errors, time to the correct owner and meetings held after activation.</li>
+              </ul>
+              <p class="resume-note">Pattern studied: <a href="https://drew.tech/posts/building-vercels-first-gtm-agent" target="_blank" rel="noopener">Drew Bredvick’s first GTM agent at Vercel</a> and <a href="https://vercel.com/templates/next.js/lead-processing-agent" target="_blank" rel="noopener">Vercel’s lead-processing reference</a>. The reference requires business-specific services and prompts; it is not a finished Trunk integration.</p>
+            </article>
+            <article class="card resume-pilot mt">
+              <div class="card-h"><h3>3. Customer champion move alerts</h3></div>
+              <p>When a known champion changes employers, verify the move and new account fit, then give the account owner relationship context and a warm-introduction draft. Flag the relationship gap at the previous customer, too.</p>
+              <div class="resume-workflow" aria-label="Champion move workflow"><span>Known champion</span><i aria-hidden="true">→</i><span>Verified employer change</span><i aria-hidden="true">→</i><span>Fit + ownership check</span><i aria-hidden="true">→</i><span>AE-reviewed alert</span></div>
+              <ul class="plain">
+                <li><b>Pilot:</b> 100 known champions after relationship review, once an authorized contact list and monitoring access are available.</li>
+                <li><b>Measure:</b> verified moves, accepted alerts, introductions, meetings, qualified opportunities and cost per accepted signal.</li>
+              </ul>
+              <p class="resume-note">Pattern studied: <a href="https://www.clay.com/customers/regency-supply" target="_blank" rel="noopener">Regency Supply’s enrichment and role-change workflow</a>, a construction-adjacent example. Data coverage and results would need to be established for Trunk’s accounts.</p>
+            </article>
+            <p class="resume-note resume-endnote">For all three: observe strong reps, establish a manual baseline, keep evidence attached and review initial CRM writes and outreach. Use Trunk’s actual approved tools. The pilots above are proposals; the project measurements describe my own work at their stated checkpoints.</p>
+          </section>
+
+
           <!-- TODAY -->
           <section class="view active" id="view-pulse" data-title="Today" data-crumb="Operate">
             <div class="view-intro">
@@ -394,7 +550,7 @@
             <div class="view-intro">
               <div>
                 <h2>First 30 days</h2>
-                <p>One visible win per week, starting with demand gen as Trunk's posting asks. Each week ends with something shipped and measured.</p>
+                <p>I want to move faster than you expect: a useful workflow in week one, measured demand-gen pilots within 30 days, and a roadmap shaped by real usage. The posting’s 90-day horizon becomes time to iterate and scale.</p>
               </div>
             </div>
             <div class="phases" id="phases"></div>
@@ -418,6 +574,12 @@
             <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
           </button>
         </div>
+        <div class="resume-access">
+          <button class="prompt resume-open view-link" id="resume-open" type="button" data-view="resume" aria-controls="view-resume" aria-current="false">
+            <span><b>AI-native résumé</b><span>Selected work, technical decisions &amp; first builds</span></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
         <div class="thread" id="thread" aria-live="polite">
           <div class="welcome">
             <b>Ask about this concept.</b>
@@ -428,6 +590,6 @@
       </aside>
     </div>
 
-    <script src="app.js?v=6"></script>
+    <script src="app.js?v=7"></script>
   </body>
 </html>

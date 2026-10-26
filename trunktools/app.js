@@ -656,10 +656,10 @@
   // ---------- ROADMAP ----------
   function renderRoadmap() {
     var phases = [
-      ["Week 1", "Listen and map", ["Shadow two BDRs, two AEs, marketing and a CSM. Join a pilot kickoff.", "Audit HubSpot: lifecycle stages, source fields, duplicates, manual workflows.", "Get access to call recordings and product usage data."], "Every manual GTM workflow listed and ranked by hours lost."],
-      ["Week 2", "First visible win", ["Event-to-pipeline: fall-conference scans enriched, scored and routed within 24 hours.", "Draft follow-ups that name each account's live projects.", "Account research briefs on every meeting's HubSpot record."], "Event leads worked within a day, and AEs opening the briefs."],
-      ["Week 3", "Trustworthy attribution", ["Connect Upside and backtest the last two quarters of closed-won deals against HubSpot.", "Required self-reported source on every demo form, plus event tags.", "The Today view running on real data."], "Every new opportunity has a source the team trusts."],
-      ["Week 4", "Start the testing loop", ["Project-start sequence live for one segment, with its first A/B test registered.", "Signal scoring v0 for the ENR 400 and mid-market.", "Publish the GTM OS roadmap, ranked by pipeline impact."], "First test running, and a roadmap approved by sales and marketing leads."]
+      ["Days 1–5", "First useful workflow", ["Shadow strong reps and marketing; agree on the manual baseline in the first two days.", "Put sourced account briefs in the hands of two reps for 20 accounts.", "Include call preparation, a LinkedIn angle and an email draft for review."], "Reps have used the briefs and recorded usefulness, errors, time and cost."],
+      ["Week 2", "Lead-to-owner pilot", ["Choose one inbound or event source; match, enrich, qualify and route.", "Compare 50 historical leads with seller decisions.", "Launch a reviewed live cohort when access and quality checks are ready."], "A complete workflow is measured for missed leads, duplicates, owner errors and routing time."],
+      ["Week 3", "Measure and learn", ["Join calls, LinkedIn, email and event follow-up with shared campaign and source definitions.", "Report meetings held, qualified opportunities, pipeline and record quality.", "Test 100 champion contacts if relationship data and monitoring access are ready."], "The team can compare the pilot with its manual baseline and identify failure modes."],
+      ["Week 4", "Improve and expand", ["Fix failure modes and improve prompts and routing from rep feedback.", "Expand the strongest pilot with sales and marketing.", "Publish the next roadmap with engineering, including attribution and quote-to-cash dependencies."], "The next build is ranked by observed value, with an owner and a measurement."]
     ];
     $("phases").innerHTML = phases.map(function (p) {
       return '<div class="card phase"><div class="when">' + p[0] + "</div><h3>" + p[1] + "</h3><ul>" + p[2].map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") +
@@ -681,11 +681,14 @@
 
   // ---------- NAV ----------
   function wireNav() {
-    var btns = document.querySelectorAll(".nav-btn");
+    var btns = document.querySelectorAll(".nav-btn, .view-link");
     btns.forEach(function (b) {
       b.addEventListener("click", function () { go(b.getAttribute("data-view")); });
     });
     function go(id) {
+      var target = $("view-" + id); if (!target) return;
+      body.classList.toggle("resume-active", id === "resume");
+      body.classList.remove("agent-open");
       btns.forEach(function (x) { x.setAttribute("aria-current", x.getAttribute("data-view") === id ? "page" : "false"); });
       document.querySelectorAll(".view").forEach(function (v) { v.classList.toggle("active", v.id === "view-" + id); });
       var v = $("view-" + id);
@@ -693,6 +696,9 @@
       $("crumb").textContent = v.getAttribute("data-crumb");
       $("main").scrollTop = 0; window.scrollTo(0, 0);
       try { history.replaceState(null, "", "#" + id); } catch (e) {}
+      if (id === "resume") {
+        var title = $("resume-title"); title.setAttribute("tabindex", "-1"); title.focus({ preventScroll: true });
+      }
     }
     var h = (location.hash || "").slice(1);
     if (h && $("view-" + h)) go(h);
@@ -717,50 +723,52 @@
   // ---------- AGENT PANE ----------
   var answers = [
     { q: "Why is CJ the right person for this role?", a:
-      "### The short version\n" +
-      "I've been the rep this system is built for, and I build things myself.\n" +
-      "### Enterprise selling\n" +
-      "- At Bebop Sensors I closed **Tesla, BMW and Toyota**: long cycles, many stakeholders, pilots that had to turn into contracts. **124% of quota, $2.5M+ closed.**\n" +
-      "- Before that: Zenefits, TubeMogul, and Head of Partnerships at Tokemak. About ten years carrying a number.\n" +
-      "### Building with AI\n" +
-      "- I've shipped three apps (OMG Career, OMG Goals and Hey Sammy) by building with frontier models every day. I'm self-taught, and I pick up new tools fast.\n" +
-      "- This dashboard is the same habit: scoped, designed and shipped before the first interview.\n" +
-      "### Why the combination matters\n" +
-      "- GTM tooling usually fails on adoption, not engineering. Reps ignore anything that doesn't help on their next call. I know what an AE will actually open between jobsite visits.\n" +
-      "- Trunk sells the same idea to superintendents: meet people where they already work. I'd hold internal tools to that standard.\n" +
-      "### Logistics\n" +
-      "- Based in New York and ready for hybrid work at HQ." },
+      "### Sales experience and hands-on building\n" +
+      "I’ve been an SDR, run successful outbound campaigns and learned what makes copy earn a response. I bring that commercial judgment to systems I can build and improve myself with AI.\n" +
+      "### The work behind that claim\n" +
+      "- **Hey Sammy:** I built source-backed activity extraction and the app that uses it. The pipeline separates discovery, extraction and validation; an instrumented app-loading test reduced database requests for three rows from about 37 to 11.\n" +
+      "- **SideQuest:** I built product and content-delivery workflows, a partnership CRM and analytics. Moving artwork on demand reduced a local app bundle from 406.2 MB to 213.9 MB. A later image-encoding candidate measured 171.3 MB locally; these are not Apple download sizes.\n" +
+      "- **Hire Line Dancers:** I built marketplace workflows involving applications, approval-based billing, private inquiries, notification jobs and delivery recovery.\n" +
+      "- **Campaign production:** I use AI for video editing, captions, UI overlays and repeatable revisions as well as strategy and dashboards.\n" +
+      "### Why it fits this role\n" +
+      "I can talk to the rep, identify the bottleneck, build the workflow and inspect the result. I understand why an account brief needs credible evidence, why a lead needs a clear owner and why an attractive dashboard still needs correct definitions.\n" +
+      "I also challenge AI’s overhead. Lower cost, smaller binaries and fewer requests matter only when the quality and user experience hold up. The AI-native résumé above shows the decisions, measurements and implementation checkpoints.\n" +
+      "### The pace I want to set\n" +
+      "**I want to move faster than you expect:** a useful first workflow in week one and measured demand-gen pilots within the first 30 days." },
     { q: "What design decisions went into this?", a:
-      "### What this shows\n" +
-      "- **What needs doing today, not totals.** The first screen is an action queue ranked by revenue at stake. Totals are one click away.\n" +
-      "- **Every metric has an owner and a next step.** If nobody acts on a number, it doesn't belong on the dashboard.\n" +
-      "- **HubSpot stays the source of truth.** Agents read from it and write back to it, so reps don't learn a new tool and leaders don't reconcile two systems.\n" +
-      "- **Buy the data layer, build the edge.** Upside rebuilds every buyer journey with citations. I build the Trunk-specific tools on top of it instead of spending months on plumbing.\n" +
-      "### How it improves\n" +
-      "- **Testing is built in.** Every sequence step carries its variant ID, and every test is registered before launch.\n" +
-      "- **Honest statistics.** Deal stages are too small for real A/B tests, so they use matched cohorts and are labeled that way.\n" +
-      "### How it feels\n" +
-      "- **Copy written for the field.** The emails are short, plain and readable on a phone in a truck, the way Trunk talks to builders.\n" +
-      "- **Calm visuals.** One accent color, with red and amber only next to a label. The palette comes from my personal site, so it reads as my work, not a copy of Trunk's brand.\n" +
-      "- **Clear about what's mocked.** The customers, case-study results and competitors are real. The pipeline and test numbers are samples, and one label says so." },
+      "### Built from the rep’s perspective\n" +
+      "I’ve done the SDR work and run successful outbound campaigns. I know targeting, copy and follow-through matter. This concept starts with an actionable queue: who needs attention, why now and what the rep should do next.\n" +
+      "### Work across the channels that matter\n" +
+      "Inboxes are getting noisier. I see calls as a way to stand out, LinkedIn as a viable relationship channel, and in-person conversations as especially valuable for Trunk’s construction audience. Email still has a job: clear, relevant follow-up that supports the conversation.\n" +
+      "That is why this concept includes call preparation, LinkedIn touches, event capture and coordinated follow-up. I want the system to make each touch informed and timely.\n" +
+      "### Collect the evidence across the whole journey\n" +
+      "- **Join the history:** account research, calls, email, LinkedIn, events and product usage should inform the same account record.\n" +
+      "- **Measure outcomes:** track connections, conversations, meetings held, qualified opportunities, pipeline and attribution. Review which audience, message and channel helped move the deal.\n" +
+      "- **Keep definitions honest:** a delivered email is not a reply, a badge scan is not a qualified opportunity, and a correlation is not proof that a channel caused the sale.\n" +
+      "### Build for use between calls\n" +
+      "Keep the CRM as the working record. Return briefs, ownership and next steps where sellers already work. Attach sources, let reps review drafts and uncertain matches, and use their edits to improve the workflow.\n" +
+      "### Keep the product focused\n" +
+      "Reuse the approved stack, build the Trunk-specific workflow and measure it before expanding. The calm cards, clear labels and single green accent keep this page consistent with my site. The operating numbers remain labeled sample data; my résumé measurements have their own stated scope." },
     { q: "What would CJ ship in the first 30 days?", a:
-      "### Week 1: Listen and map\n" +
-      "- Shadow two BDRs, two AEs, marketing and a CSM. Join a pilot kickoff.\n" +
-      "- Audit HubSpot: lifecycle stages, source fields, duplicates and which workflows are still manual.\n" +
-      "- Get access to call recordings and product usage data.\n" +
-      "### Week 2: First visible win\n" +
-      "- **Event-to-pipeline:** every fall-conference badge scan enriched, scored and routed within 24 hours, with a draft follow-up that names the account's live projects.\n" +
-      "- **Account research briefs** on every meeting's HubSpot record.\n" +
-      "### Week 3: Make attribution trustworthy\n" +
-      "- Connect **Upside** and backtest two quarters of closed-won deals: what HubSpot credited vs. the full journey.\n" +
-      "- A required self-reported source on every demo form, plus UTM rules and campaign tags for events.\n" +
-      "- The Today view running on real data.\n" +
-      "### Week 4: Start the testing loop\n" +
-      "- The project-start sequence live for one segment, with its first A/B test registered.\n" +
-      "- Signal scoring v0 for the ENR 400 and the mid-market list.\n" +
-      "- A GTM OS roadmap ranked by pipeline impact, reviewed with the sales and marketing leads.\n" +
-      "### What I'd need\n" +
-      "- HubSpot admin access, budget for Clay and one construction-data source, and 30 minutes a week with the VP of Sales." }
+      "### I want to move faster than the 90-day outline\n" +
+      "The posting describes quick wins, a first end-to-end demand-gen workflow and an initial AI agent within 90 days. **My target is to put those first useful workflows into the first 30 days, starting in week one.** Then days 31–90 become repeated improvement and expansion based on real usage.\n" +
+      "### Days 1–5: Listen, then put a brief in a rep’s hands\n" +
+      "- Shadow strong reps and marketing, inspect the current stack and agree on a manual baseline in the first two days.\n" +
+      "- Build an **account research and outreach brief** for 20 accounts with two reps: evidence, account history where available, relevant Trunk proof and a call opener, LinkedIn angle and email draft.\n" +
+      "- Measure research time, factual errors, usefulness and cost per accepted brief.\n" +
+      "### Week 2: One complete lead-to-owner workflow\n" +
+      "- Pilot **inbound or event-lead triage** from one source: match, enrich, qualify, route and propose the next step.\n" +
+      "- Compare 50 historical leads with the team’s decisions, then launch a reviewed live cohort when access and quality checks are ready.\n" +
+      "- Track missed qualified leads, duplicates, owner errors and time to the correct owner.\n" +
+      "### Week 3: Measure the multichannel result\n" +
+      "- Instrument calls, LinkedIn, email and event follow-up with shared campaign and source definitions.\n" +
+      "- Give the team a view of meetings held, qualified opportunities, pipeline and record quality; compare the new workflow with the manual baseline.\n" +
+      "- If contact data and monitoring access are available, test **champion move alerts** on 100 reviewed customer contacts.\n" +
+      "### Week 4: Improve and expand what is working\n" +
+      "- Fix the failure modes, improve prompts and routing from rep feedback, and expand the strongest pilot.\n" +
+      "- Publish the next roadmap with sales, marketing and engineering, ranked by observed demand-gen value and the data needed for attribution and quote-to-cash.\n" +
+      "### How I would keep the pace\n" +
+      "Start with the existing approved tools and a narrow workflow. Surface access and data dependencies immediately. Build in small, usable increments, with a clear owner and a measurement for each release." }
   ];
 
   function md(src) {

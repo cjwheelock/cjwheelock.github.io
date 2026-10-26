@@ -145,7 +145,7 @@ body:not(.locked) .gate { display: none; }
 
 .content { padding: 24px 28px 64px; max-width: 1180px; }
 .view { display: none; }
-.view.active { display: block; animation: fade 0.25s ease; }
+.view.active { display: block; }
 @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 
 .view-intro { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
@@ -510,6 +510,51 @@ td.nowrap { white-space: nowrap; }
 .prompt:disabled { cursor: default; opacity: 0.5; }
 .prompt svg { width: 14px; height: 14px; stroke: var(--accent); fill: none; stroke-width: 2; flex: none; margin-left: auto; }
 .prompt-note { font-size: 11px; color: var(--muted); text-align: center; margin-top: 2px; }
+
+/* ---------- AI-native resume ---------- */
+.resume-access { padding: 14px 18px; border-bottom: 1px solid var(--line); }
+.resume-open { background: var(--accent-faint); border-color: #cfe0d5; }
+.resume-open > span { min-width: 0; }
+.resume-open b { display: block; font-size: 13.5px; color: var(--accent); }
+.resume-open span span { display: block; margin-top: 2px; font-size: 11.5px; color: var(--muted); }
+.resume-open[aria-current="page"] { border-color: var(--accent); }
+.resume-open:focus-visible, .prompt:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+body.resume-active .updated, body.resume-active .sample-pill { display: none; }
+.resume p { margin: 0 0 12px; font-size: 13px; color: var(--ink-2); }
+.resume p:last-child { margin-bottom: 0; }
+.resume .view-intro p { font-size: 14px; color: var(--muted); }
+.resume-summary .chips { margin-top: 16px; }
+.resume-heading { display: flex; gap: 8px 16px; align-items: baseline; flex-wrap: wrap; margin: 28px 0 12px; }
+.resume-heading h2 { margin: 0; font-size: 18px; letter-spacing: -0.01em; }
+.resume .card-h { align-items: center; flex-wrap: wrap; }
+.resume .card-h h3 { font-size: 14px; flex: 1; min-width: 0; }
+.resume-number { color: var(--accent); font-family: var(--mono); font-size: 11px; font-weight: 600; }
+.resume-case { display: flex; flex-direction: column; }
+.resume-relevance { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 12px; font-size: 12.5px; color: var(--ink-2); }
+.resume-relevance b { color: var(--accent); }
+.resume .resume-note { font-size: 11.5px; color: var(--muted); margin: 12px 0 0; line-height: 1.55; }
+.resume-pipeline { list-style: none; margin: 0; padding: 0; }
+.resume-chart { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 4px; }
+.resume-chart .card-h h3 { flex: 1 0 180px; }
+.resume-chart .card-h .tag { white-space: normal; }
+.resume-chart .hbar { grid-template-columns: 150px minmax(0, 1fr) 76px; }
+.resume-chart .fill { transition: none; }
+.resume-metric { margin: 4px 0 12px; color: var(--accent); font-size: 27px; font-weight: 600; letter-spacing: -0.02em; }
+.resume-metric span { display: block; color: var(--muted); font-size: 12px; font-weight: 400; letter-spacing: normal; }
+.resume-lesson h3, .resume-pace h3 { font-size: 14px; margin: 0 0 8px; }
+.resume-pace { border-color: #cfe0d5; background: var(--accent-faint); }
+.resume-pace h3 { font-size: 18px; color: var(--accent); }
+.resume-workflow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 14px 0; }
+.resume-workflow span { border: 1px solid var(--line); border-radius: 6px; background: var(--surface-2); padding: 6px 8px; font-size: 12px; }
+.resume-workflow i { color: var(--accent); font-style: normal; }
+.resume .resume-endnote { margin-top: 18px; }
+@media (max-width: 760px) {
+  .resume-chart .hbar { grid-template-columns: minmax(0, 1fr) 76px; gap: 4px 10px; }
+  .resume-chart .hbar > span:first-child { grid-column: 1 / -1; }
+  .resume-chart .hbar .track { min-width: 0; }
+  .resume-workflow { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .resume-workflow i { text-align: center; transform: rotate(90deg); line-height: 14px; }
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1280px) {
