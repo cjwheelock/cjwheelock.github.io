@@ -548,7 +548,24 @@ body.resume-active .updated, body.resume-active .sample-pill { display: none; }
 .resume-workflow span { border: 1px solid var(--line); border-radius: 6px; background: var(--surface-2); padding: 6px 8px; font-size: 12px; }
 .resume-workflow i { color: var(--accent); font-style: normal; }
 .resume .resume-endnote { margin-top: 18px; }
+.resume-company { border-color: #cfe0d5; background: var(--accent-faint); }
+.resume-project + .resume-project { margin-top: 24px; }
+.resume-project-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; }
+.resume-project-head h2 { margin: 0 0 2px; font-size: 20px; letter-spacing: -0.01em; }
+.resume-project-head h2 a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.resume-project-url { font-size: 12px; color: var(--muted); text-underline-offset: 2px; }
+.resume .resume-project-description { font-size: 14px; color: var(--ink); }
+.resume .resume-requirement { background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin: 14px 0 0; font-size: 12.5px; }
+.resume-accomplishment { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 16px; }
+.resume-accomplishment h3 { margin: 0 0 8px; font-size: 14px; }
+.resume-accomplishment .resume-pipeline { margin-top: 14px; }
+.resume-accomplishment .resume-chart { margin-top: 16px; }
+.resume-tools { margin: 18px 0 0; padding: 12px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--line); font-size: 12px; }
+.resume-tools > div { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 10px; padding: 5px 0; }
+.resume-tools dt { font-weight: 600; color: var(--ink-2); }
+.resume-tools dd { margin: 0; color: var(--muted); }
 @media (max-width: 760px) {
+  .resume-tools > div { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 6px 0; }
   .resume-chart .hbar { grid-template-columns: minmax(0, 1fr) 76px; gap: 4px 10px; }
   .resume-chart .hbar > span:first-child { grid-column: 1 / -1; }
   .resume-chart .hbar .track { min-width: 0; }
