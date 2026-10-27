@@ -105,6 +105,9 @@ const server = http.createServer(async (req,res) => {
     let input;
     try { input = await body(req); } catch (_) { return reply(req,res,400,{error:'Invalid request'}); }
     const slug = typeof input.company === 'string' ? input.company : '';
+    // Reject unknown slugs before allocating rate-limit state; otherwise an
+    // unauthenticated client could create an unbounded number of buckets.
+    if (!Object.hasOwn(database,slug)) return reply(req,res,401,{error:'Incorrect password.'});
     const ip = req.socket.remoteAddress || 'unknown';
     const key = ip + ':' + slug;
     const now = Date.now();
@@ -112,7 +115,7 @@ const server = http.createServer(async (req,res) => {
     if (previous.length >= 8) return reply(req,res,429,{error:'Too many attempts. Try again later.'});
     previous.push(now); attempts.set(key,previous);
     try {
-      if (!Object.hasOwn(database,slug) || !await checkPassword(input.password,passwords[slug])) return reply(req,res,401,{error:'Incorrect password.'});
+      if (!await checkPassword(input.password,passwords[slug])) return reply(req,res,401,{error:'Incorrect password.'});
       attempts.delete(key);
       const token = crypto.randomBytes(32).toString('base64url');
       sessions.set(token,{slug,expires:now + sessionLifetime});
