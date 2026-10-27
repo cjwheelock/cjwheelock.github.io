@@ -1,0 +1,129 @@
+{
+  "name": "Clay",
+  "role": "GTM Engineer, Marketing",
+  "accent": "#7259d2",
+  "product": "Clay brings prospect data, buying signals and AI research into GTM workflows.",
+  "opportunity": "Turn intent into a fast, accountable marketing-to-SDR handoff.",
+  "hypothesis": "A qualified signal loses value when enrichment, ownership and follow-up happen in separate queues. A shared signal-to-meeting workflow could expose that delay and help the team improve it.",
+  "module": "Signal-to-meeting lab",
+  "unit": "accounts",
+  "dimension": "Customer segment",
+  "fit_label": "ICP fit",
+  "intent_label": "Buying signal",
+  "action": "Route to SDR",
+  "stages": [
+    "Capture intent",
+    "Enrich with provenance",
+    "Score and assign",
+    "Measure accepted meetings"
+  ],
+  "automations": [
+    "Research a signal with source links before scoring.",
+    "Flag stale or conflicting records for human review.",
+    "Notify an owner when the follow-up SLA is at risk."
+  ],
+  "roadmap": [
+    "Map the current inbound funnel, definitions, ownership and a baseline speed-to-lead.",
+    "Pilot a sourced intent and enrichment workflow with one marketing and SDR segment.",
+    "Compare accepted meetings and conversion by source; refine scoring with frontline feedback."
+  ],
+  "fit": "A local partnership CRM with contact provenance and pipeline stages, source-backed extraction, and enterprise outbound experience connect data quality to a real sales handoff.",
+  "segments": [
+    "Product-led SaaS",
+    "Enterprise SaaS",
+    "AI tools"
+  ],
+  "signals": [
+    "Pricing page revisit",
+    "Champion changed jobs",
+    "New product launch"
+  ],
+  "values": [
+    18000,
+    32000,
+    9000,
+    42000,
+    24000,
+    13000
+  ],
+  "slug": "clay",
+  "resume": {
+    "docx": "CJ_Wheelock_Clay_GTM_Engineer_Marketing.docx",
+    "pdf": "CJ_Wheelock_Clay_GTM_Engineer_Marketing.pdf"
+  },
+  "accounts": [
+    {
+      "name": "Account A",
+      "segment": "Product-led SaaS",
+      "signal": "Pricing page revisit",
+      "fit": 92,
+      "intent": 88,
+      "stage": "New",
+      "value": 18000,
+      "next": "Confirm the source and assign an owner."
+    },
+    {
+      "name": "Account B",
+      "segment": "Enterprise SaaS",
+      "signal": "Champion changed jobs",
+      "fit": 82,
+      "intent": 72,
+      "stage": "Qualified",
+      "value": 32000,
+      "next": "Review the context and choose a relevant next step."
+    },
+    {
+      "name": "Account C",
+      "segment": "AI tools",
+      "signal": "New product launch",
+      "fit": 67,
+      "intent": 54,
+      "stage": "Discovery",
+      "value": 9000,
+      "next": "Validate the need with the appropriate stakeholder."
+    },
+    {
+      "name": "Account D",
+      "segment": "Product-led SaaS",
+      "signal": "Pricing page revisit",
+      "fit": 94,
+      "intent": 94,
+      "stage": "Won",
+      "value": 42000,
+      "next": "Record the outcome and carry forward the learning."
+    },
+    {
+      "name": "Account E",
+      "segment": "Enterprise SaaS",
+      "signal": "Champion changed jobs",
+      "fit": 78,
+      "intent": 68,
+      "stage": "Qualified",
+      "value": 24000,
+      "next": "Resolve any missing context before outreach."
+    },
+    {
+      "name": "Account F",
+      "segment": "AI tools",
+      "signal": "New product launch",
+      "fit": 61,
+      "intent": 49,
+      "stage": "New",
+      "value": 13000,
+      "next": "Keep in research until the signal is stronger."
+    }
+  ],
+  "contact": {
+    "name": "CJ Wheelock",
+    "location": "New York, NY",
+    "email": "cjwheelock1@gmail.com",
+    "phone": "520-891-0750",
+    "linkedin": "https://www.linkedin.com/in/cjwheelock"
+  },
+  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
+  "proof": [
+    "$2.5M in development revenue at BeBop Sensors",
+    "124% of quota as an enterprise business development manager",
+    "Source-backed extraction and a local partnership CRM"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "name": "DualEntry",
+  "role": "GTM Engineer",
+  "accent": "#315bd1",
+  "product": "DualEntry builds an AI-native ERP for finance and accounting teams.",
+  "opportunity": "Identify finance teams with a reason to revisit the systems behind close.",
+  "hypothesis": "A company’s public growth or finance hiring can indicate a useful research moment, but it does not prove an ERP replacement project. Validate the finance workflow before outreach.",
+  "module": "Finance buyer activation",
+  "unit": "accounts",
+  "dimension": "Company stage",
+  "fit_label": "Finance fit",
+  "intent_label": "Change signal",
+  "action": "Review buying committee",
+  "stages": [
+    "Identify finance fit",
+    "Verify change signal",
+    "Map buying roles",
+    "Route follow-up"
+  ],
+  "automations": [
+    "Research a company’s public finance and growth context.",
+    "Flag incomplete CFO, controller and operations coverage.",
+    "Queue a human-reviewed follow-up when a lead stalls."
+  ],
+  "roadmap": [
+    "Map the existing lead lifecycle and finance-buyer segments.",
+    "Pilot an evidence-backed account and contact workflow with clear routing.",
+    "Measure follow-up completion and accepted meetings; refine with marketing."
+  ],
+  "fit": "CJ holds a B.S. in Accounting and combines enterprise sales experience with a local CRM, contact provenance and startup messaging work.",
+  "segments": [
+    "Scaling business",
+    "Multi-entity",
+    "Public company"
+  ],
+  "signals": [
+    "Finance hiring",
+    "New business unit",
+    "Reporting complexity"
+  ],
+  "values": [
+    24000,
+    45000,
+    18000,
+    85000,
+    38000,
+    56000
+  ],
+  "slug": "dualentry",
+  "resume": {
+    "docx": "CJ_Wheelock_DualEntry_GTM_Engineer.docx",
+    "pdf": "CJ_Wheelock_DualEntry_GTM_Engineer.pdf"
+  },
+  "accounts": [
+    {
+      "name": "Account A",
+      "segment": "Scaling business",
+      "signal": "Finance hiring",
+      "fit": 71,
+      "intent": 68,
+      "stage": "Discovery",
+      "value": 24000,
+      "next": "Confirm the source and assign an owner."
+    },
+    {
+      "name": "Account B",
+      "segment": "Multi-entity",
+      "signal": "New business unit",
+      "fit": 98,
+      "intent": 49,
+      "stage": "Won",
+      "value": 45000,
+      "next": "Review the context and choose a relevant next step."
+    },
+    {
+      "name": "Account C",
+      "segment": "Public company",
+      "signal": "Reporting complexity",
+      "fit": 82,
+      "intent": 88,
+      "stage": "Qualified",
+      "value": 18000,
+      "next": "Validate the need with the appropriate stakeholder."
+    },
+    {
+      "name": "Account D",
+      "segment": "Scaling business",
+      "signal": "Finance hiring",
+      "fit": 65,
+      "intent": 72,
+      "stage": "New",
+      "value": 85000,
+      "next": "Record the outcome and carry forward the learning."
+    },
+    {
+      "name": "Account E",
+      "segment": "Multi-entity",
+      "signal": "New business unit",
+      "fit": 96,
+      "intent": 54,
+      "stage": "New",
+      "value": 38000,
+      "next": "Resolve any missing context before outreach."
+    },
+    {
+      "name": "Account F",
+      "segment": "Public company",
+      "signal": "Reporting complexity",
+      "fit": 86,
+      "intent": 94,
+      "stage": "Qualified",
+      "value": 56000,
+      "next": "Keep in research until the signal is stronger."
+    }
+  ],
+  "contact": {
+    "name": "CJ Wheelock",
+    "location": "New York, NY",
+    "email": "cjwheelock1@gmail.com",
+    "phone": "520-891-0750",
+    "linkedin": "https://www.linkedin.com/in/cjwheelock"
+  },
+  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
+  "proof": [
+    "$2.5M in development revenue at BeBop Sensors",
+    "124% of quota as an enterprise business development manager",
+    "Source-backed extraction and a local partnership CRM"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "name": "Siro",
+  "role": "GTM Engineer",
+  "accent": "#bb5d32",
+  "product": "Siro analyzes field-sales conversations to support coaching, visibility and workflows.",
+  "opportunity": "Find field-sales teams where coaching context and manager visibility matter.",
+  "hypothesis": "Field-team size and a visible hiring push may help prioritize research, but a seller should validate the actual coaching workflow before outreach.",
+  "module": "Field team signal queue",
+  "unit": "organizations",
+  "dimension": "Field sales motion",
+  "fit_label": "Team fit",
+  "intent_label": "Growth signal",
+  "action": "Prepare seller context",
+  "stages": [
+    "Source organization",
+    "Verify field motion",
+    "Enrich decision roles",
+    "Route to seller"
+  ],
+  "automations": [
+    "Aggregate public hiring and team signals with timestamps.",
+    "Deduplicate organizations before routing.",
+    "Draft a rep-reviewed reason to engage, avoiding claims about current customers."
+  ],
+  "roadmap": [
+    "Document the target field-sales motions and baseline data quality.",
+    "Pilot account sourcing and enrichment for one vertical.",
+    "Measure seller acceptance and signal freshness; iterate with the team."
+  ],
+  "fit": "CJ’s enterprise sales and outbound work provides frontline context; the source-backed data pipeline and local CRM show hands-on workflow building.",
+  "segments": [
+    "Home improvement",
+    "Retail field teams",
+    "Automotive"
+  ],
+  "signals": [
+    "Field reps hiring",
+    "Manager expansion",
+    "New service market"
+  ],
+  "values": [
+    36000,
+    54000,
+    22000,
+    80000,
+    44000,
+    66000
+  ],
+  "slug": "siro",
+  "resume": {
+    "docx": "CJ_Wheelock_Siro_GTM_Engineer.docx",
+    "pdf": "CJ_Wheelock_Siro_GTM_Engineer.pdf"
+  },
+  "accounts": [
+    {
+      "name": "Account A",
+      "segment": "Home improvement",
+      "signal": "Field reps hiring",
+      "fit": 84,
+      "intent": 51,
+      "stage": "Qualified",
+      "value": 36000,
+      "next": "Confirm the source and assign an owner."
+    },
+    {
+      "name": "Account B",
+      "segment": "Retail field teams",
+      "signal": "Manager expansion",
+      "fit": 69,
+      "intent": 91,
+      "stage": "Discovery",
+      "value": 54000,
+      "next": "Review the context and choose a relevant next step."
+    },
+    {
+      "name": "Account C",
+      "segment": "Automotive",
+      "signal": "New service market",
+      "fit": 96,
+      "intent": 65,
+      "stage": "Won",
+      "value": 22000,
+      "next": "Validate the need with the appropriate stakeholder."
+    },
+    {
+      "name": "Account D",
+      "segment": "Home improvement",
+      "signal": "Field reps hiring",
+      "fit": 80,
+      "intent": 46,
+      "stage": "Qualified",
+      "value": 80000,
+      "next": "Record the outcome and carry forward the learning."
+    },
+    {
+      "name": "Account E",
+      "segment": "Retail field teams",
+      "signal": "Manager expansion",
+      "fit": 63,
+      "intent": 85,
+      "stage": "New",
+      "value": 44000,
+      "next": "Resolve any missing context before outreach."
+    },
+    {
+      "name": "Account F",
+      "segment": "Automotive",
+      "signal": "New service market",
+      "fit": 94,
+      "intent": 69,
+      "stage": "New",
+      "value": 66000,
+      "next": "Keep in research until the signal is stronger."
+    }
+  ],
+  "contact": {
+    "name": "CJ Wheelock",
+    "location": "New York, NY",
+    "email": "cjwheelock1@gmail.com",
+    "phone": "520-891-0750",
+    "linkedin": "https://www.linkedin.com/in/cjwheelock"
+  },
+  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
+  "proof": [
+    "$2.5M in development revenue at BeBop Sensors",
+    "124% of quota as an enterprise business development manager",
+    "Source-backed extraction and a local partnership CRM"
+  ]
+}

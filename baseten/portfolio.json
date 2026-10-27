@@ -1,0 +1,129 @@
+{
+  "name": "Baseten",
+  "role": "GTM Engineer",
+  "accent": "#176d73",
+  "product": "Baseten provides infrastructure and developer tools for deploying and serving AI models.",
+  "opportunity": "Connect an inference workload to the right technical and commercial next step.",
+  "hypothesis": "A generic account score may miss the workload details that matter to an inference buyer. Capturing deployment maturity and performance needs could help a rep and solutions engineer qualify together.",
+  "module": "Inference qualification desk",
+  "unit": "workloads",
+  "dimension": "Workload type",
+  "fit_label": "Technical fit",
+  "intent_label": "Deployment signal",
+  "action": "Prepare technical brief",
+  "stages": [
+    "Identify workload",
+    "Enrich technical context",
+    "Qualify requirements",
+    "Coordinate next step"
+  ],
+  "automations": [
+    "Summarize publicly sourced workload context for review.",
+    "Flag missing latency, throughput and deployment details.",
+    "Prepare a rep-reviewed handoff to a solutions engineer."
+  ],
+  "roadmap": [
+    "Interview sellers and solutions engineers; map qualification fields and sources.",
+    "Pilot a workload intelligence brief for a narrow account cohort.",
+    "Measure adoption, information gaps and qualified handoffs; improve the model."
+  ],
+  "fit": "CJ has sold technical products across engineering and business stakeholders and built AI-assisted extraction workflows with explicit data-quality checks.",
+  "segments": [
+    "Model serving",
+    "AI application",
+    "Enterprise platform"
+  ],
+  "signals": [
+    "Production launch",
+    "Scaling inference",
+    "Technical team expansion"
+  ],
+  "values": [
+    48000,
+    96000,
+    36000,
+    185000,
+    72000,
+    120000
+  ],
+  "slug": "baseten",
+  "resume": {
+    "docx": "CJ_Wheelock_Baseten_GTM_Engineer.docx",
+    "pdf": "CJ_Wheelock_Baseten_GTM_Engineer.pdf"
+  },
+  "accounts": [
+    {
+      "name": "Account A",
+      "segment": "Model serving",
+      "signal": "Production launch",
+      "fit": 94,
+      "intent": 85,
+      "stage": "Won",
+      "value": 48000,
+      "next": "Confirm the source and assign an owner."
+    },
+    {
+      "name": "Account B",
+      "segment": "AI application",
+      "signal": "Scaling inference",
+      "fit": 78,
+      "intent": 69,
+      "stage": "Qualified",
+      "value": 96000,
+      "next": "Review the context and choose a relevant next step."
+    },
+    {
+      "name": "Account C",
+      "segment": "Enterprise platform",
+      "signal": "Technical team expansion",
+      "fit": 61,
+      "intent": 51,
+      "stage": "New",
+      "value": 36000,
+      "next": "Validate the need with the appropriate stakeholder."
+    },
+    {
+      "name": "Account D",
+      "segment": "Model serving",
+      "signal": "Production launch",
+      "fit": 92,
+      "intent": 91,
+      "stage": "New",
+      "value": 185000,
+      "next": "Record the outcome and carry forward the learning."
+    },
+    {
+      "name": "Account E",
+      "segment": "AI application",
+      "signal": "Scaling inference",
+      "fit": 82,
+      "intent": 65,
+      "stage": "Qualified",
+      "value": 72000,
+      "next": "Resolve any missing context before outreach."
+    },
+    {
+      "name": "Account F",
+      "segment": "Enterprise platform",
+      "signal": "Technical team expansion",
+      "fit": 67,
+      "intent": 46,
+      "stage": "Discovery",
+      "value": 120000,
+      "next": "Keep in research until the signal is stronger."
+    }
+  ],
+  "contact": {
+    "name": "CJ Wheelock",
+    "location": "New York, NY",
+    "email": "cjwheelock1@gmail.com",
+    "phone": "520-891-0750",
+    "linkedin": "https://www.linkedin.com/in/cjwheelock"
+  },
+  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
+  "proof": [
+    "$2.5M in development revenue at BeBop Sensors",
+    "124% of quota as an enterprise business development manager",
+    "Source-backed extraction and a local partnership CRM"
+  ]
+}

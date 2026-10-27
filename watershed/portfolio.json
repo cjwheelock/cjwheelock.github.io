@@ -1,0 +1,129 @@
+{
+  "name": "Watershed",
+  "role": "GTM Engineer",
+  "accent": "#147d70",
+  "product": "Watershed helps enterprises measure, report and reduce environmental impact.",
+  "opportunity": "Map sustainability needs to the people who can move an enterprise evaluation.",
+  "hypothesis": "A reporting or supplier signal is most useful when paired with the right sustainability, finance and operational stakeholders. A sourced account map could support a more relevant conversation.",
+  "module": "Sustainability buying committee",
+  "unit": "accounts",
+  "dimension": "Sector",
+  "fit_label": "Enterprise fit",
+  "intent_label": "Research signal",
+  "action": "Map stakeholders",
+  "stages": [
+    "Identify account",
+    "Verify public signal",
+    "Map buying roles",
+    "Prepare account brief"
+  ],
+  "automations": [
+    "Capture a dated source for each company signal.",
+    "Suggest possible stakeholder roles, not named people without evidence.",
+    "Flag where compliance claims need specialist verification."
+  ],
+  "roadmap": [
+    "Map a narrow enterprise segment and interview the GTM team about current account research.",
+    "Pilot source-backed account maps with sustainability and finance roles.",
+    "Review seller use and qualified conversations; improve coverage and freshness."
+  ],
+  "fit": "Enterprise technical sales across engineering and business stakeholders pairs with source-backed research and contact provenance in CJ’s product work.",
+  "segments": [
+    "Manufacturing",
+    "Retail",
+    "Financial services"
+  ],
+  "signals": [
+    "Supplier reporting",
+    "Sustainability disclosure",
+    "Procurement initiative"
+  ],
+  "values": [
+    85000,
+    120000,
+    62000,
+    145000,
+    78000,
+    96000
+  ],
+  "slug": "watershed",
+  "resume": {
+    "docx": "CJ_Wheelock_Watershed_GTM_Engineer.docx",
+    "pdf": "CJ_Wheelock_Watershed_GTM_Engineer.pdf"
+  },
+  "accounts": [
+    {
+      "name": "Account A",
+      "segment": "Manufacturing",
+      "signal": "Supplier reporting",
+      "fit": 65,
+      "intent": 67,
+      "stage": "New",
+      "value": 85000,
+      "next": "Confirm the source and assign an owner."
+    },
+    {
+      "name": "Account B",
+      "segment": "Retail",
+      "signal": "Sustainability disclosure",
+      "fit": 96,
+      "intent": 48,
+      "stage": "New",
+      "value": 120000,
+      "next": "Review the context and choose a relevant next step."
+    },
+    {
+      "name": "Account C",
+      "segment": "Financial services",
+      "signal": "Procurement initiative",
+      "fit": 86,
+      "intent": 87,
+      "stage": "Qualified",
+      "value": 62000,
+      "next": "Validate the need with the appropriate stakeholder."
+    },
+    {
+      "name": "Account D",
+      "segment": "Manufacturing",
+      "signal": "Supplier reporting",
+      "fit": 71,
+      "intent": 71,
+      "stage": "Discovery",
+      "value": 145000,
+      "next": "Record the outcome and carry forward the learning."
+    },
+    {
+      "name": "Account E",
+      "segment": "Retail",
+      "signal": "Sustainability disclosure",
+      "fit": 98,
+      "intent": 53,
+      "stage": "Won",
+      "value": 78000,
+      "next": "Resolve any missing context before outreach."
+    },
+    {
+      "name": "Account F",
+      "segment": "Financial services",
+      "signal": "Procurement initiative",
+      "fit": 82,
+      "intent": 93,
+      "stage": "Qualified",
+      "value": 96000,
+      "next": "Keep in research until the signal is stronger."
+    }
+  ],
+  "contact": {
+    "name": "CJ Wheelock",
+    "location": "New York, NY",
+    "email": "cjwheelock1@gmail.com",
+    "phone": "520-891-0750",
+    "linkedin": "https://www.linkedin.com/in/cjwheelock"
+  },
+  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
+  "proof": [
+    "$2.5M in development revenue at BeBop Sensors",
+    "124% of quota as an enterprise business development manager",
+    "Source-backed extraction and a local partnership CRM"
+  ]
+}

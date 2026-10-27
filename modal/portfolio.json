@@ -1,0 +1,129 @@
+{
+  "name": "Modal",
+  "role": "GTM Engineer, Data Platform",
+  "accent": "#6645d1",
+  "product": "Modal provides cloud infrastructure for compute-intensive AI workloads, including GPU inference and sandboxes.",
+  "opportunity": "Resolve people, workspaces and organizations into a trustworthy account graph.",
+  "hypothesis": "When a researcher, workspace and company are not connected, usage signals can be hard to turn into an accurate owner or relevant conversation. A source-aware identity layer could make that context usable.",
+  "module": "Identity and workload graph",
+  "unit": "workspaces",
+  "dimension": "Workload",
+  "fit_label": "Identity confidence",
+  "intent_label": "Usage signal",
+  "action": "Review match",
+  "stages": [
+    "Observe workspace",
+    "Resolve identity",
+    "Connect workload",
+    "Route account context"
+  ],
+  "automations": [
+    "Suggest company matches with source and confidence attached.",
+    "Flag conflicting affiliations for review.",
+    "Surface material workload changes without treating them as buying intent automatically."
+  ],
+  "roadmap": [
+    "Map user, workspace and account sources; define identity and lineage rules.",
+    "Prototype a reviewed organization graph with deduplication and freshness checks.",
+    "Add workload signals and reconcile reporting with the data and GTM teams."
+  ],
+  "fit": "The Hey Sammy pipeline combines structured extraction, validation, deduplication and resumable jobs; the local partnership CRM retains contact provenance.",
+  "segments": [
+    "Inference",
+    "Model training",
+    "Agent sandbox"
+  ],
+  "signals": [
+    "Workspace activity rises",
+    "New GPU workload",
+    "Multiple teams observed"
+  ],
+  "values": [
+    65000,
+    92000,
+    27000,
+    140000,
+    51000,
+    78000
+  ],
+  "slug": "modal",
+  "resume": {
+    "docx": "CJ_Wheelock_Modal_GTM_Engineer_Data_Platform.docx",
+    "pdf": "CJ_Wheelock_Modal_GTM_Engineer_Data_Platform.pdf"
+  },
+  "accounts": [
+    {
+      "name": "Workspace A",
+      "segment": "Inference",
+      "signal": "Workspace activity rises",
+      "fit": 84,
+      "intent": 53,
+      "stage": "Qualified",
+      "value": 65000,
+      "next": "Confirm the source and assign an owner."
+    },
+    {
+      "name": "Workspace B",
+      "segment": "Model training",
+      "signal": "New GPU workload",
+      "fit": 69,
+      "intent": 93,
+      "stage": "Discovery",
+      "value": 92000,
+      "next": "Review the context and choose a relevant next step."
+    },
+    {
+      "name": "Workspace C",
+      "segment": "Agent sandbox",
+      "signal": "Multiple teams observed",
+      "fit": 96,
+      "intent": 67,
+      "stage": "Won",
+      "value": 27000,
+      "next": "Validate the need with the appropriate stakeholder."
+    },
+    {
+      "name": "Workspace D",
+      "segment": "Inference",
+      "signal": "Workspace activity rises",
+      "fit": 80,
+      "intent": 48,
+      "stage": "Qualified",
+      "value": 140000,
+      "next": "Record the outcome and carry forward the learning."
+    },
+    {
+      "name": "Workspace E",
+      "segment": "Model training",
+      "signal": "New GPU workload",
+      "fit": 63,
+      "intent": 87,
+      "stage": "New",
+      "value": 51000,
+      "next": "Resolve any missing context before outreach."
+    },
+    {
+      "name": "Workspace F",
+      "segment": "Agent sandbox",
+      "signal": "Multiple teams observed",
+      "fit": 94,
+      "intent": 71,
+      "stage": "New",
+      "value": 78000,
+      "next": "Keep in research until the signal is stronger."
+    }
+  ],
+  "contact": {
+    "name": "CJ Wheelock",
+    "location": "New York, NY",
+    "email": "cjwheelock1@gmail.com",
+    "phone": "520-891-0750",
+    "linkedin": "https://www.linkedin.com/in/cjwheelock"
+  },
+  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
+  "proof": [
+    "$2.5M in development revenue at BeBop Sensors",
+    "124% of quota as an enterprise business development manager",
+    "Source-backed extraction and a local partnership CRM"
+  ]
+}

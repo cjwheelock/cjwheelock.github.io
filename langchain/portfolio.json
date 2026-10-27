@@ -1,0 +1,129 @@
+{
+  "name": "LangChain",
+  "role": "GTM Engineer",
+  "accent": "#2d7d67",
+  "product": "LangChain provides open-source agent frameworks and the LangSmith platform for building and operating agents.",
+  "opportunity": "Turn recurring onboarding and support friction into evaluated, reviewable agent workflows.",
+  "hypothesis": "Repeated implementation questions can reveal both a support opportunity and an adoption barrier. A scoped agent with evaluations and a human escalation path could help teams resolve them more consistently.",
+  "module": "Agent support triage",
+  "unit": "workspaces",
+  "dimension": "Adoption stage",
+  "fit_label": "Workspace fit",
+  "intent_label": "Friction signal",
+  "action": "Review support path",
+  "stages": [
+    "Capture question",
+    "Retrieve trusted guidance",
+    "Evaluate response",
+    "Escalate or resolve"
+  ],
+  "automations": [
+    "Retrieve relevant documentation and include sources in a draft answer.",
+    "Evaluate groundedness on a small reviewed set before release.",
+    "Escalate uncertain responses and feed failures back into the evaluation set."
+  ],
+  "roadmap": [
+    "Review common onboarding questions and define a human baseline.",
+    "Build a narrow retrieval and evaluation pilot with an explicit escalation path.",
+    "Measure resolution quality and adoption; add coverage only after review."
+  ],
+  "fit": "CJ built a source-backed extraction pipeline with validation and bounded retries, and has evaluated AI models for source grounding and extraction cost.",
+  "segments": [
+    "Getting started",
+    "Evaluation setup",
+    "Production rollout"
+  ],
+  "signals": [
+    "Onboarding question",
+    "Trace interpretation",
+    "Deployment question"
+  ],
+  "values": [
+    8000,
+    16000,
+    5000,
+    50000,
+    22000,
+    32000
+  ],
+  "slug": "langchain",
+  "resume": {
+    "docx": "CJ_Wheelock_LangChain_GTM_Engineer.docx",
+    "pdf": "CJ_Wheelock_LangChain_GTM_Engineer.pdf"
+  },
+  "accounts": [
+    {
+      "name": "Workspace A",
+      "segment": "Getting started",
+      "signal": "Onboarding question",
+      "fit": 94,
+      "intent": 87,
+      "stage": "Won",
+      "value": 8000,
+      "next": "Confirm the source and assign an owner."
+    },
+    {
+      "name": "Workspace B",
+      "segment": "Evaluation setup",
+      "signal": "Trace interpretation",
+      "fit": 78,
+      "intent": 71,
+      "stage": "Qualified",
+      "value": 16000,
+      "next": "Review the context and choose a relevant next step."
+    },
+    {
+      "name": "Workspace C",
+      "segment": "Production rollout",
+      "signal": "Deployment question",
+      "fit": 61,
+      "intent": 53,
+      "stage": "New",
+      "value": 5000,
+      "next": "Validate the need with the appropriate stakeholder."
+    },
+    {
+      "name": "Workspace D",
+      "segment": "Getting started",
+      "signal": "Onboarding question",
+      "fit": 92,
+      "intent": 93,
+      "stage": "New",
+      "value": 50000,
+      "next": "Record the outcome and carry forward the learning."
+    },
+    {
+      "name": "Workspace E",
+      "segment": "Evaluation setup",
+      "signal": "Trace interpretation",
+      "fit": 82,
+      "intent": 67,
+      "stage": "Qualified",
+      "value": 22000,
+      "next": "Resolve any missing context before outreach."
+    },
+    {
+      "name": "Workspace F",
+      "segment": "Production rollout",
+      "signal": "Deployment question",
+      "fit": 67,
+      "intent": 48,
+      "stage": "Discovery",
+      "value": 32000,
+      "next": "Keep in research until the signal is stronger."
+    }
+  ],
+  "contact": {
+    "name": "CJ Wheelock",
+    "location": "New York, NY",
+    "email": "cjwheelock1@gmail.com",
+    "phone": "520-891-0750",
+    "linkedin": "https://www.linkedin.com/in/cjwheelock"
+  },
+  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
+  "proof": [
+    "$2.5M in development revenue at BeBop Sensors",
+    "124% of quota as an enterprise business development manager",
+    "Source-backed extraction and a local partnership CRM"
+  ]
+}

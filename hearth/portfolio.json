@@ -1,0 +1,129 @@
+{
+  "name": "Hearth",
+  "role": "Founding GTM Engineer",
+  "accent": "#d27340",
+  "product": "Hearth offers software for home-improvement businesses, including financing and sales workflows.",
+  "opportunity": "Find the contractor leads most likely to benefit, then make the first handoff count.",
+  "hypothesis": "A slow or incomplete inbound handoff may cost an interested contractor a timely conversation. A focused routing pilot could show whether faster follow-up improves qualified appointments.",
+  "module": "Contractor response desk",
+  "unit": "contractor leads",
+  "dimension": "Trade",
+  "fit_label": "Contractor fit",
+  "intent_label": "Lead urgency",
+  "action": "Route for follow-up",
+  "stages": [
+    "Capture inquiry",
+    "Identify trade and need",
+    "Prioritize response",
+    "Measure appointment"
+  ],
+  "automations": [
+    "Classify the stated trade and need from the inquiry.",
+    "Flag leads missing an owner or a follow-up.",
+    "Summarize context for the rep; keep contact decisions human-reviewed."
+  ],
+  "roadmap": [
+    "Listen to the sales floor and measure the existing inbound handoff.",
+    "Pilot trade-aware routing and next-best action on one lead cohort.",
+    "Compare qualified appointments and response times; expand only if the result holds."
+  ],
+  "fit": "CJ has built role-based inquiry and matching workflows for a marketplace and has first-hand experience selling, closing and building products.",
+  "segments": [
+    "Roofing",
+    "HVAC",
+    "Remodeling"
+  ],
+  "signals": [
+    "Financing inquiry",
+    "Quote workflow interest",
+    "Missed-call question"
+  ],
+  "values": [
+    2400,
+    3600,
+    1800,
+    4800,
+    3000,
+    2100
+  ],
+  "slug": "hearth",
+  "resume": {
+    "docx": "CJ_Wheelock_Hearth_Founding_GTM_Engineer.docx",
+    "pdf": "CJ_Wheelock_Hearth_Founding_GTM_Engineer.pdf"
+  },
+  "accounts": [
+    {
+      "name": "Account A",
+      "segment": "Roofing",
+      "signal": "Financing inquiry",
+      "fit": 80,
+      "intent": 54,
+      "stage": "Qualified",
+      "value": 2400,
+      "next": "Confirm the source and assign an owner."
+    },
+    {
+      "name": "Account B",
+      "segment": "HVAC",
+      "signal": "Quote workflow interest",
+      "fit": 63,
+      "intent": 94,
+      "stage": "New",
+      "value": 3600,
+      "next": "Review the context and choose a relevant next step."
+    },
+    {
+      "name": "Account C",
+      "segment": "Remodeling",
+      "signal": "Missed-call question",
+      "fit": 94,
+      "intent": 68,
+      "stage": "New",
+      "value": 1800,
+      "next": "Validate the need with the appropriate stakeholder."
+    },
+    {
+      "name": "Account D",
+      "segment": "Roofing",
+      "signal": "Financing inquiry",
+      "fit": 84,
+      "intent": 49,
+      "stage": "Qualified",
+      "value": 4800,
+      "next": "Record the outcome and carry forward the learning."
+    },
+    {
+      "name": "Account E",
+      "segment": "HVAC",
+      "signal": "Quote workflow interest",
+      "fit": 69,
+      "intent": 88,
+      "stage": "Discovery",
+      "value": 3000,
+      "next": "Resolve any missing context before outreach."
+    },
+    {
+      "name": "Account F",
+      "segment": "Remodeling",
+      "signal": "Missed-call question",
+      "fit": 96,
+      "intent": 72,
+      "stage": "Won",
+      "value": 2100,
+      "next": "Keep in research until the signal is stronger."
+    }
+  ],
+  "contact": {
+    "name": "CJ Wheelock",
+    "location": "New York, NY",
+    "email": "cjwheelock1@gmail.com",
+    "phone": "520-891-0750",
+    "linkedin": "https://www.linkedin.com/in/cjwheelock"
+  },
+  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
+  "proof": [
+    "$2.5M in development revenue at BeBop Sensors",
+    "124% of quota as an enterprise business development manager",
+    "Source-backed extraction and a local partnership CRM"
+  ]
+}

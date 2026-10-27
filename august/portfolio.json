@@ -1,0 +1,129 @@
+{
+  "name": "August",
+  "role": "GTM Engineer",
+  "accent": "#5048a8",
+  "product": "August partners with law firms on AI-enabled legal work and workflows.",
+  "opportunity": "Prioritize firms where an AI-enabled delivery model could have a clear use case.",
+  "hypothesis": "Firm focus, practice mix and publicly visible growth can help a rep choose a relevant conversation. A sourced firm brief could make outreach more specific without guessing at confidential matters.",
+  "module": "Law firm opportunity map",
+  "unit": "firms",
+  "dimension": "Practice focus",
+  "fit_label": "Firm fit",
+  "intent_label": "Public signal",
+  "action": "Build firm brief",
+  "stages": [
+    "Segment firms",
+    "Research public context",
+    "Map practice leaders",
+    "Review outreach brief"
+  ],
+  "automations": [
+    "Summarize public practice and growth information with sources.",
+    "Suggest stakeholder roles for a rep to verify.",
+    "Draft a proposed angle for human review without client or matter assumptions."
+  ],
+  "roadmap": [
+    "Define the first firm segment and gather feedback from the GTM team.",
+    "Build source-backed firm briefs and a human-reviewed prospecting workflow.",
+    "Track which conversations advance and refine the targeting model."
+  ],
+  "fit": "CJ’s background includes enterprise prospecting, messaging and negotiation, supported by a local CRM with contact provenance and campaign drafts.",
+  "segments": [
+    "Corporate law",
+    "Litigation",
+    "Commercial law"
+  ],
+  "signals": [
+    "Practice expansion",
+    "New office",
+    "Technology initiative"
+  ],
+  "values": [
+    80000,
+    115000,
+    60000,
+    160000,
+    95000,
+    70000
+  ],
+  "slug": "august",
+  "resume": {
+    "docx": "CJ_Wheelock_August_GTM_Engineer.docx",
+    "pdf": "CJ_Wheelock_August_GTM_Engineer.pdf"
+  },
+  "accounts": [
+    {
+      "name": "Account A",
+      "segment": "Corporate law",
+      "signal": "Practice expansion",
+      "fit": 92,
+      "intent": 86,
+      "stage": "New",
+      "value": 80000,
+      "next": "Confirm the source and assign an owner."
+    },
+    {
+      "name": "Account B",
+      "segment": "Litigation",
+      "signal": "New office",
+      "fit": 82,
+      "intent": 70,
+      "stage": "Qualified",
+      "value": 115000,
+      "next": "Review the context and choose a relevant next step."
+    },
+    {
+      "name": "Account C",
+      "segment": "Commercial law",
+      "signal": "Technology initiative",
+      "fit": 67,
+      "intent": 52,
+      "stage": "Discovery",
+      "value": 60000,
+      "next": "Validate the need with the appropriate stakeholder."
+    },
+    {
+      "name": "Account D",
+      "segment": "Corporate law",
+      "signal": "Practice expansion",
+      "fit": 94,
+      "intent": 92,
+      "stage": "Won",
+      "value": 160000,
+      "next": "Record the outcome and carry forward the learning."
+    },
+    {
+      "name": "Account E",
+      "segment": "Litigation",
+      "signal": "New office",
+      "fit": 78,
+      "intent": 66,
+      "stage": "Qualified",
+      "value": 95000,
+      "next": "Resolve any missing context before outreach."
+    },
+    {
+      "name": "Account F",
+      "segment": "Commercial law",
+      "signal": "Technology initiative",
+      "fit": 61,
+      "intent": 47,
+      "stage": "New",
+      "value": 70000,
+      "next": "Keep in research until the signal is stronger."
+    }
+  ],
+  "contact": {
+    "name": "CJ Wheelock",
+    "location": "New York, NY",
+    "email": "cjwheelock1@gmail.com",
+    "phone": "520-891-0750",
+    "linkedin": "https://www.linkedin.com/in/cjwheelock"
+  },
+  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
+  "proof": [
+    "$2.5M in development revenue at BeBop Sensors",
+    "124% of quota as an enterprise business development manager",
+    "Source-backed extraction and a local partnership CRM"
+  ]
+}

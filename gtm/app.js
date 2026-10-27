@@ -5,32 +5,34 @@
  if(!Object.hasOwn(names,slug)) return;
  document.body.dataset.company=slug;
  document.title='GTM portfolio for '+names[slug]+' · CJ Wheelock';
- const api=(window.GTM_API_ORIGIN||'').replace(/\/$/,'');
  const gate=document.getElementById('gate'), shell=document.getElementById('shell');
  const form=document.getElementById('login'), error=document.getElementById('error'), password=document.getElementById('password');
  document.getElementById('company-name').textContent=names[slug];
- let token='', data=null, chosen='', reviewed=new Set();
+ const sessionKey='gtm-portfolio-unlocked-'+slug;
+ let data=null, chosen='', reviewed=new Set();
  const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const money=n=>'$'+Number(n).toLocaleString('en-US');
- const request=async (route,options={})=>{
-   const headers={...(options.headers||{})};
-   if(token) headers.Authorization='Bearer '+token;
-   return fetch(api+route,{...options,headers,cache:'no-store',referrerPolicy:'no-referrer'});
- };
+ async function openDashboard(){
+   const dashboard=await fetch('/'+slug+'/portfolio.json',{cache:'no-store'});
+   if(!dashboard.ok) throw new Error('Unable to load this page.');
+   data=await dashboard.json();
+   if(data.slug!==slug) throw new Error('Unable to load this page.');
+   password.value='';render();
+   gate.classList.add('hidden');shell.classList.remove('hidden');
+   document.getElementById('heading').focus({preventScroll:true});
+ }
  async function signIn(event){
    event.preventDefault(); error.textContent='';
    const submit=form.querySelector('button');submit.disabled=true;submit.textContent='Opening…';
    try{
-     const response=await request('/api/session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({company:slug,password:password.value})});
-     const result=await response.json();
-     if(!response.ok) throw new Error(result.error||'Unable to open this page.');
-     token=result.token;
-     const dashboard=await request('/api/'+slug+'/dashboard');
-     if(!dashboard.ok) throw new Error('Unable to load this page.');
-     data=await dashboard.json();password.value='';render();
-     gate.classList.add('hidden');shell.classList.remove('hidden');
-     document.getElementById('heading').focus({preventScroll:true});
-   }catch(err){token='';error.textContent=err.message||'Unable to connect. Please try again.'}
+     // Like the Trunk Tools gate, this is a browser-side courtesy gate.
+     const input=new TextEncoder().encode(slug+':'+password.value.trim().toUpperCase());
+     const bytes=new Uint8Array(await crypto.subtle.digest('SHA-256',input));
+     const hash=Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('');
+     if(hash!==window.GTM_GATE_HASHES?.[slug]) throw new Error('Incorrect password.');
+     await openDashboard();
+     try{sessionStorage.setItem(sessionKey,'1')}catch(_){}
+   }catch(err){error.textContent=err.message||'Unable to load this page.'}
    finally{submit.disabled=false;submit.textContent='Open'}
  }
  form.addEventListener('submit',signIn);
@@ -118,7 +120,8 @@
  }
  async function download(kind){
    const status=document.getElementById('download-status');status.textContent='Preparing download…';
-   try{const response=await request('/api/'+slug+'/resume?format='+kind);if(!response.ok)throw new Error('The résumé is not available yet.');const blob=await response.blob(),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=data.resume[kind];document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent=''}catch(err){status.textContent=err.message}
+   try{const response=await fetch('/'+slug+'/resume/'+encodeURIComponent(data.resume[kind]));if(!response.ok)throw new Error('The résumé is not available yet.');const blob=await response.blob(),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=data.resume[kind];document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent=''}catch(err){status.textContent=err.message}
  }
- async function signOut(){try{await request('/api/'+slug+'/logout',{method:'POST'})}catch(_){}token='';data=null;chosen='';reviewed.clear();shell.classList.add('hidden');shell.innerHTML='';gate.classList.remove('hidden');password.focus()}
+ function signOut(){try{sessionStorage.removeItem(sessionKey)}catch(_){}data=null;chosen='';reviewed.clear();shell.classList.add('hidden');shell.innerHTML='';gate.classList.remove('hidden');password.focus()}
+ try{if(sessionStorage.getItem(sessionKey)==='1')openDashboard().catch(()=>{sessionStorage.removeItem(sessionKey);error.textContent='Unable to load this page.'})}catch(_){}
 })();

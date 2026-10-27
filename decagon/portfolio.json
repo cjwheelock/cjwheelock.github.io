@@ -1,0 +1,129 @@
+{
+  "name": "Decagon",
+  "role": "GTM Analytics Engineer",
+  "accent": "#6c46c2",
+  "product": "Decagon builds AI agents for customer interactions across support channels.",
+  "opportunity": "Give revenue leaders one traceable definition of pipeline and forecast.",
+  "hypothesis": "Different interpretations of stages and account ownership can obscure conversion and forecast changes. A modeled history with clear definitions could make decisions easier to audit.",
+  "module": "Pipeline definition studio",
+  "unit": "opportunities",
+  "dimension": "Support channel",
+  "fit_label": "Account fit",
+  "intent_label": "Opportunity signal",
+  "action": "Inspect stage history",
+  "stages": [
+    "Ingest opportunity",
+    "Standardize stage",
+    "Reconcile changes",
+    "Explain forecast"
+  ],
+  "automations": [
+    "Attach lineage and freshness to each metric.",
+    "Identify missing stage transitions and duplicates.",
+    "Summarize forecast movement for an analyst to verify."
+  ],
+  "roadmap": [
+    "Inventory pipeline definitions, source systems and reporting discrepancies.",
+    "Model opportunity history and reconcile a small set of core funnel metrics.",
+    "Add tests, ownership and forecast-change explanations with RevOps."
+  ],
+  "fit": "Experience building structured source-backed pipelines and a provenance-aware local CRM complements a decade of enterprise sales and partnerships.",
+  "segments": [
+    "Voice support",
+    "Digital support",
+    "Multichannel"
+  ],
+  "signals": [
+    "High support volume",
+    "New service operation",
+    "Enterprise expansion"
+  ],
+  "values": [
+    140000,
+    220000,
+    85000,
+    310000,
+    110000,
+    180000
+  ],
+  "slug": "decagon",
+  "resume": {
+    "docx": "CJ_Wheelock_Decagon_GTM_Analytics_Engineer.docx",
+    "pdf": "CJ_Wheelock_Decagon_GTM_Analytics_Engineer.pdf"
+  },
+  "accounts": [
+    {
+      "name": "Account A",
+      "segment": "Voice support",
+      "signal": "High support volume",
+      "fit": 71,
+      "intent": 66,
+      "stage": "Discovery",
+      "value": 140000,
+      "next": "Confirm the source and assign an owner."
+    },
+    {
+      "name": "Account B",
+      "segment": "Digital support",
+      "signal": "New service operation",
+      "fit": 98,
+      "intent": 47,
+      "stage": "Won",
+      "value": 220000,
+      "next": "Review the context and choose a relevant next step."
+    },
+    {
+      "name": "Account C",
+      "segment": "Multichannel",
+      "signal": "Enterprise expansion",
+      "fit": 82,
+      "intent": 86,
+      "stage": "Qualified",
+      "value": 85000,
+      "next": "Validate the need with the appropriate stakeholder."
+    },
+    {
+      "name": "Account D",
+      "segment": "Voice support",
+      "signal": "High support volume",
+      "fit": 65,
+      "intent": 70,
+      "stage": "New",
+      "value": 310000,
+      "next": "Record the outcome and carry forward the learning."
+    },
+    {
+      "name": "Account E",
+      "segment": "Digital support",
+      "signal": "New service operation",
+      "fit": 96,
+      "intent": 52,
+      "stage": "New",
+      "value": 110000,
+      "next": "Resolve any missing context before outreach."
+    },
+    {
+      "name": "Account F",
+      "segment": "Multichannel",
+      "signal": "Enterprise expansion",
+      "fit": 86,
+      "intent": 92,
+      "stage": "Qualified",
+      "value": 180000,
+      "next": "Keep in research until the signal is stronger."
+    }
+  ],
+  "contact": {
+    "name": "CJ Wheelock",
+    "location": "New York, NY",
+    "email": "cjwheelock1@gmail.com",
+    "phone": "520-891-0750",
+    "linkedin": "https://www.linkedin.com/in/cjwheelock"
+  },
+  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
+  "proof": [
+    "$2.5M in development revenue at BeBop Sensors",
+    "124% of quota as an enterprise business development manager",
+    "Source-backed extraction and a local partnership CRM"
+  ]
+}
