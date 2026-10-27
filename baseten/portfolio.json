@@ -1,118 +1,11 @@
 {
+  "slug": "baseten",
   "name": "Baseten",
   "role": "GTM Engineer",
-  "accent": "#176d73",
-  "product": "Baseten provides infrastructure and developer tools for deploying and serving AI models.",
-  "opportunity": "Connect an inference workload to the right technical and commercial next step.",
-  "hypothesis": "A generic account score may miss the workload details that matter to an inference buyer. Capturing deployment maturity and performance needs could help a rep and solutions engineer qualify together.",
-  "module": "Inference qualification desk",
-  "unit": "workloads",
-  "dimension": "Workload type",
-  "fit_label": "Technical fit",
-  "intent_label": "Deployment signal",
-  "action": "Prepare technical brief",
-  "stages": [
-    "Identify workload",
-    "Enrich technical context",
-    "Qualify requirements",
-    "Coordinate next step"
-  ],
-  "automations": [
-    "Summarize publicly sourced workload context for review.",
-    "Flag missing latency, throughput and deployment details.",
-    "Prepare a rep-reviewed handoff to a solutions engineer."
-  ],
-  "roadmap": [
-    "Interview sellers and solutions engineers; map qualification fields and sources.",
-    "Pilot a workload intelligence brief for a narrow account cohort.",
-    "Measure adoption, information gaps and qualified handoffs; improve the model."
-  ],
-  "fit": "CJ has sold technical products across engineering and business stakeholders and built AI-assisted extraction workflows with explicit data-quality checks.",
-  "segments": [
-    "Model serving",
-    "AI application",
-    "Enterprise platform"
-  ],
-  "signals": [
-    "Production launch",
-    "Scaling inference",
-    "Technical team expansion"
-  ],
-  "values": [
-    48000,
-    96000,
-    36000,
-    185000,
-    72000,
-    120000
-  ],
-  "slug": "baseten",
   "resume": {
     "docx": "CJ_Wheelock_Baseten_GTM_Engineer.docx",
     "pdf": "CJ_Wheelock_Baseten_GTM_Engineer.pdf"
   },
-  "accounts": [
-    {
-      "name": "Account A",
-      "segment": "Model serving",
-      "signal": "Production launch",
-      "fit": 94,
-      "intent": 85,
-      "stage": "Won",
-      "value": 48000,
-      "next": "Confirm the source and assign an owner."
-    },
-    {
-      "name": "Account B",
-      "segment": "AI application",
-      "signal": "Scaling inference",
-      "fit": 78,
-      "intent": 69,
-      "stage": "Qualified",
-      "value": 96000,
-      "next": "Review the context and choose a relevant next step."
-    },
-    {
-      "name": "Account C",
-      "segment": "Enterprise platform",
-      "signal": "Technical team expansion",
-      "fit": 61,
-      "intent": 51,
-      "stage": "New",
-      "value": 36000,
-      "next": "Validate the need with the appropriate stakeholder."
-    },
-    {
-      "name": "Account D",
-      "segment": "Model serving",
-      "signal": "Production launch",
-      "fit": 92,
-      "intent": 91,
-      "stage": "New",
-      "value": 185000,
-      "next": "Record the outcome and carry forward the learning."
-    },
-    {
-      "name": "Account E",
-      "segment": "AI application",
-      "signal": "Scaling inference",
-      "fit": 82,
-      "intent": 65,
-      "stage": "Qualified",
-      "value": 72000,
-      "next": "Resolve any missing context before outreach."
-    },
-    {
-      "name": "Account F",
-      "segment": "Enterprise platform",
-      "signal": "Technical team expansion",
-      "fit": 67,
-      "intent": 46,
-      "stage": "Discovery",
-      "value": 120000,
-      "next": "Keep in research until the signal is stronger."
-    }
-  ],
   "contact": {
     "name": "CJ Wheelock",
     "location": "New York, NY",
@@ -120,10 +13,804 @@
     "phone": "520-891-0750",
     "linkedin": "https://www.linkedin.com/in/cjwheelock"
   },
-  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
-  "proof": [
-    "$2.5M in development revenue at BeBop Sensors",
-    "124% of quota as an enterprise business development manager",
-    "Source-backed extraction and a local partnership CRM"
-  ]
+  "title": "More seller time on technically qualified accounts",
+  "subtitle": "Enrichment · Provider orchestration · Rep productivity",
+  "focus": "Connect reliable account data to inference workload context, while reducing duplicate tools, enrichment spend and rep research.",
+  "priorities": [
+    "Build CRM enrichment and account intelligence workflows.",
+    "Connect Salesforce, Clay and Harmonic context.",
+    "Automate repetitive GTM work and measure rep productivity.",
+    "Evaluate stack overlap, data quality and workflow cost."
+  ],
+  "segments": [
+    "AI-native products",
+    "Enterprise AI platforms"
+  ],
+  "funnel": [
+    "Accounts identified",
+    "Workload qualified",
+    "Technical meeting",
+    "Evaluation",
+    "Won"
+  ],
+  "channels": [
+    "Developer signals",
+    "Product inbound",
+    "Targeted outbound",
+    "Ecosystem partners"
+  ],
+  "unit": "annual opportunity value",
+  "metric": "Qualified inference pipeline",
+  "special": "Enrichment waterfall",
+  "dealLabel": "Technical evaluations",
+  "stack": [
+    "Salesforce account context",
+    "Clay / Harmonic enrichment",
+    "Workload qualification brief",
+    "Provider costs + quality logs"
+  ],
+  "layers": [
+    [
+      "Observe",
+      "Company research, product interest and technical workload evidence."
+    ],
+    [
+      "Enrich",
+      "Fill the missing field with the least redundant approved provider."
+    ],
+    [
+      "Qualify",
+      "Keep latency, throughput, deployment constraints and owner attached to the account."
+    ],
+    [
+      "Activate",
+      "Deliver one useful seller / solutions brief and record whether it helped."
+    ]
+  ],
+  "rules": [
+    "A company building AI is not automatically a qualified inference workload.",
+    "Stop enrichment after a verified answer; retain provider and cost.",
+    "Ask about deployment constraints instead of inferring confidential infrastructure."
+  ],
+  "accounts": [
+    {
+      "id": "baseten-01",
+      "name": "Vector Harbor",
+      "domain": "baseten-account-1.example",
+      "segment": "AI-native products",
+      "signalType": "Production launch",
+      "signal": "A document assistant is moving from an evaluation to recurring customer requests.",
+      "play": "Ask about model, response pattern and production ownership.",
+      "stage": 1,
+      "fit": 94,
+      "timing": 93,
+      "value": 84000,
+      "owner": "SDR team",
+      "channel": "Developer signals",
+      "ageDays": 2,
+      "responseMinutes": 8,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A document assistant is moving from an evaluation to recurring customer requests.",
+          "age": "2 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Ask about model, response pattern and production ownership.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "baseten-02",
+      "name": "Aster Vision",
+      "domain": "baseten-account-2.example",
+      "segment": "Enterprise AI platforms",
+      "signalType": "Workload evidence",
+      "signal": "A computer-vision team is hiring for high-throughput batch inference.",
+      "play": "Qualify batch size, throughput and deployment constraints.",
+      "stage": 3,
+      "fit": 88,
+      "timing": 86,
+      "value": 150000,
+      "owner": "Account owner",
+      "channel": "Product inbound",
+      "ageDays": 5,
+      "responseMinutes": 12,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A computer-vision team is hiring for high-throughput batch inference.",
+          "age": "5 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Qualify batch size, throughput and deployment constraints.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "baseten-03",
+      "name": "Loom Search",
+      "domain": "baseten-account-3.example",
+      "segment": "AI-native products",
+      "signalType": "Latency question",
+      "signal": "A retrieval product asked about real-time response requirements.",
+      "play": "Capture target latency and traffic shape before proposing a technical session.",
+      "stage": 0,
+      "fit": 72,
+      "timing": 48,
+      "value": 36000,
+      "owner": "Needs review",
+      "channel": "Targeted outbound",
+      "ageDays": 14,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A retrieval product asked about real-time response requirements.",
+          "age": "14 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Capture target latency and traffic shape before proposing a technical session.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "baseten-04",
+      "name": "Cobalt Agents",
+      "domain": "baseten-account-4.example",
+      "segment": "AI-native products",
+      "signalType": "Provider overlap",
+      "signal": "The account was enriched twice through two tools with conflicting headcount.",
+      "play": "Choose the authoritative field before using the score.",
+      "stage": 2,
+      "fit": 83,
+      "timing": 77,
+      "value": 240000,
+      "owner": "Solutions partner",
+      "channel": "Ecosystem partners",
+      "ageDays": 1,
+      "responseMinutes": 25,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The account was enriched twice through two tools with conflicting headcount.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Choose the authoritative field before using the score.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "baseten-05",
+      "name": "Pine Robotics",
+      "domain": "baseten-account-5.example",
+      "segment": "Enterprise AI platforms",
+      "signalType": "Deployment constraints",
+      "signal": "An enterprise team asked about how a workload would fit its security requirements.",
+      "play": "Bring the platform and security owners into qualification.",
+      "stage": 1,
+      "fit": 91,
+      "timing": 90,
+      "value": 128000,
+      "owner": "SDR team",
+      "channel": "Developer signals",
+      "ageDays": 4,
+      "responseMinutes": 7,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An enterprise team asked about how a workload would fit its security requirements.",
+          "age": "4 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Bring the platform and security owners into qualification.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "baseten-06",
+      "name": "Prism Voice",
+      "domain": "baseten-account-6.example",
+      "segment": "AI-native products",
+      "signalType": "Traffic growth",
+      "signal": "A voice product is planning a larger customer rollout.",
+      "play": "Distinguish concurrency requirements from monthly request totals.",
+      "stage": 2,
+      "fit": 80,
+      "timing": 73,
+      "value": 170000,
+      "owner": "Account owner",
+      "channel": "Product inbound",
+      "ageDays": 8,
+      "responseMinutes": 18,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A voice product is planning a larger customer rollout.",
+          "age": "8 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Distinguish concurrency requirements from monthly request totals.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "baseten-07",
+      "name": "Slate Models",
+      "domain": "baseten-account-7.example",
+      "segment": "Enterprise AI platforms",
+      "signalType": "Evaluation",
+      "signal": "A technical evaluation has a model owner but no agreed performance baseline.",
+      "play": "Define the representative workload and success criteria together.",
+      "stage": 0,
+      "fit": 67,
+      "timing": 42,
+      "value": 48000,
+      "owner": "Needs review",
+      "channel": "Targeted outbound",
+      "ageDays": 21,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A technical evaluation has a model owner but no agreed performance baseline.",
+          "age": "21 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Define the representative workload and success criteria together.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "baseten-08",
+      "name": "Ridge Studio",
+      "domain": "baseten-account-8.example",
+      "segment": "AI-native products",
+      "signalType": "Stale enrichment",
+      "signal": "The company profile is current, but the technical contact changed roles.",
+      "play": "Refresh the relationship before generating another outreach brief.",
+      "stage": 3,
+      "fit": 86,
+      "timing": 80,
+      "value": 116000,
+      "owner": "Solutions partner",
+      "channel": "Ecosystem partners",
+      "ageDays": 3,
+      "responseMinutes": 9,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The company profile is current, but the technical contact changed roles.",
+          "age": "3 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Refresh the relationship before generating another outreach brief.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "baseten-09",
+      "name": "Morrow Health AI",
+      "domain": "baseten-account-9.example",
+      "segment": "Enterprise AI platforms",
+      "signalType": "Technical inbound",
+      "signal": "A team requested a discussion of deployment options for a model-serving workflow.",
+      "play": "Ask which constraints need technical validation.",
+      "stage": 1,
+      "fit": 79,
+      "timing": 68,
+      "value": 190000,
+      "owner": "SDR team",
+      "channel": "Developer signals",
+      "ageDays": 7,
+      "responseMinutes": 20,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A team requested a discussion of deployment options for a model-serving workflow.",
+          "age": "7 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Ask which constraints need technical validation.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "baseten-10",
+      "name": "Quill Runtime",
+      "domain": "baseten-account-10.example",
+      "segment": "AI-native products",
+      "signalType": "Commercial review",
+      "signal": "A production workload completed its technical and commercial review and recorded a signed agreement.",
+      "play": "Join the solutions notes to the opportunity handoff.",
+      "stage": 4,
+      "fit": 95,
+      "timing": 96,
+      "value": 220000,
+      "owner": "Customer owner",
+      "channel": "Product inbound",
+      "ageDays": 1,
+      "responseMinutes": 5,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A production workload completed its technical and commercial review and recorded a signed agreement.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Customer owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Join the solutions notes to the opportunity handoff.",
+          "age": "Current rule"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Prioritize a real workload",
+      "detail": "Give the seller the deployment context and a concrete technical question.",
+      "badge": "Qualification",
+      "view": "signals",
+      "accountId": "baseten-01",
+      "accountName": "Vector Harbor",
+      "signalType": "Production launch"
+    },
+    {
+      "title": "Remove duplicate enrichment",
+      "detail": "Compare provider quality and marginal cost for the same required field.",
+      "badge": "Efficiency",
+      "view": "booth",
+      "accountId": "baseten-04",
+      "accountName": "Cobalt Agents",
+      "signalType": "Provider overlap"
+    },
+    {
+      "title": "Resolve the conflicting profile",
+      "detail": "Keep the source and timestamp before writing the account record.",
+      "badge": "Quality",
+      "view": "datalayer",
+      "accountId": "baseten-08",
+      "accountName": "Ridge Studio",
+      "signalType": "Stale enrichment"
+    },
+    {
+      "title": "Check the technical evaluation",
+      "detail": "Confirm a representative workload and shared performance baseline.",
+      "badge": "Evaluation",
+      "view": "deals",
+      "accountId": "baseten-07",
+      "accountName": "Slate Models",
+      "signalType": "Evaluation"
+    },
+    {
+      "title": "Measure research time saved",
+      "detail": "Track the usefulness of the brief and rep edits, alongside enrichment cost.",
+      "badge": "Adoption",
+      "view": "agents",
+      "accountId": "baseten-02",
+      "accountName": "Aster Vision",
+      "signalType": "Workload evidence"
+    },
+    {
+      "title": "Test a constraint-led opening",
+      "detail": "Compare an AI-company pitch with a question about the actual workload.",
+      "badge": "Experiment",
+      "view": "experiments",
+      "accountId": "baseten-03",
+      "accountName": "Loom Search",
+      "signalType": "Latency question"
+    }
+  ],
+  "personas": [
+    {
+      "name": "ML platform lead",
+      "pain": "Production serving constraints that generic prospecting misses",
+      "promise": "A focused technical conversation about the workload and evaluation criteria.",
+      "subject": "The workload behind {{product}}",
+      "email": "Hi {{first_name}}, before a platform conversation, I’d like to understand the model-serving workload: response pattern, throughput, latency and the constraints your team needs to preserve. Which one currently limits your next rollout?",
+      "question": "What representative workload would make an evaluation useful?"
+    },
+    {
+      "name": "GTM operations",
+      "pain": "Duplicate tools and enrichment that does not change a seller decision",
+      "promise": "A measured waterfall that fills only the missing, useful fields.",
+      "subject": "One useful account brief",
+      "email": "Hi {{first_name}}, a seller should not have to reconcile multiple enrichment tools before a call. I’d start with the fields that change qualification, keep the source and cost, and stop when they are verified. Which recurring research task takes the most seller time?",
+      "question": "Which provider field improves a decision enough to justify its cost?"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E-01",
+      "title": "Qualification brief",
+      "control": "Company-level AI label",
+      "treatment": "Specific workload + constraints",
+      "metric": "Accepted technical meetings",
+      "nA": 120,
+      "nB": 120,
+      "winsA": 12,
+      "winsB": 17,
+      "status": "Review"
+    },
+    {
+      "id": "E-02",
+      "title": "Provider order",
+      "control": "Parallel enrichment",
+      "treatment": "Verified-field waterfall",
+      "metric": "Verified fields",
+      "nA": 145,
+      "nB": 145,
+      "winsA": 29,
+      "winsB": 33,
+      "status": "Review"
+    },
+    {
+      "id": "E-03",
+      "title": "Seller delivery",
+      "control": "Separate research document",
+      "treatment": "Context inside CRM workflow",
+      "metric": "Useful briefs",
+      "nA": 90,
+      "nB": 90,
+      "winsA": 18,
+      "winsB": 21,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-04",
+      "title": "Profile refresh",
+      "control": "Fixed monthly refresh",
+      "treatment": "Change-sensitive refresh",
+      "metric": "Current contacts",
+      "nA": 160,
+      "nB": 160,
+      "winsA": 24,
+      "winsB": 26,
+      "status": "Review"
+    },
+    {
+      "id": "E-05",
+      "title": "Tool overlap",
+      "control": "Two providers for every field",
+      "treatment": "Selective fallback",
+      "metric": "Equivalent-quality records",
+      "nA": 100,
+      "nB": 100,
+      "winsA": 20,
+      "winsB": 25,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-06",
+      "title": "Evaluation handoff",
+      "control": "Rep notes only",
+      "treatment": "Workload baseline + solutions owner",
+      "metric": "Complete handoffs",
+      "nA": 130,
+      "nB": 130,
+      "winsA": 13,
+      "winsB": 18,
+      "status": "Review"
+    }
+  ],
+  "pitch": "I have sold technical products across engineering and business stakeholders, and I now build AI-assisted data and commercial workflows. At BeBop Sensors I led technical sales through validation, proposals and negotiation. At Baseten, I would combine that seller’s judgment with source-backed research, careful enrichment and workload-aware handoffs that save reps time.",
+  "mappings": [
+    [
+      "Rep productivity + enrichment",
+      "Local CRM with contact provenance, imports and campaign drafts.",
+      "Deliver the technical brief where a seller already works."
+    ],
+    [
+      "Provider orchestration",
+      "Hey Sammy: source extraction, model comparisons and workflow cost review.",
+      "Compare the whole workflow, including factual quality and recovery."
+    ],
+    [
+      "Technical qualification",
+      "BeBop: $2.5M development revenue; technical enterprise selling.",
+      "Translate deployment and engineering questions into a useful next conversation."
+    ]
+  ],
+  "checkpoint": [
+    "Workload documented",
+    "Baseline agreed",
+    "Solutions owner engaged",
+    "Commercial decision"
+  ],
+  "northStar": "Seller productivity on qualified inference accounts",
+  "weekOne": "One sourced workload brief that two sellers and a solutions partner can use.",
+  "days60": "Expand the provider waterfall and measure quality, tool redundancy, cost and seller adoption.",
+  "days90": "Connect the strongest research signals to technical evaluation outcomes and refine the stack from measured usefulness.",
+  "schemaVersion": 2,
+  "roleUrl": "https://jobs.ashbyhq.com/baseten/b621b620-85eb-4f73-8d77-e4ebd458b02d",
+  "sources": [
+    {
+      "url": "https://jobs.ashbyhq.com/baseten/b621b620-85eb-4f73-8d77-e4ebd458b02d",
+      "label": "Role description"
+    },
+    {
+      "url": "https://www.baseten.co/",
+      "label": "Company / product reference"
+    },
+    {
+      "url": "https://docs.baseten.co/",
+      "label": "Company / product reference"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Modal",
+      "url": "https://modal.com/",
+      "context": "Provides serverless inference, sandboxes and training infrastructure.",
+      "question": "Which workload constraints favor a serverless compute workflow, dedicated inference support or a self-hosted deployment? Establish throughput, latency, scale and engineering requirements first."
+    },
+    {
+      "name": "Fireworks",
+      "url": "https://fireworks.ai/",
+      "context": "Markets a platform for running, composing and training open models.",
+      "question": "Which model, tuning, deployment and operational requirements are decisive for this account? Use a representative benchmark rather than unsupported speed or price claims."
+    }
+  ],
+  "firstBuilds": [
+    {
+      "title": "Workload-aware account brief",
+      "goal": "Help sellers and solutions teams share the right qualification context.",
+      "steps": [
+        "Source account",
+        "Verify workload",
+        "Capture constraints",
+        "Deliver reviewed brief"
+      ],
+      "scope": "20 accounts with two sellers and a solutions partner.",
+      "measure": "Research time, accepted briefs, factual edits and technical meetings held."
+    },
+    {
+      "title": "Provider waterfall",
+      "goal": "Reduce redundant enrichment while preserving useful data quality.",
+      "steps": [
+        "Check CRM fields",
+        "Select provider",
+        "Validate answer",
+        "Record marginal cost"
+      ],
+      "scope": "One field set across a bounded account cohort.",
+      "measure": "Verified fields, stale data, tool overlap and cost per useful account."
+    },
+    {
+      "title": "Rep workflow scorecard",
+      "goal": "See whether the automation changes seller work.",
+      "steps": [
+        "Record baseline",
+        "Deliver briefs",
+        "Collect rep feedback",
+        "Compare outcomes"
+      ],
+      "scope": "One repeating research task before expanding to more tooling.",
+      "measure": "Minutes per account, rep edits, adoption and downstream qualification."
+    }
+  ],
+  "projectRelevance": {
+    "sammy": "Source-grounded extraction and model/tool comparisons are relevant to provider quality, enrichment cost and trustworthy account context.",
+    "sidequest": "The partnership CRM demonstrates deduplicated imports and commercial context delivered in a working tool.",
+    "dancers": "Recoverable inquiries, signed webhooks and approval flows are patterns for dependable rep workflows and external-tool orchestration."
+  }
 }

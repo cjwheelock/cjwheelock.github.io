@@ -1,118 +1,11 @@
 {
+  "slug": "langchain",
   "name": "LangChain",
   "role": "GTM Engineer",
-  "accent": "#2d7d67",
-  "product": "LangChain provides open-source agent frameworks and the LangSmith platform for building and operating agents.",
-  "opportunity": "Turn recurring onboarding and support friction into evaluated, reviewable agent workflows.",
-  "hypothesis": "Repeated implementation questions can reveal both a support opportunity and an adoption barrier. A scoped agent with evaluations and a human escalation path could help teams resolve them more consistently.",
-  "module": "Agent support triage",
-  "unit": "workspaces",
-  "dimension": "Adoption stage",
-  "fit_label": "Workspace fit",
-  "intent_label": "Friction signal",
-  "action": "Review support path",
-  "stages": [
-    "Capture question",
-    "Retrieve trusted guidance",
-    "Evaluate response",
-    "Escalate or resolve"
-  ],
-  "automations": [
-    "Retrieve relevant documentation and include sources in a draft answer.",
-    "Evaluate groundedness on a small reviewed set before release.",
-    "Escalate uncertain responses and feed failures back into the evaluation set."
-  ],
-  "roadmap": [
-    "Review common onboarding questions and define a human baseline.",
-    "Build a narrow retrieval and evaluation pilot with an explicit escalation path.",
-    "Measure resolution quality and adoption; add coverage only after review."
-  ],
-  "fit": "CJ built a source-backed extraction pipeline with validation and bounded retries, and has evaluated AI models for source grounding and extraction cost.",
-  "segments": [
-    "Getting started",
-    "Evaluation setup",
-    "Production rollout"
-  ],
-  "signals": [
-    "Onboarding question",
-    "Trace interpretation",
-    "Deployment question"
-  ],
-  "values": [
-    8000,
-    16000,
-    5000,
-    50000,
-    22000,
-    32000
-  ],
-  "slug": "langchain",
   "resume": {
     "docx": "CJ_Wheelock_LangChain_GTM_Engineer.docx",
     "pdf": "CJ_Wheelock_LangChain_GTM_Engineer.pdf"
   },
-  "accounts": [
-    {
-      "name": "Workspace A",
-      "segment": "Getting started",
-      "signal": "Onboarding question",
-      "fit": 94,
-      "intent": 87,
-      "stage": "Won",
-      "value": 8000,
-      "next": "Confirm the source and assign an owner."
-    },
-    {
-      "name": "Workspace B",
-      "segment": "Evaluation setup",
-      "signal": "Trace interpretation",
-      "fit": 78,
-      "intent": 71,
-      "stage": "Qualified",
-      "value": 16000,
-      "next": "Review the context and choose a relevant next step."
-    },
-    {
-      "name": "Workspace C",
-      "segment": "Production rollout",
-      "signal": "Deployment question",
-      "fit": 61,
-      "intent": 53,
-      "stage": "New",
-      "value": 5000,
-      "next": "Validate the need with the appropriate stakeholder."
-    },
-    {
-      "name": "Workspace D",
-      "segment": "Getting started",
-      "signal": "Onboarding question",
-      "fit": 92,
-      "intent": 93,
-      "stage": "New",
-      "value": 50000,
-      "next": "Record the outcome and carry forward the learning."
-    },
-    {
-      "name": "Workspace E",
-      "segment": "Evaluation setup",
-      "signal": "Trace interpretation",
-      "fit": 82,
-      "intent": 67,
-      "stage": "Qualified",
-      "value": 22000,
-      "next": "Resolve any missing context before outreach."
-    },
-    {
-      "name": "Workspace F",
-      "segment": "Production rollout",
-      "signal": "Deployment question",
-      "fit": 67,
-      "intent": 48,
-      "stage": "Discovery",
-      "value": 32000,
-      "next": "Keep in research until the signal is stronger."
-    }
-  ],
   "contact": {
     "name": "CJ Wheelock",
     "location": "New York, NY",
@@ -120,10 +13,800 @@
     "phone": "520-891-0750",
     "linkedin": "https://www.linkedin.com/in/cjwheelock"
   },
-  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
-  "proof": [
-    "$2.5M in development revenue at BeBop Sensors",
-    "124% of quota as an enterprise business development manager",
-    "Source-backed extraction and a local partnership CRM"
-  ]
+  "title": "Support and onboarding that help teams ship useful agents",
+  "subtitle": "Customer success · LangGraph workflows · LangSmith evaluation",
+  "focus": "Ground technical help in evidence, turn repeated onboarding friction into a tested workflow and connect adoption to customer outcomes.",
+  "priorities": [
+    "Build agents and automation for support, onboarding and customer success.",
+    "Use LangGraph and LangSmith for reliable, observable workflows.",
+    "Ship integrations and technical solutions that help customers succeed.",
+    "Turn recurring support patterns into better product and onboarding experiences."
+  ],
+  "segments": [
+    "Developer teams",
+    "Enterprise AI platforms"
+  ],
+  "funnel": [
+    "Workspaces reviewed",
+    "Need verified",
+    "Onboarding engaged",
+    "Activated workflow",
+    "Expanded"
+  ],
+  "channels": [
+    "Developer onboarding",
+    "Support requests",
+    "Customer success",
+    "Enterprise adoption"
+  ],
+  "unit": "annual expansion potential",
+  "metric": "Qualified expansion value",
+  "special": "Support triage",
+  "dealLabel": "Onboarding & expansion",
+  "stack": [
+    "Approved docs + support context",
+    "LangGraph workflow design",
+    "LangSmith traces + evaluations",
+    "Customer success + product feedback"
+  ],
+  "layers": [
+    [
+      "Understand",
+      "Customer question, environment and exact product / documentation context."
+    ],
+    [
+      "Retrieve",
+      "Relevant approved documentation and trace evidence with version information."
+    ],
+    [
+      "Evaluate",
+      "Grounding, privacy, task success and escalation checks before a response."
+    ],
+    [
+      "Improve",
+      "Human-reviewed help, onboarding milestones and product feedback with observability."
+    ]
+  ],
+  "rules": [
+    "A source link alone does not prove the answer is supported.",
+    "Escalate missing context, failed evaluations and account-sensitive actions.",
+    "Do not treat framework downloads as a verified company expansion signal."
+  ],
+  "accounts": [
+    {
+      "id": "langchain-01",
+      "name": "Cedar Agent Studio",
+      "domain": "langchain-account-1.example",
+      "segment": "Developer teams",
+      "signalType": "Deployment question",
+      "signal": "A team is moving a local graph into a deployed workflow.",
+      "play": "Confirm the environment and relevant deployment documentation.",
+      "stage": 1,
+      "fit": 94,
+      "timing": 93,
+      "value": 63000,
+      "owner": "SDR team",
+      "channel": "Developer onboarding",
+      "ageDays": 2,
+      "responseMinutes": 8,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A team is moving a local graph into a deployed workflow.",
+          "age": "2 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Confirm the environment and relevant deployment documentation.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "langchain-02",
+      "name": "Harbor AI Platform",
+      "domain": "langchain-account-2.example",
+      "segment": "Enterprise AI platforms",
+      "signalType": "Evaluation setup",
+      "signal": "A platform team needs an evaluation set for a support-agent workflow.",
+      "play": "Clarify the task, failure modes and a reviewed example set.",
+      "stage": 3,
+      "fit": 88,
+      "timing": 86,
+      "value": 112500,
+      "owner": "Account owner",
+      "channel": "Support requests",
+      "ageDays": 5,
+      "responseMinutes": 12,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A platform team needs an evaluation set for a support-agent workflow.",
+          "age": "5 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Clarify the task, failure modes and a reviewed example set.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "langchain-03",
+      "name": "Mosaic Assist",
+      "domain": "langchain-account-3.example",
+      "segment": "Developer teams",
+      "signalType": "Trace interpretation",
+      "signal": "A developer shared a question about a failed step and incomplete state.",
+      "play": "Use the trace context and avoid guessing about an unseen execution.",
+      "stage": 0,
+      "fit": 72,
+      "timing": 48,
+      "value": 27000,
+      "owner": "Needs review",
+      "channel": "Customer success",
+      "ageDays": 14,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A developer shared a question about a failed step and incomplete state.",
+          "age": "14 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Use the trace context and avoid guessing about an unseen execution.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "langchain-04",
+      "name": "Pine Enterprise AI",
+      "domain": "langchain-account-4.example",
+      "segment": "Enterprise AI platforms",
+      "signalType": "Governance review",
+      "signal": "The customer asks who can access traces and evaluation data.",
+      "play": "Route account-specific security and governance questions to a human.",
+      "stage": 2,
+      "fit": 83,
+      "timing": 77,
+      "value": 180000,
+      "owner": "Solutions partner",
+      "channel": "Enterprise adoption",
+      "ageDays": 1,
+      "responseMinutes": 25,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The customer asks who can access traces and evaluation data.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Route account-specific security and governance questions to a human.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "langchain-05",
+      "name": "Quay Workflow Lab",
+      "domain": "langchain-account-5.example",
+      "segment": "Developer teams",
+      "signalType": "Activation gap",
+      "signal": "The workspace has a trace but has not run a useful evaluation.",
+      "play": "Offer the next relevant evaluation milestone.",
+      "stage": 1,
+      "fit": 91,
+      "timing": 90,
+      "value": 96000,
+      "owner": "SDR team",
+      "channel": "Developer onboarding",
+      "ageDays": 4,
+      "responseMinutes": 7,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The workspace has a trace but has not run a useful evaluation.",
+          "age": "4 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Offer the next relevant evaluation milestone.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "langchain-06",
+      "name": "Larch Systems AI",
+      "domain": "langchain-account-6.example",
+      "segment": "Enterprise AI platforms",
+      "signalType": "Integration issue",
+      "signal": "A customer integration fails intermittently after a retry.",
+      "play": "Collect the minimal technical context and preserve a reproducible case.",
+      "stage": 2,
+      "fit": 80,
+      "timing": 73,
+      "value": 127500,
+      "owner": "Account owner",
+      "channel": "Support requests",
+      "ageDays": 8,
+      "responseMinutes": 18,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A customer integration fails intermittently after a retry.",
+          "age": "8 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Collect the minimal technical context and preserve a reproducible case.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "langchain-07",
+      "name": "Beacon Graph Team",
+      "domain": "langchain-account-7.example",
+      "segment": "Developer teams",
+      "signalType": "Repeated question",
+      "signal": "Several onboarding conversations ask the same deployment question.",
+      "play": "Turn the reviewed answer into an evaluated support workflow.",
+      "stage": 0,
+      "fit": 67,
+      "timing": 42,
+      "value": 36000,
+      "owner": "Needs review",
+      "channel": "Customer success",
+      "ageDays": 21,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "Several onboarding conversations ask the same deployment question.",
+          "age": "21 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Turn the reviewed answer into an evaluated support workflow.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "langchain-08",
+      "name": "Atlas Customer AI",
+      "domain": "langchain-account-8.example",
+      "segment": "Enterprise AI platforms",
+      "signalType": "Adoption review",
+      "signal": "Multiple teams use the platform but the success plan has no shared milestones.",
+      "play": "Join customer-success context to the actual adoption journey.",
+      "stage": 3,
+      "fit": 86,
+      "timing": 80,
+      "value": 87000,
+      "owner": "Solutions partner",
+      "channel": "Enterprise adoption",
+      "ageDays": 3,
+      "responseMinutes": 9,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "Multiple teams use the platform but the success plan has no shared milestones.",
+          "age": "3 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Join customer-success context to the actual adoption journey.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "langchain-09",
+      "name": "Elm Runtime Team",
+      "domain": "langchain-account-9.example",
+      "segment": "Developer teams",
+      "signalType": "Evidence gap",
+      "signal": "A draft support answer references a document that does not support its claim.",
+      "play": "Fail the grounding check and escalate instead of publishing the answer.",
+      "stage": 1,
+      "fit": 79,
+      "timing": 68,
+      "value": 142500,
+      "owner": "SDR team",
+      "channel": "Developer onboarding",
+      "ageDays": 7,
+      "responseMinutes": 20,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A draft support answer references a document that does not support its claim.",
+          "age": "7 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Fail the grounding check and escalate instead of publishing the answer.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "langchain-10",
+      "name": "Stonewell AI Ops",
+      "domain": "langchain-account-10.example",
+      "segment": "Enterprise AI platforms",
+      "signalType": "Expansion milestone",
+      "signal": "A customer reached its agreed workflow milestone and broadened the rollout to a second team.",
+      "play": "Verify the adoption context and prepare a customer-success handoff.",
+      "stage": 4,
+      "fit": 95,
+      "timing": 96,
+      "value": 165000,
+      "owner": "Customer owner",
+      "channel": "Support requests",
+      "ageDays": 1,
+      "responseMinutes": 5,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A customer reached its agreed workflow milestone and broadened the rollout to a second team.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Customer owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Verify the adoption context and prepare a customer-success handoff.",
+          "age": "Current rule"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Ground the next support answer",
+      "detail": "Check the exact documentation and environment before proposing a response.",
+      "badge": "Support quality",
+      "view": "booth",
+      "accountId": "langchain-01",
+      "accountName": "Cedar Agent Studio",
+      "signalType": "Deployment question"
+    },
+    {
+      "title": "Help a team reach its next milestone",
+      "detail": "Connect trace, evaluation and deployment into a useful onboarding path.",
+      "badge": "Activation",
+      "view": "deals",
+      "accountId": "langchain-05",
+      "accountName": "Quay Workflow Lab",
+      "signalType": "Activation gap"
+    },
+    {
+      "title": "Turn repeated friction into an eval",
+      "detail": "Create a small reviewed set before automating another answer.",
+      "badge": "Evaluation",
+      "view": "experiments",
+      "accountId": "langchain-07",
+      "accountName": "Beacon Graph Team",
+      "signalType": "Repeated question"
+    },
+    {
+      "title": "Inspect a failed handoff",
+      "detail": "Keep the trace, missing context and escalation reason with the human owner.",
+      "badge": "Reliability",
+      "view": "datalayer",
+      "accountId": "langchain-09",
+      "accountName": "Elm Runtime Team",
+      "signalType": "Evidence gap"
+    },
+    {
+      "title": "Close the product feedback loop",
+      "detail": "Group recurring issues by workflow, severity and customer impact.",
+      "badge": "Learning",
+      "view": "agents",
+      "accountId": "langchain-06",
+      "accountName": "Larch Systems AI",
+      "signalType": "Integration issue"
+    },
+    {
+      "title": "Review expansion readiness",
+      "detail": "Use agreed adoption milestones and customer-success context.",
+      "badge": "Expansion",
+      "view": "signals",
+      "accountId": "langchain-10",
+      "accountName": "Stonewell AI Ops",
+      "signalType": "Expansion milestone"
+    }
+  ],
+  "personas": [
+    {
+      "name": "Developer / builder",
+      "pain": "A specific technical blocker between an agent idea and a useful deployment",
+      "promise": "A relevant source, the missing context and a clear next debugging step.",
+      "subject": "The next step for {{workflow}}",
+      "email": "Hi {{first_name}}, I’m following up on the {{question_type}} question. Could you share the minimal environment and the step that fails? I’d like to connect the relevant documentation to a reproducible next step, then escalate anything the evidence does not support.",
+      "question": "What is the smallest reproducible case, and which version or environment is involved?"
+    },
+    {
+      "name": "Customer success / platform owner",
+      "pain": "Adoption across teams without a clear success milestone",
+      "promise": "A shared onboarding plan with evaluated help and an explicit human owner.",
+      "subject": "A useful milestone for {{team}}",
+      "email": "Hi {{first_name}}, I’d like to make the next adoption milestone concrete: a representative trace, a reviewed evaluation set, or a deployed workflow that the team can judge. Which one would move your current use case forward?",
+      "question": "What observable milestone would make the next success review useful?"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E-01",
+      "title": "Support grounding",
+      "control": "Answer with a source link",
+      "treatment": "Claim-level grounding check",
+      "metric": "Supported answers",
+      "nA": 120,
+      "nB": 120,
+      "winsA": 12,
+      "winsB": 17,
+      "status": "Review"
+    },
+    {
+      "id": "E-02",
+      "title": "Onboarding follow-up",
+      "control": "Generic check-in",
+      "treatment": "Specific next workflow milestone",
+      "metric": "Completed milestones",
+      "nA": 145,
+      "nB": 145,
+      "winsA": 29,
+      "winsB": 33,
+      "status": "Review"
+    },
+    {
+      "id": "E-03",
+      "title": "Escalation",
+      "control": "Confidence-only routing",
+      "treatment": "Evidence + evaluation + account context",
+      "metric": "Correct escalations",
+      "nA": 90,
+      "nB": 90,
+      "winsA": 18,
+      "winsB": 21,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-04",
+      "title": "Evaluation set",
+      "control": "Happy-path examples",
+      "treatment": "Reviewed success + failure cases",
+      "metric": "Caught failures",
+      "nA": 160,
+      "nB": 160,
+      "winsA": 24,
+      "winsB": 26,
+      "status": "Review"
+    },
+    {
+      "id": "E-05",
+      "title": "Feedback routing",
+      "control": "Unstructured issue notes",
+      "treatment": "Workflow + severity + impact",
+      "metric": "Actionable reports",
+      "nA": 100,
+      "nB": 100,
+      "winsA": 20,
+      "winsB": 25,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-06",
+      "title": "Success review",
+      "control": "Raw usage summary",
+      "treatment": "Agreed milestone and owner",
+      "metric": "Useful plans",
+      "nA": 130,
+      "nB": 130,
+      "winsA": 13,
+      "winsB": 18,
+      "status": "Review"
+    }
+  ],
+  "pitch": "I am an AI product builder with an enterprise sales background. I have shipped a revenue-generating iOS app, built a source-backed extraction pipeline and compared models on grounding, structured output and total workflow cost. At LangChain, I would start with a narrow support or onboarding problem, a reviewed evaluation set and an observable workflow that helps a customer complete a useful task.",
+  "mappings": [
+    [
+      "Reliable AI workflows",
+      "Hey Sammy: model comparison, source grounding, validation and recovery.",
+      "Evaluate a narrow support task before expanding automation."
+    ],
+    [
+      "Customer onboarding",
+      "Shipped app onboarding and dependable product workflows.",
+      "Define the next observable customer milestone."
+    ],
+    [
+      "Commercial empathy",
+      "Enterprise sales, partnerships and direct work with technical stakeholders.",
+      "Understand the actual customer task and return useful context to engineering."
+    ]
+  ],
+  "checkpoint": [
+    "Use case confirmed",
+    "Trace / evidence available",
+    "Evaluation reviewed",
+    "Milestone completed"
+  ],
+  "northStar": "Customers completing useful tasks with evidence-grounded help",
+  "weekOne": "One support question category with a grounded answer path, evaluations and a human escalation route.",
+  "days60": "Extend the evaluated workflow to a second onboarding milestone and improve observability and integration recovery.",
+  "days90": "Make customer-success and product feedback repeatable, then prioritize expansion of the support system from task success and customer usefulness.",
+  "schemaVersion": 2,
+  "roleUrl": "https://jobs.ashbyhq.com/langchain/825b6d91-bc5e-4165-8a7c-2022a2248f7e",
+  "sources": [
+    {
+      "url": "https://api.ashbyhq.com/posting-api/job-board/langchain?includeCompensation=true",
+      "label": "Exact original role ID, active listing, location metadata and responsibilities"
+    },
+    {
+      "url": "https://www.langchain.com/langsmith/observability",
+      "label": "Tracing, debugging and observability product context"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Braintrust",
+      "url": "https://www.braintrust.dev/",
+      "context": "Its public site describes agent tracing, evaluation and production-behavior discovery.",
+      "question": "Which production traces should become evaluation cases, who reviews failures, and how will the team compare diagnosis-to-improvement workflows?"
+    },
+    {
+      "name": "Arize Phoenix",
+      "url": "https://arize.com/phoenix/",
+      "context": "Its public site describes open-source observability/evaluation that can run locally or be self-hosted.",
+      "question": "What hosting, data-handling, framework and evaluation requirements matter for this team, and what evidence would demonstrate a successful production workflow?"
+    }
+  ],
+  "firstBuilds": [
+    {
+      "title": "Grounded support workflow",
+      "goal": "Help with one repeatable question and escalate the rest.",
+      "steps": [
+        "Capture context",
+        "Retrieve approved source",
+        "Evaluate answer",
+        "Human review / escalation"
+      ],
+      "scope": "One onboarding question category and a reviewed evaluation set.",
+      "measure": "Supported answers, task completion, correct escalation and time to useful help."
+    },
+    {
+      "title": "Milestone-led onboarding",
+      "goal": "Make the next useful step explicit for the customer team.",
+      "steps": [
+        "Confirm use case",
+        "Map current milestone",
+        "Prepare guidance",
+        "Review completion"
+      ],
+      "scope": "A small developer cohort moving from trace to evaluation or deployment.",
+      "measure": "Milestone completion, repeated blockers and customer usefulness."
+    },
+    {
+      "title": "Product feedback loop",
+      "goal": "Convert recurring support friction into useful engineering context.",
+      "steps": [
+        "Group issue",
+        "Keep evidence",
+        "Assess impact",
+        "Send reviewed brief"
+      ],
+      "scope": "One weekly customer-success / product review with clear ownership.",
+      "measure": "Actionable reports, duplicates, resolved patterns and follow-through."
+    }
+  ],
+  "projectRelevance": {
+    "sammy": "Model comparisons, grounding checks, structured extraction and resumable jobs are directly relevant to reliable support-agent design.",
+    "sidequest": "Recoverable product workflows, analytics and careful content delivery connect engineering decisions to customer experience.",
+    "dancers": "Private inquiry flows, durable notifications and delivery recovery illustrate why reliable state and human ownership matter."
+  }
 }

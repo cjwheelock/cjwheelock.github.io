@@ -1,118 +1,11 @@
 {
+  "slug": "hearth",
   "name": "Hearth",
   "role": "Founding GTM Engineer",
-  "accent": "#d27340",
-  "product": "Hearth offers software for home-improvement businesses, including financing and sales workflows.",
-  "opportunity": "Find the contractor leads most likely to benefit, then make the first handoff count.",
-  "hypothesis": "A slow or incomplete inbound handoff may cost an interested contractor a timely conversation. A focused routing pilot could show whether faster follow-up improves qualified appointments.",
-  "module": "Contractor response desk",
-  "unit": "contractor leads",
-  "dimension": "Trade",
-  "fit_label": "Contractor fit",
-  "intent_label": "Lead urgency",
-  "action": "Route for follow-up",
-  "stages": [
-    "Capture inquiry",
-    "Identify trade and need",
-    "Prioritize response",
-    "Measure appointment"
-  ],
-  "automations": [
-    "Classify the stated trade and need from the inquiry.",
-    "Flag leads missing an owner or a follow-up.",
-    "Summarize context for the rep; keep contact decisions human-reviewed."
-  ],
-  "roadmap": [
-    "Listen to the sales floor and measure the existing inbound handoff.",
-    "Pilot trade-aware routing and next-best action on one lead cohort.",
-    "Compare qualified appointments and response times; expand only if the result holds."
-  ],
-  "fit": "CJ has built role-based inquiry and matching workflows for a marketplace and has first-hand experience selling, closing and building products.",
-  "segments": [
-    "Roofing",
-    "HVAC",
-    "Remodeling"
-  ],
-  "signals": [
-    "Financing inquiry",
-    "Quote workflow interest",
-    "Missed-call question"
-  ],
-  "values": [
-    2400,
-    3600,
-    1800,
-    4800,
-    3000,
-    2100
-  ],
-  "slug": "hearth",
   "resume": {
     "docx": "CJ_Wheelock_Hearth_Founding_GTM_Engineer.docx",
     "pdf": "CJ_Wheelock_Hearth_Founding_GTM_Engineer.pdf"
   },
-  "accounts": [
-    {
-      "name": "Account A",
-      "segment": "Roofing",
-      "signal": "Financing inquiry",
-      "fit": 80,
-      "intent": 54,
-      "stage": "Qualified",
-      "value": 2400,
-      "next": "Confirm the source and assign an owner."
-    },
-    {
-      "name": "Account B",
-      "segment": "HVAC",
-      "signal": "Quote workflow interest",
-      "fit": 63,
-      "intent": 94,
-      "stage": "New",
-      "value": 3600,
-      "next": "Review the context and choose a relevant next step."
-    },
-    {
-      "name": "Account C",
-      "segment": "Remodeling",
-      "signal": "Missed-call question",
-      "fit": 94,
-      "intent": 68,
-      "stage": "New",
-      "value": 1800,
-      "next": "Validate the need with the appropriate stakeholder."
-    },
-    {
-      "name": "Account D",
-      "segment": "Roofing",
-      "signal": "Financing inquiry",
-      "fit": 84,
-      "intent": 49,
-      "stage": "Qualified",
-      "value": 4800,
-      "next": "Record the outcome and carry forward the learning."
-    },
-    {
-      "name": "Account E",
-      "segment": "HVAC",
-      "signal": "Quote workflow interest",
-      "fit": 69,
-      "intent": 88,
-      "stage": "Discovery",
-      "value": 3000,
-      "next": "Resolve any missing context before outreach."
-    },
-    {
-      "name": "Account F",
-      "segment": "Remodeling",
-      "signal": "Missed-call question",
-      "fit": 96,
-      "intent": 72,
-      "stage": "Won",
-      "value": 2100,
-      "next": "Keep in research until the signal is stronger."
-    }
-  ],
   "contact": {
     "name": "CJ Wheelock",
     "location": "New York, NY",
@@ -120,10 +13,800 @@
     "phone": "520-891-0750",
     "linkedin": "https://www.linkedin.com/in/cjwheelock"
   },
-  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
-  "proof": [
-    "$2.5M in development revenue at BeBop Sensors",
-    "124% of quota as an enterprise business development manager",
-    "Source-backed extraction and a local partnership CRM"
-  ]
+  "title": "Every qualified contractor lead gets a useful next step",
+  "subtitle": "Inbound conversion · Lead routing · Contractor activation",
+  "focus": "Find the right contractor, route the lead quickly and measure whether the handoff produces activation and retention.",
+  "priorities": [
+    "Build and own the inbound conversion engine.",
+    "Improve qualification, routing and next-best actions.",
+    "Connect Salesforce / HubSpot, Redshift, Clay and AI-assisted workflows.",
+    "Measure business outcomes with experiments and causal discipline."
+  ],
+  "segments": [
+    "Roofing / exterior",
+    "HVAC / remodeling"
+  ],
+  "funnel": [
+    "Contractor leads",
+    "Qualified",
+    "Meeting held",
+    "Activated",
+    "Retained"
+  ],
+  "channels": [
+    "Inbound search",
+    "Trade campaigns",
+    "Partner referrals",
+    "Lifecycle"
+  ],
+  "unit": "annual subscription opportunity",
+  "metric": "Qualified contractor value",
+  "special": "Contractor routing",
+  "dealLabel": "Activation & retention",
+  "stack": [
+    "Contractor intake + CRM",
+    "Trade / geography enrichment",
+    "Routing + response receipts",
+    "Activation + retention cohorts"
+  ],
+  "layers": [
+    [
+      "Capture",
+      "Lead source, trade, service area and requested workflow."
+    ],
+    [
+      "Qualify",
+      "Contractor fit and a verified contact; keep uncertain fields in review."
+    ],
+    [
+      "Route",
+      "Available owner, clear SLA and an actionable next step."
+    ],
+    [
+      "Measure",
+      "Meetings held, activation and retention by cohort and experiment assignment."
+    ]
+  ],
+  "rules": [
+    "Financing interest is not proof of borrower eligibility or approval.",
+    "Respect existing account ownership and contact history.",
+    "A faster response is a testable intervention, not proof of causal lift."
+  ],
+  "accounts": [
+    {
+      "id": "hearth-01",
+      "name": "Cedar Ridge Roofing",
+      "domain": "hearth-account-1.example",
+      "segment": "Roofing / exterior",
+      "signalType": "Inbound request",
+      "signal": "A roofing owner requested a way to discuss project financing with homeowners.",
+      "play": "Confirm trade, service area and the requested contractor workflow.",
+      "stage": 1,
+      "fit": 94,
+      "timing": 93,
+      "value": 3360,
+      "owner": "SDR team",
+      "channel": "Inbound search",
+      "ageDays": 2,
+      "responseMinutes": 8,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A roofing owner requested a way to discuss project financing with homeowners.",
+          "age": "2 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Confirm trade, service area and the requested contractor workflow.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "hearth-02",
+      "name": "Harbor Homeworks",
+      "domain": "hearth-account-2.example",
+      "segment": "HVAC / remodeling",
+      "signalType": "Partial booking",
+      "signal": "An HVAC manager completed the lead form but left before booking.",
+      "play": "Recover the handoff with a clear owner and a relevant next step.",
+      "stage": 3,
+      "fit": 88,
+      "timing": 86,
+      "value": 6000,
+      "owner": "Account owner",
+      "channel": "Trade campaigns",
+      "ageDays": 5,
+      "responseMinutes": 12,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An HVAC manager completed the lead form but left before booking.",
+          "age": "5 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Recover the handoff with a clear owner and a relevant next step.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "hearth-03",
+      "name": "Pine Exterior",
+      "domain": "hearth-account-3.example",
+      "segment": "Roofing / exterior",
+      "signalType": "Trade campaign",
+      "signal": "A window-and-siding contractor responded to a trade-specific campaign.",
+      "play": "Match the message to the work the contractor actually sells.",
+      "stage": 0,
+      "fit": 72,
+      "timing": 48,
+      "value": 1440,
+      "owner": "Needs review",
+      "channel": "Partner referrals",
+      "ageDays": 14,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A window-and-siding contractor responded to a trade-specific campaign.",
+          "age": "14 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Match the message to the work the contractor actually sells.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "hearth-04",
+      "name": "Summit Airworks",
+      "domain": "hearth-account-4.example",
+      "segment": "HVAC / remodeling",
+      "signalType": "Partner referral",
+      "signal": "A referral includes a verified owner but an incomplete service area.",
+      "play": "Resolve coverage before assigning the local sales queue.",
+      "stage": 2,
+      "fit": 83,
+      "timing": 77,
+      "value": 9600,
+      "owner": "Solutions partner",
+      "channel": "Lifecycle",
+      "ageDays": 1,
+      "responseMinutes": 25,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A referral includes a verified owner but an incomplete service area.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Resolve coverage before assigning the local sales queue.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "hearth-05",
+      "name": "Mosaic Renovation",
+      "domain": "hearth-account-5.example",
+      "segment": "HVAC / remodeling",
+      "signalType": "Activation gap",
+      "signal": "A new contractor attended onboarding but has not used its first customer workflow.",
+      "play": "Identify the activation step that needs a human follow-up.",
+      "stage": 1,
+      "fit": 91,
+      "timing": 90,
+      "value": 5120,
+      "owner": "SDR team",
+      "channel": "Inbound search",
+      "ageDays": 4,
+      "responseMinutes": 7,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A new contractor attended onboarding but has not used its first customer workflow.",
+          "age": "4 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Identify the activation step that needs a human follow-up.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "hearth-06",
+      "name": "Juniper Roofing",
+      "domain": "hearth-account-6.example",
+      "segment": "Roofing / exterior",
+      "signalType": "Response delay",
+      "signal": "A qualified roofing lead has no response receipt after routing.",
+      "play": "Check delivery and ownership before treating the lead as contacted.",
+      "stage": 2,
+      "fit": 80,
+      "timing": 73,
+      "value": 6800,
+      "owner": "Account owner",
+      "channel": "Trade campaigns",
+      "ageDays": 8,
+      "responseMinutes": 18,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A qualified roofing lead has no response receipt after routing.",
+          "age": "8 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Check delivery and ownership before treating the lead as contacted.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "hearth-07",
+      "name": "Quay Comfort",
+      "domain": "hearth-account-7.example",
+      "segment": "HVAC / remodeling",
+      "signalType": "Retention signal",
+      "signal": "An established contractor has reduced activity and a changed office contact.",
+      "play": "Verify the contact change and offer a focused workflow check-in.",
+      "stage": 0,
+      "fit": 67,
+      "timing": 42,
+      "value": 1920,
+      "owner": "Needs review",
+      "channel": "Partner referrals",
+      "ageDays": 21,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An established contractor has reduced activity and a changed office contact.",
+          "age": "21 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Verify the contact change and offer a focused workflow check-in.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "hearth-08",
+      "name": "Larch Exteriors",
+      "domain": "hearth-account-8.example",
+      "segment": "Roofing / exterior",
+      "signalType": "Duplicate lead",
+      "signal": "A trade-show scan and a website request represent the same business.",
+      "play": "Merge the context and preserve source attribution without duplicate outreach.",
+      "stage": 3,
+      "fit": 86,
+      "timing": 80,
+      "value": 4640,
+      "owner": "Solutions partner",
+      "channel": "Lifecycle",
+      "ageDays": 3,
+      "responseMinutes": 9,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A trade-show scan and a website request represent the same business.",
+          "age": "3 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Merge the context and preserve source attribution without duplicate outreach.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "hearth-09",
+      "name": "Beacon Remodel",
+      "domain": "hearth-account-9.example",
+      "segment": "HVAC / remodeling",
+      "signalType": "Workflow interest",
+      "signal": "A remodeler asked about quotes and customer follow-through.",
+      "play": "Qualify the requested workflow rather than lead with every product.",
+      "stage": 1,
+      "fit": 79,
+      "timing": 68,
+      "value": 7600,
+      "owner": "SDR team",
+      "channel": "Inbound search",
+      "ageDays": 7,
+      "responseMinutes": 20,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A remodeler asked about quotes and customer follow-through.",
+          "age": "7 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Qualify the requested workflow rather than lead with every product.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "hearth-10",
+      "name": "Stonepath Roof",
+      "domain": "hearth-account-10.example",
+      "segment": "Roofing / exterior",
+      "signalType": "Outcome review",
+      "signal": "A contractor completed onboarding and has a recurring customer workflow.",
+      "play": "Capture the activation milestone and the next retention check.",
+      "stage": 4,
+      "fit": 95,
+      "timing": 96,
+      "value": 8800,
+      "owner": "Customer owner",
+      "channel": "Trade campaigns",
+      "ageDays": 1,
+      "responseMinutes": 5,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A contractor completed onboarding and has a recurring customer workflow.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Customer owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Capture the activation milestone and the next retention check.",
+          "age": "Current rule"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Recover the unfinished booking",
+      "detail": "Inspect lead → owner → response → meeting so the next step is explicit.",
+      "badge": "Conversion",
+      "view": "booth",
+      "accountId": "hearth-02",
+      "accountName": "Harbor Homeworks",
+      "signalType": "Partial booking"
+    },
+    {
+      "title": "Route by trade and service area",
+      "detail": "Send the contractor to the right owner with the original request attached.",
+      "badge": "Routing",
+      "view": "signals",
+      "accountId": "hearth-04",
+      "accountName": "Summit Airworks",
+      "signalType": "Partner referral"
+    },
+    {
+      "title": "Check first-workflow activation",
+      "detail": "Find the missing step after onboarding instead of sending a generic reminder.",
+      "badge": "Activation",
+      "view": "deals",
+      "accountId": "hearth-05",
+      "accountName": "Mosaic Renovation",
+      "signalType": "Activation gap"
+    },
+    {
+      "title": "Audit response receipts",
+      "detail": "A delivered message is different from a reply or held meeting.",
+      "badge": "Reliability",
+      "view": "agents",
+      "accountId": "hearth-06",
+      "accountName": "Juniper Roofing",
+      "signalType": "Response delay"
+    },
+    {
+      "title": "Keep the holdout intact",
+      "detail": "Compare like-for-like lead cohorts before attributing a conversion change.",
+      "badge": "Measurement",
+      "view": "experiments",
+      "accountId": "hearth-09",
+      "accountName": "Beacon Remodel",
+      "signalType": "Workflow interest"
+    },
+    {
+      "title": "Inspect duplicate acquisition",
+      "detail": "Preserve the referral and search sources while avoiding a second outreach owner.",
+      "badge": "Attribution",
+      "view": "datalayer",
+      "accountId": "hearth-08",
+      "accountName": "Larch Exteriors",
+      "signalType": "Duplicate lead"
+    }
+  ],
+  "personas": [
+    {
+      "name": "Contractor owner",
+      "pain": "A customer conversation interrupted by complicated financing and follow-through",
+      "promise": "A trade-relevant conversation about the sales workflow the owner wants to improve.",
+      "subject": "A useful next step for {{trade}} projects",
+      "email": "Hi {{first_name}}, you asked about {{requested_workflow}} for your {{trade}} business. What happens today between the first customer quote and the next decision? I’d like to understand that handoff before suggesting a workflow.",
+      "question": "Which part of your quote-to-customer process causes the most follow-up?"
+    },
+    {
+      "name": "Sales / office manager",
+      "pain": "Leads and customer tasks without clear ownership",
+      "promise": "A clear next step, an owner and a visible follow-up receipt.",
+      "subject": "Following up on {{business}}’s request",
+      "email": "Hi {{first_name}}, I’m following up on the request about {{requested_workflow}}. Would it be more useful to review the current process together, or first answer one specific question? I can keep the next step focused on how your team works.",
+      "question": "Who should own the next step, and what would make a short conversation useful?"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E-01",
+      "title": "Response timing",
+      "control": "Current routing SLA",
+      "treatment": "Prioritized owner acknowledgement",
+      "metric": "Held meetings",
+      "nA": 120,
+      "nB": 120,
+      "winsA": 12,
+      "winsB": 17,
+      "status": "Review"
+    },
+    {
+      "id": "E-02",
+      "title": "Intake form",
+      "control": "All fields upfront",
+      "treatment": "Progressive trade-specific questions",
+      "metric": "Completed bookings",
+      "nA": 145,
+      "nB": 145,
+      "winsA": 29,
+      "winsB": 33,
+      "status": "Review"
+    },
+    {
+      "id": "E-03",
+      "title": "Outreach relevance",
+      "control": "Generic contractor copy",
+      "treatment": "Trade + requested workflow",
+      "metric": "Qualified replies",
+      "nA": 90,
+      "nB": 90,
+      "winsA": 18,
+      "winsB": 21,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-04",
+      "title": "Booking recovery",
+      "control": "No follow-up on dropoff",
+      "treatment": "Owned recovery sequence",
+      "metric": "Recovered meetings",
+      "nA": 160,
+      "nB": 160,
+      "winsA": 24,
+      "winsB": 26,
+      "status": "Review"
+    },
+    {
+      "id": "E-05",
+      "title": "Activation",
+      "control": "General onboarding reminder",
+      "treatment": "Specific missing workflow step",
+      "metric": "Activated contractors",
+      "nA": 100,
+      "nB": 100,
+      "winsA": 20,
+      "winsB": 25,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-06",
+      "title": "Retention",
+      "control": "Time-based check-in",
+      "treatment": "Change-triggered human review",
+      "metric": "Retained accounts",
+      "nA": 130,
+      "nB": 130,
+      "winsA": 13,
+      "winsB": 18,
+      "status": "Review"
+    }
+  ],
+  "pitch": "I am a founder who has shipped a revenue-generating iOS app and built inquiry, matching, billing and follow-up workflows. I also bring years of outbound sales and closing experience. At Hearth, I would connect that builder-operator perspective to the contractor lead journey: the right fit, a clear owner, a useful next step and measurement through activation.",
+  "mappings": [
+    [
+      "Inbound conversion",
+      "Hire Line Dancers: matching, private inquiries and follow-up recovery.",
+      "Make the lead-to-next-step workflow complete and observable."
+    ],
+    [
+      "Activation + measurement",
+      "Shipped product onboarding and PostHog funnel work.",
+      "Define one activation event and test the intervention against a baseline."
+    ],
+    [
+      "Hands-on GTM building",
+      "Founder experience plus startup positioning, outbound and closing.",
+      "Build a small usable workflow, observe sellers and iterate on outcomes."
+    ]
+  ],
+  "checkpoint": [
+    "Trade + area verified",
+    "Owner responded",
+    "First workflow used",
+    "Retention check"
+  ],
+  "northStar": "Qualified contractors who activate and keep using the product",
+  "weekOne": "A complete lead-to-owner-to-next-step workflow for one contractor source.",
+  "days60": "Improve the first-workflow activation journey and compare trade-specific cohorts with a documented baseline.",
+  "days90": "Scale the strongest intervention using activation and retention outcomes, with causal limits and operational cost visible.",
+  "schemaVersion": 2,
+  "roleUrl": "https://ats.rippling.com/en-CA/hearth-careers/jobs/6646458f-fb05-4c7b-b6fa-93504a628fdc",
+  "sources": [
+    {
+      "url": "https://ats.rippling.com/en-CA/hearth-careers/jobs/6646458f-fb05-4c7b-b6fa-93504a628fdc",
+      "label": "Role description"
+    },
+    {
+      "url": "https://gethearth.com/",
+      "label": "Company / product reference"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Wisetack",
+      "url": "https://www.wisetack.com/",
+      "context": "Offers customer financing for real-life service businesses.",
+      "question": "Is the contractor primarily solving homeowner payment flexibility, lead response, or the broader quote-to-payment workflow? Compare the relevant financing terms directly before making claims."
+    },
+    {
+      "name": "Jobber",
+      "url": "https://www.getjobber.com/",
+      "context": "Offers software for service-business quotes, scheduling, work and payments.",
+      "question": "Which contractor workflows already work in the existing system, and what acquisition, call handling or financing gap is still worth solving? Treat overlap as partial rather than identical."
+    }
+  ],
+  "firstBuilds": [
+    {
+      "title": "Inbound handoff recovery",
+      "goal": "Make the step after a qualified form submission dependable.",
+      "steps": [
+        "Match contractor",
+        "Verify fit + trade",
+        "Assign owner",
+        "Confirm next action"
+      ],
+      "scope": "50 historical inbound leads and one reviewed live source.",
+      "measure": "Owner accuracy, response receipts, held meetings and booking dropoff."
+    },
+    {
+      "title": "Trade-aware qualification",
+      "goal": "Keep the conversation relevant to the contractor’s business.",
+      "steps": [
+        "Capture trade",
+        "Check coverage",
+        "Identify workflow need",
+        "Prepare owner brief"
+      ],
+      "scope": "One trade cohort with a documented manual baseline.",
+      "measure": "Qualified-lead agreement, missing fields and useful owner context."
+    },
+    {
+      "title": "Activation experiment",
+      "goal": "Test one intervention with a clear outcome and comparison group.",
+      "steps": [
+        "Define activation",
+        "Assign cohort",
+        "Observe workflow use",
+        "Review causal limits"
+      ],
+      "scope": "A narrow activation milestone with an agreed holdout.",
+      "measure": "Activation, retention, intervention cost and cohort balance."
+    }
+  ],
+  "projectRelevance": {
+    "sammy": "Structured source data, deduplication and validation are useful for clean contractor qualification and service-area context.",
+    "sidequest": "Onboarding, analytics and a local partnership CRM connect acquisition, activation and commercial feedback.",
+    "dancers": "Matching by service area, private inquiries and durable follow-up closely relate to contractor lead handoffs and recovery."
+  }
 }

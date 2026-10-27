@@ -1,118 +1,11 @@
 {
+  "slug": "august",
   "name": "August",
   "role": "GTM Engineer",
-  "accent": "#5048a8",
-  "product": "August partners with law firms on AI-enabled legal work and workflows.",
-  "opportunity": "Prioritize firms where an AI-enabled delivery model could have a clear use case.",
-  "hypothesis": "Firm focus, practice mix and publicly visible growth can help a rep choose a relevant conversation. A sourced firm brief could make outreach more specific without guessing at confidential matters.",
-  "module": "Law firm opportunity map",
-  "unit": "firms",
-  "dimension": "Practice focus",
-  "fit_label": "Firm fit",
-  "intent_label": "Public signal",
-  "action": "Build firm brief",
-  "stages": [
-    "Segment firms",
-    "Research public context",
-    "Map practice leaders",
-    "Review outreach brief"
-  ],
-  "automations": [
-    "Summarize public practice and growth information with sources.",
-    "Suggest stakeholder roles for a rep to verify.",
-    "Draft a proposed angle for human review without client or matter assumptions."
-  ],
-  "roadmap": [
-    "Define the first firm segment and gather feedback from the GTM team.",
-    "Build source-backed firm briefs and a human-reviewed prospecting workflow.",
-    "Track which conversations advance and refine the targeting model."
-  ],
-  "fit": "CJ’s background includes enterprise prospecting, messaging and negotiation, supported by a local CRM with contact provenance and campaign drafts.",
-  "segments": [
-    "Corporate law",
-    "Litigation",
-    "Commercial law"
-  ],
-  "signals": [
-    "Practice expansion",
-    "New office",
-    "Technology initiative"
-  ],
-  "values": [
-    80000,
-    115000,
-    60000,
-    160000,
-    95000,
-    70000
-  ],
-  "slug": "august",
   "resume": {
     "docx": "CJ_Wheelock_August_GTM_Engineer.docx",
     "pdf": "CJ_Wheelock_August_GTM_Engineer.pdf"
   },
-  "accounts": [
-    {
-      "name": "Account A",
-      "segment": "Corporate law",
-      "signal": "Practice expansion",
-      "fit": 92,
-      "intent": 86,
-      "stage": "New",
-      "value": 80000,
-      "next": "Confirm the source and assign an owner."
-    },
-    {
-      "name": "Account B",
-      "segment": "Litigation",
-      "signal": "New office",
-      "fit": 82,
-      "intent": 70,
-      "stage": "Qualified",
-      "value": 115000,
-      "next": "Review the context and choose a relevant next step."
-    },
-    {
-      "name": "Account C",
-      "segment": "Commercial law",
-      "signal": "Technology initiative",
-      "fit": 67,
-      "intent": 52,
-      "stage": "Discovery",
-      "value": 60000,
-      "next": "Validate the need with the appropriate stakeholder."
-    },
-    {
-      "name": "Account D",
-      "segment": "Corporate law",
-      "signal": "Practice expansion",
-      "fit": 94,
-      "intent": 92,
-      "stage": "Won",
-      "value": 160000,
-      "next": "Record the outcome and carry forward the learning."
-    },
-    {
-      "name": "Account E",
-      "segment": "Litigation",
-      "signal": "New office",
-      "fit": 78,
-      "intent": 66,
-      "stage": "Qualified",
-      "value": 95000,
-      "next": "Resolve any missing context before outreach."
-    },
-    {
-      "name": "Account F",
-      "segment": "Commercial law",
-      "signal": "Technology initiative",
-      "fit": 61,
-      "intent": 47,
-      "stage": "New",
-      "value": 70000,
-      "next": "Keep in research until the signal is stronger."
-    }
-  ],
   "contact": {
     "name": "CJ Wheelock",
     "location": "New York, NY",
@@ -120,10 +13,800 @@
     "phone": "520-891-0750",
     "linkedin": "https://www.linkedin.com/in/cjwheelock"
   },
-  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
-  "proof": [
-    "$2.5M in development revenue at BeBop Sensors",
-    "124% of quota as an enterprise business development manager",
-    "Source-backed extraction and a local partnership CRM"
-  ]
+  "title": "A growth system that connects channels to the client",
+  "subtitle": "Acquisition engineering · Partnerships · Attribution",
+  "focus": "Build the measurement and workflow layer across search, referrals, outbound and a law firm’s first useful conversation.",
+  "priorities": [
+    "Build pipelines and automations across GTM tools and HubSpot APIs.",
+    "Instrument acquisition, referrals and funnel performance with PostHog / Statsig.",
+    "Improve search and paid acquisition using SEO, Search Console and Google Ads context.",
+    "Support the partnership and services growth model with useful, relevant outreach."
+  ],
+  "segments": [
+    "Corporate / commercial",
+    "Litigation / disputes"
+  ],
+  "funnel": [
+    "Firms reached",
+    "Qualified interest",
+    "Partner conversation",
+    "Solution evaluation",
+    "Engaged"
+  ],
+  "channels": [
+    "Organic search",
+    "Referrals",
+    "Outbound",
+    "Paid acquisition"
+  ],
+  "unit": "annual opportunity value",
+  "metric": "Qualified firm pipeline",
+  "special": "Channel attribution",
+  "dealLabel": "Partnerships & activation",
+  "stack": [
+    "Search + acquisition events",
+    "Referral / campaign identifiers",
+    "HubSpot APIs + lifecycle",
+    "PostHog / Statsig measurement"
+  ],
+  "layers": [
+    [
+      "Acquire",
+      "Search intent, referral identifiers, outbound and paid campaign context."
+    ],
+    [
+      "Resolve",
+      "Firm, practice group and contact identity with source and consent context."
+    ],
+    [
+      "Attribute",
+      "Preserve first touch, assisted touches and the qualified-conversation outcome."
+    ],
+    [
+      "Improve",
+      "Use channel and experiment evidence to refine content, outreach and partner handoffs."
+    ]
+  ],
+  "rules": [
+    "Public practice information is sufficient for research; do not infer confidential client matters.",
+    "A referral needs its own identifier and a verified relationship.",
+    "An attribution model assigns credit; it does not prove incrementality."
+  ],
+  "accounts": [
+    {
+      "id": "august-01",
+      "name": "Cedar & Vale",
+      "domain": "august-account-1.example",
+      "segment": "Corporate / commercial",
+      "signalType": "Search intent",
+      "signal": "A commercial-practice contact requested a knowledge-workflow discussion after reading a guide.",
+      "play": "Preserve the content and qualified-conversation context.",
+      "stage": 1,
+      "fit": 94,
+      "timing": 93,
+      "value": 27300,
+      "owner": "SDR team",
+      "channel": "Organic search",
+      "ageDays": 2,
+      "responseMinutes": 8,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A commercial-practice contact requested a knowledge-workflow discussion after reading a guide.",
+          "age": "2 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Preserve the content and qualified-conversation context.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "august-02",
+      "name": "Harbor Counsel",
+      "domain": "august-account-2.example",
+      "segment": "Litigation / disputes",
+      "signalType": "Referral",
+      "signal": "A professional referral introduced a practice leader.",
+      "play": "Verify the referral owner and relationship before follow-up.",
+      "stage": 3,
+      "fit": 88,
+      "timing": 86,
+      "value": 48750,
+      "owner": "Account owner",
+      "channel": "Referrals",
+      "ageDays": 5,
+      "responseMinutes": 12,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A professional referral introduced a practice leader.",
+          "age": "5 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Verify the referral owner and relationship before follow-up.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "august-03",
+      "name": "Larch Legal",
+      "domain": "august-account-3.example",
+      "segment": "Corporate / commercial",
+      "signalType": "Practice growth",
+      "signal": "The firm announced a new commercial practice group.",
+      "play": "Research the group’s public work and operating process.",
+      "stage": 0,
+      "fit": 72,
+      "timing": 48,
+      "value": 11700,
+      "owner": "Needs review",
+      "channel": "Outbound",
+      "ageDays": 14,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The firm announced a new commercial practice group.",
+          "age": "14 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Research the group’s public work and operating process.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "august-04",
+      "name": "Mosaic Chambers",
+      "domain": "august-account-4.example",
+      "segment": "Litigation / disputes",
+      "signalType": "Document workflow",
+      "signal": "A public job description references document-intensive litigation operations.",
+      "play": "Ask a practice-specific question without inferring client details.",
+      "stage": 2,
+      "fit": 83,
+      "timing": 77,
+      "value": 78000,
+      "owner": "Solutions partner",
+      "channel": "Paid acquisition",
+      "ageDays": 1,
+      "responseMinutes": 25,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A public job description references document-intensive litigation operations.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Ask a practice-specific question without inferring client details.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "august-05",
+      "name": "Elm Advisory Law",
+      "domain": "august-account-5.example",
+      "segment": "Corporate / commercial",
+      "signalType": "Outbound reply",
+      "signal": "A partner replied with a question about how an AI-assisted workflow fits the firm.",
+      "play": "Route to a relevant conversation and preserve the original question.",
+      "stage": 1,
+      "fit": 91,
+      "timing": 90,
+      "value": 41600,
+      "owner": "SDR team",
+      "channel": "Organic search",
+      "ageDays": 4,
+      "responseMinutes": 7,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A partner replied with a question about how an AI-assisted workflow fits the firm.",
+          "age": "4 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Route to a relevant conversation and preserve the original question.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "august-06",
+      "name": "Quay Partners",
+      "domain": "august-account-6.example",
+      "segment": "Litigation / disputes",
+      "signalType": "Channel overlap",
+      "signal": "A referred contact later returned through paid search before booking.",
+      "play": "Keep the first, assisted and conversion touches separate.",
+      "stage": 2,
+      "fit": 80,
+      "timing": 73,
+      "value": 55250,
+      "owner": "Account owner",
+      "channel": "Referrals",
+      "ageDays": 8,
+      "responseMinutes": 18,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A referred contact later returned through paid search before booking.",
+          "age": "8 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Keep the first, assisted and conversion touches separate.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "august-07",
+      "name": "Pinebridge Law",
+      "domain": "august-account-7.example",
+      "segment": "Corporate / commercial",
+      "signalType": "Integration interest",
+      "signal": "A firm asked about Word and Outlook workflow context.",
+      "play": "Verify the actual requested use case and integration needs.",
+      "stage": 0,
+      "fit": 67,
+      "timing": 42,
+      "value": 15600,
+      "owner": "Needs review",
+      "channel": "Outbound",
+      "ageDays": 21,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A firm asked about Word and Outlook workflow context.",
+          "age": "21 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Verify the actual requested use case and integration needs.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "august-08",
+      "name": "Atlas Disputes",
+      "domain": "august-account-8.example",
+      "segment": "Litigation / disputes",
+      "signalType": "Booking dropoff",
+      "signal": "A practice leader started the booking flow after reading a guide but did not finish.",
+      "play": "Recover the handoff with a specific, low-friction next step.",
+      "stage": 3,
+      "fit": 86,
+      "timing": 80,
+      "value": 37700,
+      "owner": "Solutions partner",
+      "channel": "Paid acquisition",
+      "ageDays": 3,
+      "responseMinutes": 9,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A practice leader started the booking flow after reading a guide but did not finish.",
+          "age": "3 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Recover the handoff with a specific, low-friction next step.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "august-09",
+      "name": "Beacon Commercial",
+      "domain": "august-account-9.example",
+      "segment": "Corporate / commercial",
+      "signalType": "Partner model",
+      "signal": "A potential partner requested a discussion of the service and commercial arrangement.",
+      "play": "Document the partnership questions for a human owner.",
+      "stage": 1,
+      "fit": 79,
+      "timing": 68,
+      "value": 61750,
+      "owner": "SDR team",
+      "channel": "Organic search",
+      "ageDays": 7,
+      "responseMinutes": 20,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A potential partner requested a discussion of the service and commercial arrangement.",
+          "age": "7 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Document the partnership questions for a human owner.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "august-10",
+      "name": "Stonewell Legal",
+      "domain": "august-account-10.example",
+      "segment": "Litigation / disputes",
+      "signalType": "Evaluation review",
+      "signal": "The firm completed a scoped workflow discussion and has a clear decision owner.",
+      "play": "Carry the agreed practice context into the next stage.",
+      "stage": 4,
+      "fit": 95,
+      "timing": 96,
+      "value": 71500,
+      "owner": "Customer owner",
+      "channel": "Referrals",
+      "ageDays": 1,
+      "responseMinutes": 5,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The firm completed a scoped workflow discussion and has a clear decision owner.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Customer owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Carry the agreed practice context into the next stage.",
+          "age": "Current rule"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Reconcile the referral journey",
+      "detail": "Preserve a referral touch even when search receives the final click.",
+      "badge": "Attribution",
+      "view": "booth",
+      "accountId": "august-06",
+      "accountName": "Quay Partners",
+      "signalType": "Channel overlap"
+    },
+    {
+      "title": "Research the practice context",
+      "detail": "Use public firm evidence to make the outreach question relevant.",
+      "badge": "Relevance",
+      "view": "signals",
+      "accountId": "august-01",
+      "accountName": "Cedar & Vale",
+      "signalType": "Search intent"
+    },
+    {
+      "title": "Recover the qualified booking",
+      "detail": "Keep the original workflow interest with the lifecycle owner.",
+      "badge": "Conversion",
+      "view": "deals",
+      "accountId": "august-08",
+      "accountName": "Atlas Disputes",
+      "signalType": "Booking dropoff"
+    },
+    {
+      "title": "Audit channel identifiers",
+      "detail": "Check referral, campaign and account joins before trusting the report.",
+      "badge": "Data quality",
+      "view": "datalayer",
+      "accountId": "august-06",
+      "accountName": "Quay Partners",
+      "signalType": "Channel overlap"
+    },
+    {
+      "title": "Test the acquisition message",
+      "detail": "Compare a specific practice workflow with a generic AI introduction.",
+      "badge": "Growth",
+      "view": "experiments",
+      "accountId": "august-04",
+      "accountName": "Mosaic Chambers",
+      "signalType": "Document workflow"
+    },
+    {
+      "title": "Connect partner feedback",
+      "detail": "Turn the questions from a partner conversation into an owned next action.",
+      "badge": "Partnerships",
+      "view": "agents",
+      "accountId": "august-09",
+      "accountName": "Beacon Commercial",
+      "signalType": "Partner model"
+    }
+  ],
+  "personas": [
+    {
+      "name": "Practice leader",
+      "pain": "Finding a useful AI workflow within the practice’s actual work",
+      "promise": "A practice-specific discovery conversation using public context only.",
+      "subject": "A question about {{practice}} workflows",
+      "email": "Hi {{first_name}}, I saw your firm’s public work in {{practice}}. I’d like to understand one recurring knowledge or document workflow your team would find useful to improve. Where does that work slow down today?",
+      "question": "Which workflow would be useful to examine without bringing in confidential matter details?"
+    },
+    {
+      "name": "Managing partner / operations",
+      "pain": "Evaluating a new workflow and commercial partnership across the firm",
+      "promise": "A scoped evaluation with operational ownership and clear partnership questions.",
+      "subject": "A focused conversation for {{firm}}",
+      "email": "Hi {{first_name}}, before proposing a broad AI initiative, I’d start with one practice workflow, a responsible owner and a way to judge usefulness. Would it help to map that process and the partnership questions together?",
+      "question": "Who should own workflow adoption and review the commercial arrangement?"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E-01",
+      "title": "Search landing page",
+      "control": "Generic AI overview",
+      "treatment": "Practice-specific workflow page",
+      "metric": "Qualified conversations",
+      "nA": 120,
+      "nB": 120,
+      "winsA": 12,
+      "winsB": 17,
+      "status": "Review"
+    },
+    {
+      "id": "E-02",
+      "title": "Referral capture",
+      "control": "Last-touch only",
+      "treatment": "Persistent referral identifier",
+      "metric": "Attributed referrals",
+      "nA": 145,
+      "nB": 145,
+      "winsA": 29,
+      "winsB": 33,
+      "status": "Review"
+    },
+    {
+      "id": "E-03",
+      "title": "Outbound opening",
+      "control": "AI efficiency claim",
+      "treatment": "Public practice-specific question",
+      "metric": "Relevant replies",
+      "nA": 90,
+      "nB": 90,
+      "winsA": 18,
+      "winsB": 21,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-04",
+      "title": "Booking flow",
+      "control": "Long qualification form",
+      "treatment": "Focused question then booking",
+      "metric": "Completed bookings",
+      "nA": 160,
+      "nB": 160,
+      "winsA": 24,
+      "winsB": 26,
+      "status": "Review"
+    },
+    {
+      "id": "E-05",
+      "title": "Paid search",
+      "control": "Broad category terms",
+      "treatment": "Workflow-intent cohort",
+      "metric": "Qualified meetings",
+      "nA": 100,
+      "nB": 100,
+      "winsA": 20,
+      "winsB": 25,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-06",
+      "title": "Partner onboarding",
+      "control": "General presentation",
+      "treatment": "Scoped workflow + owner",
+      "metric": "Accepted evaluations",
+      "nA": 130,
+      "nB": 130,
+      "winsA": 13,
+      "winsB": 18,
+      "status": "Review"
+    }
+  ],
+  "pitch": "I combine startup positioning and outbound experience with hands-on product and data building. I have built a local CRM with contact provenance and campaign drafts, product analytics and customer inquiry workflows. At August, I would bring those pieces together across acquisition channels, relevant firm research and a measurable path to a useful partner conversation.",
+  "mappings": [
+    [
+      "Acquisition + attribution",
+      "PostHog funnel work and a local partnership CRM.",
+      "Join search, referrals and campaign activity to qualified conversations."
+    ],
+    [
+      "GTM APIs + workflows",
+      "Next.js / React / Node / Supabase product and commercial workflows.",
+      "Build a narrow, reliable lifecycle integration with explicit receipts."
+    ],
+    [
+      "Relevant outreach",
+      "Startup positioning, messaging, outbound and enterprise selling.",
+      "Start from the practice’s public work and a useful question."
+    ]
+  ],
+  "checkpoint": [
+    "Practice context verified",
+    "Partner owner engaged",
+    "Workflow scope agreed",
+    "Next action accepted"
+  ],
+  "northStar": "Qualified conversations with understandable acquisition history",
+  "weekOne": "One instrumented search / referral-to-conversation journey.",
+  "days60": "Extend the measurement model across outbound and paid acquisition; improve a practice-specific landing page and booking path.",
+  "days90": "Scale channels and partner workflows from qualified outcomes, with attribution and incrementality treated as different questions.",
+  "schemaVersion": 2,
+  "roleUrl": "https://jobs.ashbyhq.com/august/c87016c8-1ecf-410c-809e-2a15b52c15d6",
+  "sources": [
+    {
+      "url": "https://jobs.ashbyhq.com/august/c87016c8-1ecf-410c-809e-2a15b52c15d6/",
+      "label": "Role, engineering requirements, acquisition channels, stack, compensation, partnership model"
+    },
+    {
+      "url": "https://www.august.law/product/integrations",
+      "label": "Word, Outlook and SharePoint workflows"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Harvey",
+      "url": "https://www.harvey.ai/",
+      "context": "Its public site describes AI products for legal/professional work, including agents, document analysis, knowledge and legal-work orchestration.",
+      "question": "Is the firm buying a software tool, redesigning a service workflow, or evaluating a commercial partnership, and what measurable outcome should the pilot prove?"
+    },
+    {
+      "name": "Legora",
+      "url": "https://legora.com/",
+      "context": "Its public site describes collaborative legal AI with data/integrations, context, legal capabilities and governance.",
+      "question": "Which practice workflow, knowledge sources, review responsibilities and integration constraints will the firm use to compare approaches?"
+    }
+  ],
+  "firstBuilds": [
+    {
+      "title": "Acquisition attribution foundation",
+      "goal": "Connect a useful conversation to its actual touch history.",
+      "steps": [
+        "Capture identifiers",
+        "Resolve firm",
+        "Preserve touches",
+        "Model qualified outcome"
+      ],
+      "scope": "One search / referral journey and agreed attribution definitions.",
+      "measure": "Identifier coverage, channel reconciliation and qualified conversations."
+    },
+    {
+      "title": "Practice-led prospect brief",
+      "goal": "Keep outreach relevant without making unsupported assumptions.",
+      "steps": [
+        "Research firm",
+        "Identify practice",
+        "Draft useful question",
+        "Human review"
+      ],
+      "scope": "20 firms across two clearly defined practice cohorts.",
+      "measure": "Factual edits, relevant replies and partner usefulness."
+    },
+    {
+      "title": "Booking + partner handoff",
+      "goal": "Give qualified interest an explicit next step.",
+      "steps": [
+        "Record interest",
+        "Assign owner",
+        "Recover booking gap",
+        "Capture partner questions"
+      ],
+      "scope": "One qualified inquiry path with HubSpot lifecycle receipts.",
+      "measure": "Booking completion, owner accuracy and accepted partner conversations."
+    }
+  ],
+  "projectRelevance": {
+    "sammy": "Source-backed research helps keep firm and practice context credible without inferring confidential work.",
+    "sidequest": "The local partnership CRM, campaign drafts and PostHog funnels are relevant to acquisition joins and channel measurement.",
+    "dancers": "Discovery, private inquiries, matching and dependable follow-up connect qualified interest to the right person."
+  }
 }

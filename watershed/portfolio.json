@@ -1,118 +1,11 @@
 {
+  "slug": "watershed",
   "name": "Watershed",
   "role": "GTM Engineer",
-  "accent": "#147d70",
-  "product": "Watershed helps enterprises measure, report and reduce environmental impact.",
-  "opportunity": "Map sustainability needs to the people who can move an enterprise evaluation.",
-  "hypothesis": "A reporting or supplier signal is most useful when paired with the right sustainability, finance and operational stakeholders. A sourced account map could support a more relevant conversation.",
-  "module": "Sustainability buying committee",
-  "unit": "accounts",
-  "dimension": "Sector",
-  "fit_label": "Enterprise fit",
-  "intent_label": "Research signal",
-  "action": "Map stakeholders",
-  "stages": [
-    "Identify account",
-    "Verify public signal",
-    "Map buying roles",
-    "Prepare account brief"
-  ],
-  "automations": [
-    "Capture a dated source for each company signal.",
-    "Suggest possible stakeholder roles, not named people without evidence.",
-    "Flag where compliance claims need specialist verification."
-  ],
-  "roadmap": [
-    "Map a narrow enterprise segment and interview the GTM team about current account research.",
-    "Pilot source-backed account maps with sustainability and finance roles.",
-    "Review seller use and qualified conversations; improve coverage and freshness."
-  ],
-  "fit": "Enterprise technical sales across engineering and business stakeholders pairs with source-backed research and contact provenance in CJ’s product work.",
-  "segments": [
-    "Manufacturing",
-    "Retail",
-    "Financial services"
-  ],
-  "signals": [
-    "Supplier reporting",
-    "Sustainability disclosure",
-    "Procurement initiative"
-  ],
-  "values": [
-    85000,
-    120000,
-    62000,
-    145000,
-    78000,
-    96000
-  ],
-  "slug": "watershed",
   "resume": {
     "docx": "CJ_Wheelock_Watershed_GTM_Engineer.docx",
     "pdf": "CJ_Wheelock_Watershed_GTM_Engineer.pdf"
   },
-  "accounts": [
-    {
-      "name": "Account A",
-      "segment": "Manufacturing",
-      "signal": "Supplier reporting",
-      "fit": 65,
-      "intent": 67,
-      "stage": "New",
-      "value": 85000,
-      "next": "Confirm the source and assign an owner."
-    },
-    {
-      "name": "Account B",
-      "segment": "Retail",
-      "signal": "Sustainability disclosure",
-      "fit": 96,
-      "intent": 48,
-      "stage": "New",
-      "value": 120000,
-      "next": "Review the context and choose a relevant next step."
-    },
-    {
-      "name": "Account C",
-      "segment": "Financial services",
-      "signal": "Procurement initiative",
-      "fit": 86,
-      "intent": 87,
-      "stage": "Qualified",
-      "value": 62000,
-      "next": "Validate the need with the appropriate stakeholder."
-    },
-    {
-      "name": "Account D",
-      "segment": "Manufacturing",
-      "signal": "Supplier reporting",
-      "fit": 71,
-      "intent": 71,
-      "stage": "Discovery",
-      "value": 145000,
-      "next": "Record the outcome and carry forward the learning."
-    },
-    {
-      "name": "Account E",
-      "segment": "Retail",
-      "signal": "Sustainability disclosure",
-      "fit": 98,
-      "intent": 53,
-      "stage": "Won",
-      "value": 78000,
-      "next": "Resolve any missing context before outreach."
-    },
-    {
-      "name": "Account F",
-      "segment": "Financial services",
-      "signal": "Procurement initiative",
-      "fit": 82,
-      "intent": 93,
-      "stage": "Qualified",
-      "value": 96000,
-      "next": "Keep in research until the signal is stronger."
-    }
-  ],
   "contact": {
     "name": "CJ Wheelock",
     "location": "New York, NY",
@@ -120,10 +13,800 @@
     "phone": "520-891-0750",
     "linkedin": "https://www.linkedin.com/in/cjwheelock"
   },
-  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
-  "proof": [
-    "$2.5M in development revenue at BeBop Sensors",
-    "124% of quota as an enterprise business development manager",
-    "Source-backed extraction and a local partnership CRM"
-  ]
+  "title": "Enterprise signals with evidence and a buying map",
+  "subtitle": "Account intelligence · Seller workflows · Revenue systems",
+  "focus": "Connect sustainability-related account context to the right stakeholders, seller action and a dependable commercial handoff.",
+  "priorities": [
+    "Build an outbound signal engine and AI-assisted account intelligence.",
+    "Improve Salesforce, routing and CPQ workflows.",
+    "Work with GTM teams to turn requests into adopted systems.",
+    "Measure business impact and improve the operating process."
+  ],
+  "segments": [
+    "Global enterprises",
+    "Complex supply chains"
+  ],
+  "funnel": [
+    "Accounts researched",
+    "Signal verified",
+    "Discovery",
+    "Solution validation",
+    "Won"
+  ],
+  "channels": [
+    "Account signals",
+    "Enterprise inbound",
+    "Partner programs",
+    "Executive events"
+  ],
+  "unit": "annual opportunity value",
+  "metric": "Mapped enterprise pipeline",
+  "special": "Buying committee",
+  "dealLabel": "Validation & commercial",
+  "stack": [
+    "Sourced account research",
+    "Salesforce ownership + routing",
+    "Buying-committee context",
+    "CPQ + approval dependencies"
+  ],
+  "layers": [
+    [
+      "Research",
+      "Public company disclosures, business changes and source timestamps."
+    ],
+    [
+      "Map",
+      "Sustainability, Finance, Operations and procurement roles with verified affiliations."
+    ],
+    [
+      "Route",
+      "Existing account ownership, a relevant reason to engage and seller feedback."
+    ],
+    [
+      "Operate",
+      "Solution validation and CPQ dependencies, with adoption and business impact measured."
+    ]
+  ],
+  "rules": [
+    "A reporting mention is a research signal, not a legal conclusion about an obligation.",
+    "Verify stakeholder names and remit; a title alone does not prove buying authority.",
+    "Preserve commercial approval dependencies before a quote or commitment."
+  ],
+  "accounts": [
+    {
+      "id": "watershed-01",
+      "name": "Cedar Global",
+      "domain": "watershed-account-1.example",
+      "segment": "Global enterprises",
+      "signalType": "Reporting update",
+      "signal": "A public sustainability report describes a broader data collection program.",
+      "play": "Research the program owner and current data workflow.",
+      "stage": 1,
+      "fit": 94,
+      "timing": 93,
+      "value": 75600,
+      "owner": "SDR team",
+      "channel": "Account signals",
+      "ageDays": 2,
+      "responseMinutes": 8,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A public sustainability report describes a broader data collection program.",
+          "age": "2 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Research the program owner and current data workflow.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "watershed-02",
+      "name": "Harbor Components",
+      "domain": "watershed-account-2.example",
+      "segment": "Complex supply chains",
+      "signalType": "Supplier initiative",
+      "signal": "A procurement update references supplier data requests.",
+      "play": "Map sustainability and procurement before proposing a conversation.",
+      "stage": 3,
+      "fit": 88,
+      "timing": 86,
+      "value": 135000,
+      "owner": "Account owner",
+      "channel": "Enterprise inbound",
+      "ageDays": 5,
+      "responseMinutes": 12,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A procurement update references supplier data requests.",
+          "age": "5 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Map sustainability and procurement before proposing a conversation.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "watershed-03",
+      "name": "Atlas Consumer",
+      "domain": "watershed-account-3.example",
+      "segment": "Global enterprises",
+      "signalType": "Finance hiring",
+      "signal": "A finance systems role includes responsibility for non-financial reporting data.",
+      "play": "Verify the remit and its relationship to the sustainability team.",
+      "stage": 0,
+      "fit": 72,
+      "timing": 48,
+      "value": 32400,
+      "owner": "Needs review",
+      "channel": "Partner programs",
+      "ageDays": 14,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A finance systems role includes responsibility for non-financial reporting data.",
+          "age": "14 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Verify the remit and its relationship to the sustainability team.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "watershed-04",
+      "name": "Mosaic Manufacturing",
+      "domain": "watershed-account-4.example",
+      "segment": "Complex supply chains",
+      "signalType": "Business expansion",
+      "signal": "A company announcement adds operating sites in several regions.",
+      "play": "Ask about data ownership across locations without inferring legal requirements.",
+      "stage": 2,
+      "fit": 83,
+      "timing": 77,
+      "value": 216000,
+      "owner": "Solutions partner",
+      "channel": "Executive events",
+      "ageDays": 1,
+      "responseMinutes": 25,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A company announcement adds operating sites in several regions.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Ask about data ownership across locations without inferring legal requirements.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "watershed-05",
+      "name": "Northline Group",
+      "domain": "watershed-account-5.example",
+      "segment": "Global enterprises",
+      "signalType": "Committee gap",
+      "signal": "The sustainability sponsor is engaged but Finance and procurement are unmapped.",
+      "play": "Build a verified buying map before the next enterprise review.",
+      "stage": 1,
+      "fit": 91,
+      "timing": 90,
+      "value": 115200,
+      "owner": "SDR team",
+      "channel": "Account signals",
+      "ageDays": 4,
+      "responseMinutes": 7,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The sustainability sponsor is engaged but Finance and procurement are unmapped.",
+          "age": "4 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Build a verified buying map before the next enterprise review.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "watershed-06",
+      "name": "Pine Materials",
+      "domain": "watershed-account-6.example",
+      "segment": "Complex supply chains",
+      "signalType": "Partner introduction",
+      "signal": "An advisor offered an introduction around a sustainability-data workflow.",
+      "play": "Keep relationship context and existing account ownership attached.",
+      "stage": 2,
+      "fit": 80,
+      "timing": 73,
+      "value": 153000,
+      "owner": "Account owner",
+      "channel": "Enterprise inbound",
+      "ageDays": 8,
+      "responseMinutes": 18,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An advisor offered an introduction around a sustainability-data workflow.",
+          "age": "8 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Keep relationship context and existing account ownership attached.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "watershed-07",
+      "name": "Larch Holdings",
+      "domain": "watershed-account-7.example",
+      "segment": "Global enterprises",
+      "signalType": "Approval dependency",
+      "signal": "A solution review is ready, but a commercial approval is incomplete.",
+      "play": "Expose the CPQ dependency instead of advancing the close plan prematurely.",
+      "stage": 0,
+      "fit": 67,
+      "timing": 42,
+      "value": 43200,
+      "owner": "Needs review",
+      "channel": "Partner programs",
+      "ageDays": 21,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A solution review is ready, but a commercial approval is incomplete.",
+          "age": "21 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Expose the CPQ dependency instead of advancing the close plan prematurely.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "watershed-08",
+      "name": "Quay Industries",
+      "domain": "watershed-account-8.example",
+      "segment": "Complex supply chains",
+      "signalType": "Source freshness",
+      "signal": "An old account brief refers to a stakeholder who changed roles.",
+      "play": "Refresh the evidence and verify the new program owner.",
+      "stage": 3,
+      "fit": 86,
+      "timing": 80,
+      "value": 104400,
+      "owner": "Solutions partner",
+      "channel": "Executive events",
+      "ageDays": 3,
+      "responseMinutes": 9,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An old account brief refers to a stakeholder who changed roles.",
+          "age": "3 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Refresh the evidence and verify the new program owner.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "watershed-09",
+      "name": "Beacon Retail",
+      "domain": "watershed-account-9.example",
+      "segment": "Global enterprises",
+      "signalType": "Executive interest",
+      "signal": "An executive event attendee asked about organizing sustainability data.",
+      "play": "Turn the question into a focused discovery brief.",
+      "stage": 1,
+      "fit": 79,
+      "timing": 68,
+      "value": 171000,
+      "owner": "SDR team",
+      "channel": "Account signals",
+      "ageDays": 7,
+      "responseMinutes": 20,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An executive event attendee asked about organizing sustainability data.",
+          "age": "7 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Turn the question into a focused discovery brief.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "watershed-10",
+      "name": "Elm Supply",
+      "domain": "watershed-account-10.example",
+      "segment": "Complex supply chains",
+      "signalType": "Outcome review",
+      "signal": "The account completed solution validation and signed an agreement with a documented data scope and buying group.",
+      "play": "Carry the agreed scope into the commercial handoff.",
+      "stage": 4,
+      "fit": 95,
+      "timing": 96,
+      "value": 198000,
+      "owner": "Customer owner",
+      "channel": "Enterprise inbound",
+      "ageDays": 1,
+      "responseMinutes": 5,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The account completed solution validation and signed an agreement with a documented data scope and buying group.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Customer owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Carry the agreed scope into the commercial handoff.",
+          "age": "Current rule"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Complete the buying map",
+      "detail": "Research the missing Finance and procurement roles before the next account review.",
+      "badge": "Stakeholders",
+      "view": "booth",
+      "accountId": "watershed-05",
+      "accountName": "Northline Group",
+      "signalType": "Committee gap"
+    },
+    {
+      "title": "Verify the reporting signal",
+      "detail": "Attach the original disclosure and avoid inferring an obligation or buying intent.",
+      "badge": "Evidence",
+      "view": "signals",
+      "accountId": "watershed-01",
+      "accountName": "Cedar Global",
+      "signalType": "Reporting update"
+    },
+    {
+      "title": "Resolve the quote dependency",
+      "detail": "Keep scope, owner and approval status visible through the commercial handoff.",
+      "badge": "CPQ",
+      "view": "deals",
+      "accountId": "watershed-07",
+      "accountName": "Larch Holdings",
+      "signalType": "Approval dependency"
+    },
+    {
+      "title": "Check seller adoption",
+      "detail": "Collect whether the brief changed a useful next action.",
+      "badge": "Impact",
+      "view": "agents",
+      "accountId": "watershed-09",
+      "accountName": "Beacon Retail",
+      "signalType": "Executive interest"
+    },
+    {
+      "title": "Refresh stale account context",
+      "detail": "Recheck affiliation and source date before reusing the outreach draft.",
+      "badge": "Freshness",
+      "view": "datalayer",
+      "accountId": "watershed-08",
+      "accountName": "Quay Industries",
+      "signalType": "Source freshness"
+    },
+    {
+      "title": "Compare the research play",
+      "detail": "Test a committee-aware brief against an undifferentiated account summary.",
+      "badge": "Experiment",
+      "view": "experiments",
+      "accountId": "watershed-03",
+      "accountName": "Atlas Consumer",
+      "signalType": "Finance hiring"
+    }
+  ],
+  "personas": [
+    {
+      "name": "Sustainability leader",
+      "pain": "Fragmented sustainability data and unclear ownership across teams",
+      "promise": "A discussion grounded in the published program and the current data process.",
+      "subject": "The data work behind {{initiative}}",
+      "email": "Hi {{first_name}}, your published {{initiative}} raises a practical question about how information moves across teams. How does your group collect, review and use that data today, and where does coordination slow down?",
+      "question": "Which teams produce the data, and who owns the review process?"
+    },
+    {
+      "name": "Finance / procurement leader",
+      "pain": "Cross-functional data needs and an enterprise approval process",
+      "promise": "A clear stakeholder map and an agreed scope for evaluating the workflow.",
+      "subject": "Connecting {{initiative}} to the operating process",
+      "email": "Hi {{first_name}}, I’m researching the operating process around {{initiative}}, including the Finance and procurement handoffs. Who should help define the data scope and evaluation criteria before a broader platform discussion?",
+      "question": "What needs to be true for a solution scope to enter commercial approval?"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E-01",
+      "title": "Account brief",
+      "control": "General sustainability summary",
+      "treatment": "Verified signal + committee map",
+      "metric": "Useful seller briefs",
+      "nA": 120,
+      "nB": 120,
+      "winsA": 12,
+      "winsB": 17,
+      "status": "Review"
+    },
+    {
+      "id": "E-02",
+      "title": "Signal scoring",
+      "control": "Keyword mention",
+      "treatment": "Source + business context + recency",
+      "metric": "Accepted accounts",
+      "nA": 145,
+      "nB": 145,
+      "winsA": 29,
+      "winsB": 33,
+      "status": "Review"
+    },
+    {
+      "id": "E-03",
+      "title": "Stakeholder research",
+      "control": "One sponsor",
+      "treatment": "Cross-functional role coverage",
+      "metric": "Complete discovery plans",
+      "nA": 90,
+      "nB": 90,
+      "winsA": 18,
+      "winsB": 21,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-04",
+      "title": "CPQ handoff",
+      "control": "Free-text scope",
+      "treatment": "Structured dependencies + owner",
+      "metric": "Complete approvals",
+      "nA": 160,
+      "nB": 160,
+      "winsA": 24,
+      "winsB": 26,
+      "status": "Review"
+    },
+    {
+      "id": "E-05",
+      "title": "Seller delivery",
+      "control": "Standalone research file",
+      "treatment": "Context in account workflow",
+      "metric": "Adopted briefs",
+      "nA": 100,
+      "nB": 100,
+      "winsA": 20,
+      "winsB": 25,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-06",
+      "title": "Event follow-up",
+      "control": "Generic recap",
+      "treatment": "Specific published initiative",
+      "metric": "Qualified conversations",
+      "nA": 130,
+      "nB": 130,
+      "winsA": 13,
+      "winsB": 18,
+      "status": "Review"
+    }
+  ],
+  "pitch": "I have led technical enterprise sales across engineering, product, legal and customer stakeholders, and built source-backed data and CRM workflows myself. At Watershed, I would connect that commercial experience to verified account intelligence, buying-committee context and reliable revenue-system handoffs that sellers actually use.",
+  "mappings": [
+    [
+      "Enterprise GTM workflows",
+      "BeBop technical sales through validation, proposals and negotiation.",
+      "Map stakeholders and commercial dependencies around a useful evaluation."
+    ],
+    [
+      "Signal intelligence",
+      "Hey Sammy: source-backed collection, structured records and validation.",
+      "Keep disclosure evidence and a clear hypothesis attached to the account."
+    ],
+    [
+      "Adopted internal tools",
+      "Local partnership CRM and product analytics.",
+      "Deliver context in the seller workflow and measure usefulness."
+    ]
+  ],
+  "checkpoint": [
+    "Data scope agreed",
+    "Buying roles mapped",
+    "Solution owner engaged",
+    "Commercial approvals"
+  ],
+  "northStar": "Evidence-led seller action and dependable commercial handoffs",
+  "weekOne": "A source-linked account brief and buying map for one enterprise segment.",
+  "days60": "Expand ownership and stakeholder intelligence; measure adoption and fix a specific Salesforce or CPQ handoff.",
+  "days90": "Connect accepted signals and commercial dependencies to business outcomes; scale workflows with observed seller value.",
+  "schemaVersion": 2,
+  "roleUrl": "https://jobs.ashbyhq.com/Watershed/00f1ba3f-67ba-48cb-8e88-1eacc2ebb9f7",
+  "sources": [
+    {
+      "url": "https://jobs.ashbyhq.com/watershed/00f1ba3f-67ba-48cb-8e88-1eacc2ebb9f7/",
+      "label": "Role, stack, expectations, location, compensation"
+    },
+    {
+      "url": "https://watershed.com/",
+      "label": "Measure/report/act product context, reporting lineage and review"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Sweep",
+      "url": "https://www.sweep.net/",
+      "context": "Its public site describes carbon management, supplier emissions, sustainability reporting and decarbonization.",
+      "question": "Which reporting, supplier-data and operational-action workflows are required, and how will the buyer validate lineage, review ownership and implementation effort across alternatives?"
+    },
+    {
+      "name": "Persefoni",
+      "url": "https://www.persefoni.com/",
+      "context": "Its public site describes carbon footprint and sustainability reporting.",
+      "question": "What data must finance and sustainability teams reconcile, and what evidence would make their disclosure review process dependable?"
+    }
+  ],
+  "firstBuilds": [
+    {
+      "title": "Sourced enterprise account brief",
+      "goal": "Make the reason to engage verifiable and useful.",
+      "steps": [
+        "Find disclosure",
+        "Verify business context",
+        "Map roles",
+        "Collect seller feedback"
+      ],
+      "scope": "20 accounts with a seller and an agreed research standard.",
+      "measure": "Unsupported claims, source freshness, research time and useful next actions."
+    },
+    {
+      "title": "Committee + ownership workflow",
+      "goal": "Connect a good signal to the right commercial owner.",
+      "steps": [
+        "Check account owner",
+        "Verify stakeholders",
+        "Identify missing role",
+        "Prepare discovery plan"
+      ],
+      "scope": "One enterprise segment and its existing account assignments.",
+      "measure": "Ownership errors, verified role coverage and accepted meetings."
+    },
+    {
+      "title": "Commercial dependency view",
+      "goal": "Surface the steps that stop an evaluation becoming a clear proposal.",
+      "steps": [
+        "Agree scope",
+        "Identify approvals",
+        "Check CPQ inputs",
+        "Record handoff receipt"
+      ],
+      "scope": "A bounded set of commercial handoffs with RevOps.",
+      "measure": "Missing inputs, review time, adoption and returned handoffs."
+    }
+  ],
+  "projectRelevance": {
+    "sammy": "Evidence retention and source refresh are useful patterns for enterprise account intelligence without unsupported conclusions.",
+    "sidequest": "The local partnership CRM combines contact provenance, pipeline stages and useful commercial context.",
+    "dancers": "Approval-based billing and recovery show how I think about dependencies, explicit state and dependable handoffs."
+  }
 }

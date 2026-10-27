@@ -1,118 +1,11 @@
 {
+  "slug": "clay",
   "name": "Clay",
   "role": "GTM Engineer, Marketing",
-  "accent": "#7259d2",
-  "product": "Clay brings prospect data, buying signals and AI research into GTM workflows.",
-  "opportunity": "Turn intent into a fast, accountable marketing-to-SDR handoff.",
-  "hypothesis": "A qualified signal loses value when enrichment, ownership and follow-up happen in separate queues. A shared signal-to-meeting workflow could expose that delay and help the team improve it.",
-  "module": "Signal-to-meeting lab",
-  "unit": "accounts",
-  "dimension": "Customer segment",
-  "fit_label": "ICP fit",
-  "intent_label": "Buying signal",
-  "action": "Route to SDR",
-  "stages": [
-    "Capture intent",
-    "Enrich with provenance",
-    "Score and assign",
-    "Measure accepted meetings"
-  ],
-  "automations": [
-    "Research a signal with source links before scoring.",
-    "Flag stale or conflicting records for human review.",
-    "Notify an owner when the follow-up SLA is at risk."
-  ],
-  "roadmap": [
-    "Map the current inbound funnel, definitions, ownership and a baseline speed-to-lead.",
-    "Pilot a sourced intent and enrichment workflow with one marketing and SDR segment.",
-    "Compare accepted meetings and conversion by source; refine scoring with frontline feedback."
-  ],
-  "fit": "A local partnership CRM with contact provenance and pipeline stages, source-backed extraction, and enterprise outbound experience connect data quality to a real sales handoff.",
-  "segments": [
-    "Product-led SaaS",
-    "Enterprise SaaS",
-    "AI tools"
-  ],
-  "signals": [
-    "Pricing page revisit",
-    "Champion changed jobs",
-    "New product launch"
-  ],
-  "values": [
-    18000,
-    32000,
-    9000,
-    42000,
-    24000,
-    13000
-  ],
-  "slug": "clay",
   "resume": {
     "docx": "CJ_Wheelock_Clay_GTM_Engineer_Marketing.docx",
     "pdf": "CJ_Wheelock_Clay_GTM_Engineer_Marketing.pdf"
   },
-  "accounts": [
-    {
-      "name": "Account A",
-      "segment": "Product-led SaaS",
-      "signal": "Pricing page revisit",
-      "fit": 92,
-      "intent": 88,
-      "stage": "New",
-      "value": 18000,
-      "next": "Confirm the source and assign an owner."
-    },
-    {
-      "name": "Account B",
-      "segment": "Enterprise SaaS",
-      "signal": "Champion changed jobs",
-      "fit": 82,
-      "intent": 72,
-      "stage": "Qualified",
-      "value": 32000,
-      "next": "Review the context and choose a relevant next step."
-    },
-    {
-      "name": "Account C",
-      "segment": "AI tools",
-      "signal": "New product launch",
-      "fit": 67,
-      "intent": 54,
-      "stage": "Discovery",
-      "value": 9000,
-      "next": "Validate the need with the appropriate stakeholder."
-    },
-    {
-      "name": "Account D",
-      "segment": "Product-led SaaS",
-      "signal": "Pricing page revisit",
-      "fit": 94,
-      "intent": 94,
-      "stage": "Won",
-      "value": 42000,
-      "next": "Record the outcome and carry forward the learning."
-    },
-    {
-      "name": "Account E",
-      "segment": "Enterprise SaaS",
-      "signal": "Champion changed jobs",
-      "fit": 78,
-      "intent": 68,
-      "stage": "Qualified",
-      "value": 24000,
-      "next": "Resolve any missing context before outreach."
-    },
-    {
-      "name": "Account F",
-      "segment": "AI tools",
-      "signal": "New product launch",
-      "fit": 61,
-      "intent": 49,
-      "stage": "New",
-      "value": 13000,
-      "next": "Keep in research until the signal is stronger."
-    }
-  ],
   "contact": {
     "name": "CJ Wheelock",
     "location": "New York, NY",
@@ -120,10 +13,808 @@
     "phone": "520-891-0750",
     "linkedin": "https://www.linkedin.com/in/cjwheelock"
   },
-  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
-  "proof": [
-    "$2.5M in development revenue at BeBop Sensors",
-    "124% of quota as an enterprise business development manager",
-    "Source-backed extraction and a local partnership CRM"
-  ]
+  "title": "Marketing signals that become accepted pipeline",
+  "subtitle": "Demand generation · Lifecycle · SDR handoff",
+  "focus": "Connect the definition of a qualified lead to the next action, the owner and the revenue outcome.",
+  "priorities": [
+    "Define and improve MQL criteria with Marketing and SDR leaders.",
+    "Build enrichment, scoring and lifecycle workflows in Clay.",
+    "Instrument campaign attribution and marketing-to-SDR SLAs.",
+    "Use seller feedback to improve signal quality and conversion."
+  ],
+  "segments": [
+    "Product-led SaaS",
+    "Enterprise SaaS"
+  ],
+  "funnel": [
+    "Signals captured",
+    "MQL accepted",
+    "Meeting held",
+    "Evaluation",
+    "Won"
+  ],
+  "channels": [
+    "Content / community",
+    "Product intent",
+    "Events",
+    "Lifecycle"
+  ],
+  "unit": "annual opportunity value",
+  "metric": "Marketing-sourced pipeline",
+  "special": "Enrichment & routing",
+  "dealLabel": "Handoffs & activation",
+  "stack": [
+    "Clay tables + enrichment",
+    "CRM account / lead history",
+    "Lifecycle + campaign events",
+    "SDR acceptance receipts"
+  ],
+  "layers": [
+    [
+      "Capture",
+      "Campaign events, product signals and source timestamps."
+    ],
+    [
+      "Resolve",
+      "Match people and accounts before buying another enrichment result."
+    ],
+    [
+      "Model",
+      "Shared MQL rules, fit, timing, ownership and attribution definitions."
+    ],
+    [
+      "Activate",
+      "An owned SDR queue with accepted / rejected feedback and meeting outcomes."
+    ]
+  ],
+  "rules": [
+    "Preserve source, timestamp and provider for every enriched field.",
+    "Check existing ownership and opportunities before routing.",
+    "Require an acceptance reason or rejection reason at the handoff."
+  ],
+  "accounts": [
+    {
+      "id": "clay-01",
+      "name": "Orbit Grove",
+      "domain": "clay-account-1.example",
+      "segment": "Product-led SaaS",
+      "signalType": "Pricing intent",
+      "signal": "Three teammates revisited pricing after importing a prospect list.",
+      "play": "Connect expansion intent with the workspace owner.",
+      "stage": 1,
+      "fit": 94,
+      "timing": 93,
+      "value": 21000,
+      "owner": "SDR team",
+      "channel": "Content / community",
+      "ageDays": 2,
+      "responseMinutes": 8,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "Three teammates revisited pricing after importing a prospect list.",
+          "age": "2 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Connect expansion intent with the workspace owner.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "clay-02",
+      "name": "Harbor Metric",
+      "domain": "clay-account-2.example",
+      "segment": "Enterprise SaaS",
+      "signalType": "Champion move",
+      "signal": "A former customer champion joined revenue operations at a larger SaaS team.",
+      "play": "Verify the move and relationship before proposing an introduction.",
+      "stage": 3,
+      "fit": 88,
+      "timing": 86,
+      "value": 37500,
+      "owner": "Account owner",
+      "channel": "Product intent",
+      "ageDays": 5,
+      "responseMinutes": 12,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A former customer champion joined revenue operations at a larger SaaS team.",
+          "age": "5 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Verify the move and relationship before proposing an introduction.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "clay-03",
+      "name": "Cedar Loop",
+      "domain": "clay-account-3.example",
+      "segment": "Product-led SaaS",
+      "signalType": "Content engagement",
+      "signal": "A webinar attendee requested the enrichment-waterfall workbook.",
+      "play": "Use the stated workflow interest to shape the first question.",
+      "stage": 0,
+      "fit": 72,
+      "timing": 48,
+      "value": 9000,
+      "owner": "Needs review",
+      "channel": "Events",
+      "ageDays": 14,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A webinar attendee requested the enrichment-waterfall workbook.",
+          "age": "14 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Use the stated workflow interest to shape the first question.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "clay-04",
+      "name": "Slate Signal",
+      "domain": "clay-account-4.example",
+      "segment": "Enterprise SaaS",
+      "signalType": "Hiring",
+      "signal": "The company posted a marketing operations role focused on enrichment.",
+      "play": "Validate whether the new role owns a workflow Clay can support.",
+      "stage": 2,
+      "fit": 83,
+      "timing": 77,
+      "value": 60000,
+      "owner": "Solutions partner",
+      "channel": "Lifecycle",
+      "ageDays": 1,
+      "responseMinutes": 25,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The company posted a marketing operations role focused on enrichment.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Validate whether the new role owns a workflow Clay can support.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "clay-05",
+      "name": "Northline Stack",
+      "domain": "clay-account-5.example",
+      "segment": "Enterprise SaaS",
+      "signalType": "Event follow-up",
+      "signal": "Two sales leaders joined a workshop and requested CRM workflow examples.",
+      "play": "Merge the contacts into one account and assign a single owner.",
+      "stage": 1,
+      "fit": 91,
+      "timing": 90,
+      "value": 32000,
+      "owner": "SDR team",
+      "channel": "Content / community",
+      "ageDays": 4,
+      "responseMinutes": 7,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "Two sales leaders joined a workshop and requested CRM workflow examples.",
+          "age": "4 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Merge the contacts into one account and assign a single owner.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "clay-06",
+      "name": "Mosaic Relay",
+      "domain": "clay-account-6.example",
+      "segment": "Product-led SaaS",
+      "signalType": "Usage milestone",
+      "signal": "The workspace completed its first enrichment table but has no recurring workflow.",
+      "play": "Offer an activation play tied to a repeatable business task.",
+      "stage": 2,
+      "fit": 80,
+      "timing": 73,
+      "value": 42500,
+      "owner": "Account owner",
+      "channel": "Product intent",
+      "ageDays": 8,
+      "responseMinutes": 18,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The workspace completed its first enrichment table but has no recurring workflow.",
+          "age": "8 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Offer an activation play tied to a repeatable business task.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "clay-07",
+      "name": "Field Atlas",
+      "domain": "clay-account-7.example",
+      "segment": "Enterprise SaaS",
+      "signalType": "Lifecycle reply",
+      "signal": "An older lead replied with a current segmentation problem.",
+      "play": "Reopen the conversation with its prior context and a new owner.",
+      "stage": 0,
+      "fit": 67,
+      "timing": 42,
+      "value": 12000,
+      "owner": "Needs review",
+      "channel": "Events",
+      "ageDays": 21,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An older lead replied with a current segmentation problem.",
+          "age": "21 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Reopen the conversation with its prior context and a new owner.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "clay-08",
+      "name": "Pine Current",
+      "domain": "clay-account-8.example",
+      "segment": "Product-led SaaS",
+      "signalType": "Source conflict",
+      "signal": "A form says enterprise, while the public company profile suggests a smaller team.",
+      "play": "Resolve the account match before assigning enterprise priority.",
+      "stage": 3,
+      "fit": 86,
+      "timing": 80,
+      "value": 29000,
+      "owner": "Solutions partner",
+      "channel": "Lifecycle",
+      "ageDays": 3,
+      "responseMinutes": 9,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A form says enterprise, while the public company profile suggests a smaller team.",
+          "age": "3 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Resolve the account match before assigning enterprise priority.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "clay-09",
+      "name": "Bridge Finch",
+      "domain": "clay-account-9.example",
+      "segment": "Enterprise SaaS",
+      "signalType": "Campaign response",
+      "signal": "A revenue leader asked how to measure accepted pipeline from buying signals.",
+      "play": "Use an attribution and acceptance workshop as the next step.",
+      "stage": 1,
+      "fit": 79,
+      "timing": 68,
+      "value": 47500,
+      "owner": "SDR team",
+      "channel": "Content / community",
+      "ageDays": 7,
+      "responseMinutes": 20,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A revenue leader asked how to measure accepted pipeline from buying signals.",
+          "age": "7 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Use an attribution and acceptance workshop as the next step.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "clay-10",
+      "name": "Lumen Trail",
+      "domain": "clay-account-10.example",
+      "segment": "Product-led SaaS",
+      "signalType": "Expansion review",
+      "signal": "An active workspace completed a commercial expansion and adopted a shared enrichment process for two GTM teams.",
+      "play": "Review governance, credit use and ownership before expanding.",
+      "stage": 4,
+      "fit": 95,
+      "timing": 96,
+      "value": 55000,
+      "owner": "Customer owner",
+      "channel": "Product intent",
+      "ageDays": 1,
+      "responseMinutes": 5,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An active workspace completed a commercial expansion and adopted a shared enrichment process for two GTM teams.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Customer owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Review governance, credit use and ownership before expanding.",
+          "age": "Current rule"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Unblock the marketing-to-SDR queue",
+      "detail": "Review the next high-fit signal and preserve its source in the owner acceptance receipt.",
+      "badge": "Ownership",
+      "view": "signals",
+      "accountId": "clay-01",
+      "accountName": "Orbit Grove",
+      "signalType": "Pricing intent"
+    },
+    {
+      "title": "Audit the current MQL boundary",
+      "detail": "Separate company fit from a momentary engagement signal before routing.",
+      "badge": "MQL rules",
+      "view": "booth",
+      "accountId": "clay-08",
+      "accountName": "Pine Current",
+      "signalType": "Source conflict"
+    },
+    {
+      "title": "Close the feedback loop",
+      "detail": "Capture why the SDR accepted or returned the handoff, then use that feedback in the next rule review.",
+      "badge": "Feedback",
+      "view": "deals",
+      "accountId": "clay-02",
+      "accountName": "Harbor Metric",
+      "signalType": "Champion move"
+    },
+    {
+      "title": "Review enrichment spend",
+      "detail": "Compare a provider waterfall with duplicate enrichment across campaigns.",
+      "badge": "Efficiency",
+      "view": "agents",
+      "accountId": "clay-04",
+      "accountName": "Slate Signal",
+      "signalType": "Hiring"
+    },
+    {
+      "title": "Test a workflow-led opening",
+      "detail": "Compare a relevant workflow question with a generic product introduction.",
+      "badge": "Experiment",
+      "view": "experiments",
+      "accountId": "clay-09",
+      "accountName": "Bridge Finch",
+      "signalType": "Campaign response"
+    },
+    {
+      "title": "Reconcile source credit",
+      "detail": "Keep first touch, assisted touch and SDR acceptance distinct in the campaign view.",
+      "badge": "Attribution",
+      "view": "funnel",
+      "accountId": "clay-05",
+      "accountName": "Northline Stack",
+      "signalType": "Event follow-up"
+    }
+  ],
+  "personas": [
+    {
+      "name": "Marketing operations",
+      "pain": "Fragmented enrichment and unclear MQL ownership",
+      "promise": "A source-linked signal, a shared qualification rule and a visible acceptance receipt.",
+      "subject": "A cleaner handoff from {{signal}}",
+      "email": "Hi {{first_name}}, your team’s interest in {{workflow}} suggests a specific place to start: one enrichment table, one agreed MQL rule and a clear owner. How do you currently tell whether those signals turn into meetings the SDR team accepts?",
+      "question": "How is MQL acceptance defined, and where does the feedback return?"
+    },
+    {
+      "name": "SDR leadership",
+      "pain": "High-volume queues that hide the reason to call",
+      "promise": "Prioritized context, an owner and a relevant opening for each accepted signal.",
+      "subject": "The reason to call {{account}}",
+      "email": "Hi {{first_name}}, the useful output of a buying signal is a conversation your team can act on. I’d like to understand how reps see the source, timing and next step today. Where does context tend to disappear between marketing and the SDR queue?",
+      "question": "Which rejection reasons would help Marketing improve the next cohort?"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E-01",
+      "title": "Workflow-led outreach",
+      "control": "Product introduction",
+      "treatment": "A source-backed workflow question",
+      "metric": "Accepted meetings",
+      "nA": 120,
+      "nB": 120,
+      "winsA": 12,
+      "winsB": 17,
+      "status": "Review"
+    },
+    {
+      "id": "E-02",
+      "title": "MQL threshold",
+      "control": "Fit score only",
+      "treatment": "Fit + verified timing + owner",
+      "metric": "Accepted handoffs",
+      "nA": 145,
+      "nB": 145,
+      "winsA": 29,
+      "winsB": 33,
+      "status": "Review"
+    },
+    {
+      "id": "E-03",
+      "title": "Enrichment order",
+      "control": "All providers at once",
+      "treatment": "Stop after a verified answer",
+      "metric": "Verified fields",
+      "nA": 90,
+      "nB": 90,
+      "winsA": 18,
+      "winsB": 21,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-04",
+      "title": "Lifecycle timing",
+      "control": "Weekly batch",
+      "treatment": "Signal-triggered owner review",
+      "metric": "Held meetings",
+      "nA": 160,
+      "nB": 160,
+      "winsA": 24,
+      "winsB": 26,
+      "status": "Review"
+    },
+    {
+      "id": "E-05",
+      "title": "SDR feedback",
+      "control": "Free-text notes",
+      "treatment": "Structured rejection reasons",
+      "metric": "Useful feedback",
+      "nA": 100,
+      "nB": 100,
+      "winsA": 20,
+      "winsB": 25,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-06",
+      "title": "Campaign credit",
+      "control": "Last-touch only",
+      "treatment": "First + assisted + accepted source",
+      "metric": "Attributed opportunities",
+      "nA": 130,
+      "nB": 130,
+      "winsA": 13,
+      "winsB": 18,
+      "status": "Review"
+    }
+  ],
+  "pitch": "I bring the perspective of someone who has done the outbound work and now builds the systems behind it. My local partnership CRM preserves contact provenance, imports and pipeline stages; Hey Sammy turns scattered sources into structured records. At Clay, I would connect that building experience to MQL definitions, enrichment quality and the marketing-to-SDR handoff.",
+  "mappings": [
+    [
+      "Enrichment + signal quality",
+      "Hey Sammy: source evidence, validation, deduplication and resumable jobs.",
+      "Attach provenance to the field that changes the qualification decision."
+    ],
+    [
+      "Marketing-to-SDR workflows",
+      "SideQuest: local partnership CRM, imports, pipeline stages and campaign drafts.",
+      "Build one complete handoff with acceptance feedback."
+    ],
+    [
+      "Commercial judgment",
+      "Enterprise sales, startup messaging and outbound; 124% quota attainment.",
+      "Review whether a signal gives a rep a useful reason to call."
+    ]
+  ],
+  "checkpoint": [
+    "Source verified",
+    "MQL accepted",
+    "Owner acknowledged",
+    "Next step booked"
+  ],
+  "northStar": "Accepted pipeline from a sourced signal",
+  "weekOne": "A usable, sourced handoff for one marketing campaign.",
+  "days60": "Expand the accepted-signal workflow to a second segment; compare enrichment cost, routing errors and meetings held.",
+  "days90": "Use seller feedback and cohort outcomes to refine MQL definitions, lifecycle timing and campaign investment.",
+  "schemaVersion": 2,
+  "roleUrl": "https://jobs.ashbyhq.com/claylabs/9f8067d1-61cf-42cd-aad7-0ac54de8b345",
+  "sources": [
+    {
+      "url": "https://jobs.ashbyhq.com/claylabs/9f8067d1-61cf-42cd-aad7-0ac54de8b345",
+      "label": "Role description"
+    },
+    {
+      "url": "https://university.clay.com/courses/automated-outbound",
+      "label": "Company / product reference"
+    },
+    {
+      "url": "https://university.clay.com/docs/access-settings-for-connections",
+      "label": "Company / product reference"
+    },
+    {
+      "url": "https://www.clay.com/changelog/custom-waterfalls",
+      "label": "Company / product reference"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Apollo",
+      "url": "https://www.apollo.io/",
+      "context": "Markets data, enrichment, AI workflows and sales execution.",
+      "question": "Which existing data and engagement capabilities should remain in place, and where does a configurable Clay workflow add missing research, signal or activation logic?"
+    },
+    {
+      "name": "ZoomInfo",
+      "url": "https://www.zoominfo.com/",
+      "context": "Markets account/contact data, buying signals, routing and GTM workflow products.",
+      "question": "What coverage, freshness, governance and downstream execution does this account need? Compare the proposed Clay play against the buyer’s actual installed workflow."
+    }
+  ],
+  "firstBuilds": [
+    {
+      "title": "Signal-to-SDR handoff",
+      "goal": "Make one intent source useful to an SDR without losing its evidence.",
+      "steps": [
+        "Capture signal",
+        "Enrich missing fields",
+        "Apply MQL rule",
+        "Assign owner + collect feedback"
+      ],
+      "scope": "50 historical signals, then one reviewed campaign.",
+      "measure": "Owner accuracy, time to acceptance, rejection reasons and meetings held."
+    },
+    {
+      "title": "Enrichment efficiency",
+      "goal": "Spend credits on fields that change a GTM decision.",
+      "steps": [
+        "Check existing data",
+        "Choose provider",
+        "Validate provenance",
+        "Record cost + decision"
+      ],
+      "scope": "One account segment and a small provider comparison.",
+      "measure": "Verified fields per credit, stale fields and cost per accepted account."
+    },
+    {
+      "title": "Campaign measurement",
+      "goal": "Join campaign activity to the handoff and opportunity.",
+      "steps": [
+        "Campaign ID",
+        "Account identity",
+        "Acceptance receipt",
+        "Outcome model"
+      ],
+      "scope": "One campaign with agreed definitions and an SDR feedback partner.",
+      "measure": "MQL → accepted → held → opportunity conversion by source."
+    }
+  ],
+  "projectRelevance": {
+    "sammy": "Source-backed discovery and validation translate directly to credible enrichment and buying-signal research.",
+    "sidequest": "The local partnership CRM and PostHog work connect clean records, campaign drafts and commercial measurement.",
+    "dancers": "Private inquiries and dependable follow-up are useful patterns for handoffs with clear ownership and recovery."
+  }
 }

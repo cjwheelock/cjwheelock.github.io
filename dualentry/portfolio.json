@@ -1,118 +1,11 @@
 {
+  "slug": "dualentry",
   "name": "DualEntry",
   "role": "GTM Engineer",
-  "accent": "#315bd1",
-  "product": "DualEntry builds an AI-native ERP for finance and accounting teams.",
-  "opportunity": "Identify finance teams with a reason to revisit the systems behind close.",
-  "hypothesis": "A company’s public growth or finance hiring can indicate a useful research moment, but it does not prove an ERP replacement project. Validate the finance workflow before outreach.",
-  "module": "Finance buyer activation",
-  "unit": "accounts",
-  "dimension": "Company stage",
-  "fit_label": "Finance fit",
-  "intent_label": "Change signal",
-  "action": "Review buying committee",
-  "stages": [
-    "Identify finance fit",
-    "Verify change signal",
-    "Map buying roles",
-    "Route follow-up"
-  ],
-  "automations": [
-    "Research a company’s public finance and growth context.",
-    "Flag incomplete CFO, controller and operations coverage.",
-    "Queue a human-reviewed follow-up when a lead stalls."
-  ],
-  "roadmap": [
-    "Map the existing lead lifecycle and finance-buyer segments.",
-    "Pilot an evidence-backed account and contact workflow with clear routing.",
-    "Measure follow-up completion and accepted meetings; refine with marketing."
-  ],
-  "fit": "CJ holds a B.S. in Accounting and combines enterprise sales experience with a local CRM, contact provenance and startup messaging work.",
-  "segments": [
-    "Scaling business",
-    "Multi-entity",
-    "Public company"
-  ],
-  "signals": [
-    "Finance hiring",
-    "New business unit",
-    "Reporting complexity"
-  ],
-  "values": [
-    24000,
-    45000,
-    18000,
-    85000,
-    38000,
-    56000
-  ],
-  "slug": "dualentry",
   "resume": {
     "docx": "CJ_Wheelock_DualEntry_GTM_Engineer.docx",
     "pdf": "CJ_Wheelock_DualEntry_GTM_Engineer.pdf"
   },
-  "accounts": [
-    {
-      "name": "Account A",
-      "segment": "Scaling business",
-      "signal": "Finance hiring",
-      "fit": 71,
-      "intent": 68,
-      "stage": "Discovery",
-      "value": 24000,
-      "next": "Confirm the source and assign an owner."
-    },
-    {
-      "name": "Account B",
-      "segment": "Multi-entity",
-      "signal": "New business unit",
-      "fit": 98,
-      "intent": 49,
-      "stage": "Won",
-      "value": 45000,
-      "next": "Review the context and choose a relevant next step."
-    },
-    {
-      "name": "Account C",
-      "segment": "Public company",
-      "signal": "Reporting complexity",
-      "fit": 82,
-      "intent": 88,
-      "stage": "Qualified",
-      "value": 18000,
-      "next": "Validate the need with the appropriate stakeholder."
-    },
-    {
-      "name": "Account D",
-      "segment": "Scaling business",
-      "signal": "Finance hiring",
-      "fit": 65,
-      "intent": 72,
-      "stage": "New",
-      "value": 85000,
-      "next": "Record the outcome and carry forward the learning."
-    },
-    {
-      "name": "Account E",
-      "segment": "Multi-entity",
-      "signal": "New business unit",
-      "fit": 96,
-      "intent": 54,
-      "stage": "New",
-      "value": 38000,
-      "next": "Resolve any missing context before outreach."
-    },
-    {
-      "name": "Account F",
-      "segment": "Public company",
-      "signal": "Reporting complexity",
-      "fit": 86,
-      "intent": 94,
-      "stage": "Qualified",
-      "value": 56000,
-      "next": "Keep in research until the signal is stronger."
-    }
-  ],
   "contact": {
     "name": "CJ Wheelock",
     "location": "New York, NY",
@@ -120,10 +13,800 @@
     "phone": "520-891-0750",
     "linkedin": "https://www.linkedin.com/in/cjwheelock"
   },
-  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
-  "proof": [
-    "$2.5M in development revenue at BeBop Sensors",
-    "124% of quota as an enterprise business development manager",
-    "Source-backed extraction and a local partnership CRM"
-  ]
+  "title": "A complete path from finance signal to a booked conversation",
+  "subtitle": "Lifecycle engineering · Finance ICP · Outbound experiments",
+  "focus": "Connect relevant finance-team research to HubSpot lifecycle, booking recovery and the buying committee behind an ERP decision.",
+  "priorities": [
+    "Own HubSpot lifecycle, routing and lead handoffs.",
+    "Recover lead dropoff and incomplete booking journeys.",
+    "Build outbound workflows across Clay, Smartlead and HeyReach.",
+    "Test copy and measure the funnel through qualified outcomes."
+  ],
+  "segments": [
+    "Scaling finance teams",
+    "Multi-entity businesses"
+  ],
+  "funnel": [
+    "Accounts researched",
+    "Qualified finance need",
+    "Demo held",
+    "Solution validation",
+    "Won"
+  ],
+  "channels": [
+    "Finance outbound",
+    "Demo requests",
+    "Partner referrals",
+    "Content / search"
+  ],
+  "unit": "annual subscription opportunity",
+  "metric": "Finance-team pipeline",
+  "special": "Booking recovery",
+  "dealLabel": "Validation & implementation",
+  "stack": [
+    "HubSpot lifecycle + booking",
+    "Clay account intelligence",
+    "Outbound + LinkedIn workflow",
+    "Finance committee + close plan"
+  ],
+  "layers": [
+    [
+      "Research",
+      "Public finance hiring, business complexity and verified stakeholder context."
+    ],
+    [
+      "Qualify",
+      "Distinguish a plausible research signal from a confirmed ERP evaluation."
+    ],
+    [
+      "Recover",
+      "Track form, booking, owner and response events as separate lifecycle steps."
+    ],
+    [
+      "Measure",
+      "Join message variants, held demos and validation outcomes without duplicate credit."
+    ]
+  ],
+  "rules": [
+    "Finance hiring is not proof that an ERP replacement is underway.",
+    "Controller, CFO and IT responsibilities need verification for the actual buying process.",
+    "Use solution validation and implementation planning; do not invent a free trial."
+  ],
+  "accounts": [
+    {
+      "id": "dualentry-01",
+      "name": "Cedar MultiCo",
+      "domain": "dualentry-account-1.example",
+      "segment": "Multi-entity businesses",
+      "signalType": "Entity expansion",
+      "signal": "A public update describes expansion into additional business entities.",
+      "play": "Research the finance workflow and verified controller.",
+      "stage": 1,
+      "fit": 94,
+      "timing": 93,
+      "value": 52500,
+      "owner": "SDR team",
+      "channel": "Finance outbound",
+      "ageDays": 2,
+      "responseMinutes": 8,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A public update describes expansion into additional business entities.",
+          "age": "2 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Research the finance workflow and verified controller.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "dualentry-02",
+      "name": "Harbor Finance Ops",
+      "domain": "dualentry-account-2.example",
+      "segment": "Scaling finance teams",
+      "signalType": "Finance hiring",
+      "signal": "A controller role references close and reporting process improvements.",
+      "play": "Ask about the actual process before inferring a replacement project.",
+      "stage": 3,
+      "fit": 88,
+      "timing": 86,
+      "value": 93750,
+      "owner": "Account owner",
+      "channel": "Demo requests",
+      "ageDays": 5,
+      "responseMinutes": 12,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A controller role references close and reporting process improvements.",
+          "age": "5 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Ask about the actual process before inferring a replacement project.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "dualentry-03",
+      "name": "Mosaic Commerce Group",
+      "domain": "dualentry-account-3.example",
+      "segment": "Multi-entity businesses",
+      "signalType": "Partial booking",
+      "signal": "A finance contact submitted a demo request but did not complete the calendar step.",
+      "play": "Assign a recovery owner and preserve the original question.",
+      "stage": 0,
+      "fit": 72,
+      "timing": 48,
+      "value": 22500,
+      "owner": "Needs review",
+      "channel": "Partner referrals",
+      "ageDays": 14,
+      "responseMinutes": 0,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A finance contact submitted a demo request but did not complete the calendar step.",
+          "age": "14 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Assign a recovery owner and preserve the original question.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "dualentry-04",
+      "name": "Pine Software",
+      "domain": "dualentry-account-4.example",
+      "segment": "Scaling finance teams",
+      "signalType": "Outbound reply",
+      "signal": "A CFO replied with a question about implementation requirements.",
+      "play": "Route the implementation question with an appropriate owner.",
+      "stage": 2,
+      "fit": 83,
+      "timing": 77,
+      "value": 150000,
+      "owner": "Solutions partner",
+      "channel": "Content / search",
+      "ageDays": 1,
+      "responseMinutes": 25,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A CFO replied with a question about implementation requirements.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Route the implementation question with an appropriate owner.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "dualentry-05",
+      "name": "Quay Holdings",
+      "domain": "dualentry-account-5.example",
+      "segment": "Multi-entity businesses",
+      "signalType": "Committee gap",
+      "signal": "The controller is engaged while IT and the executive sponsor are unmapped.",
+      "play": "Verify the buying roles before the solution validation.",
+      "stage": 1,
+      "fit": 91,
+      "timing": 90,
+      "value": 80000,
+      "owner": "SDR team",
+      "channel": "Finance outbound",
+      "ageDays": 4,
+      "responseMinutes": 7,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The controller is engaged while IT and the executive sponsor are unmapped.",
+          "age": "4 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Verify the buying roles before the solution validation.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "dualentry-06",
+      "name": "Larch Platform",
+      "domain": "dualentry-account-6.example",
+      "segment": "Scaling finance teams",
+      "signalType": "Duplicate lifecycle",
+      "signal": "A content contact and a demo request exist as separate HubSpot records.",
+      "play": "Resolve identity and lifecycle without duplicate outreach.",
+      "stage": 2,
+      "fit": 80,
+      "timing": 73,
+      "value": 106250,
+      "owner": "Account owner",
+      "channel": "Demo requests",
+      "ageDays": 8,
+      "responseMinutes": 18,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A content contact and a demo request exist as separate HubSpot records.",
+          "age": "8 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Resolve identity and lifecycle without duplicate outreach.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "dualentry-07",
+      "name": "Beacon Ventures Ops",
+      "domain": "dualentry-account-7.example",
+      "segment": "Multi-entity businesses",
+      "signalType": "Partner referral",
+      "signal": "An advisor introduced a finance leader with a specific consolidation question.",
+      "play": "Keep the referral and problem context attached.",
+      "stage": 0,
+      "fit": 67,
+      "timing": 42,
+      "value": 30000,
+      "owner": "Needs review",
+      "channel": "Partner referrals",
+      "ageDays": 21,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An advisor introduced a finance leader with a specific consolidation question.",
+          "age": "21 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Keep the referral and problem context attached.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "dualentry-08",
+      "name": "Atlas Revenue",
+      "domain": "dualentry-account-8.example",
+      "segment": "Scaling finance teams",
+      "signalType": "Validation scope",
+      "signal": "A finance team wants to evaluate a close and reporting workflow.",
+      "play": "Agree on a scoped validation and implementation requirements.",
+      "stage": 3,
+      "fit": 86,
+      "timing": 80,
+      "value": 72500,
+      "owner": "Solutions partner",
+      "channel": "Content / search",
+      "ageDays": 3,
+      "responseMinutes": 9,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A finance team wants to evaluate a close and reporting workflow.",
+          "age": "3 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Agree on a scoped validation and implementation requirements.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "dualentry-09",
+      "name": "Elm Global",
+      "domain": "dualentry-account-9.example",
+      "segment": "Multi-entity businesses",
+      "signalType": "Data preparation",
+      "signal": "The solution conversation needs a map of entities, systems and migration dependencies.",
+      "play": "Prepare a reviewed implementation-readiness brief.",
+      "stage": 1,
+      "fit": 79,
+      "timing": 68,
+      "value": 118750,
+      "owner": "SDR team",
+      "channel": "Finance outbound",
+      "ageDays": 7,
+      "responseMinutes": 20,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The solution conversation needs a map of entities, systems and migration dependencies.",
+          "age": "7 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Prepare a reviewed implementation-readiness brief.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "dualentry-10",
+      "name": "Stonewell Growth",
+      "domain": "dualentry-account-10.example",
+      "segment": "Scaling finance teams",
+      "signalType": "Commercial review",
+      "signal": "The team completed solution validation and signed an agreement with documented implementation requirements and an owner.",
+      "play": "Carry the agreed requirements into the implementation handoff.",
+      "stage": 4,
+      "fit": 95,
+      "timing": 96,
+      "value": 137500,
+      "owner": "Customer owner",
+      "channel": "Demo requests",
+      "ageDays": 1,
+      "responseMinutes": 5,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The team completed solution validation and signed an agreement with documented implementation requirements and an owner.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Customer owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Carry the agreed requirements into the implementation handoff.",
+          "age": "Current rule"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Recover the incomplete booking",
+      "detail": "Connect the form receipt, owner, next action and held-demo outcome.",
+      "badge": "Lifecycle",
+      "view": "booth",
+      "accountId": "dualentry-03",
+      "accountName": "Mosaic Commerce Group",
+      "signalType": "Partial booking"
+    },
+    {
+      "title": "Verify the finance problem",
+      "detail": "Use the public signal as a starting question, not a claim of ERP intent.",
+      "badge": "ICP",
+      "view": "signals",
+      "accountId": "dualentry-02",
+      "accountName": "Harbor Finance Ops",
+      "signalType": "Finance hiring"
+    },
+    {
+      "title": "Map the buying committee",
+      "detail": "Check controller, CFO and technical ownership for the validation.",
+      "badge": "Committee",
+      "view": "deals",
+      "accountId": "dualentry-05",
+      "accountName": "Quay Holdings",
+      "signalType": "Committee gap"
+    },
+    {
+      "title": "Reconcile HubSpot duplicates",
+      "detail": "Preserve source history and one lead owner.",
+      "badge": "Data quality",
+      "view": "datalayer",
+      "accountId": "dualentry-06",
+      "accountName": "Larch Platform",
+      "signalType": "Duplicate lifecycle"
+    },
+    {
+      "title": "Inspect the copy test",
+      "detail": "Compare finance-process relevance with a generic replacement pitch.",
+      "badge": "Outbound",
+      "view": "experiments",
+      "accountId": "dualentry-01",
+      "accountName": "Cedar MultiCo",
+      "signalType": "Entity expansion"
+    },
+    {
+      "title": "Prepare the implementation handoff",
+      "detail": "Keep data, entity and stakeholder dependencies with the opportunity.",
+      "badge": "Readiness",
+      "view": "agents",
+      "accountId": "dualentry-09",
+      "accountName": "Elm Global",
+      "signalType": "Data preparation"
+    }
+  ],
+  "personas": [
+    {
+      "name": "Controller / finance operations",
+      "pain": "Close, consolidation and reporting workflows that span systems",
+      "promise": "A concrete discussion of the finance process and its evaluation criteria.",
+      "subject": "A question about {{finance_workflow}}",
+      "email": "Hi {{first_name}}, the public context around {{business_change}} made me curious about your {{finance_workflow}} process. How does the team handle that today, and where does manual coordination show up?",
+      "question": "Which part of close, consolidation or reporting would be useful to validate?"
+    },
+    {
+      "name": "CFO / executive sponsor",
+      "pain": "A business decision that depends on implementation scope and confidence",
+      "promise": "A clear problem, decision criteria and realistic implementation dependencies.",
+      "subject": "The evaluation behind {{business_change}}",
+      "email": "Hi {{first_name}}, I’d start an ERP discussion with the business outcome and implementation requirements your team needs to preserve. Who should help define the finance and technical criteria for a focused evaluation?",
+      "question": "What would make a solution evaluation useful enough to enter implementation planning?"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E-01",
+      "title": "Finance opening",
+      "control": "Generic ERP pitch",
+      "treatment": "Specific workflow question",
+      "metric": "Qualified replies",
+      "nA": 120,
+      "nB": 120,
+      "winsA": 12,
+      "winsB": 17,
+      "status": "Review"
+    },
+    {
+      "id": "E-02",
+      "title": "Booking recovery",
+      "control": "Unowned reminder",
+      "treatment": "Named owner + relevant question",
+      "metric": "Held demos",
+      "nA": 145,
+      "nB": 145,
+      "winsA": 29,
+      "winsB": 33,
+      "status": "Review"
+    },
+    {
+      "id": "E-03",
+      "title": "Lifecycle join",
+      "control": "Email-only deduplication",
+      "treatment": "Contact + company + history",
+      "metric": "Clean records",
+      "nA": 90,
+      "nB": 90,
+      "winsA": 18,
+      "winsB": 21,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-04",
+      "title": "LinkedIn follow-up",
+      "control": "Repeated product message",
+      "treatment": "Context from original reply",
+      "metric": "Relevant conversations",
+      "nA": 160,
+      "nB": 160,
+      "winsA": 24,
+      "winsB": 26,
+      "status": "Review"
+    },
+    {
+      "id": "E-05",
+      "title": "Demo intake",
+      "control": "Long form before calendar",
+      "treatment": "Focused progressive questions",
+      "metric": "Completed bookings",
+      "nA": 100,
+      "nB": 100,
+      "winsA": 20,
+      "winsB": 25,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-06",
+      "title": "Validation handoff",
+      "control": "Feature checklist",
+      "treatment": "Decision criteria + implementation map",
+      "metric": "Complete validations",
+      "nA": 130,
+      "nB": 130,
+      "winsA": 13,
+      "winsB": 18,
+      "status": "Review"
+    }
+  ],
+  "pitch": "I hold a B.S. in Accounting and bring more than a decade of enterprise sales and partnership experience. I have also built a local CRM with pipeline stages and campaign drafts, along with inquiry and follow-up workflows. At DualEntry, I would pair finance literacy with hands-on building to improve account relevance, lifecycle ownership and the path from interest to a useful conversation.",
+  "mappings": [
+    [
+      "Finance context",
+      "B.S. Accounting, Eller College of Management.",
+      "Ask a useful question about the finance workflow and buying process."
+    ],
+    [
+      "Lifecycle + recovery",
+      "Hire Line Dancers: matching, inquiries and dependable follow-up.",
+      "Connect the form, calendar, owner and actual response."
+    ],
+    [
+      "Outbound + measurement",
+      "Startup messaging and outbound; local CRM with campaign drafts.",
+      "Test relevant copy and measure through held, qualified conversations."
+    ]
+  ],
+  "checkpoint": [
+    "Finance scope agreed",
+    "CFO / controller mapped",
+    "Implementation inputs",
+    "Decision documented"
+  ],
+  "northStar": "Qualified finance conversations with a complete lifecycle",
+  "weekOne": "An owned recovery workflow for one incomplete demo-booking path.",
+  "days60": "Connect finance account intelligence to outbound variants and HubSpot lifecycle receipts; improve the buying map.",
+  "days90": "Use held-demo and solution-validation outcomes to refine targeting, copy and implementation handoffs.",
+  "schemaVersion": 2,
+  "roleUrl": "https://jobs.ashbyhq.com/dualentry/e6146a1a-ca77-478f-8376-9fa92611997a/",
+  "sources": [
+    {
+      "url": "https://jobs.ashbyhq.com/dualentry/e6146a1a-ca77-478f-8376-9fa92611997a",
+      "label": "Role, stack, lead recovery and compensation"
+    },
+    {
+      "url": "https://www.dualentry.com/pricing",
+      "label": "ERP context, implementation, user pricing and no-free-trial qualification"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Oracle NetSuite",
+      "url": "https://www.netsuite.com/portal/products/erp.shtml",
+      "context": "Its public ERP page lists finance/accounting, reporting, consolidation, billing and operational modules.",
+      "question": "Which entity structure, close process, integrations and implementation dependencies must be demonstrated before the finance team can select a system?"
+    },
+    {
+      "name": "Sage Intacct",
+      "url": "https://www.sage.com/en-us/sage-business-cloud/intacct/",
+      "context": "Its public site describes financial operations, close, reporting, accounts payable and auditability.",
+      "question": "What existing controls, reporting requirements and migration constraints does the controller need to preserve while improving the finance workflow?"
+    }
+  ],
+  "firstBuilds": [
+    {
+      "title": "Booking recovery workflow",
+      "goal": "Make qualified interest survive the gap between form and calendar.",
+      "steps": [
+        "Join form + calendar",
+        "Verify owner",
+        "Prepare useful follow-up",
+        "Record held outcome"
+      ],
+      "scope": "One demo-request path and 50 historical records.",
+      "measure": "Dropoff, owner errors, response receipts and held demos."
+    },
+    {
+      "title": "Finance ICP brief",
+      "goal": "Give outbound a relevant question and an evidenced buying map.",
+      "steps": [
+        "Verify signal",
+        "Map finance roles",
+        "Draft workflow question",
+        "Human review"
+      ],
+      "scope": "20 accounts across two finance complexity segments.",
+      "measure": "Factual edits, useful replies and qualified conversations."
+    },
+    {
+      "title": "Lifecycle + copy measurement",
+      "goal": "Join the outbound variant to the outcome that matters.",
+      "steps": [
+        "Campaign ID",
+        "Identity match",
+        "Lifecycle receipt",
+        "Qualified outcome"
+      ],
+      "scope": "One approved outbound sequence and a shared HubSpot definition.",
+      "measure": "Qualified replies, held demos, duplication and decision-ready opportunities."
+    }
+  ],
+  "projectRelevance": {
+    "sammy": "Structured records and source evidence support finance-account research without overstating replacement intent.",
+    "sidequest": "The partnership CRM’s pipeline stages and campaign drafts are relevant to HubSpot lifecycle thinking and outbound measurement.",
+    "dancers": "Private inquiries, approval-based billing and follow-up recovery are useful patterns for booking and implementation handoffs."
+  }
 }

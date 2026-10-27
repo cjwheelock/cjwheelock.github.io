@@ -1,118 +1,11 @@
 {
+  "slug": "siro",
   "name": "Siro",
   "role": "GTM Engineer",
-  "accent": "#bb5d32",
-  "product": "Siro analyzes field-sales conversations to support coaching, visibility and workflows.",
-  "opportunity": "Find field-sales teams where coaching context and manager visibility matter.",
-  "hypothesis": "Field-team size and a visible hiring push may help prioritize research, but a seller should validate the actual coaching workflow before outreach.",
-  "module": "Field team signal queue",
-  "unit": "organizations",
-  "dimension": "Field sales motion",
-  "fit_label": "Team fit",
-  "intent_label": "Growth signal",
-  "action": "Prepare seller context",
-  "stages": [
-    "Source organization",
-    "Verify field motion",
-    "Enrich decision roles",
-    "Route to seller"
-  ],
-  "automations": [
-    "Aggregate public hiring and team signals with timestamps.",
-    "Deduplicate organizations before routing.",
-    "Draft a rep-reviewed reason to engage, avoiding claims about current customers."
-  ],
-  "roadmap": [
-    "Document the target field-sales motions and baseline data quality.",
-    "Pilot account sourcing and enrichment for one vertical.",
-    "Measure seller acceptance and signal freshness; iterate with the team."
-  ],
-  "fit": "CJ’s enterprise sales and outbound work provides frontline context; the source-backed data pipeline and local CRM show hands-on workflow building.",
-  "segments": [
-    "Home improvement",
-    "Retail field teams",
-    "Automotive"
-  ],
-  "signals": [
-    "Field reps hiring",
-    "Manager expansion",
-    "New service market"
-  ],
-  "values": [
-    36000,
-    54000,
-    22000,
-    80000,
-    44000,
-    66000
-  ],
-  "slug": "siro",
   "resume": {
     "docx": "CJ_Wheelock_Siro_GTM_Engineer.docx",
     "pdf": "CJ_Wheelock_Siro_GTM_Engineer.pdf"
   },
-  "accounts": [
-    {
-      "name": "Account A",
-      "segment": "Home improvement",
-      "signal": "Field reps hiring",
-      "fit": 84,
-      "intent": 51,
-      "stage": "Qualified",
-      "value": 36000,
-      "next": "Confirm the source and assign an owner."
-    },
-    {
-      "name": "Account B",
-      "segment": "Retail field teams",
-      "signal": "Manager expansion",
-      "fit": 69,
-      "intent": 91,
-      "stage": "Discovery",
-      "value": 54000,
-      "next": "Review the context and choose a relevant next step."
-    },
-    {
-      "name": "Account C",
-      "segment": "Automotive",
-      "signal": "New service market",
-      "fit": 96,
-      "intent": 65,
-      "stage": "Won",
-      "value": 22000,
-      "next": "Validate the need with the appropriate stakeholder."
-    },
-    {
-      "name": "Account D",
-      "segment": "Home improvement",
-      "signal": "Field reps hiring",
-      "fit": 80,
-      "intent": 46,
-      "stage": "Qualified",
-      "value": 80000,
-      "next": "Record the outcome and carry forward the learning."
-    },
-    {
-      "name": "Account E",
-      "segment": "Retail field teams",
-      "signal": "Manager expansion",
-      "fit": 63,
-      "intent": 85,
-      "stage": "New",
-      "value": 44000,
-      "next": "Resolve any missing context before outreach."
-    },
-    {
-      "name": "Account F",
-      "segment": "Automotive",
-      "signal": "New service market",
-      "fit": 94,
-      "intent": 69,
-      "stage": "New",
-      "value": 66000,
-      "next": "Keep in research until the signal is stronger."
-    }
-  ],
   "contact": {
     "name": "CJ Wheelock",
     "location": "New York, NY",
@@ -120,10 +13,800 @@
     "phone": "520-891-0750",
     "linkedin": "https://www.linkedin.com/in/cjwheelock"
   },
-  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
-  "proof": [
-    "$2.5M in development revenue at BeBop Sensors",
-    "124% of quota as an enterprise business development manager",
-    "Source-backed extraction and a local partnership CRM"
-  ]
+  "title": "Give the SDR a better reason to start a conversation",
+  "subtitle": "SDR effectiveness · Field-sales intelligence · Reliable data",
+  "focus": "Find the right field-sales organizations and deliver reliable account context in the tools where SDRs work.",
+  "priorities": [
+    "Build data flows across CRM, product and outbound systems.",
+    "Improve SDR effectiveness from day one.",
+    "Automate account research, enrichment and useful rep workflows.",
+    "Make the data dependable and measure adoption and GTM outcomes."
+  ],
+  "segments": [
+    "Home services",
+    "Distributed field sales"
+  ],
+  "funnel": [
+    "Organizations researched",
+    "ICP qualified",
+    "Meeting held",
+    "Pilot agreed",
+    "Rollout"
+  ],
+  "channels": [
+    "Account research",
+    "Inbound requests",
+    "Partner referrals",
+    "Events"
+  ],
+  "unit": "annual opportunity value",
+  "metric": "Field-sales pipeline",
+  "special": "SDR workbench",
+  "dealLabel": "Pilots & rollout",
+  "stack": [
+    "CRM account + contact context",
+    "Field-team research signals",
+    "Product / outbound event joins",
+    "SDR feedback + pilot outcomes"
+  ],
+  "layers": [
+    [
+      "Research",
+      "Verify the field-sales model, team footprint and growth context."
+    ],
+    [
+      "Enrich",
+      "Match the commercial owner and relevant contacts without duplicate outreach."
+    ],
+    [
+      "Activate",
+      "Give the SDR a useful reason to call and a reviewed opening."
+    ],
+    [
+      "Learn",
+      "Join rep feedback and product/pilot events to the account record."
+    ]
+  ],
+  "rules": [
+    "Hiring suggests research priority; it does not prove a coaching problem.",
+    "Do not infer conversation contents or employee performance from public signals.",
+    "Track an accepted SDR handoff separately from an email delivery."
+  ],
+  "accounts": [
+    {
+      "id": "siro-01",
+      "name": "Cedar Home Energy",
+      "domain": "siro-account-1.example",
+      "segment": "Home services",
+      "signalType": "Field hiring",
+      "signal": "The company is hiring several in-home sales representatives.",
+      "play": "Verify the field model and manager before drafting a coaching question.",
+      "stage": 1,
+      "fit": 94,
+      "timing": 93,
+      "value": 29400,
+      "owner": "SDR team",
+      "channel": "Account research",
+      "ageDays": 2,
+      "responseMinutes": 8,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The company is hiring several in-home sales representatives.",
+          "age": "2 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Verify the field model and manager before drafting a coaching question.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "siro-02",
+      "name": "Harbor Install Group",
+      "domain": "siro-account-2.example",
+      "segment": "Distributed field sales",
+      "signalType": "Regional expansion",
+      "signal": "A field-sales organization announced two new regions.",
+      "play": "Map the sales manager and ask about onboarding consistency.",
+      "stage": 3,
+      "fit": 88,
+      "timing": 86,
+      "value": 52500,
+      "owner": "Account owner",
+      "channel": "Inbound requests",
+      "ageDays": 5,
+      "responseMinutes": 12,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A field-sales organization announced two new regions.",
+          "age": "5 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Map the sales manager and ask about onboarding consistency.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "siro-03",
+      "name": "Pine Comfort",
+      "domain": "siro-account-3.example",
+      "segment": "Home services",
+      "signalType": "Manager change",
+      "signal": "A new sales leader publicly described responsibility for a distributed team.",
+      "play": "Use the role context to ask about the current coaching workflow.",
+      "stage": 0,
+      "fit": 72,
+      "timing": 48,
+      "value": 12600,
+      "owner": "Needs review",
+      "channel": "Partner referrals",
+      "ageDays": 14,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A new sales leader publicly described responsibility for a distributed team.",
+          "age": "14 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Use the role context to ask about the current coaching workflow.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "siro-04",
+      "name": "Mosaic Retail Teams",
+      "domain": "siro-account-4.example",
+      "segment": "Distributed field sales",
+      "signalType": "Training interest",
+      "signal": "An inbound contact requested a discussion of in-person sales visibility.",
+      "play": "Preserve the question and route it to an informed SDR.",
+      "stage": 2,
+      "fit": 83,
+      "timing": 77,
+      "value": 84000,
+      "owner": "Solutions partner",
+      "channel": "Events",
+      "ageDays": 1,
+      "responseMinutes": 25,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An inbound contact requested a discussion of in-person sales visibility.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Preserve the question and route it to an informed SDR.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "siro-05",
+      "name": "Larch Solar",
+      "domain": "siro-account-5.example",
+      "segment": "Home services",
+      "signalType": "Duplicate contact",
+      "signal": "Two outbound tools contain the same manager with different ownership.",
+      "play": "Resolve the owner before creating another touch.",
+      "stage": 1,
+      "fit": 91,
+      "timing": 90,
+      "value": 44800,
+      "owner": "SDR team",
+      "channel": "Account research",
+      "ageDays": 4,
+      "responseMinutes": 7,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "Two outbound tools contain the same manager with different ownership.",
+          "age": "4 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Resolve the owner before creating another touch.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "siro-06",
+      "name": "Quay Auto Network",
+      "domain": "siro-account-6.example",
+      "segment": "Distributed field sales",
+      "signalType": "Multi-location",
+      "signal": "A business lists a growing network of physical selling locations.",
+      "play": "Confirm the selling model and coaching structure.",
+      "stage": 2,
+      "fit": 80,
+      "timing": 73,
+      "value": 59500,
+      "owner": "Account owner",
+      "channel": "Inbound requests",
+      "ageDays": 8,
+      "responseMinutes": 18,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A business lists a growing network of physical selling locations.",
+          "age": "8 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Confirm the selling model and coaching structure.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "siro-07",
+      "name": "Beacon Remodel Group",
+      "domain": "siro-account-7.example",
+      "segment": "Home services",
+      "signalType": "Pilot context",
+      "signal": "A team is evaluating a small sales-manager cohort.",
+      "play": "Agree on adoption and manager usefulness before rollout.",
+      "stage": 0,
+      "fit": 67,
+      "timing": 42,
+      "value": 16800,
+      "owner": "Needs review",
+      "channel": "Partner referrals",
+      "ageDays": 21,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A team is evaluating a small sales-manager cohort.",
+          "age": "21 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Agree on adoption and manager usefulness before rollout.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "siro-08",
+      "name": "Atlas Services",
+      "domain": "siro-account-8.example",
+      "segment": "Distributed field sales",
+      "signalType": "Usage handoff",
+      "signal": "A pilot team has activity but no documented manager review rhythm.",
+      "play": "Check the product milestone and customer owner.",
+      "stage": 3,
+      "fit": 86,
+      "timing": 80,
+      "value": 40600,
+      "owner": "Solutions partner",
+      "channel": "Events",
+      "ageDays": 3,
+      "responseMinutes": 9,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A pilot team has activity but no documented manager review rhythm.",
+          "age": "3 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Check the product milestone and customer owner.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "siro-09",
+      "name": "Elm Exterior",
+      "domain": "siro-account-9.example",
+      "segment": "Home services",
+      "signalType": "SDR feedback",
+      "signal": "A rep rejected the account because it does not use in-person selling.",
+      "play": "Return that reason to ICP research and scoring.",
+      "stage": 1,
+      "fit": 79,
+      "timing": 68,
+      "value": 66500,
+      "owner": "SDR team",
+      "channel": "Account research",
+      "ageDays": 7,
+      "responseMinutes": 20,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A rep rejected the account because it does not use in-person selling.",
+          "age": "7 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Return that reason to ICP research and scoring.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "siro-10",
+      "name": "Stonepath Field",
+      "domain": "siro-account-10.example",
+      "segment": "Distributed field sales",
+      "signalType": "Rollout review",
+      "signal": "The team finished its pilot and began an agreed rollout with a manager sponsor and a defined coaching workflow.",
+      "play": "Carry the agreed coaching workflow into the rollout plan.",
+      "stage": 4,
+      "fit": 95,
+      "timing": 96,
+      "value": 77000,
+      "owner": "Customer owner",
+      "channel": "Inbound requests",
+      "ageDays": 1,
+      "responseMinutes": 5,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The team finished its pilot and began an agreed rollout with a manager sponsor and a defined coaching workflow.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Customer owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Carry the agreed coaching workflow into the rollout plan.",
+          "age": "Current rule"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Give the SDR a reason to call",
+      "detail": "Review field model, relevant manager and an evidence-led opening.",
+      "badge": "SDR impact",
+      "view": "booth",
+      "accountId": "siro-01",
+      "accountName": "Cedar Home Energy",
+      "signalType": "Field hiring"
+    },
+    {
+      "title": "Fix the account owner conflict",
+      "detail": "Prevent two tools creating two unrelated touches to one manager.",
+      "badge": "Reliability",
+      "view": "datalayer",
+      "accountId": "siro-05",
+      "accountName": "Larch Solar",
+      "signalType": "Duplicate contact"
+    },
+    {
+      "title": "Learn from the rejected account",
+      "detail": "Return the field-sales mismatch to the next enrichment decision.",
+      "badge": "ICP feedback",
+      "view": "signals",
+      "accountId": "siro-09",
+      "accountName": "Elm Exterior",
+      "signalType": "SDR feedback"
+    },
+    {
+      "title": "Review the pilot milestone",
+      "detail": "Use manager adoption and the agreed evaluation criteria to plan the next step.",
+      "badge": "Pilot",
+      "view": "deals",
+      "accountId": "siro-07",
+      "accountName": "Beacon Remodel Group",
+      "signalType": "Pilot context"
+    },
+    {
+      "title": "Measure the work saved",
+      "detail": "Compare research time and accepted handoffs before adding more automation.",
+      "badge": "Adoption",
+      "view": "agents",
+      "accountId": "siro-03",
+      "accountName": "Pine Comfort",
+      "signalType": "Manager change"
+    },
+    {
+      "title": "Test manager-relevant messaging",
+      "detail": "Compare a generic revenue-intelligence pitch with an actual coaching-workflow question.",
+      "badge": "Experiment",
+      "view": "experiments",
+      "accountId": "siro-02",
+      "accountName": "Harbor Install Group",
+      "signalType": "Regional expansion"
+    }
+  ],
+  "personas": [
+    {
+      "name": "Field sales leader",
+      "pain": "Limited visibility into distributed in-person sales work",
+      "promise": "A conversation about the manager’s current review and coaching process.",
+      "subject": "How {{team}} shares field-sales learning",
+      "email": "Hi {{first_name}}, your public team growth suggests a useful question about manager workflows: how do good field conversations become learning the rest of the team can use? What does that process look like today?",
+      "question": "How do managers choose which in-person conversations need coaching?"
+    },
+    {
+      "name": "SDR manager",
+      "pain": "Research and tooling that do not help reps start better conversations",
+      "promise": "A clear ICP reason, verified owner and useful opening in the SDR workflow.",
+      "subject": "A better first conversation with {{account}}",
+      "email": "Hi {{first_name}}, I’d like the account brief to answer three rep questions: why this organization, why now, and what should I ask? Which of those takes your team the most manual work today?",
+      "question": "Which account facts consistently help an SDR earn the next conversation?"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E-01",
+      "title": "Account qualification",
+      "control": "Broad sales-team label",
+      "treatment": "Verified in-person selling model",
+      "metric": "Accepted accounts",
+      "nA": 120,
+      "nB": 120,
+      "winsA": 12,
+      "winsB": 17,
+      "status": "Review"
+    },
+    {
+      "id": "E-02",
+      "title": "SDR opening",
+      "control": "Generic intelligence pitch",
+      "treatment": "Manager workflow question",
+      "metric": "Held meetings",
+      "nA": 145,
+      "nB": 145,
+      "winsA": 29,
+      "winsB": 33,
+      "status": "Review"
+    },
+    {
+      "id": "E-03",
+      "title": "Research delivery",
+      "control": "Separate report",
+      "treatment": "Brief inside SDR workflow",
+      "metric": "Useful briefs",
+      "nA": 90,
+      "nB": 90,
+      "winsA": 18,
+      "winsB": 21,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-04",
+      "title": "Contact ownership",
+      "control": "Tool-specific owners",
+      "treatment": "One account / contact rule",
+      "metric": "Clean handoffs",
+      "nA": 160,
+      "nB": 160,
+      "winsA": 24,
+      "winsB": 26,
+      "status": "Review"
+    },
+    {
+      "id": "E-05",
+      "title": "Pilot activation",
+      "control": "Usage count alone",
+      "treatment": "Manager review milestone",
+      "metric": "Activated pilots",
+      "nA": 100,
+      "nB": 100,
+      "winsA": 20,
+      "winsB": 25,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-06",
+      "title": "Rep feedback",
+      "control": "Unstructured rejection",
+      "treatment": "Reason-coded ICP feedback",
+      "metric": "Qualified next cohort",
+      "nA": 130,
+      "nB": 130,
+      "winsA": 13,
+      "winsB": 18,
+      "status": "Review"
+    }
+  ],
+  "pitch": "I have done the frontline sales work and know that a useful account brief must help someone start a better conversation. I also build the underlying tools: source-backed research, deduplicated CRM imports, pipeline stages and campaign drafts. At Siro, I would start with SDR effectiveness and make the data reliable enough that reps want to use it.",
+  "mappings": [
+    [
+      "SDR effectiveness",
+      "Zenefits sales development, enterprise outbound and startup messaging.",
+      "Start from the rep’s next conversation and useful account context."
+    ],
+    [
+      "Reliable GTM flows",
+      "Local CRM imports, provenance and pipeline stages.",
+      "Resolve identities and owners before activating another tool."
+    ],
+    [
+      "Hands-on building",
+      "Hey Sammy pipeline and AI-assisted product development.",
+      "Build and measure a focused SDR workflow before expanding."
+    ]
+  ],
+  "checkpoint": [
+    "Field model verified",
+    "Manager sponsor",
+    "Pilot workflow adopted",
+    "Rollout decision"
+  ],
+  "northStar": "SDRs who can act on reliable account context",
+  "weekOne": "A source-backed brief tested with two SDRs on one field-sales segment.",
+  "days60": "Connect account research, CRM and outbound receipts; remove the largest reliability and ownership failures.",
+  "days90": "Improve targeting and pilot handoffs from SDR and manager feedback, with adoption and meetings held visible.",
+  "schemaVersion": 2,
+  "roleUrl": "https://jobs.ashbyhq.com/siro/6bbf352a-32e0-487c-8b09-15b193f54006/",
+  "sources": [
+    {
+      "url": "https://jobs.ashbyhq.com/siro/6bbf352a-32e0-487c-8b09-15b193f54006/",
+      "label": "SDR-first mandate, data reliability, stack, requirements and compensation"
+    },
+    {
+      "url": "https://www.siro.ai/",
+      "label": "Field-selling product and user context"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Gong",
+      "url": "https://www.gong.io/",
+      "context": "Its public site describes revenue AI, interaction capture, pipeline risk and automated handoffs.",
+      "question": "Which selling interactions occur in person versus on scheduled calls, and what recording adoption, manager review and CRM-workflow evidence does the team need?"
+    },
+    {
+      "name": "SalesRabbit",
+      "url": "https://salesrabbit.com/",
+      "context": "Its public site describes field-sales management, canvassing, territory mapping, lead management and team reporting.",
+      "question": "Is the priority field-process management, conversation intelligence or both, and which existing tools and data flows should a pilot complement?"
+    }
+  ],
+  "firstBuilds": [
+    {
+      "title": "SDR account-intelligence brief",
+      "goal": "Put the evidence and next useful question in a rep’s hands.",
+      "steps": [
+        "Verify field model",
+        "Map manager",
+        "Identify context",
+        "Review opening"
+      ],
+      "scope": "20 accounts and two SDRs with a manual research baseline.",
+      "measure": "Research time, factual edits, useful briefs and meetings held."
+    },
+    {
+      "title": "CRM / outbound reliability",
+      "goal": "Stop duplicate and conflicting context crossing tools.",
+      "steps": [
+        "Define keys",
+        "Resolve ownership",
+        "Sync approved fields",
+        "Record receipts"
+      ],
+      "scope": "One SDR workflow and its current data sources.",
+      "measure": "Duplicate contacts, owner errors, freshness and accepted updates."
+    },
+    {
+      "title": "Pilot-to-learning loop",
+      "goal": "Use customer workflow evidence to improve targeting and handoffs.",
+      "steps": [
+        "Agree milestone",
+        "Observe adoption",
+        "Collect manager feedback",
+        "Update qualification"
+      ],
+      "scope": "A small reviewed pilot cohort and an explicit success definition.",
+      "measure": "Manager adoption, useful coaching workflow and rollout decisions."
+    }
+  ],
+  "projectRelevance": {
+    "sammy": "Source discovery and validation can reduce repetitive SDR research while keeping account context trustworthy.",
+    "sidequest": "The local partnership CRM directly relates to contact provenance, clean imports, rep context and campaign drafting.",
+    "dancers": "Reliable inquiry handoffs and notifications demonstrate how I handle ownership and recovery around a commercial workflow."
+  }
 }

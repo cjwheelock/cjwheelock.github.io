@@ -1,118 +1,11 @@
 {
+  "slug": "modal",
   "name": "Modal",
   "role": "GTM Engineer, Data Platform",
-  "accent": "#6645d1",
-  "product": "Modal provides cloud infrastructure for compute-intensive AI workloads, including GPU inference and sandboxes.",
-  "opportunity": "Resolve people, workspaces and organizations into a trustworthy account graph.",
-  "hypothesis": "When a researcher, workspace and company are not connected, usage signals can be hard to turn into an accurate owner or relevant conversation. A source-aware identity layer could make that context usable.",
-  "module": "Identity and workload graph",
-  "unit": "workspaces",
-  "dimension": "Workload",
-  "fit_label": "Identity confidence",
-  "intent_label": "Usage signal",
-  "action": "Review match",
-  "stages": [
-    "Observe workspace",
-    "Resolve identity",
-    "Connect workload",
-    "Route account context"
-  ],
-  "automations": [
-    "Suggest company matches with source and confidence attached.",
-    "Flag conflicting affiliations for review.",
-    "Surface material workload changes without treating them as buying intent automatically."
-  ],
-  "roadmap": [
-    "Map user, workspace and account sources; define identity and lineage rules.",
-    "Prototype a reviewed organization graph with deduplication and freshness checks.",
-    "Add workload signals and reconcile reporting with the data and GTM teams."
-  ],
-  "fit": "The Hey Sammy pipeline combines structured extraction, validation, deduplication and resumable jobs; the local partnership CRM retains contact provenance.",
-  "segments": [
-    "Inference",
-    "Model training",
-    "Agent sandbox"
-  ],
-  "signals": [
-    "Workspace activity rises",
-    "New GPU workload",
-    "Multiple teams observed"
-  ],
-  "values": [
-    65000,
-    92000,
-    27000,
-    140000,
-    51000,
-    78000
-  ],
-  "slug": "modal",
   "resume": {
     "docx": "CJ_Wheelock_Modal_GTM_Engineer_Data_Platform.docx",
     "pdf": "CJ_Wheelock_Modal_GTM_Engineer_Data_Platform.pdf"
   },
-  "accounts": [
-    {
-      "name": "Workspace A",
-      "segment": "Inference",
-      "signal": "Workspace activity rises",
-      "fit": 84,
-      "intent": 53,
-      "stage": "Qualified",
-      "value": 65000,
-      "next": "Confirm the source and assign an owner."
-    },
-    {
-      "name": "Workspace B",
-      "segment": "Model training",
-      "signal": "New GPU workload",
-      "fit": 69,
-      "intent": 93,
-      "stage": "Discovery",
-      "value": 92000,
-      "next": "Review the context and choose a relevant next step."
-    },
-    {
-      "name": "Workspace C",
-      "segment": "Agent sandbox",
-      "signal": "Multiple teams observed",
-      "fit": 96,
-      "intent": 67,
-      "stage": "Won",
-      "value": 27000,
-      "next": "Validate the need with the appropriate stakeholder."
-    },
-    {
-      "name": "Workspace D",
-      "segment": "Inference",
-      "signal": "Workspace activity rises",
-      "fit": 80,
-      "intent": 48,
-      "stage": "Qualified",
-      "value": 140000,
-      "next": "Record the outcome and carry forward the learning."
-    },
-    {
-      "name": "Workspace E",
-      "segment": "Model training",
-      "signal": "New GPU workload",
-      "fit": 63,
-      "intent": 87,
-      "stage": "New",
-      "value": 51000,
-      "next": "Resolve any missing context before outreach."
-    },
-    {
-      "name": "Workspace F",
-      "segment": "Agent sandbox",
-      "signal": "Multiple teams observed",
-      "fit": 94,
-      "intent": 71,
-      "stage": "New",
-      "value": 78000,
-      "next": "Keep in research until the signal is stronger."
-    }
-  ],
   "contact": {
     "name": "CJ Wheelock",
     "location": "New York, NY",
@@ -120,10 +13,808 @@
     "phone": "520-891-0750",
     "linkedin": "https://www.linkedin.com/in/cjwheelock"
   },
-  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
-  "proof": [
-    "$2.5M in development revenue at BeBop Sensors",
-    "124% of quota as an enterprise business development manager",
-    "Source-backed extraction and a local partnership CRM"
-  ]
+  "title": "One trustworthy graph behind every GTM decision",
+  "subtitle": "People · Organizations · Workspaces · Revenue",
+  "focus": "Resolve who is using the platform, connect the evidence to an account and reconcile the commercial numbers before activation.",
+  "priorities": [
+    "Build the people / organization / workspace graph.",
+    "Model reliable GTM data in Snowflake and dbt.",
+    "Activate clean data through reverse ETL and CRM workflows.",
+    "Reconcile actuals, forecasts and credited attainment."
+  ],
+  "segments": [
+    "Self-serve teams",
+    "Enterprise platforms"
+  ],
+  "funnel": [
+    "Workspaces observed",
+    "Organization matched",
+    "Sales accepted",
+    "Technical evaluation",
+    "Expanded"
+  ],
+  "channels": [
+    "Developer adoption",
+    "Product usage",
+    "Technical content",
+    "Enterprise inbound"
+  ],
+  "unit": "annual expansion potential",
+  "metric": "Qualified expansion value",
+  "special": "Identity resolution",
+  "dealLabel": "Usage & expansion",
+  "stack": [
+    "Product + billing events",
+    "Snowflake / dbt models",
+    "People / org / workspace graph",
+    "Reverse ETL + CRM"
+  ],
+  "layers": [
+    [
+      "Collect",
+      "Workspace, usage, billing and CRM identifiers with event times."
+    ],
+    [
+      "Resolve",
+      "Person affiliations and company domains with confidence and conflict history."
+    ],
+    [
+      "Model",
+      "Account usage, commercial status and actual / forecast / credit definitions."
+    ],
+    [
+      "Activate",
+      "Approved account context to CRM; unresolved identities stay in review."
+    ]
+  ],
+  "rules": [
+    "A personal email is evidence of a user, not proof of a company.",
+    "Keep affiliation history; do not overwrite a previous employer on an ambiguous match.",
+    "Actual revenue, forecast value and credited attainment remain separate measures."
+  ],
+  "accounts": [
+    {
+      "id": "modal-01",
+      "name": "Kiteworks Lab",
+      "domain": "modal-account-1.example",
+      "segment": "Self-serve teams",
+      "signalType": "Workspace growth",
+      "signal": "A GPU workspace added collaborators from two verified company domains.",
+      "play": "Resolve whether the collaborators belong to one organization before creating an account.",
+      "stage": 1,
+      "fit": 94,
+      "timing": 93,
+      "value": 84000,
+      "owner": "SDR team",
+      "channel": "Developer adoption",
+      "ageDays": 2,
+      "responseMinutes": 8,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A GPU workspace added collaborators from two verified company domains.",
+          "age": "2 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Resolve whether the collaborators belong to one organization before creating an account.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "modal-02",
+      "name": "Aurora Compute",
+      "domain": "modal-account-2.example",
+      "segment": "Enterprise platforms",
+      "signalType": "Production usage",
+      "signal": "A recurring inference workload now runs daily with a stable team owner.",
+      "play": "Pair the usage trend with a verified company and technical owner.",
+      "stage": 3,
+      "fit": 88,
+      "timing": 86,
+      "value": 150000,
+      "owner": "Account owner",
+      "channel": "Product usage",
+      "ageDays": 5,
+      "responseMinutes": 12,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A recurring inference workload now runs daily with a stable team owner.",
+          "age": "5 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Pair the usage trend with a verified company and technical owner.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "modal-03",
+      "name": "Tern Research",
+      "domain": "modal-account-3.example",
+      "segment": "Self-serve teams",
+      "signalType": "Affiliation conflict",
+      "signal": "A personal-email user lists a lab that conflicts with a recent employer record.",
+      "play": "Keep the workspace separate until affiliation evidence is reviewed.",
+      "stage": 0,
+      "fit": 72,
+      "timing": 48,
+      "value": 36000,
+      "owner": "Needs review",
+      "channel": "Technical content",
+      "ageDays": 14,
+      "responseMinutes": 0,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A personal-email user lists a lab that conflicts with a recent employer record.",
+          "age": "14 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Keep the workspace separate until affiliation evidence is reviewed.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "modal-04",
+      "name": "Morrow Systems",
+      "domain": "modal-account-4.example",
+      "segment": "Enterprise platforms",
+      "signalType": "Billing change",
+      "signal": "A team account moved to consolidated billing across three workspaces.",
+      "play": "Connect billing ownership without merging unrelated usage histories.",
+      "stage": 2,
+      "fit": 83,
+      "timing": 77,
+      "value": 240000,
+      "owner": "Solutions partner",
+      "channel": "Enterprise inbound",
+      "ageDays": 1,
+      "responseMinutes": 25,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A team account moved to consolidated billing across three workspaces.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Connect billing ownership without merging unrelated usage histories.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "modal-05",
+      "name": "Pixel Quay",
+      "domain": "modal-account-5.example",
+      "segment": "Self-serve teams",
+      "signalType": "Technical interest",
+      "signal": "A developer requested guidance on scaling a batch GPU workload.",
+      "play": "Attach the workload and company context to an assisted onboarding review.",
+      "stage": 1,
+      "fit": 91,
+      "timing": 90,
+      "value": 128000,
+      "owner": "SDR team",
+      "channel": "Developer adoption",
+      "ageDays": 4,
+      "responseMinutes": 7,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A developer requested guidance on scaling a batch GPU workload.",
+          "age": "4 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Attach the workload and company context to an assisted onboarding review.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "modal-06",
+      "name": "Copper Engine",
+      "domain": "modal-account-6.example",
+      "segment": "Enterprise platforms",
+      "signalType": "Multi-workspace",
+      "signal": "Several workspaces share a verified domain but have different billing owners.",
+      "play": "Review parent-child relationships and ownership before reverse ETL.",
+      "stage": 2,
+      "fit": 80,
+      "timing": 73,
+      "value": 170000,
+      "owner": "Account owner",
+      "channel": "Product usage",
+      "ageDays": 8,
+      "responseMinutes": 18,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "Several workspaces share a verified domain but have different billing owners.",
+          "age": "8 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Review parent-child relationships and ownership before reverse ETL.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "modal-07",
+      "name": "Aspen Models",
+      "domain": "modal-account-7.example",
+      "segment": "Self-serve teams",
+      "signalType": "Usage spike",
+      "signal": "One burst of experimental compute preceded a quiet week.",
+      "play": "Distinguish a one-off experiment from sustained production adoption.",
+      "stage": 0,
+      "fit": 67,
+      "timing": 42,
+      "value": 48000,
+      "owner": "Needs review",
+      "channel": "Technical content",
+      "ageDays": 21,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "One burst of experimental compute preceded a quiet week.",
+          "age": "21 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Distinguish a one-off experiment from sustained production adoption.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "modal-08",
+      "name": "Beacon Runtime",
+      "domain": "modal-account-8.example",
+      "segment": "Enterprise platforms",
+      "signalType": "Forecast mismatch",
+      "signal": "The CRM opportunity amount differs from the approved billing schedule.",
+      "play": "Reconcile forecast and actuals with a clear timing and currency definition.",
+      "stage": 3,
+      "fit": 86,
+      "timing": 80,
+      "value": 116000,
+      "owner": "Solutions partner",
+      "channel": "Enterprise inbound",
+      "ageDays": 3,
+      "responseMinutes": 9,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The CRM opportunity amount differs from the approved billing schedule.",
+          "age": "3 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Reconcile forecast and actuals with a clear timing and currency definition.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "modal-09",
+      "name": "Quartz Studio",
+      "domain": "modal-account-9.example",
+      "segment": "Self-serve teams",
+      "signalType": "Team milestone",
+      "signal": "An individual workspace invited an engineering team after a successful evaluation.",
+      "play": "Confirm the organization and surface a relevant expansion conversation.",
+      "stage": 1,
+      "fit": 79,
+      "timing": 68,
+      "value": 190000,
+      "owner": "SDR team",
+      "channel": "Developer adoption",
+      "ageDays": 7,
+      "responseMinutes": 20,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An individual workspace invited an engineering team after a successful evaluation.",
+          "age": "7 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Confirm the organization and surface a relevant expansion conversation.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "modal-10",
+      "name": "Elm Platform",
+      "domain": "modal-account-10.example",
+      "segment": "Enterprise platforms",
+      "signalType": "Attribution review",
+      "signal": "Two sellers are credited for one organization’s expansion.",
+      "play": "Resolve credited attainment using the approved commercial ownership rule.",
+      "stage": 4,
+      "fit": 95,
+      "timing": 96,
+      "value": 220000,
+      "owner": "Customer owner",
+      "channel": "Product usage",
+      "ageDays": 1,
+      "responseMinutes": 5,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "Two sellers are credited for one organization’s expansion.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Customer owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Resolve credited attainment using the approved commercial ownership rule.",
+          "age": "Current rule"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Review ambiguous workspace affiliations",
+      "detail": "Separate uncertain personal-email matches from verified organization identities.",
+      "badge": "Identity",
+      "view": "booth",
+      "accountId": "modal-03",
+      "accountName": "Tern Research",
+      "signalType": "Affiliation conflict"
+    },
+    {
+      "title": "Publish the account grain",
+      "detail": "Agree on workspace, person and organization keys before reverse ETL.",
+      "badge": "Data model",
+      "view": "datalayer",
+      "accountId": "modal-06",
+      "accountName": "Copper Engine",
+      "signalType": "Multi-workspace"
+    },
+    {
+      "title": "Reconcile the forecast bridge",
+      "detail": "Compare current CRM value with billing actuals and credited ownership.",
+      "badge": "Reconciliation",
+      "view": "funnel",
+      "accountId": "modal-08",
+      "accountName": "Beacon Runtime",
+      "signalType": "Forecast mismatch"
+    },
+    {
+      "title": "Route sustained production usage",
+      "detail": "Prioritize a verified organization with a clear technical workload.",
+      "badge": "Expansion",
+      "view": "signals",
+      "accountId": "modal-02",
+      "accountName": "Aurora Compute",
+      "signalType": "Production usage"
+    },
+    {
+      "title": "Audit activation receipts",
+      "detail": "Check which CRM updates were accepted, rejected or duplicated.",
+      "badge": "Reliability",
+      "view": "agents",
+      "accountId": "modal-04",
+      "accountName": "Morrow Systems",
+      "signalType": "Billing change"
+    },
+    {
+      "title": "Review the onboarding cohort",
+      "detail": "Find teams that reached a technical milestone but have no commercial owner.",
+      "badge": "Adoption",
+      "view": "deals",
+      "accountId": "modal-09",
+      "accountName": "Quartz Studio",
+      "signalType": "Team milestone"
+    }
+  ],
+  "personas": [
+    {
+      "name": "ML infrastructure lead",
+      "pain": "Workload growth without shared operational context",
+      "promise": "A workload-aware conversation that keeps technical constraints attached.",
+      "subject": "Scaling {{workload}} with the team",
+      "email": "Hi {{first_name}}, the next useful conversation starts with your workload: its pattern, constraints and ownership. What changes when your team moves from individual experiments to a shared production service?",
+      "question": "Which workload is recurring, and who owns reliability and spend?"
+    },
+    {
+      "name": "Revenue operations",
+      "pain": "Conflicting identities and inconsistent commercial measures",
+      "promise": "One traceable organization graph and clearly separated actual, forecast and credit models.",
+      "subject": "One organization, several workspaces",
+      "email": "Hi {{first_name}}, a company can appear as several workspaces, billing accounts and CRM records. I’d start by agreeing on the organization grain and the evidence for each match. Where do identity differences currently affect a GTM decision?",
+      "question": "What is the authoritative source for actuals, forecast and credited attainment?"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E-01",
+      "title": "Identity threshold",
+      "control": "Domain-only merge",
+      "treatment": "Domain + affiliation evidence",
+      "metric": "Correct matches",
+      "nA": 120,
+      "nB": 120,
+      "winsA": 12,
+      "winsB": 17,
+      "status": "Review"
+    },
+    {
+      "id": "E-02",
+      "title": "Production signal",
+      "control": "Single usage spike",
+      "treatment": "Sustained usage + owner",
+      "metric": "Accepted accounts",
+      "nA": 145,
+      "nB": 145,
+      "winsA": 29,
+      "winsB": 33,
+      "status": "Review"
+    },
+    {
+      "id": "E-03",
+      "title": "Reverse ETL",
+      "control": "Unconditional upsert",
+      "treatment": "Idempotent staged update",
+      "metric": "Accepted writes",
+      "nA": 90,
+      "nB": 90,
+      "winsA": 18,
+      "winsB": 21,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-04",
+      "title": "Activation timing",
+      "control": "Weekly usage digest",
+      "treatment": "Milestone-triggered review",
+      "metric": "Technical meetings",
+      "nA": 160,
+      "nB": 160,
+      "winsA": 24,
+      "winsB": 26,
+      "status": "Review"
+    },
+    {
+      "id": "E-05",
+      "title": "Revenue reconciliation",
+      "control": "CRM snapshot only",
+      "treatment": "Versioned actual / forecast / credit",
+      "metric": "Reconciled records",
+      "nA": 100,
+      "nB": 100,
+      "winsA": 20,
+      "winsB": 25,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-06",
+      "title": "Onboarding brief",
+      "control": "Generic sales note",
+      "treatment": "Workload + team context",
+      "metric": "Useful handoffs",
+      "nA": 130,
+      "nB": 130,
+      "winsA": 13,
+      "winsB": 18,
+      "status": "Review"
+    }
+  ],
+  "pitch": "I combine enterprise sales experience with practical data-system building. Hey Sammy required explicit record structure, deduplication, validation and resumable collection; my local CRM preserves contact provenance and pipeline state. At Modal, I would bring that attention to identity and evidence to the people, organizations and workspaces behind GTM decisions.",
+  "mappings": [
+    [
+      "Reliable GTM data",
+      "Hey Sammy: structured records, validation, deduplication and resumable jobs.",
+      "Start with explicit entity keys and source-aware tests."
+    ],
+    [
+      "Identity + activation",
+      "Local partnership CRM: deduplicated imports and contact provenance.",
+      "Review people / workspace affiliations before an account update."
+    ],
+    [
+      "Commercial reconciliation",
+      "Accounting degree and enterprise sales / partnership experience.",
+      "Make actuals, forecast and credit definitions understandable to the team."
+    ]
+  ],
+  "checkpoint": [
+    "Organization verified",
+    "Workload understood",
+    "Technical owner engaged",
+    "Expansion decision"
+  ],
+  "northStar": "Verified organization context that GTM can trust",
+  "weekOne": "An explainable identity-review queue for a bounded workspace cohort.",
+  "days60": "Extend the organization graph and model freshness to a second data source; activate approved fields with traceable receipts.",
+  "days90": "Reconcile actuals, forecasts and credited attainment with Finance and RevOps, then improve the next expansion signal.",
+  "schemaVersion": 2,
+  "roleUrl": "https://jobs.ashbyhq.com/modal/dd6fe63b-8265-474e-b1f0-fcc1c5a28daf",
+  "sources": [
+    {
+      "url": "https://jobs.ashbyhq.com/modal/dd6fe63b-8265-474e-b1f0-fcc1c5a28daf",
+      "label": "Role description"
+    },
+    {
+      "url": "https://api.ashbyhq.com/posting-api/job-board/modal?includeCompensation=true",
+      "label": "Company / product reference"
+    },
+    {
+      "url": "https://modal.com/pricing",
+      "label": "Company / product reference"
+    },
+    {
+      "url": "https://modal.com/docs/guide/billing",
+      "label": "Company / product reference"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Baseten",
+      "url": "https://www.baseten.co/",
+      "context": "Provides production inference infrastructure and managed or self-hosted deployment options.",
+      "question": "Is the buyer’s primary need flexible compute and workload orchestration, a specialized inference deployment, or a combination? Validate workload fit before positioning."
+    },
+    {
+      "name": "Amazon SageMaker AI",
+      "url": "https://aws.amazon.com/sagemaker/ai/",
+      "context": "AWS machine-learning platform covering model building, training and deployment.",
+      "question": "Which existing AWS commitments, operational requirements and developer workflows constrain the evaluation? Benchmark the actual workload rather than claiming a universal cost advantage."
+    }
+  ],
+  "firstBuilds": [
+    {
+      "title": "Organization graph review queue",
+      "goal": "Make a match explainable before using it to target an account.",
+      "steps": [
+        "Collect identifiers",
+        "Rank match evidence",
+        "Review conflicts",
+        "Publish stable keys"
+      ],
+      "scope": "A bounded sample of workspace and CRM records.",
+      "measure": "Match precision, unresolved affiliations, duplicate accounts and review time."
+    },
+    {
+      "title": "Account usage model",
+      "goal": "Give GTM teams context without losing the underlying workspace grain.",
+      "steps": [
+        "Define workspace grain",
+        "Model usage windows",
+        "Join billing + CRM",
+        "Activate approved fields"
+      ],
+      "scope": "One production-use signal and one reverse-ETL destination.",
+      "measure": "Freshness, accepted updates and seller usefulness."
+    },
+    {
+      "title": "Commercial reconciliation",
+      "goal": "Explain the bridge from billing to forecast to seller credit.",
+      "steps": [
+        "Version definitions",
+        "Join actuals",
+        "Compare forecast",
+        "Resolve credit rules"
+      ],
+      "scope": "A finance / RevOps-reviewed period and a small account cohort.",
+      "measure": "Unexplained variance, late-arriving events and ownership exceptions."
+    }
+  ],
+  "projectRelevance": {
+    "sammy": "Discovery, structured extraction and geospatial validation demonstrate a disciplined approach to identity, data grain and exceptions.",
+    "sidequest": "Deduplicated CRM imports and provenance are directly relevant to clean account activation and seller context.",
+    "dancers": "Signed webhooks, retry-safe notifications and recovery illustrate the reliability patterns needed around commercial events."
+  }
 }

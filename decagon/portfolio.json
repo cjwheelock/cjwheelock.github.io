@@ -1,118 +1,11 @@
 {
+  "slug": "decagon",
   "name": "Decagon",
   "role": "GTM Analytics Engineer",
-  "accent": "#6c46c2",
-  "product": "Decagon builds AI agents for customer interactions across support channels.",
-  "opportunity": "Give revenue leaders one traceable definition of pipeline and forecast.",
-  "hypothesis": "Different interpretations of stages and account ownership can obscure conversion and forecast changes. A modeled history with clear definitions could make decisions easier to audit.",
-  "module": "Pipeline definition studio",
-  "unit": "opportunities",
-  "dimension": "Support channel",
-  "fit_label": "Account fit",
-  "intent_label": "Opportunity signal",
-  "action": "Inspect stage history",
-  "stages": [
-    "Ingest opportunity",
-    "Standardize stage",
-    "Reconcile changes",
-    "Explain forecast"
-  ],
-  "automations": [
-    "Attach lineage and freshness to each metric.",
-    "Identify missing stage transitions and duplicates.",
-    "Summarize forecast movement for an analyst to verify."
-  ],
-  "roadmap": [
-    "Inventory pipeline definitions, source systems and reporting discrepancies.",
-    "Model opportunity history and reconcile a small set of core funnel metrics.",
-    "Add tests, ownership and forecast-change explanations with RevOps."
-  ],
-  "fit": "Experience building structured source-backed pipelines and a provenance-aware local CRM complements a decade of enterprise sales and partnerships.",
-  "segments": [
-    "Voice support",
-    "Digital support",
-    "Multichannel"
-  ],
-  "signals": [
-    "High support volume",
-    "New service operation",
-    "Enterprise expansion"
-  ],
-  "values": [
-    140000,
-    220000,
-    85000,
-    310000,
-    110000,
-    180000
-  ],
-  "slug": "decagon",
   "resume": {
     "docx": "CJ_Wheelock_Decagon_GTM_Analytics_Engineer.docx",
     "pdf": "CJ_Wheelock_Decagon_GTM_Analytics_Engineer.pdf"
   },
-  "accounts": [
-    {
-      "name": "Account A",
-      "segment": "Voice support",
-      "signal": "High support volume",
-      "fit": 71,
-      "intent": 66,
-      "stage": "Discovery",
-      "value": 140000,
-      "next": "Confirm the source and assign an owner."
-    },
-    {
-      "name": "Account B",
-      "segment": "Digital support",
-      "signal": "New service operation",
-      "fit": 98,
-      "intent": 47,
-      "stage": "Won",
-      "value": 220000,
-      "next": "Review the context and choose a relevant next step."
-    },
-    {
-      "name": "Account C",
-      "segment": "Multichannel",
-      "signal": "Enterprise expansion",
-      "fit": 82,
-      "intent": 86,
-      "stage": "Qualified",
-      "value": 85000,
-      "next": "Validate the need with the appropriate stakeholder."
-    },
-    {
-      "name": "Account D",
-      "segment": "Voice support",
-      "signal": "High support volume",
-      "fit": 65,
-      "intent": 70,
-      "stage": "New",
-      "value": 310000,
-      "next": "Record the outcome and carry forward the learning."
-    },
-    {
-      "name": "Account E",
-      "segment": "Digital support",
-      "signal": "New service operation",
-      "fit": 96,
-      "intent": 52,
-      "stage": "New",
-      "value": 110000,
-      "next": "Resolve any missing context before outreach."
-    },
-    {
-      "name": "Account F",
-      "segment": "Multichannel",
-      "signal": "Enterprise expansion",
-      "fit": 86,
-      "intent": 92,
-      "stage": "Qualified",
-      "value": 180000,
-      "next": "Keep in research until the signal is stronger."
-    }
-  ],
   "contact": {
     "name": "CJ Wheelock",
     "location": "New York, NY",
@@ -120,10 +13,808 @@
     "phone": "520-891-0750",
     "linkedin": "https://www.linkedin.com/in/cjwheelock"
   },
-  "profile": "Founder and AI product builder with more than a decade in enterprise sales and partnerships. Built a source-backed data pipeline, a local partnership CRM and customer-facing product workflows.",
-  "proof": [
-    "$2.5M in development revenue at BeBop Sensors",
-    "124% of quota as an enterprise business development manager",
-    "Source-backed extraction and a local partnership CRM"
-  ]
+  "title": "A forecast that can explain every movement",
+  "subtitle": "RevOps · Analytics engineering · GTM leadership",
+  "focus": "Turn CRM history into tested, documented models that make pipeline, conversion and forecast movement understandable.",
+  "priorities": [
+    "Build the foundational GTM analytics models.",
+    "Join Salesforce, Gong and Outreach context in BigQuery.",
+    "Develop tested transformations and repeatable reporting with dbt and Hex.",
+    "Partner with RevOps and leadership on trusted definitions and self-service."
+  ],
+  "segments": [
+    "Digital services",
+    "Enterprise CX"
+  ],
+  "funnel": [
+    "Target accounts",
+    "Qualified",
+    "Discovery",
+    "Evaluation",
+    "Won"
+  ],
+  "channels": [
+    "Enterprise inbound",
+    "Outbound",
+    "Partner referral",
+    "Executive programs"
+  ],
+  "unit": "annual opportunity value",
+  "metric": "Open pipeline",
+  "special": "Forecast bridge",
+  "dealLabel": "Evaluations & close plans",
+  "stack": [
+    "Salesforce stage history",
+    "Gong + Outreach context",
+    "BigQuery / dbt models",
+    "Hex + leadership reporting"
+  ],
+  "layers": [
+    [
+      "Ingest",
+      "Immutable opportunity and activity snapshots with source and event time."
+    ],
+    [
+      "Model",
+      "Account, opportunity, stage history and activity grains documented separately."
+    ],
+    [
+      "Test",
+      "Unique opportunity keys, valid stage transitions and reconciled amount definitions."
+    ],
+    [
+      "Explain",
+      "Pipeline movement, cohorts and self-service views with a clear owner for each metric."
+    ]
+  ],
+  "rules": [
+    "A current opportunity row cannot reconstruct the full stage history.",
+    "Reopened and pushed opportunities need an explicit movement category.",
+    "Separate weighted forecast assumptions from committed forecast and actual revenue."
+  ],
+  "accounts": [
+    {
+      "id": "decagon-01",
+      "name": "Cedar Travel",
+      "domain": "decagon-account-1.example",
+      "segment": "Enterprise CX",
+      "signalType": "Stage movement",
+      "signal": "A support-automation evaluation advanced, but its stage-change timestamp is missing.",
+      "play": "Repair the history before counting the stage-conversion cohort.",
+      "stage": 1,
+      "fit": 94,
+      "timing": 93,
+      "value": 117600,
+      "owner": "SDR team",
+      "channel": "Enterprise inbound",
+      "ageDays": 2,
+      "responseMinutes": 8,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A support-automation evaluation advanced, but its stage-change timestamp is missing.",
+          "age": "2 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Repair the history before counting the stage-conversion cohort.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "decagon-02",
+      "name": "Atlas Commerce",
+      "domain": "decagon-account-2.example",
+      "segment": "Digital services",
+      "signalType": "Forecast push",
+      "signal": "An evaluation moved its expected close date into the next quarter.",
+      "play": "Show a timing movement instead of silently treating the opportunity as lost.",
+      "stage": 3,
+      "fit": 88,
+      "timing": 86,
+      "value": 210000,
+      "owner": "Account owner",
+      "channel": "Outbound",
+      "ageDays": 5,
+      "responseMinutes": 12,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An evaluation moved its expected close date into the next quarter.",
+          "age": "5 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Show a timing movement instead of silently treating the opportunity as lost.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "decagon-03",
+      "name": "Harbor Mobility",
+      "domain": "decagon-account-3.example",
+      "segment": "Enterprise CX",
+      "signalType": "Buying committee",
+      "signal": "A CX sponsor is engaged; the security review owner is still unconfirmed.",
+      "play": "Add the missing stakeholder to the close-plan evidence.",
+      "stage": 0,
+      "fit": 72,
+      "timing": 48,
+      "value": 50400,
+      "owner": "Needs review",
+      "channel": "Partner referral",
+      "ageDays": 14,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A CX sponsor is engaged; the security review owner is still unconfirmed.",
+          "age": "14 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Add the missing stakeholder to the close-plan evidence.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "decagon-04",
+      "name": "Tide Finance",
+      "domain": "decagon-account-4.example",
+      "segment": "Digital services",
+      "signalType": "Amount change",
+      "signal": "An opportunity’s scope expanded from one support channel to several.",
+      "play": "Attribute the amount change separately from new pipeline creation.",
+      "stage": 2,
+      "fit": 83,
+      "timing": 77,
+      "value": 336000,
+      "owner": "Solutions partner",
+      "channel": "Executive programs",
+      "ageDays": 1,
+      "responseMinutes": 25,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An opportunity’s scope expanded from one support channel to several.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Attribute the amount change separately from new pipeline creation.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "decagon-05",
+      "name": "Pine Marketplace",
+      "domain": "decagon-account-5.example",
+      "segment": "Digital services",
+      "signalType": "Activity gap",
+      "signal": "Recent rep activity has no matching opportunity identifier.",
+      "play": "Resolve the join before including activity in a conversion analysis.",
+      "stage": 1,
+      "fit": 91,
+      "timing": 90,
+      "value": 179200,
+      "owner": "SDR team",
+      "channel": "Enterprise inbound",
+      "ageDays": 4,
+      "responseMinutes": 7,
+      "sourceStatus": "Needs review",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "Recent rep activity has no matching opportunity identifier.",
+          "age": "4 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Resolve the join before including activity in a conversion analysis.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "decagon-06",
+      "name": "Juniper Telecom",
+      "domain": "decagon-account-6.example",
+      "segment": "Enterprise CX",
+      "signalType": "Evaluation design",
+      "signal": "The customer team agreed on an evaluation, but its success criteria are not documented.",
+      "play": "Record the baseline, evaluation owner and decision criteria.",
+      "stage": 2,
+      "fit": 80,
+      "timing": 73,
+      "value": 238000,
+      "owner": "Account owner",
+      "channel": "Outbound",
+      "ageDays": 8,
+      "responseMinutes": 18,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The customer team agreed on an evaluation, but its success criteria are not documented.",
+          "age": "8 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Account owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Record the baseline, evaluation owner and decision criteria.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "decagon-07",
+      "name": "Silverline Services",
+      "domain": "decagon-account-7.example",
+      "segment": "Enterprise CX",
+      "signalType": "Executive review",
+      "signal": "Leadership requested a drilldown on a forecast change by segment.",
+      "play": "Trace the change to opportunity history and source definitions.",
+      "stage": 0,
+      "fit": 67,
+      "timing": 42,
+      "value": 67200,
+      "owner": "Needs review",
+      "channel": "Partner referral",
+      "ageDays": 21,
+      "responseMinutes": 0,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "Leadership requested a drilldown on a forecast change by segment.",
+          "age": "21 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Unresolved — review before activation",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Trace the change to opportunity history and source definitions.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "decagon-08",
+      "name": "Mosaic Pay",
+      "domain": "decagon-account-8.example",
+      "segment": "Digital services",
+      "signalType": "Reopened deal",
+      "signal": "A previously closed opportunity returned with a new scope.",
+      "play": "Classify reopened pipeline explicitly rather than as net-new demand.",
+      "stage": 3,
+      "fit": 86,
+      "timing": 80,
+      "value": 162400,
+      "owner": "Solutions partner",
+      "channel": "Executive programs",
+      "ageDays": 3,
+      "responseMinutes": 9,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "A previously closed opportunity returned with a new scope.",
+          "age": "3 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Solutions partner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Classify reopened pipeline explicitly rather than as net-new demand.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "decagon-09",
+      "name": "Larch Network",
+      "domain": "decagon-account-9.example",
+      "segment": "Enterprise CX",
+      "signalType": "Model freshness",
+      "signal": "The latest CRM update arrived after the reporting model completed.",
+      "play": "Mark the as-of time and refresh the affected reporting slice.",
+      "stage": 1,
+      "fit": 79,
+      "timing": 68,
+      "value": 266000,
+      "owner": "SDR team",
+      "channel": "Enterprise inbound",
+      "ageDays": 7,
+      "responseMinutes": 20,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "The latest CRM update arrived after the reporting model completed.",
+          "age": "7 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "SDR team",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Mark the as-of time and refresh the affected reporting slice.",
+          "age": "Current rule"
+        }
+      ]
+    },
+    {
+      "id": "decagon-10",
+      "name": "Quay Logistics",
+      "domain": "decagon-account-10.example",
+      "segment": "Digital services",
+      "signalType": "Outcome review",
+      "signal": "An evaluation closed won with a complete stage history and a documented commercial decision.",
+      "play": "Capture the outcome and feedback in the cohort model.",
+      "stage": 4,
+      "fit": 95,
+      "timing": 96,
+      "value": 308000,
+      "owner": "Customer owner",
+      "channel": "Outbound",
+      "ageDays": 1,
+      "responseMinutes": 5,
+      "sourceStatus": "Evidence attached",
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "completeness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "evidence": [
+        {
+          "field": "Account context",
+          "source": "Synthetic source snapshot",
+          "value": "An evaluation closed won with a complete stage history and a documented commercial decision.",
+          "age": "1 days"
+        },
+        {
+          "field": "Affiliation / ownership",
+          "source": "Synthetic CRM record",
+          "value": "Customer owner",
+          "age": "1 day"
+        },
+        {
+          "field": "Next useful action",
+          "source": "Proposed workflow rule",
+          "value": "Capture the outcome and feedback in the cohort model.",
+          "age": "Current rule"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Explain the forecast movement",
+      "detail": "Separate new pipeline, scope change, timing pushes and reopened opportunities.",
+      "badge": "Forecast",
+      "view": "booth",
+      "accountId": "decagon-02",
+      "accountName": "Atlas Commerce",
+      "signalType": "Forecast push"
+    },
+    {
+      "title": "Repair the stage-history gap",
+      "detail": "Keep the opportunity grain intact and expose the missing event for review.",
+      "badge": "Data quality",
+      "view": "datalayer",
+      "accountId": "decagon-01",
+      "accountName": "Cedar Travel",
+      "signalType": "Stage movement"
+    },
+    {
+      "title": "Agree on one qualified definition",
+      "detail": "Reconcile the RevOps and leadership view before adding another dashboard.",
+      "badge": "Definitions",
+      "view": "funnel",
+      "accountId": "decagon-07",
+      "accountName": "Silverline Services",
+      "signalType": "Executive review"
+    },
+    {
+      "title": "Inspect the evaluation cohort",
+      "detail": "Compare progression and missing success criteria across the current evaluations.",
+      "badge": "Conversion",
+      "view": "deals",
+      "accountId": "decagon-06",
+      "accountName": "Juniper Telecom",
+      "signalType": "Evaluation design"
+    },
+    {
+      "title": "Publish a useful self-service model",
+      "detail": "Document the grain, owner and as-of time in the output a business team uses.",
+      "badge": "Adoption",
+      "view": "agents",
+      "accountId": "decagon-09",
+      "accountName": "Larch Network",
+      "signalType": "Model freshness"
+    },
+    {
+      "title": "Test an evidence-led executive brief",
+      "detail": "Compare a headline-only forecast update with a source-linked movement narrative.",
+      "badge": "Reporting",
+      "view": "experiments",
+      "accountId": "decagon-04",
+      "accountName": "Tide Finance",
+      "signalType": "Amount change"
+    }
+  ],
+  "personas": [
+    {
+      "name": "RevOps leader",
+      "pain": "Conflicting metrics and opaque stage movement",
+      "promise": "Tested models with a clear grain, definition and reporting as-of time.",
+      "subject": "The bridge behind {{forecast_period}}",
+      "email": "Hi {{first_name}}, I’d start with one question: can the team explain the movement from last week’s pipeline to this week’s? A small bridge of new, advanced, pushed and resized opportunities is a useful place to agree on definitions. Which movement is hardest to reconcile today?",
+      "question": "Which metric has two competing definitions, and who owns the resolution?"
+    },
+    {
+      "name": "CX transformation leader",
+      "pain": "An evaluation with several stakeholders and unclear success criteria",
+      "promise": "A coordinated evaluation plan with an explicit baseline and decision owner.",
+      "subject": "A clear evaluation for {{support_workflow}}",
+      "email": "Hi {{first_name}}, a support-agent evaluation is easier to judge when the team agrees on the workflow, baseline and escalation path first. Which support journey would be useful to evaluate, and what would your team need to see to make a decision?",
+      "question": "Who owns the evaluation baseline, security review and final decision?"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E-01",
+      "title": "Forecast brief",
+      "control": "Headline totals",
+      "treatment": "Source-linked movement bridge",
+      "metric": "Correct explanations",
+      "nA": 120,
+      "nB": 120,
+      "winsA": 12,
+      "winsB": 17,
+      "status": "Review"
+    },
+    {
+      "id": "E-02",
+      "title": "Pipeline definition",
+      "control": "Team-specific SQL",
+      "treatment": "Reviewed shared model",
+      "metric": "Reconciled records",
+      "nA": 145,
+      "nB": 145,
+      "winsA": 29,
+      "winsB": 33,
+      "status": "Review"
+    },
+    {
+      "id": "E-03",
+      "title": "Evaluation handoff",
+      "control": "Activity summary",
+      "treatment": "Baseline + decision criteria",
+      "metric": "Accepted evaluations",
+      "nA": 90,
+      "nB": 90,
+      "winsA": 18,
+      "winsB": 21,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-04",
+      "title": "Reporting delivery",
+      "control": "Ad hoc spreadsheet",
+      "treatment": "Documented self-service view",
+      "metric": "Useful answers",
+      "nA": 160,
+      "nB": 160,
+      "winsA": 24,
+      "winsB": 26,
+      "status": "Review"
+    },
+    {
+      "id": "E-05",
+      "title": "Stage-history repair",
+      "control": "Current-state inference",
+      "treatment": "Event-based transition model",
+      "metric": "Valid transitions",
+      "nA": 100,
+      "nB": 100,
+      "winsA": 20,
+      "winsB": 25,
+      "status": "Collecting"
+    },
+    {
+      "id": "E-06",
+      "title": "Executive review",
+      "control": "All-account aggregate",
+      "treatment": "Segment + cohort drilldown",
+      "metric": "Resolved questions",
+      "nA": 130,
+      "nB": 130,
+      "winsA": 13,
+      "winsB": 18,
+      "status": "Review"
+    }
+  ],
+  "pitch": "I bring commercial context to data-system work. I have managed complex technical sales, built a source-backed extraction pipeline and built a local CRM with deduplicated imports and pipeline stages. At Decagon, I would focus that experience on explicit definitions, reliable history and analytics that help RevOps and leadership explain what changed and what to do next.",
+  "mappings": [
+    [
+      "Tested data models",
+      "Hey Sammy: validation, deduplication, structured records and bounded recovery.",
+      "Define opportunity and activity grains before joining them."
+    ],
+    [
+      "Business-facing analytics",
+      "Local CRM pipeline stages and PostHog funnel work.",
+      "Build a repeatable pipeline movement view with clear definitions."
+    ],
+    [
+      "GTM partnership",
+      "Enterprise technical sales through validation, proposals and negotiation.",
+      "Translate the questions leaders and sellers ask into useful model outputs."
+    ]
+  ],
+  "checkpoint": [
+    "Success criteria agreed",
+    "CX sponsor engaged",
+    "Security owner identified",
+    "Decision documented"
+  ],
+  "northStar": "Trusted answers to GTM questions",
+  "weekOne": "One reconciled pipeline movement view with RevOps-owned definitions.",
+  "days60": "Extend tested models to stage conversion and activity context, then publish a documented self-service reporting view.",
+  "days90": "Make forecast and cohort reviews repeatable; prioritize the next models from the questions business teams still cannot answer.",
+  "schemaVersion": 2,
+  "roleUrl": "https://jobs.ashbyhq.com/decagon/52bba096-667f-4e35-aa47-f8cc2219c390",
+  "sources": [
+    {
+      "url": "https://jobs.ashbyhq.com/decagon/52bba096-667f-4e35-aa47-f8cc2219c390",
+      "label": "Role description"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/view/gtm-analytics-engineer-at-decagon-4450775256",
+      "label": "Company / product reference"
+    },
+    {
+      "url": "https://decagon.ai/careers",
+      "label": "Company / product reference"
+    },
+    {
+      "url": "https://decagon.ai/",
+      "label": "Company / product reference"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Sierra",
+      "url": "https://sierra.ai/",
+      "context": "Markets customer-facing AI agents spanning multiple channels.",
+      "question": "What workflows, channel continuity, governance and measurable customer outcomes matter in this evaluation? Record why the buyer selected a solution without inventing a feature ranking."
+    },
+    {
+      "name": "Intercom / Fin",
+      "url": "https://www.intercom.com/",
+      "context": "Combines helpdesk capabilities and Fin AI Agent for customer service.",
+      "question": "Does the buyer want to extend an existing helpdesk or evaluate a broader enterprise agent program? Compare implementation scope and outcome definitions from approved evidence."
+    }
+  ],
+  "firstBuilds": [
+    {
+      "title": "Pipeline movement model",
+      "goal": "Make changes explainable before building more reporting.",
+      "steps": [
+        "Snapshot source",
+        "Classify movement",
+        "Reconcile totals",
+        "Publish drilldown"
+      ],
+      "scope": "A bounded period and one leadership metric reviewed with RevOps.",
+      "measure": "Reconciliation variance, unclassified changes and time to answer a business question."
+    },
+    {
+      "title": "Opportunity history foundation",
+      "goal": "Keep stage changes and timing available for repeatable cohort analysis.",
+      "steps": [
+        "Define grain",
+        "Model events",
+        "Test transitions",
+        "Document definitions"
+      ],
+      "scope": "One stage-history source and a small representative account cohort.",
+      "measure": "Missing timestamps, duplicate keys and source-to-model freshness."
+    },
+    {
+      "title": "Self-service GTM reporting",
+      "goal": "Help the commercial team answer common questions with shared definitions.",
+      "steps": [
+        "Collect questions",
+        "Build trusted view",
+        "Expose source context",
+        "Review adoption"
+      ],
+      "scope": "One RevOps partner and three repeated leadership questions.",
+      "measure": "Answer accuracy, repeat usage and avoided ad hoc reconstruction."
+    }
+  ],
+  "projectRelevance": {
+    "sammy": "Structured extraction, validation and source evidence are the foundations I would bring to tested GTM models.",
+    "sidequest": "Pipeline stages, deduplicated imports and PostHog funnels connect the record-level work to useful commercial reporting.",
+    "dancers": "Approval-based billing and signed-event recovery provide practical experience with state transitions and trustworthy commercial events."
+  }
 }
