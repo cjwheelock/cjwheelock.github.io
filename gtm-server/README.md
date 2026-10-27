@@ -16,6 +16,8 @@ Open `http://127.0.0.1:4173/clay/` or any of the other company routes. Passwords
 
 ## Production arrangement to approve before use
 
+For a no-cost deployment, prefer the separately prepared Cloudflare Workers Free implementation in `gtm-cloudflare/README.md`. The Node service below remains useful for local preview and is an alternative only if an appropriate host is already available without added cost.
+
 GitHub Pages cannot run this API. Run one Node web service behind HTTPS on a separate host, with its private bundle supplied as a secret file. Configure:
 
 - `HOST=0.0.0.0` and the host-provided `PORT`.
