@@ -2,7 +2,7 @@
   "schema_version": 1,
   "companies": {
     "clay": { "enabled": false, "starts_at": null },
-    "modal": { "enabled": false, "starts_at": null },
+    "modal": { "enabled": true, "starts_at": "2026-10-28T20:49:00Z" },
     "decagon": { "enabled": false, "starts_at": null },
     "baseten": { "enabled": false, "starts_at": null },
     "hearth": { "enabled": false, "starts_at": null },
