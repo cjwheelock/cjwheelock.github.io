@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "companies": {
+    "clay": { "enabled": false, "starts_at": null },
+    "modal": { "enabled": false, "starts_at": null },
+    "decagon": { "enabled": false, "starts_at": null },
+    "baseten": { "enabled": false, "starts_at": null },
+    "hearth": { "enabled": false, "starts_at": null },
+    "watershed": { "enabled": false, "starts_at": null },
+    "august": { "enabled": false, "starts_at": null },
+    "siro": { "enabled": false, "starts_at": null },
+    "dualentry": { "enabled": false, "starts_at": null },
+    "langchain": { "enabled": false, "starts_at": null }
+  }
+}
