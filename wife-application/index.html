@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+    <meta name="description" content="A playful Wife Application. References available from the dogs.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#f7f7f3">
+    <title>Wife Application · CJ Wheelock</title>
+    <link rel="stylesheet" href="styles.css?v=20261031-four-step">
+    <script src="app.js?v=20261031-four-step" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#application">Skip to questions</a>
+    <main>
+      <header class="page-header">
+        <span class="wordmark">CJ Wheelock</span>
+        <span class="time-note">4 quick steps</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">Wife Application<span aria-hidden="true">.</span></h1>
+        <div class="hero">
+          <img class="hero-photo" src="../assets/cj-dogs.jpg" alt="CJ holding his two Cavalier puppies, Atlas and Theo" width="1350" height="1800" fetchpriority="high" decoding="async">
+          <div class="hero-copy">
+            <h2>Hi, I’m CJ.</h2>
+            <p>Dances, builds apps, comes with two dogs.</p>
+            <p class="references">References available from the dogs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="application" id="application" aria-label="Application">
+        <div class="step-header" id="step-header">
+          <button id="back-button" class="back-button" type="button" aria-label="Back" disabled><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m14 5-7 7 7 7M7 12h14"></path></svg></button>
+          <span id="step-count" role="status" aria-live="polite">Step 1 of 4</span>
+        </div>
+        <progress id="step-progress" value="1" max="4" aria-label="Application progress">1 of 4</progress>
+        <noscript><p>Enable JavaScript to use the application. No answers are sent.</p></noscript>
+
+        <section class="question-screen" id="step-1" aria-labelledby="unhinged-title">
+          <h2 id="unhinged-title" class="question-title" tabindex="-1">How unhinged are you?</h2>
+          <div class="unhinged-options" aria-label="Unhinged level">
+            <button class="unhinged-button" type="button" data-unhinged="1" aria-pressed="false"><span class="level-number">1</span><span>Only slightly unhinged</span><span class="selection" aria-hidden="true"></span></button>
+            <button class="unhinged-button" type="button" data-unhinged="2" aria-pressed="false"><span class="level-number">2</span><span>Somewhat unhinged</span><span class="selection" aria-hidden="true"></span></button>
+            <button class="unhinged-button" type="button" data-unhinged="3" aria-pressed="false"><span class="level-number">3</span><span>Moderately unhinged</span><span class="selection" aria-hidden="true"></span></button>
+            <button class="unhinged-button" type="button" data-unhinged="4" aria-pressed="false"><span class="level-number">4</span><span>Mostly unhinged</span><span class="selection" aria-hidden="true"></span></button>
+            <button class="unhinged-button" type="button" data-unhinged="5" aria-pressed="false"><span class="level-number">5</span><span>Very unhinged</span><span class="selection" aria-hidden="true"></span></button>
+          </div>
+        </section>
+
+        <section class="question-screen" id="step-2" aria-labelledby="qualifications-title" hidden>
+          <form id="qualifications-form" novalidate autocomplete="off" aria-describedby="privacy-note">
+            <h2 id="qualifications-title" class="question-title" tabindex="-1"><label for="qualifications">Why are you qualified to be a wife?</label></h2>
+            <textarea id="qualifications" name="qualifications" rows="5" maxlength="2000" required aria-describedby="qualifications-dictation" spellcheck="false" autocorrect="off" autocomplete="off"></textarea>
+            <div class="dictation-row">
+              <button class="dictation-button" type="button" data-dictation-target="qualifications" aria-label="Focus qualifications answer for keyboard dictation" aria-describedby="qualifications-dictation"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M6 11v1a6 6 0 0 0 12 0v-1M12 18v3M9 21h6"></path></svg> Dictate</button>
+              <p id="qualifications-dictation" class="dictation-note">Tap the microphone on your keyboard to dictate.</p>
+            </div>
+            <p id="qualifications-error" class="error" role="alert" hidden>Write an answer before continuing.</p>
+            <button class="primary-button continue-button" type="submit">Continue <span aria-hidden="true">→</span></button>
+          </form>
+        </section>
+
+        <section class="question-screen" id="step-3" aria-labelledby="table-title" hidden>
+          <form id="table-form" novalidate autocomplete="off" aria-describedby="privacy-note">
+            <h2 id="table-title" class="question-title" tabindex="-1"><label for="table">What do you bring to the table?</label></h2>
+            <textarea id="table" name="table" rows="5" maxlength="2000" required aria-describedby="table-dictation" spellcheck="false" autocorrect="off" autocomplete="off"></textarea>
+            <div class="dictation-row">
+              <button class="dictation-button" type="button" data-dictation-target="table" aria-label="Focus table answer for keyboard dictation" aria-describedby="table-dictation"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M6 11v1a6 6 0 0 0 12 0v-1M12 18v3M9 21h6"></path></svg> Dictate</button>
+              <p id="table-dictation" class="dictation-note">Tap the microphone on your keyboard to dictate.</p>
+            </div>
+            <p id="table-error" class="error" role="alert" hidden>Write an answer before continuing.</p>
+            <button class="primary-button continue-button" type="submit">Continue <span aria-hidden="true">→</span></button>
+          </form>
+        </section>
+
+        <section class="question-screen" id="step-4" aria-labelledby="details-title" hidden>
+          <form id="details-form" novalidate autocomplete="off" aria-describedby="privacy-note">
+            <h2 id="details-title" class="question-title" tabindex="-1">Age &amp; desired number of kids</h2>
+            <div class="details-grid">
+              <div>
+                <label class="detail-label" for="age">Age</label>
+                <select id="age" name="age" required aria-describedby="age-note">
+                  <option value="">Choose</option>
+                  <option value="under18">Under 18</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                  <option value="32">32</option>
+                  <option value="33">33</option>
+                  <option value="34">34</option>
+                  <option value="35">35</option>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+                  <option value="45">45</option>
+                  <option value="46">46</option>
+                  <option value="47">47</option>
+                  <option value="48">48</option>
+                  <option value="49">49</option>
+                  <option value="50">50</option>
+                  <option value="51">51</option>
+                  <option value="52">52</option>
+                  <option value="53">53</option>
+                  <option value="54">54</option>
+                  <option value="55">55</option>
+                  <option value="56">56</option>
+                  <option value="57">57</option>
+                  <option value="58">58</option>
+                  <option value="59">59</option>
+                  <option value="60">60</option>
+                  <option value="61">61</option>
+                  <option value="62">62</option>
+                  <option value="63">63</option>
+                  <option value="64">64</option>
+                  <option value="65">65</option>
+                  <option value="66">66</option>
+                  <option value="67">67</option>
+                  <option value="68">68</option>
+                  <option value="69">69</option>
+                  <option value="70">70</option>
+                  <option value="71">71</option>
+                  <option value="72">72</option>
+                  <option value="73">73</option>
+                  <option value="74">74</option>
+                  <option value="75">75</option>
+                  <option value="76">76</option>
+                  <option value="77">77</option>
+                  <option value="78">78</option>
+                  <option value="79">79</option>
+                  <option value="80">80</option>
+                  <option value="81">81</option>
+                  <option value="82">82</option>
+                  <option value="83">83</option>
+                  <option value="84">84</option>
+                  <option value="85">85</option>
+                  <option value="86">86</option>
+                  <option value="87">87</option>
+                  <option value="88">88</option>
+                  <option value="89">89</option>
+                  <option value="90">90</option>
+                  <option value="91">91</option>
+                  <option value="92">92</option>
+                  <option value="93">93</option>
+                  <option value="94">94</option>
+                  <option value="95">95</option>
+                  <option value="96">96</option>
+                  <option value="97">97</option>
+                  <option value="98">98</option>
+                  <option value="99">99</option>
+                  <option value="100">100</option>
+                  <option value="101">101</option>
+                  <option value="102">102</option>
+                  <option value="103">103</option>
+                  <option value="104">104</option>
+                  <option value="105">105</option>
+                  <option value="106">106</option>
+                  <option value="107">107</option>
+                  <option value="108">108</option>
+                  <option value="109">109</option>
+                  <option value="110">110</option>
+                  <option value="111">111</option>
+                  <option value="112">112</option>
+                  <option value="113">113</option>
+                  <option value="114">114</option>
+                  <option value="115">115</option>
+                  <option value="116">116</option>
+                  <option value="117">117</option>
+                  <option value="118">118</option>
+                  <option value="119">119</option>
+                  <option value="120">120</option>
+                </select>
+                <p id="age-note" class="field-note">18+ only.</p>
+              </div>
+              <div>
+                <label class="detail-label" for="kids">Desired number of kids</label>
+                <select id="kids" name="kids" required>
+                  <option value="">Choose</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            <fieldset class="money-question">
+              <legend>Hypothetically, is it okay if I’m only worth $10M?</legend>
+              <div class="yes-no-options">
+                <label class="choice"><input type="radio" name="hypothetical" value="yes" required><span class="option"><span>Yes</span><span class="selection" aria-hidden="true"></span></span></label>
+                <label class="choice"><input type="radio" name="hypothetical" value="no"><span class="option"><span>No</span><span class="selection" aria-hidden="true"></span></span></label>
+              </div>
+            </fieldset>
+            <p id="details-error" class="error" role="alert" hidden>Choose your age, desired number of kids, and an answer to the hypothetical question.</p>
+            <button class="primary-button continue-button" type="submit">See my result <span aria-hidden="true">→</span></button>
+          </form>
+        </section>
+
+        <section id="result" class="result" aria-labelledby="result-title" hidden>
+          <span class="coffee-mark" aria-hidden="true">☕</span>
+          <h2 id="result-title" tabindex="-1">You’ve advanced to the coffee round.</h2>
+          <p>Please return this phone to the handsome man with the QR code.</p>
+          <div class="result-actions"><button class="primary-button restart-button" type="button">Start over</button></div>
+        </section>
+
+        <section id="age-exit" class="result" aria-labelledby="age-exit-title" hidden>
+          <h2 id="age-exit-title" tabindex="-1">This page is for adults 18 and over.</h2>
+          <p>Thanks for stopping by.</p>
+          <button class="text-button restart-button" type="button">Start over</button>
+        </section>
+      </section>
+      <footer><p id="privacy-note">Just for fun. No answers are sent or saved.</p></footer>
+    </main>
+  </body>
+</html>
