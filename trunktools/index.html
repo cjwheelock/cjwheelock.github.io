@@ -8,6 +8,7 @@
     <meta name="description" content="A working concept of the GTM operating system a founding GTM engineer would run at Trunk Tools, by CJ Wheelock.">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231f201d'/%3E%3Ctext x='32' y='41' font-family='Arial, sans-serif' font-size='25' font-weight='700' text-anchor='middle' fill='%23f7f7f3'%3ECJ%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="app.css?v=8">
+    <link rel="stylesheet" href="fieldreports.css?v=1">
   </head>
   <body class="locked">
     <!-- Password gate -->
@@ -60,6 +61,9 @@
         </button>
         <button class="nav-btn" data-view="winloss">
           <svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l-2 6h4zM19 8l-2 6h4zM5 8h14"/></svg>Win/loss &amp; competitive
+        </button>
+        <button class="nav-btn" data-view="fieldreports">
+          <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9 10v3M12 8.5v6M15 10v3"/></svg>Field reports<span class="count" id="fr-count">8</span>
         </button>
         <div class="nav-label">Build</div>
         <button class="nav-btn" data-view="datalayer">
@@ -477,6 +481,24 @@
             </div>
           </section>
 
+          <!-- FIELD REPORTS -->
+          <section class="view" id="view-fieldreports" data-title="Field reports" data-crumb="Improve">
+            <div class="view-intro">
+              <div>
+                <h2>Ask the people doing the work</h2>
+                <p>Reps answer three or four questions out loud in about three minutes. Reports are transcribed, grouped into themes, and the biggest themes become tools on the punch list. Next cycle asks whether those tools helped.</p>
+              </div>
+              <div class="seg" id="seg-fr" role="group" aria-label="Field reports section">
+                <button aria-pressed="true" data-fr="overview">Overview</button>
+                <button aria-pressed="false" data-fr="record">Record</button>
+                <button aria-pressed="false" data-fr="reports">Reports</button>
+                <button aria-pressed="false" data-fr="punch">Punch list</button>
+                <button aria-pressed="false" data-fr="team">Team</button>
+              </div>
+            </div>
+            <div id="fr-root"></div>
+          </section>
+
           <!-- DATA LAYER -->
           <section class="view" id="view-datalayer" data-title="Data layer · Upside" data-crumb="Build">
             <div class="view-intro">
@@ -607,5 +629,6 @@
 
     <script src="access-alert.js?v=1"></script>
     <script src="app.js?v=8"></script>
+    <script src="fieldreports.js?v=1"></script>
   </body>
 </html>
