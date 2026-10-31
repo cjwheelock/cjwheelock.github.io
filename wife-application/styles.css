@@ -50,6 +50,76 @@ textarea { resize: vertical; min-height: 14rem; line-height: 1.5; padding-bottom
 .dictation-button { position: absolute; right: 0.75rem; bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem; min-height: 44px; padding: 0.55rem 0.6rem; border: 1px solid #98a592; border-radius: 0.3rem; background: #e8eee7; color: var(--green); font-size: 0.8rem; }
 .dictation-note { margin: 0.65rem 0 0; color: var(--muted); font-size: 0.75rem; line-height: 1.4; }
 .continue-button { margin-top: 1.5rem; }
+
+/* Only the two written answers use this visible-viewport panel. The surrounding
+   screens, including the under-18 siren, retain their existing layout. */
+body.is-writing { overflow: hidden; }
+.application.is-writing {
+  position: fixed;
+  z-index: 3;
+  top: var(--writing-viewport-top, 0px);
+  left: max(1rem, env(safe-area-inset-left, 0px));
+  right: max(1rem, env(safe-area-inset-right, 0px));
+  width: auto;
+  max-width: 40rem;
+  height: var(--writing-viewport-height, 100dvh);
+  min-height: 0;
+  margin-inline: auto;
+  padding-block: max(0.25rem, env(safe-area-inset-top, 0px)) max(0.5rem, env(safe-area-inset-bottom, 0px));
+  background: var(--background);
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  grid-template-rows: 44px minmax(0, 1fr);
+  gap: 0.5rem 0.75rem;
+}
+.is-writing .step-header { display: contents; }
+.is-writing #back-button { grid-column: 1; grid-row: 1; }
+.is-writing #step-progress { grid-column: 2; grid-row: 1; align-self: center; margin: 0; }
+.is-writing #step-count { grid-column: 3; grid-row: 1; align-self: center; white-space: nowrap; font-size: 0.75rem; }
+.is-writing .question-screen {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  padding: 0.25rem;
+}
+.is-writing .question-screen form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  min-height: 0;
+}
+.is-writing .question-title {
+  flex: none;
+  margin: 0;
+  font-size: clamp(1.125rem, 4.8vw, 1.35rem);
+  line-height: 1.2;
+}
+.is-writing .answer-field {
+  flex: 0 1 8rem;
+  min-height: 6rem;
+  padding-bottom: 3.2rem;
+  border: 1px solid #989e90;
+  border-radius: 0.4rem;
+  background: white;
+}
+.is-writing .answer-field:focus-within { outline: 3px solid var(--green); outline-offset: 2px; }
+.is-writing textarea {
+  height: 100%;
+  min-height: 0;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  line-height: 1.4;
+  resize: none;
+  overflow-y: auto;
+}
+.is-writing textarea:focus-visible { outline: none; }
+.is-writing .dictation-button { right: 0.5rem; bottom: 0.25rem; }
+.is-writing .dictation-note { flex: none; margin: 0; line-height: 1.25; }
+.is-writing .continue-button { flex: none; margin: 0; min-height: 44px; padding: 0.5rem 0.75rem; }
+.is-writing .error { flex: none; margin: 0; font-size: 0.8rem; line-height: 1.25; }
 .details-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
 .detail-label { display: flex; align-items: flex-end; min-height: 2.8rem; font-size: 1rem; font-weight: 600; line-height: 1.4; margin-bottom: 0.6rem; }
 .field-note { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.8rem; }

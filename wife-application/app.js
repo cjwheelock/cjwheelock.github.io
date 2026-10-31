@@ -17,11 +17,33 @@
   let selectedLevel = null;
   let view = "questions";
 
+  function syncWritingViewport() {
+    if (!application.classList.contains("is-writing")) return;
+    const viewport = window.visualViewport;
+    const height = Math.max(1, Math.floor(viewport ? viewport.height : window.innerHeight));
+    const top = Math.max(0, viewport ? viewport.offsetTop : 0);
+    application.style.setProperty("--writing-viewport-height", `${height}px`);
+    application.style.setProperty("--writing-viewport-top", `${top}px`);
+  }
+
+  function setWritingMode(enabled) {
+    application.classList.toggle("is-writing", enabled);
+    document.body.classList.toggle("is-writing", enabled);
+    if (enabled) syncWritingViewport();
+  }
+
+  window.addEventListener("resize", syncWritingViewport);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", syncWritingViewport);
+    window.visualViewport.addEventListener("scroll", syncWritingViewport);
+  }
+
   // Answers stay in these existing form elements and memory. No sending or storage.
   function showStep(index, moveFocus = true) {
     currentStep = index;
     view = "questions";
     intro.hidden = index !== 0;
+    setWritingMode(index === 1 || index === 2);
     screens[index].hidden = false;
     screens.forEach((screen, i) => { if (i !== index) screen.hidden = true; });
     result.hidden = true;
@@ -35,7 +57,7 @@
       // Runs synchronously inside the navigation gesture so mobile can show its keyboard.
       focusTarget.focus({ preventScroll: true });
       if (index === 0) window.scrollTo({ top: 0, behavior: "auto" });
-      else application.scrollIntoView({ block: "start", behavior: "auto" });
+      else if (!application.classList.contains("is-writing")) application.scrollIntoView({ block: "start", behavior: "auto" });
     }
   }
 
@@ -67,6 +89,7 @@
   }
 
   function showAgeExit() {
+    setWritingMode(false);
     ageExit.hidden = false;
     result.hidden = true;
     intro.hidden = true;
