@@ -3,6 +3,7 @@
 (() => {
   const screens = [...document.querySelectorAll(".question-screen")];
   const application = document.querySelector("#application");
+  const intro = document.querySelector(".intro");
   const back = document.querySelector("#back-button");
   const count = document.querySelector("#step-count");
   const progress = document.querySelector("#step-progress");
@@ -20,6 +21,7 @@
   function showStep(index, moveFocus = true) {
     currentStep = index;
     view = "questions";
+    intro.hidden = index !== 0;
     screens[index].hidden = false;
     screens.forEach((screen, i) => { if (i !== index) screen.hidden = true; });
     result.hidden = true;
@@ -29,8 +31,11 @@
     progress.value = index + 1;
     progress.textContent = `${index + 1} of 4`;
     if (moveFocus) {
-      screens[index].querySelector(".question-title").focus({ preventScroll: true });
-      application.scrollIntoView({ block: "start", behavior: "auto" });
+      const focusTarget = screens[index].querySelector("textarea") || screens[index].querySelector(".question-title");
+      // Runs synchronously inside the navigation gesture so mobile can show its keyboard.
+      focusTarget.focus({ preventScroll: true });
+      if (index === 0) window.scrollTo({ top: 0, behavior: "auto" });
+      else application.scrollIntoView({ block: "start", behavior: "auto" });
     }
   }
 
@@ -61,6 +66,20 @@
     showStep(0, moveFocus);
   }
 
+  function showAgeExit() {
+    ageExit.hidden = false;
+    result.hidden = true;
+    intro.hidden = true;
+    screens.forEach((screen) => { screen.hidden = true; });
+    view = "exit";
+    back.disabled = false;
+    count.textContent = "18+ only";
+    progress.value = 0;
+    progress.textContent = "0 of 4";
+    document.querySelector("#age-exit-title").focus({ preventScroll: true });
+    application.scrollIntoView({ block: "start", behavior: "auto" });
+  }
+
   document.querySelectorAll("[data-unhinged]").forEach((button) => {
     button.addEventListener("click", () => {
       if (view !== "questions" || currentStep !== 0) return;
@@ -86,20 +105,12 @@
   document.querySelector("#details-form").addEventListener("change", () => {
     document.querySelector("#details-error").hidden = true;
     document.querySelectorAll("#details-form select, #details-form input").forEach((control) => clearInvalid(control, "details-error"));
+    if (age.value === "under18") showAgeExit();
   });
   document.querySelector("#details-form").addEventListener("submit", (event) => {
     event.preventDefault();
     if (age.value === "under18") {
-      reset(false);
-      ageExit.hidden = false;
-      screens.forEach((screen) => { screen.hidden = true; });
-      view = "exit";
-      back.disabled = true;
-      count.textContent = "18+ only";
-      progress.value = 0;
-      progress.textContent = "0 of 4";
-      document.querySelector("#age-exit-title").focus({ preventScroll: true });
-      application.scrollIntoView({ block: "start", behavior: "auto" });
+      showAgeExit();
       return;
     }
     if (!selectedLevel) return showStep(0);
@@ -126,8 +137,12 @@
   });
 
   back.addEventListener("click", () => {
-    if (view === "result") showStep(3);
+    if (view === "result" || view === "exit") showStep(3);
     else if (view === "questions" && currentStep > 0) showStep(currentStep - 1);
+  });
+  document.querySelector("#exit-back-button").addEventListener("click", () => {
+    showStep(3);
+    age.focus();
   });
   document.querySelectorAll(".restart-button").forEach((button) => button.addEventListener("click", () => reset()));
   // A click focuses the textarea; the phone keyboard provides its own dictation.

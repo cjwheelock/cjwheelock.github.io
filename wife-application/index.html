@@ -8,24 +8,19 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#f7f7f3">
     <title>Wife Application · CJ Wheelock</title>
-    <link rel="stylesheet" href="styles.css?v=20261031-four-step">
-    <script src="app.js?v=20261031-four-step" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261031-refinement">
+    <script src="app.js?v=20261031-refinement" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#application">Skip to questions</a>
     <main>
-      <header class="page-header">
-        <span class="wordmark">CJ Wheelock</span>
-        <span class="time-note">4 quick steps</span>
-      </header>
-
       <section class="intro" aria-labelledby="page-title">
         <h1 id="page-title">Wife Application<span aria-hidden="true">.</span></h1>
         <div class="hero">
-          <img class="hero-photo" src="../assets/cj-dogs.jpg" alt="CJ holding his two Cavalier puppies, Atlas and Theo" width="1350" height="1800" fetchpriority="high" decoding="async">
+          <img class="hero-photo" src="../assets/cj-dogs.jpg" alt="CJ posing with two Cavalier dogs" width="1350" height="1800" fetchpriority="high" decoding="async">
           <div class="hero-copy">
             <h2>Hi, I’m CJ.</h2>
-            <p>Dances, builds apps, comes with two dogs.</p>
+            <p>Dances, builds apps, takes pictures with cute dogs.</p>
             <p class="references">References available from the dogs.</p>
           </div>
         </div>
@@ -53,11 +48,11 @@
         <section class="question-screen" id="step-2" aria-labelledby="qualifications-title" hidden>
           <form id="qualifications-form" novalidate autocomplete="off" aria-describedby="privacy-note">
             <h2 id="qualifications-title" class="question-title" tabindex="-1"><label for="qualifications">Why are you qualified to be a wife?</label></h2>
-            <textarea id="qualifications" name="qualifications" rows="5" maxlength="2000" required aria-describedby="qualifications-dictation" spellcheck="false" autocorrect="off" autocomplete="off"></textarea>
-            <div class="dictation-row">
+            <div class="answer-field">
+              <textarea id="qualifications" name="qualifications" rows="5" maxlength="2000" required aria-describedby="qualifications-dictation" spellcheck="false" autocorrect="off" autocomplete="off"></textarea>
               <button class="dictation-button" type="button" data-dictation-target="qualifications" aria-label="Focus qualifications answer for keyboard dictation" aria-describedby="qualifications-dictation"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M6 11v1a6 6 0 0 0 12 0v-1M12 18v3M9 21h6"></path></svg> Dictate</button>
-              <p id="qualifications-dictation" class="dictation-note">Tap the microphone on your keyboard to dictate.</p>
             </div>
+            <p id="qualifications-dictation" class="dictation-note">Tap the microphone on your keyboard to dictate.</p>
             <p id="qualifications-error" class="error" role="alert" hidden>Write an answer before continuing.</p>
             <button class="primary-button continue-button" type="submit">Continue <span aria-hidden="true">→</span></button>
           </form>
@@ -66,11 +61,11 @@
         <section class="question-screen" id="step-3" aria-labelledby="table-title" hidden>
           <form id="table-form" novalidate autocomplete="off" aria-describedby="privacy-note">
             <h2 id="table-title" class="question-title" tabindex="-1"><label for="table">What do you bring to the table?</label></h2>
-            <textarea id="table" name="table" rows="5" maxlength="2000" required aria-describedby="table-dictation" spellcheck="false" autocorrect="off" autocomplete="off"></textarea>
-            <div class="dictation-row">
+            <div class="answer-field">
+              <textarea id="table" name="table" rows="5" maxlength="2000" required aria-describedby="table-dictation" spellcheck="false" autocorrect="off" autocomplete="off"></textarea>
               <button class="dictation-button" type="button" data-dictation-target="table" aria-label="Focus table answer for keyboard dictation" aria-describedby="table-dictation"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M6 11v1a6 6 0 0 0 12 0v-1M12 18v3M9 21h6"></path></svg> Dictate</button>
-              <p id="table-dictation" class="dictation-note">Tap the microphone on your keyboard to dictate.</p>
             </div>
+            <p id="table-dictation" class="dictation-note">Tap the microphone on your keyboard to dictate.</p>
             <p id="table-error" class="error" role="alert" hidden>Write an answer before continuing.</p>
             <button class="primary-button continue-button" type="submit">Continue <span aria-hidden="true">→</span></button>
           </form>
@@ -205,7 +200,7 @@
                   <option value="7">7</option>
                   <option value="8">8</option>
                   <option value="9">9</option>
-                  <option value="10">10</option>
+                  <option value="10+">10+</option>
                 </select>
               </div>
             </div>
@@ -228,10 +223,10 @@
           <div class="result-actions"><button class="primary-button restart-button" type="button">Start over</button></div>
         </section>
 
-        <section id="age-exit" class="result" aria-labelledby="age-exit-title" hidden>
-          <h2 id="age-exit-title" tabindex="-1">This page is for adults 18 and over.</h2>
-          <p>Thanks for stopping by.</p>
-          <button class="text-button restart-button" type="button">Start over</button>
+        <section id="age-exit" class="age-exit" aria-labelledby="age-exit-title" hidden>
+          <span class="siren-mark" aria-hidden="true">🚨</span>
+          <h2 id="age-exit-title" tabindex="-1">Please leave this webpage immediately!!!</h2>
+          <button id="exit-back-button" class="primary-button" type="button">Back to form</button>
         </section>
       </section>
       <footer><p id="privacy-note">Just for fun. No answers are sent or saved.</p></footer>
