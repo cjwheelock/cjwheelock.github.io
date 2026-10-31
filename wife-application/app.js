@@ -160,18 +160,17 @@
   });
 
   back.addEventListener("click", () => {
-    if (view === "result" || view === "exit") showStep(3);
+    if (view === "exit") return returnFromAgeExit();
+    if (view === "result") showStep(3);
     else if (view === "questions" && currentStep > 0) showStep(currentStep - 1);
   });
-  document.querySelector("#exit-back-button").addEventListener("click", () => {
+  function returnFromAgeExit() {
+    age.value = "";
     showStep(3);
-    age.focus();
-  });
+    age.focus({ preventScroll: true });
+  }
+  document.querySelector("#exit-back-button").addEventListener("click", returnFromAgeExit);
   document.querySelectorAll(".restart-button").forEach((button) => button.addEventListener("click", () => reset()));
-  // A click focuses the textarea; the phone keyboard provides its own dictation.
-  document.querySelectorAll("[data-dictation-target]").forEach((button) => {
-    button.addEventListener("click", () => document.getElementById(button.dataset.dictationTarget).focus());
-  });
 
   reset(false);
   window.addEventListener("pageshow", (event) => { if (event.persisted) reset(false); });
