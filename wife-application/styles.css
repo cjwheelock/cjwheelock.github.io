@@ -46,9 +46,10 @@ progress::-moz-progress-bar { background: var(--green); }
 .unhinged-button[aria-pressed="true"] .selection { background: var(--green); border-color: var(--green); box-shadow: inset 0 0 0 3px #e8eee7; }
 select, textarea { display: block; width: 100%; min-height: 3.5rem; border: 1px solid #989e90; border-radius: 0.4rem; background: white; color: var(--text); font-size: 1rem; padding: 0.8rem; }
 textarea { resize: vertical; min-height: 14rem; line-height: 1.5; }
-.answer-field { position: relative; }
+.answer-field { position: relative; display: grid; grid-template-rows: minmax(0, 1fr) auto; overflow: hidden; border: 1px solid #989e90; border-radius: 0.4rem; background: white; }
+.answer-field textarea { border: 0; border-radius: 0; }
 .keyboard-microphone { display: inline-block; width: 1em; height: 1.36em; vertical-align: -0.25em; object-fit: contain; }
-.dictation-note { margin: 0.65rem 0 0; color: var(--muted); font-size: 0.75rem; line-height: 1.4; }
+.dictation-note { margin: 0; padding: 0.25rem 0.65rem 0.4rem; color: var(--muted); text-align: right; font-size: 0.7rem; line-height: 1.25; }
 .continue-button { margin-top: 1.5rem; }
 
 /* Only the two written answers use this visible-viewport panel. The surrounding
@@ -100,9 +101,6 @@ body.is-writing { overflow: hidden; }
 .is-writing .answer-field {
   flex: 0 1 8rem;
   min-height: 6rem;
-  border: 1px solid #989e90;
-  border-radius: 0.4rem;
-  background: white;
 }
 .is-writing .answer-field:focus-within { outline: 3px solid var(--green); outline-offset: 2px; }
 .is-writing textarea {
@@ -115,7 +113,7 @@ body.is-writing { overflow: hidden; }
   overflow-y: auto;
 }
 .is-writing textarea:focus-visible { outline: none; }
-.is-writing .dictation-note { flex: none; margin: 0; line-height: 1.25; }
+/* Guidance has a reserved row inside the field; scrolling text cannot overlap it. */
 .is-writing .continue-button { flex: none; margin: 0; min-height: 44px; padding: 0.5rem 0.75rem; }
 .is-writing .error { flex: none; margin: 0; font-size: 0.8rem; line-height: 1.25; }
 .details-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
