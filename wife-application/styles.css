@@ -157,3 +157,19 @@ footer p { font-size: 0.75rem; color: var(--muted); margin: 0; }
   .unhinged-button[aria-pressed="true"] .selection, input:checked + .option .selection { background: Highlight; }
   progress { border: 1px solid CanvasText; }
 }
+
+/* Deliberate, optional contact and photo submission. */
+.contact-fields { margin: 1.25rem 0 0; padding: 0; border: 0; text-align: left; }
+.contact-fields legend { margin-bottom: 0.75rem; font-weight: 600; }
+.contact-fields label { display: block; margin: 0.75rem 0 0.4rem; }
+.contact-fields input[type="text"], .contact-fields input[type="tel"], .contact-fields input[type="file"] { width: 100%; min-height: 44px; padding: 0.65rem; border: 1px solid #989e90; border-radius: 0.4rem; font-size: 1rem; background: white; }
+.contact-fields input:disabled { opacity: 0.65; }
+.contact-fields .contact-consent { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.85rem; }
+.contact-consent input { flex: none; margin-top: 0.35rem; }
+.contact-fields button:disabled { opacity: 0.5; cursor: default; margin-top: 1rem; }
+.result p.capture-status { margin-top: 1rem; font-size: 0.85rem; }
+
+.contact-fields .primary-button { margin-top: 1rem; }
+.contact-fields input[type="checkbox"] { min-width: 22px; min-height: 22px; }
+.capture-status:empty { display: none; }
+[aria-busy="true"] { cursor: progress; }

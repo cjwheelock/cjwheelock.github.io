@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' blob:; style-src 'self'; script-src 'self'; connect-src https://ofcgfocrhhjoinxfvklq.supabase.co; form-action 'none'; base-uri 'none'">
     <meta name="description" content="A playful Wife Application. References available from the dogs.">
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#f7f7f3">
     <title>Wife Application · CJ Wheelock</title>
-    <link rel="stylesheet" href="styles.css?v=20261101-inset-guidance">
-    <script src="app.js?v=20261031-microphone" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261101-submit">
+    <script src="app.js?v=20261101-submit" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#application">Skip to questions</a>
@@ -32,7 +32,7 @@
           <span id="step-count" role="status" aria-live="polite">Step 1 of 4</span>
         </div>
         <progress id="step-progress" value="1" max="4" aria-label="Application progress">1 of 4</progress>
-        <noscript><p>Enable JavaScript to use the application. No answers are sent.</p></noscript>
+        <noscript><p>Enable JavaScript to use the application.</p></noscript>
 
         <section class="question-screen" id="step-1" aria-labelledby="unhinged-title">
           <h2 id="unhinged-title" class="question-title" tabindex="-1">How unhinged are you?</h2>
@@ -210,14 +210,42 @@
               </div>
             </fieldset>
             <p id="details-error" class="error" role="alert" hidden>Choose your age, desired number of kids, and an answer to the hypothetical question.</p>
-            <button class="primary-button continue-button" type="submit">See my result <span aria-hidden="true">→</span></button>
+            <button class="primary-button continue-button" type="submit">Continue <span aria-hidden="true">→</span></button>
           </form>
         </section>
 
         <section id="result" class="result" aria-labelledby="result-title" hidden>
-          <h2 id="result-title" tabindex="-1">Application complete.</h2>
-          <p>The committee is two dogs and a man with a website.</p>
-          <div class="result-actions"><button class="primary-button restart-button" type="button">Start over</button></div>
+          <div id="committee-contact">
+            <h2 id="result-title" tabindex="-1">If you’re serious…</h2>
+            <p>Leave your name, number and an optional <span data-selfie-level>mostly unhinged</span> selfie. You know what CJ looks like. He’s currently evaluating a mystery applicant.</p>
+            <p id="capture-status" class="capture-status" role="status" aria-live="polite"></p>
+            <form id="contact-form" novalidate autocomplete="off">
+            <fieldset id="contact-fields" class="contact-fields" aria-describedby="capture-status">
+              <legend>Optional details</legend>
+              <label for="applicant-name">Name (optional)</label>
+              <input id="applicant-name" name="applicant-name" type="text" autocomplete="off" maxlength="100">
+              <label for="applicant-phone">Phone number (optional)</label>
+              <input id="applicant-phone" name="applicant-phone" type="tel" autocomplete="off" maxlength="40">
+              <label for="applicant-selfie">Optional <span data-selfie-level>mostly unhinged</span> selfie</label>
+              <input id="applicant-selfie" name="applicant-selfie" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="selfie-format">
+              <p id="selfie-format" class="field-note">JPEG, PNG or WebP, up to 5 MB.</p>
+              <label class="contact-consent"><input type="checkbox" id="contact-consent" required> <span>Allow CJ to review these answers, contact details and optional selfie.</span></label>
+              <p class="field-note">Sent only when you tap Submit. Scheduled for deletion after 30 days.</p>
+              <button id="submit-application" class="primary-button" type="submit">Submit application</button>
+            </fieldset>
+            </form>
+            <button id="skip-contact" class="text-button" type="button">Skip sending</button>
+          </div>
+          <div id="submitted-result" hidden>
+            <h2 id="submitted-title" tabindex="-1">Your application is under review by the committee</h2>
+            <p>The committee is reviewing your qualifications. Nobody has reviewed his.</p>
+            <div class="result-actions"><button class="primary-button restart-button" type="button">Start over</button></div>
+          </div>
+          <div id="skipped-result" hidden>
+            <h2 id="skipped-result-title" tabindex="-1">Application complete.</h2>
+            <p>The committee is two dogs and a man with a website.</p>
+            <div class="result-actions"><button class="primary-button restart-button" type="button">Start over</button></div>
+          </div>
         </section>
 
         <section id="age-exit" class="age-exit" aria-labelledby="age-exit-title" hidden>
@@ -226,7 +254,7 @@
           <button id="exit-back-button" class="primary-button" type="button">Back to form</button>
         </section>
       </section>
-      <footer><p id="privacy-note">Just for fun. No answers are sent or saved.</p></footer>
+      <footer><p id="privacy-note">Just for fun. Answers stay on this page until you choose to submit them to CJ.</p></footer>
     </main>
   </body>
 </html>
