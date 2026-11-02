@@ -1,0 +1,334 @@
+{
+  "slug": "heidi",
+  "company": "Heidi",
+  "role": "GTM Engineer",
+  "roleUrl": "https://www.heidihealth.com/en-us/careers/710c20da-c65a-40e3-93b6-4d67ce0f6a9c",
+  "companyUrl": "https://www.heidihealth.com/en-us",
+  "portalUrl": "https://cjwheelock.com/heidi/",
+  "resumeFile": "CJ_Wheelock_Heidi_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://www.heidihealth.com/en-us/careers/710c20da-c65a-40e3-93b6-4d67ce0f6a9c"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.heidihealth.com/en-us"
+    }
+  ],
+  "workspace": "Clinical-team growth operations",
+  "title": "Connect the professional, the practice and the account.",
+  "intro": "A proposed lifecycle-data workbench for Heidi: resolve organization relationships before turning product activity into a useful enterprise handoff.",
+  "accountLabel": "Practice relationship map",
+  "workbenchLabel": "Lifecycle handoff",
+  "metricsLabel": "Identity and adoption",
+  "queueIntro": "All organizations and professional-use scenarios are fictional. No patient records, clinical notes or personal health information appear in this demo.",
+  "workbenchIntro": "Check professional affiliation, workspace context and existing ownership. Organization-level product activity can support discovery without making clinical claims.",
+  "firstBuild": "A practice-aware product handoff",
+  "firstBody": "Join professional workspace activity to the right practice and parent organization, preserve conflicting affiliations and give sales or CS a concrete operational question.",
+  "fields": [
+    {
+      "id": "practice",
+      "label": "Practice and parent organization mapped",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "affiliation",
+      "label": "Current professional affiliation supported",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "usage",
+      "label": "Usage signal joined to the correct professional workspace",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "lifecycle",
+      "label": "Self-serve and enterprise lifecycle states reconciled",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "ownerCheck",
+      "label": "Sales and customer-success ownership checked",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "reason",
+      "label": "Operational discovery question recorded",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "practice",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the practice hierarchy",
+      "next": "Keep the clinician, practice, provider group and parent organization distinct before assigning an account.",
+      "owner": "Data steward"
+    },
+    {
+      "field": "affiliation",
+      "op": "eq",
+      "value": false,
+      "title": "Review the affiliation evidence",
+      "next": "Preserve conflicting sources instead of assuming a clinician belongs to only one organization.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "usage",
+      "op": "eq",
+      "value": false,
+      "title": "Validate the product signal",
+      "next": "Do not attribute a personal or test workspace to an enterprise account without evidence.",
+      "owner": "Product analytics"
+    },
+    {
+      "field": "lifecycle",
+      "op": "eq",
+      "value": false,
+      "title": "Reconcile the lifecycle stage",
+      "next": "A self-serve user can coexist with an enterprise evaluation. Retain both contexts without duplicate outreach.",
+      "owner": "Revenue operations"
+    },
+    {
+      "field": "ownerCheck",
+      "op": "eq",
+      "value": false,
+      "title": "Check the current relationship",
+      "next": "Preserve the active sales or customer-success owner before proposing an expansion handoff.",
+      "owner": "Revenue operations"
+    },
+    {
+      "field": "reason",
+      "op": "eq",
+      "value": false,
+      "title": "Make the handoff useful",
+      "next": "Describe the documentation workflow question without inferring clinical performance or patient outcomes.",
+      "owner": "Account owner"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a practice-account review",
+    "next": "The account owner can inspect the affiliation evidence, product context and proposed operational question. This is not a clinical assessment."
+  },
+  "experiments": [
+    {
+      "name": "Hierarchy-aware account matching",
+      "hypothesis": "Practice and parent relationships reduce incorrect enterprise handoffs.",
+      "control": "Email-domain matching",
+      "treatment": "Professional affiliation plus practice hierarchy",
+      "primary": "Correct account handoffs per reviewed workspace",
+      "guardrail": "False merges and unsupported affiliation claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Operational context in the handoff",
+      "hypothesis": "A useful workflow question improves sales and CS acceptance.",
+      "control": "Usage score only",
+      "treatment": "Usage context plus documentation-workflow question",
+      "primary": "Accepted handoffs per eligible account",
+      "guardrail": "Duplicate outreach and patient-data exposure",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Agree on account and lifecycle definitions",
+      "body": "Map clinician, practice, group and parent entities with Marketing, Sales and CS. Define conflicting-affiliation handling.",
+      "measure": "Match accuracy and unresolved relationships"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Pilot one product-to-account motion",
+      "body": "Build a versioned identity join and reviewed handoff for an agreed professional-use signal.",
+      "measure": "Accepted handoffs and false-positive rate"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve lifecycle measurement",
+      "body": "Connect corrected account data to cohort adoption and commercial outcomes without mixing user and organization denominators.",
+      "measure": "Practice activation, expansion discovery and data quality"
+    }
+  ],
+  "records": [
+    {
+      "id": "H-1",
+      "name": "Alder Practice Group",
+      "segment": "Provider group",
+      "context": "Two professional workspaces map to a verified practice and parent.",
+      "question": "How does documentation move across the team today?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "practice": true,
+        "affiliation": true,
+        "usage": true,
+        "lifecycle": true,
+        "ownerCheck": true,
+        "reason": true
+      }
+    },
+    {
+      "id": "H-2",
+      "name": "Cedar Clinic Network",
+      "segment": "Practice network",
+      "context": "The operating clinic and parent network were treated as one record.",
+      "question": "Which entity owns the evaluation and rollout?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "practice": false,
+        "affiliation": true,
+        "usage": true,
+        "lifecycle": true,
+        "ownerCheck": true,
+        "reason": true
+      }
+    },
+    {
+      "id": "H-3",
+      "name": "Willow Medical Group",
+      "segment": "Provider group",
+      "context": "A professional has two conflicting current affiliations.",
+      "question": "Which practice context applies to this workspace?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "practice": true,
+        "affiliation": false,
+        "usage": true,
+        "lifecycle": true,
+        "ownerCheck": true,
+        "reason": true
+      }
+    },
+    {
+      "id": "H-4",
+      "name": "Elm Practice",
+      "segment": "Independent practice",
+      "context": "A personal test workspace triggered an enterprise score.",
+      "question": "Does this activity represent the organization?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "practice": true,
+        "affiliation": true,
+        "usage": false,
+        "lifecycle": true,
+        "ownerCheck": true,
+        "reason": true
+      }
+    },
+    {
+      "id": "H-5",
+      "name": "Birch Care Group",
+      "segment": "Provider group",
+      "context": "A self-serve record and enterprise opportunity have different stages.",
+      "question": "How should both lifecycle contexts be preserved?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "practice": true,
+        "affiliation": true,
+        "usage": true,
+        "lifecycle": false,
+        "ownerCheck": true,
+        "reason": true
+      }
+    },
+    {
+      "id": "H-6",
+      "name": "Juniper Clinical Team",
+      "segment": "Practice",
+      "context": "Customer success may already own the account conversation.",
+      "question": "Who should receive this workflow question?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "practice": true,
+        "affiliation": true,
+        "usage": true,
+        "lifecycle": true,
+        "ownerCheck": false,
+        "reason": true
+      }
+    }
+  ],
+  "metricsTitle": "Do not divide organization outcomes by individual users.",
+  "metricsIntro": "Synthetic identity and lifecycle cohorts use explicit entity levels.",
+  "metricTable": {
+    "headers": [
+      "Metric",
+      "Numerator",
+      "Denominator"
+    ],
+    "rows": [
+      [
+        "Professional affiliation resolved",
+        "42 workspaces",
+        "50 reviewed workspaces"
+      ],
+      [
+        "Practice parent mapped",
+        "18 practices",
+        "24 reviewed practices"
+      ],
+      [
+        "Practice activation milestone",
+        "12 practices",
+        "24 reviewed practices"
+      ],
+      [
+        "Accepted enterprise handoff",
+        "7 organizations",
+        "10 eligible organizations"
+      ],
+      [
+        "Open affiliation conflicts",
+        "8 workspaces",
+        "50 reviewed workspaces"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "These are invented operating examples, not Heidi adoption or clinical results.",
+    "A user milestone is not automatically a buying signal for the parent organization.",
+    "Keep patient data outside GTM research and qualify the business workflow through the appropriate professional contact."
+  ],
+  "gateHash": "0b3752035dcbc9b046c45b8d50e838978eee599a626ad3bb61d6bd91c5cdcacb"
+}

@@ -1,0 +1,332 @@
+{
+  "slug": "trove",
+  "company": "Trove",
+  "role": "Growth Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/trovehq/33671529-02a1-40b9-af07-b2143d60bf9f",
+  "companyUrl": "https://trove.xyz/",
+  "portalUrl": "https://cjwheelock.com/trove/",
+  "resumeFile": "CJ_Wheelock_Trove_Growth_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/trovehq/33671529-02a1-40b9-af07-b2143d60bf9f"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://trove.xyz/"
+    }
+  ],
+  "workspace": "Collector experience operations",
+  "title": "Measure a useful collector experience, then fix the friction.",
+  "intro": "A proposed growth-infrastructure workbench for Trove, focused on reliable onboarding events, collection-management milestones and owned support escalation.",
+  "accountLabel": "Collector cohort scenarios",
+  "workbenchLabel": "Activation data review",
+  "metricsLabel": "Cohort instrumentation",
+  "queueIntro": "Synthetic cohort records represent groups, not identifiable users. There are no pack purchases, card valuations, odds changes or buyback transactions in this demo.",
+  "workbenchIntro": "Review event quality, meaningful product use and support ownership. The experiment measures usability and user-chosen engagement, not spending intensity.",
+  "firstBuild": "An activation cohort the team can trust",
+  "firstBody": "Define a useful non-purchase milestone, deduplicate events and connect unresolved support issues to an owner before testing the onboarding experience.",
+  "fields": [
+    {
+      "id": "cohort",
+      "label": "Acquisition source and cohort window defined",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "events",
+      "label": "Event schema and deduplication checked",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "milestone",
+      "label": "Non-purchase activation milestone defined",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "support",
+      "label": "Unresolved support issue has an owner",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "preference",
+      "label": "Communication preferences respected",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "review",
+      "label": "Experiment guardrails and reviewer agreed",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "cohort",
+      "op": "eq",
+      "value": false,
+      "title": "Define the collector cohort",
+      "next": "Keep install date, acquisition source and observation window consistent before comparing activation.",
+      "owner": "Growth analyst"
+    },
+    {
+      "field": "events",
+      "op": "eq",
+      "value": false,
+      "title": "Validate the event contract",
+      "next": "A retried event must not count as a second collector milestone. Record event names, keys and source.",
+      "owner": "Growth engineer"
+    },
+    {
+      "field": "milestone",
+      "op": "eq",
+      "value": false,
+      "title": "Choose an observable product milestone",
+      "next": "Use a meaningful collection-management or onboarding task, not spending volume, to define this pilot\u2019s activation.",
+      "owner": "Product owner"
+    },
+    {
+      "field": "support",
+      "op": "eq",
+      "value": false,
+      "title": "Route the support issue first",
+      "next": "An account with an unresolved delivery or access issue needs support attention before engagement messaging.",
+      "owner": "Support owner"
+    },
+    {
+      "field": "preference",
+      "op": "eq",
+      "value": false,
+      "title": "Preserve collector preferences",
+      "next": "Respect opt-outs and user-selected notification preferences instead of treating more messages as progress.",
+      "owner": "Lifecycle operator"
+    },
+    {
+      "field": "review",
+      "op": "eq",
+      "value": false,
+      "title": "Define a responsible experiment",
+      "next": "Measure usability and task completion alongside complaints, opt-outs and support burden. Do not optimize for excessive spending.",
+      "owner": "Growth lead"
+    }
+  ],
+  "ready": {
+    "title": "Ready for an onboarding experiment review",
+    "next": "The team can review the cohort definition, instrumentation and user-experience guardrails before running a bounded usability test."
+  },
+  "experiments": [
+    {
+      "name": "Clear collection onboarding",
+      "hypothesis": "A clearer first-run guide helps users complete a chosen collection task.",
+      "control": "Existing onboarding guide",
+      "treatment": "Short task-oriented guide",
+      "primary": "Unique users completing the defined non-purchase task",
+      "guardrail": "Opt-outs, complaints and support burden",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Support-aware lifecycle operations",
+      "hypothesis": "Owning unresolved issues improves the user experience.",
+      "control": "Engagement queue without support state",
+      "treatment": "Support issue reviewed before lifecycle messaging",
+      "primary": "Resolved issues with confirmed owner",
+      "guardrail": "Repeated messages and unresolved delivery issues",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Map the collector journey and event contract",
+      "body": "Work with founders, product and support on acquisition cohorts, meaningful milestones and event definitions.",
+      "measure": "Duplicate events and milestone completeness"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build one instrumented internal workflow",
+      "body": "Pilot an onboarding scorecard and support escalation queue with clear owners and failure visibility.",
+      "measure": "Task completion and time to owned support action"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Create repeatable experimentation infrastructure",
+      "body": "Compare stable cohorts, document results and make the next experiment easy to run. Keep user-experience guardrails visible.",
+      "measure": "Reliable experiments, useful retention and support quality"
+    }
+  ],
+  "records": [
+    {
+      "id": "TR-1",
+      "name": "Organic onboarding cohort",
+      "segment": "Organic discovery",
+      "context": "A fictional cohort completes a collection-organization task after onboarding.",
+      "question": "Which step helps users understand the collection tools?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "cohort": true,
+        "events": true,
+        "milestone": true,
+        "support": true,
+        "preference": true,
+        "review": true
+      }
+    },
+    {
+      "id": "TR-2",
+      "name": "Partner onboarding cohort",
+      "segment": "Partner referral",
+      "context": "The observation window differs from the comparison cohort.",
+      "question": "Are both cohorts measured over the same period?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "cohort": false,
+        "events": true,
+        "milestone": true,
+        "support": true,
+        "preference": true,
+        "review": true
+      }
+    },
+    {
+      "id": "TR-3",
+      "name": "Mobile retry cohort",
+      "segment": "Mobile onboarding",
+      "context": "A retried event is counted twice in the activation report.",
+      "question": "Which stable event key should deduplicate the retry?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "cohort": true,
+        "events": false,
+        "milestone": true,
+        "support": true,
+        "preference": true,
+        "review": true
+      }
+    },
+    {
+      "id": "TR-4",
+      "name": "New collector cohort",
+      "segment": "First-run experience",
+      "context": "The activation definition is based only on spending.",
+      "question": "Which useful non-purchase task could measure product understanding?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "cohort": true,
+        "events": true,
+        "milestone": false,
+        "support": true,
+        "preference": true,
+        "review": true
+      }
+    },
+    {
+      "id": "TR-5",
+      "name": "Delivery support cohort",
+      "segment": "Support follow-up",
+      "context": "An unresolved delivery question has no assigned support owner.",
+      "question": "Who should resolve the issue before lifecycle messaging?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "cohort": true,
+        "events": true,
+        "milestone": true,
+        "support": false,
+        "preference": true,
+        "review": true
+      }
+    },
+    {
+      "id": "TR-6",
+      "name": "Preference review cohort",
+      "segment": "Lifecycle operations",
+      "context": "A notification opt-out was omitted from the audience export.",
+      "question": "Which preference should prevent the proposed message?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "cohort": true,
+        "events": true,
+        "milestone": true,
+        "support": true,
+        "preference": false,
+        "review": true
+      }
+    }
+  ],
+  "metricsTitle": "Reliable events come before a growth conclusion.",
+  "metricsIntro": "Invented onboarding cohorts use unique users and the same seven-day window.",
+  "metricTable": {
+    "headers": [
+      "Cohort",
+      "Eligible users",
+      "Task completions",
+      "Duplicate events removed",
+      "Open support issues"
+    ],
+    "rows": [
+      [
+        "Organic discovery",
+        "100",
+        "42",
+        "7",
+        "4"
+      ],
+      [
+        "Partner referral",
+        "80",
+        "35",
+        "3",
+        "2"
+      ],
+      [
+        "Onboarding pilot",
+        "60",
+        "29",
+        "5",
+        "3"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "These are synthetic examples, not Trove performance or CJ\u2019s measured results.",
+    "The milestone is collection organization, not a purchase or spending target.",
+    "A cohort difference needs uncertainty, acquisition mix and support context before it supports a rollout decision."
+  ],
+  "gateHash": "8ff41179a7f6c20b5bba5773c05936eba98c8d1f97918ec4ffcdf252b27d84bb"
+}

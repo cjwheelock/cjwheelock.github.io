@@ -1,0 +1,307 @@
+{
+  "slug": "concourse-finance-ai",
+  "company": "Concourse",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/concourse/2ab4f993-41cb-47d3-9315-a8fb87223db9/",
+  "companyUrl": "https://www.concourse.ai/",
+  "portalUrl": "https://cjwheelock.com/concourse-finance-ai/",
+  "resumeFile": "CJ_Wheelock_Concourse_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/concourse/2ab4f993-41cb-47d3-9315-a8fb87223db9/"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.concourse.ai/"
+    }
+  ],
+  "workspace": "Finance AI sales",
+  "title": "Make the finance demo explain its numbers.",
+  "intro": "A proposed technical-sales workbench for Concourse: connect the CFO team\u2019s question to an owned evaluation, a reconciled example and a clear next step.",
+  "accountLabel": "Finance account briefs",
+  "workbenchLabel": "POC readiness",
+  "metricsLabel": "Cash reconciliation",
+  "queueIntro": "Separate a promising finance use case from a scoped evaluation. A source system name does not prove access, compatible definitions or an accepted success criterion.",
+  "workbenchIntro": "Change the evaluation prerequisites. A useful demo needs a finance owner, a period and a testable question before it becomes a proof of concept.",
+  "firstBuild": "A finance demo with traceable calculations",
+  "firstBody": "Pair an ERP-informed discovery brief with a small synthetic cash bridge. Show where each number comes from and surface discrepancies for review instead of explaining them away.",
+  "fields": [
+    {
+      "id": "question",
+      "label": "Finance decision and evaluation question agreed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "sponsor",
+      "label": "Finance owner identified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "sample",
+      "label": "Approved example data available",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "period",
+      "label": "Currency and period aligned",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "definition",
+      "label": "Cash-flow definitions agreed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "success",
+      "label": "POC success criterion recorded",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "question",
+      "op": "eq",
+      "value": false,
+      "title": "Clarify the finance question",
+      "next": "Choose a specific question, such as explaining a period-end cash movement. Broad interest in AI is not an evaluation plan.",
+      "owner": "Technical seller"
+    },
+    {
+      "field": "sponsor",
+      "op": "eq",
+      "value": false,
+      "title": "Identify the finance owner",
+      "next": "Find who can validate source data and judge whether the answer is useful.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "sample",
+      "op": "eq",
+      "value": false,
+      "title": "Agree on an approved sample",
+      "next": "Use appropriate example data with approved access. This portfolio grants no data permissions.",
+      "owner": "Customer data owner"
+    },
+    {
+      "field": "period",
+      "op": "eq",
+      "value": false,
+      "title": "Align currency and period",
+      "next": "Do not reconcile records from different periods or currencies as if they were comparable.",
+      "owner": "Finance reviewer"
+    },
+    {
+      "field": "definition",
+      "op": "eq",
+      "value": false,
+      "title": "Reconcile the definitions",
+      "next": "Document inclusions and exclusions before comparing the calculation to the finance team\u2019s result.",
+      "owner": "Finance reviewer"
+    },
+    {
+      "field": "success",
+      "op": "eq",
+      "value": false,
+      "title": "Write the acceptance criterion",
+      "next": "Agree on an observable result and the person who will accept the evaluation.",
+      "owner": "POC owner"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a scoped finance evaluation",
+    "next": "The scenario has a question, owner, approved sample, aligned definitions and a testable acceptance criterion. Review it with the customer before a real POC."
+  },
+  "records": [
+    {
+      "id": "CF-1",
+      "name": "Alder Manufacturing",
+      "segment": "FP&A",
+      "context": "Finance wants to explain cash movement across a month-end close.",
+      "question": "Which period and cash definition should the example reconcile?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "question": true,
+        "sponsor": true,
+        "sample": true,
+        "period": true,
+        "definition": true,
+        "success": true
+      }
+    },
+    {
+      "id": "CF-2",
+      "name": "Cedar Software",
+      "segment": "Treasury",
+      "context": "The team has a question but no approved sample.",
+      "question": "What example can the data owner approve?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "question": true,
+        "sponsor": true,
+        "sample": false,
+        "period": true,
+        "definition": true,
+        "success": true
+      }
+    },
+    {
+      "id": "CF-3",
+      "name": "Willow Retail",
+      "segment": "Accounting",
+      "context": "Two exported reports use different closing dates.",
+      "question": "Which date and currency define the comparison?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "question": true,
+        "sponsor": true,
+        "sample": true,
+        "period": false,
+        "definition": true,
+        "success": true
+      }
+    },
+    {
+      "id": "CF-4",
+      "name": "Elm Logistics",
+      "segment": "FP&A",
+      "context": "An executive sponsor likes the concept but has not defined success.",
+      "question": "What result would make this evaluation useful?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "question": true,
+        "sponsor": true,
+        "sample": true,
+        "period": true,
+        "definition": true,
+        "success": false
+      }
+    },
+    {
+      "id": "CF-5",
+      "name": "Juniper Services",
+      "segment": "Internal audit",
+      "context": "A review team needs source traceability, but the finance owner is unknown.",
+      "question": "Who owns the source and can validate the calculation?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "question": true,
+        "sponsor": false,
+        "sample": true,
+        "period": true,
+        "definition": true,
+        "success": true
+      }
+    },
+    {
+      "id": "CF-6",
+      "name": "Birch Distribution",
+      "segment": "Treasury",
+      "context": "Cash-flow categories differ across the two source reports.",
+      "question": "Which inclusions and exclusions need to be reconciled?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "question": true,
+        "sponsor": true,
+        "sample": true,
+        "period": true,
+        "definition": false,
+        "success": true
+      }
+    }
+  ],
+  "metricsTitle": "A cash bridge that has to reconcile.",
+  "metricsIntro": "Change the synthetic opening balance, cash movements and reported closing balance. This is a deterministic arithmetic example, not financial advice or a live ledger.",
+  "model": {
+    "kind": "cash",
+    "opening": 120000,
+    "inflow": 85000,
+    "outflow": 72000,
+    "reported": 133000
+  },
+  "metricsNotes": [
+    "Expected closing cash = opening cash + inflows \u2212 outflows.",
+    "Unexplained difference = reported closing cash \u2212 expected closing cash. A nonzero difference requires source review.",
+    "The example excludes currency translation, restricted cash and other adjustments. Add an explicit line and definition if a real evaluation requires them."
+  ],
+  "experiments": [
+    {
+      "name": "Finance-specific discovery",
+      "hypothesis": "An explicit finance question creates a more useful first demonstration.",
+      "control": "Broad AI product demo",
+      "treatment": "Finance question, aligned period and traceable calculation",
+      "primary": "Accepted evaluation plans per held discovery",
+      "guardrail": "Unsupported interpretations or unclear data permission",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "POC acceptance before build",
+      "hypothesis": "Written acceptance criteria reduce ambiguous pilot outcomes.",
+      "control": "Build first, agree later",
+      "treatment": "Named evaluator and agreed test result",
+      "primary": "Evaluations with an explicit decision",
+      "guardrail": "Unplanned custom work",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 20,
+      "nB": 20,
+      "winsA": 9,
+      "winsB": 13
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Learn the finance buyer",
+      "body": "Map a CFO team\u2019s decision, source systems and current manual steps. Choose one repeatable demonstration.",
+      "measure": "Accepted questions and source definitions"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build the evaluation path",
+      "body": "Create reusable examples, prerequisite checks and a technical handoff. Document integration blockers.",
+      "measure": "Time to useful demo and unresolved prerequisites"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve sales velocity",
+      "body": "Compare POC outcomes, onboarding gaps and feedback with the CEO and engineering team.",
+      "measure": "Accepted evaluations and reasons for delay"
+    }
+  ],
+  "gateHash": "028160a8becc0bdfb639081102f2213bbe354f80b1668bd48462f6e8084f603a"
+}

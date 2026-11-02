@@ -1,0 +1,339 @@
+{
+  "slug": "avoca",
+  "company": "Avoca",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/avoca/fbe0abac-e902-4396-bde4-3f2a48dd3268",
+  "companyUrl": "https://www.avoca.ai/",
+  "portalUrl": "https://cjwheelock.com/avoca/",
+  "resumeFile": "CJ_Wheelock_Avoca_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/avoca/fbe0abac-e902-4396-bde4-3f2a48dd3268"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.avoca.ai/"
+    }
+  ],
+  "workspace": "Home-services growth operations",
+  "title": "Map the service business before starting the conversation.",
+  "intro": "A proposed market-development workbench for Avoca: research service brands, locations and operating context, then prepare a grounded front-office discovery handoff.",
+  "accountLabel": "Service-business market map",
+  "workbenchLabel": "Outbound quality review",
+  "metricsLabel": "Booking-to-pipeline",
+  "queueIntro": "All service businesses and operating scenarios are fictional. No consumer contact records, call recordings or homeowner information appear in the demo.",
+  "workbenchIntro": "Review account structure, business-contact provenance and the call-handling question. A research score does not prove missed calls, booking problems or revenue opportunity.",
+  "firstBuild": "A location-aware service-business brief",
+  "firstBody": "Connect the operating brand, trade and service footprint to a credible call or booking question, an appropriate business contact and an owned next step.",
+  "fields": [
+    {
+      "id": "business",
+      "label": "Service brand, locations and parent resolved",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "trade",
+      "label": "Trade and service footprint sourced",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "question",
+      "label": "Call or booking workflow question is evidence-based",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "contact",
+      "label": "Professional business contact and provenance checked",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "quality",
+      "label": "Campaign quality and suppression checks complete",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "routing",
+      "label": "Reply and meeting handoff owner assigned",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "business",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the service-business account",
+      "next": "Keep the operating brand, branch and parent relationship distinct before assigning an outbound account.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "trade",
+      "op": "eq",
+      "value": false,
+      "title": "Verify the service footprint",
+      "next": "Use supported service categories and geography instead of assuming every branch serves the same area.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "question",
+      "op": "eq",
+      "value": false,
+      "title": "Write the front-office discovery question",
+      "next": "Ask how the business handles calls or booking. Do not assert missed-call volume or lost revenue without evidence.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "contact",
+      "op": "eq",
+      "value": false,
+      "title": "Verify the business contact",
+      "next": "Use a sourced professional route to the appropriate operating role, not consumer records or guessed addresses.",
+      "owner": "Research reviewer"
+    },
+    {
+      "field": "quality",
+      "op": "eq",
+      "value": false,
+      "title": "Review outbound quality before launch",
+      "next": "Check account duplication, stop requests and the agreed sending policy. Do not treat volume as a success measure.",
+      "owner": "GTM operator"
+    },
+    {
+      "field": "routing",
+      "op": "eq",
+      "value": false,
+      "title": "Assign the revenue handoff",
+      "next": "A positive reply or scheduled meeting needs an owner; keep booked meetings separate from held qualified discovery.",
+      "owner": "Sales operations"
+    }
+  ],
+  "ready": {
+    "title": "Ready for service-business discovery review",
+    "next": "The seller can inspect the company context and ask how the front office works. Actual call volume, booking performance and product fit remain discovery questions."
+  },
+  "experiments": [
+    {
+      "name": "Trade-specific front-office discovery",
+      "hypothesis": "A relevant operating question improves qualified conversations.",
+      "control": "Generic service-business pitch",
+      "treatment": "Trade and footprint context with a booking question",
+      "primary": "Qualified held meetings per starting account",
+      "guardrail": "Unsupported missed-call or revenue claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Location-aware account deduplication",
+      "hypothesis": "Brand and parent mapping reduces overlapping prospecting.",
+      "control": "Independent branch lists",
+      "treatment": "Operating brand, location and parent keys",
+      "primary": "Correctly owned account handoffs",
+      "guardrail": "Duplicate contact across locations",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Define the service-business market map",
+      "body": "Agree on brand, branch and parent keys, priority trades and acceptable research sources.",
+      "measure": "Coverage, duplicates and provenance completeness"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Pilot a quality-controlled motion",
+      "body": "Build sourced briefs and business-contact review. Align reply suppression and seller ownership before launch.",
+      "measure": "Relevant replies and correctly owned next steps"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve qualified conversion",
+      "body": "Compare trade and channel cohorts through held discovery and qualified pipeline. Train the team on corrections and failure recovery.",
+      "measure": "Qualified opportunities and maintenance effort"
+    }
+  ],
+  "records": [
+    {
+      "id": "AV-1",
+      "name": "Alder Heating",
+      "segment": "HVAC",
+      "context": "A fictional multi-location HVAC brand is reviewing front-office operations.",
+      "question": "How does call handling differ across the branches?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": true,
+        "trade": true,
+        "question": true,
+        "contact": true,
+        "quality": true,
+        "routing": true
+      }
+    },
+    {
+      "id": "AV-2",
+      "name": "Cedar Plumbing",
+      "segment": "Plumbing",
+      "context": "Three branches were entered as unrelated prospect accounts.",
+      "question": "Which brand or parent owns the buying relationship?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": false,
+        "trade": true,
+        "question": true,
+        "contact": true,
+        "quality": true,
+        "routing": true
+      }
+    },
+    {
+      "id": "AV-3",
+      "name": "Willow Electrical",
+      "segment": "Electrical",
+      "context": "The service territory was copied from an outdated directory.",
+      "question": "Which geography and services are currently supported?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": true,
+        "trade": false,
+        "question": true,
+        "contact": true,
+        "quality": true,
+        "routing": true
+      }
+    },
+    {
+      "id": "AV-4",
+      "name": "Elm Garage Doors",
+      "segment": "Garage doors",
+      "context": "The brief asserts missed-call revenue without a source.",
+      "question": "What neutral booking-process question could replace the claim?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": true,
+        "trade": true,
+        "question": false,
+        "contact": true,
+        "quality": true,
+        "routing": true
+      }
+    },
+    {
+      "id": "AV-5",
+      "name": "Birch Restoration",
+      "segment": "Restoration",
+      "context": "A contact was imported without professional source provenance.",
+      "question": "Who is the appropriate business operations contact?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": true,
+        "trade": true,
+        "question": true,
+        "contact": false,
+        "quality": true,
+        "routing": true
+      }
+    },
+    {
+      "id": "AV-6",
+      "name": "Juniper Pest",
+      "segment": "Pest control",
+      "context": "A meeting was booked but no seller accepted the handoff.",
+      "question": "Who will own the conversation and qualification?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": true,
+        "trade": true,
+        "question": true,
+        "contact": true,
+        "quality": true,
+        "routing": false
+      }
+    }
+  ],
+  "metricsTitle": "A booked meeting is a step, not the outcome.",
+  "metricsIntro": "Synthetic cohort for a location-aware outbound pilot.",
+  "metricTable": {
+    "headers": [
+      "Stage",
+      "Accounts",
+      "Interpretation"
+    ],
+    "rows": [
+      [
+        "Reviewed service brands",
+        "90",
+        "Unique operating-brand cohort"
+      ],
+      [
+        "Approved business-contact briefs",
+        "60",
+        "Research and quality checks complete"
+      ],
+      [
+        "Positive replies",
+        "15",
+        "Relevant interest, not all replies"
+      ],
+      [
+        "Meetings booked",
+        "12",
+        "Scheduled conversation"
+      ],
+      [
+        "Meetings held",
+        "9",
+        "Conversation occurred"
+      ],
+      [
+        "Qualified opportunities",
+        "5",
+        "Agreed commercial criteria met"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "All numbers are illustrative and do not describe Avoca or its customers.",
+    "Track brand-level and location-level counts separately to avoid overstating market coverage.",
+    "Stop requests and active relationships take priority over any new prospecting proposal."
+  ],
+  "gateHash": "559a9e450ce5cf238e9dfbad35b20dcc12b3bc8d000ceb8ea19532771a21175f"
+}

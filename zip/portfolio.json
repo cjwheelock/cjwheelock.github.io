@@ -1,0 +1,334 @@
+{
+  "slug": "zip",
+  "company": "Zip",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/zip/de102ffc-3b93-4b8c-a165-d4a016136b50",
+  "companyUrl": "https://zip.com/",
+  "portalUrl": "https://cjwheelock.com/zip/",
+  "resumeFile": "CJ_Wheelock_Zip_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/zip/de102ffc-3b93-4b8c-a165-d4a016136b50"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://zip.com/"
+    }
+  ],
+  "workspace": "Procurement account growth",
+  "title": "Give the rep a useful next move, then measure whether it helps.",
+  "intro": "A proposed presales workbench for Zip: connect a procurement change signal to a grounded account brief, an existing owner and a measurable rep pilot.",
+  "accountLabel": "Procurement account map",
+  "workbenchLabel": "Rep brief review",
+  "metricsLabel": "Adoption and impact",
+  "queueIntro": "A public change in the business can suggest a procurement question. It does not prove which purchasing process, supplier workflow or internal approval is broken.",
+  "workbenchIntro": "Review the evidence, buyer coverage and rep ownership. A workflow should earn adoption through useful output, not merely generate more activity.",
+  "firstBuild": "A procurement discovery brief reps can correct",
+  "firstBody": "Connect a researched business change with finance, procurement and IT stakeholders. Preserve existing opportunities and collect rep corrections before broad rollout.",
+  "fields": [
+    {
+      "id": "trigger",
+      "label": "Current procurement-related business signal",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "pain",
+      "label": "Procurement question grounded in evidence",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "committee",
+      "label": "Finance, procurement and IT coverage mapped",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "existing",
+      "label": "Existing opportunity or account owner checked",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "rep",
+      "label": "Receiving rep assigned",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "pilot",
+      "label": "Pilot success metric and feedback loop agreed",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "trigger",
+      "op": "eq",
+      "value": false,
+      "title": "Refresh the business trigger",
+      "next": "Find a dated business change instead of assuming a company needs new procurement software.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "pain",
+      "op": "eq",
+      "value": false,
+      "title": "Write a procurement discovery question",
+      "next": "Connect the signal to a specific intake, approval or supplier process and keep the need unconfirmed.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "committee",
+      "op": "eq",
+      "value": false,
+      "title": "Map the buying group",
+      "next": "Identify known roles and gaps across procurement, finance and IT without inventing contacts.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "existing",
+      "op": "eq",
+      "value": false,
+      "title": "Check the current relationship",
+      "next": "Preserve an existing opportunity or owner before creating another prospecting motion.",
+      "owner": "Sales operations"
+    },
+    {
+      "field": "rep",
+      "op": "eq",
+      "value": false,
+      "title": "Assign the receiving rep",
+      "next": "The brief needs someone who can accept it, correct it and act on the next question.",
+      "owner": "Sales leader"
+    },
+    {
+      "field": "pilot",
+      "op": "eq",
+      "value": false,
+      "title": "Define the rep pilot",
+      "next": "Agree on eligible users, useful-output acceptance, repeat use and a baseline before claiming time savings.",
+      "owner": "Business Technology"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a rep pilot review",
+    "next": "The rep can review the account context and next question. Capture corrections and adoption before increasing automation."
+  },
+  "experiments": [
+    {
+      "name": "Procurement-specific call preparation",
+      "hypothesis": "A sourced business change improves the first procurement discussion.",
+      "control": "Generic account summary",
+      "treatment": "Business change, buying-group gaps and next question",
+      "primary": "Held qualified discovery per account",
+      "guardrail": "Incorrect personalization and ownership conflict",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Rep feedback before rollout",
+      "hypothesis": "A correction loop makes the workflow useful enough for repeat use.",
+      "control": "Launch to all reps",
+      "treatment": "Small pilot with accepted and returned briefs",
+      "primary": "Repeat weekly use among eligible reps",
+      "guardrail": "Review burden and unsupported time-saving claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 24,
+      "nB": 24,
+      "winsA": 9,
+      "winsB": 14
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Start with the rep\u2019s actual task",
+      "body": "Observe BDR and AE research. Choose one procurement segment and define a useful brief with sales.",
+      "measure": "Accepted briefs and baseline preparation effort"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Pilot and earn adoption",
+      "body": "Build the research and ownership checks, collect corrections and instrument repeat use.",
+      "measure": "Eligible, active and repeat users; return reasons"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Scale what helps pipeline",
+      "body": "Connect accepted briefs to held discovery and qualified pipeline using a fixed cohort. Document failures and maintenance.",
+      "measure": "Qualified outcomes, adoption and measured effort"
+    }
+  ],
+  "records": [
+    {
+      "id": "Z-1",
+      "name": "Alder Industries",
+      "segment": "Manufacturing",
+      "context": "A public acquisition suggests more fragmented supplier intake.",
+      "question": "How are purchase requests coordinated across the combined group?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "trigger": true,
+        "pain": true,
+        "committee": true,
+        "existing": true,
+        "rep": true,
+        "pilot": true
+      }
+    },
+    {
+      "id": "Z-2",
+      "name": "Cedar Software",
+      "segment": "Enterprise software",
+      "context": "A growth announcement exists but no procurement question is written.",
+      "question": "Which approval or supplier-onboarding step warrants discovery?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "trigger": true,
+        "pain": false,
+        "committee": true,
+        "existing": true,
+        "rep": true,
+        "pilot": true
+      }
+    },
+    {
+      "id": "Z-3",
+      "name": "Willow Retail",
+      "segment": "Retail",
+      "context": "The account brief covers finance but omits procurement and IT.",
+      "question": "Which roles own intake and third-party review?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "trigger": true,
+        "pain": true,
+        "committee": false,
+        "existing": true,
+        "rep": true,
+        "pilot": true
+      }
+    },
+    {
+      "id": "Z-4",
+      "name": "Elm Logistics",
+      "segment": "Logistics",
+      "context": "A seller may already own an active opportunity.",
+      "question": "What relationship should this research support?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "trigger": true,
+        "pain": true,
+        "committee": true,
+        "existing": false,
+        "rep": true,
+        "pilot": true
+      }
+    },
+    {
+      "id": "Z-5",
+      "name": "Birch Services",
+      "segment": "Professional services",
+      "context": "The brief is reviewed but has no receiving rep.",
+      "question": "Who can accept the research and own the next conversation?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "trigger": true,
+        "pain": true,
+        "committee": true,
+        "existing": true,
+        "rep": false,
+        "pilot": true
+      }
+    },
+    {
+      "id": "Z-6",
+      "name": "Juniper Systems",
+      "segment": "Enterprise software",
+      "context": "The proposed workflow has not defined adoption or baseline effort.",
+      "question": "How will the pilot distinguish useful work from extra activity?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "trigger": true,
+        "pain": true,
+        "committee": true,
+        "existing": true,
+        "rep": true,
+        "pilot": false
+      }
+    }
+  ],
+  "metricsTitle": "Measure the workflow people return to.",
+  "metricsIntro": "A synthetic two-week rep pilot. Accepted output, repeat use and qualified outcomes have different denominators.",
+  "metricTable": {
+    "headers": [
+      "Metric",
+      "Numerator",
+      "Denominator",
+      "Interpretation"
+    ],
+    "rows": [
+      [
+        "Weekly reach",
+        "18 active reps",
+        "24 eligible reps",
+        "75% reach"
+      ],
+      [
+        "Repeat use",
+        "12 returning reps",
+        "18 active reps",
+        "67% of active reps"
+      ],
+      [
+        "Brief acceptance",
+        "30 accepted briefs",
+        "40 proposed briefs",
+        "75% acceptance"
+      ],
+      [
+        "Qualified discovery",
+        "6 qualified meetings",
+        "40 original accounts",
+        "15% of starting cohort"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "These numbers are invented examples, not Zip results or CJ\u2019s prior outcomes.",
+    "Measure preparation effort before and after a pilot with comparable tasks; do not equate generated briefs with hours saved.",
+    "Pipeline influenced must remain separate from pipeline sourced and closed revenue."
+  ],
+  "gateHash": "70d2e42381d548c37a9143be4a34395aae58339bcad435c6f295aa34df2a358d"
+}

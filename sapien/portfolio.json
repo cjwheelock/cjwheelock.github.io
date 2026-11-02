@@ -1,0 +1,268 @@
+{
+  "slug": "sapien",
+  "company": "Sapien",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/sapien/0a6e216a-a357-4984-9b06-a6f9cf6b2004",
+  "companyUrl": "https://sapien.ai/",
+  "portalUrl": "https://cjwheelock.com/sapien/",
+  "resumeFile": "CJ_Wheelock_Sapien_GTM_Engineer.pdf",
+  "notice": "All organizations, account facts, activity and results are synthetic. These are proposed GTM workflows, not deployed employer systems or measured company performance.",
+  "sources": [
+    {
+      "label": "Sapien role",
+      "url": "https://jobs.ashbyhq.com/sapien/0a6e216a-a357-4984-9b06-a6f9cf6b2004"
+    },
+    {
+      "label": "Sapien product context",
+      "url": "https://sapien.ai/"
+    }
+  ],
+  "workspace": "Finance and operations growth",
+  "title": "Turn an account hypothesis into a useful conversation.",
+  "intro": "A proposed growth system for Sapien: keep financial and operational research evidence visible, give the BDR a precise discovery question and compare channels on qualified outcomes.",
+  "accountLabel": "Vertical research",
+  "workbenchLabel": "BDR handoff",
+  "metricsLabel": "Channel economics",
+  "queueIntro": "Separate public business signals from confirmed operational needs. An analyst\u2019s hypothesis is not proof that a prospect has a particular financial problem.",
+  "workbenchIntro": "Change the evidence level, operational question and ownership. Keep the BDR responsible for the conversation while the system prepares a traceable brief.",
+  "firstBuild": "A vertical account brief with a clear next question",
+  "firstBody": "Start with manufacturing and multi-location operations. Distinguish a public expansion signal from a confirmed reporting or margin-analysis problem, then hand off an owned research brief.",
+  "fields": [
+    {
+      "id": "evidence",
+      "label": "Evidence level",
+      "kind": "select",
+      "options": [
+        "Unverified hypothesis",
+        "Current public signal",
+        "Confirmed discovery"
+      ]
+    },
+    {
+      "id": "problem",
+      "label": "Specific finance or operations question recorded",
+      "kind": "check"
+    },
+    {
+      "id": "metric",
+      "label": "Metric definition understood",
+      "kind": "check"
+    },
+    {
+      "id": "dataOwner",
+      "label": "Data or process owner identified",
+      "kind": "check"
+    },
+    {
+      "id": "bdr",
+      "label": "BDR owner assigned",
+      "kind": "check"
+    },
+    {
+      "id": "conflict",
+      "label": "Conflicting account or source evidence",
+      "kind": "check"
+    }
+  ],
+  "records": [
+    {
+      "id": "S-101",
+      "name": "Aster Components",
+      "segment": "Manufacturing",
+      "context": "A discovery conversation identifies inconsistent margin definitions across plants.",
+      "question": "How are material and intercompany costs included in the current margin view?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "evidence": "Confirmed discovery",
+        "problem": true,
+        "metric": true,
+        "dataOwner": true,
+        "bdr": true,
+        "conflict": false
+      }
+    },
+    {
+      "id": "S-102",
+      "name": "Juniper Kitchens",
+      "segment": "Restaurant group",
+      "context": "A public expansion announcement suggests added reporting complexity.",
+      "question": "How does the finance team compare new and established locations?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "evidence": "Current public signal",
+        "problem": true,
+        "metric": false,
+        "dataOwner": false,
+        "bdr": true,
+        "conflict": false
+      }
+    },
+    {
+      "id": "S-103",
+      "name": "Cedar Distribution",
+      "segment": "Distribution",
+      "context": "An analyst assumes supplier performance is difficult to compare.",
+      "question": "Which supplier decisions are hardest to support with current data?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "evidence": "Unverified hypothesis",
+        "problem": true,
+        "metric": false,
+        "dataOwner": false,
+        "bdr": true,
+        "conflict": false
+      }
+    },
+    {
+      "id": "S-104",
+      "name": "Willow Charging",
+      "segment": "Infrastructure operations",
+      "context": "The team reports inconsistent definitions of utilization across regions.",
+      "question": "Which definition is used when comparing locations?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "evidence": "Confirmed discovery",
+        "problem": true,
+        "metric": false,
+        "dataOwner": true,
+        "bdr": true,
+        "conflict": false
+      }
+    },
+    {
+      "id": "S-105",
+      "name": "Elm Hospitality",
+      "segment": "Multi-location services",
+      "context": "Two sources identify different parent organizations.",
+      "question": "Which legal group owns the operating locations and finance process?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "evidence": "Current public signal",
+        "problem": true,
+        "metric": false,
+        "dataOwner": false,
+        "bdr": true,
+        "conflict": true
+      }
+    },
+    {
+      "id": "S-106",
+      "name": "Birch Packaging",
+      "segment": "Manufacturing",
+      "context": "Finance wants to investigate purchase-cost variance, with a known process owner.",
+      "question": "Which purchases should be compared after product mix and timing are aligned?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "evidence": "Confirmed discovery",
+        "problem": true,
+        "metric": true,
+        "dataOwner": true,
+        "bdr": false,
+        "conflict": false
+      }
+    }
+  ],
+  "metricsTitle": "Compare the channel and the cohort, not just volume.",
+  "metricsIntro": "Synthetic channel spend and qualified-opportunity counts. A small event cohort and a broad outbound campaign have different selection effects.",
+  "channels": [
+    {
+      "name": "Manufacturing account research",
+      "spend": 1200,
+      "accounts": 80,
+      "meetings": 9,
+      "qualified": 4
+    },
+    {
+      "name": "Finance operator roundtable",
+      "spend": 2600,
+      "accounts": 24,
+      "meetings": 8,
+      "qualified": 5
+    },
+    {
+      "name": "Operations content",
+      "spend": 900,
+      "accounts": 110,
+      "meetings": 6,
+      "qualified": 2
+    }
+  ],
+  "metricsNotes": [
+    "Account-to-qualified-opportunity conversion uses the original target-account cohort.",
+    "Spend includes the illustrative channel budget only. Include labor and full acquisition costs before calling any figure CAC.",
+    "Use consistent qualification and observation windows; do not rank channels solely by tiny sample differences."
+  ],
+  "experiments": [
+    {
+      "name": "Evidence-labeled account brief",
+      "hypothesis": "A BDR can prepare better when a confirmed need is distinct from a hypothesis.",
+      "control": "Unlabeled research summary",
+      "treatment": "Evidence level, source and discovery question",
+      "primary": "Held conversations with a confirmed business need",
+      "guardrail": "False personalization and research correction rate",
+      "allocation": "Assign matched accounts to one variant for a fixed observation window; review uncertainty before expansion.",
+      "nA": 45,
+      "nB": 45,
+      "winsA": 7,
+      "winsB": 10
+    },
+    {
+      "name": "Vertical-specific content",
+      "hypothesis": "A clear operational question attracts more relevant discovery.",
+      "control": "Broad AI efficiency message",
+      "treatment": "A concrete finance-analysis workflow and its limitations",
+      "primary": "Qualified conversations per account",
+      "guardrail": "Audience mismatch and unsupported outcome claims",
+      "allocation": "Assign matched accounts to one variant for a fixed observation window; review uncertainty before expansion.",
+      "nA": 50,
+      "nB": 50,
+      "winsA": 5,
+      "winsB": 8
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Make one vertical repeatable",
+      "body": "Agree on account identity, evidence labels, qualification and BDR ownership. Build a small reviewed research queue.",
+      "measure": "Brief acceptance and corrections"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Connect channels and pipeline",
+      "body": "Record channel cohorts, spend and meeting outcomes. Keep booked, held and qualified milestones separate.",
+      "measure": "Qualified opportunity rate and cost coverage"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Turn evidence into playbooks",
+      "body": "Compare experiments with founders and sales. Improve the best channel while documenting retries, source freshness and handoff exceptions.",
+      "measure": "Repeatable qualified pipeline and system reliability"
+    }
+  ],
+  "gateHash": "c7828f57802f24807eaef1f5f5ed5e114c9c184908709469c6398efa39538290"
+}

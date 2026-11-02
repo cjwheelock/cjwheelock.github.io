@@ -1,0 +1,334 @@
+{
+  "slug": "asg",
+  "company": "ASG",
+  "role": "GTM Engineer",
+  "roleUrl": "https://job-boards.greenhouse.io/asg/jobs/8770316002",
+  "companyUrl": "https://www.alpinesg.com/",
+  "portalUrl": "https://cjwheelock.com/asg/",
+  "resumeFile": "CJ_Wheelock_ASG_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://job-boards.greenhouse.io/asg/jobs/8770316002"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.alpinesg.com/"
+    }
+  ],
+  "workspace": "Portfolio growth-system delivery",
+  "title": "Reuse the pattern. Keep the operating context.",
+  "intro": "A proposed portfolio-delivery workbench for ASG: scope repeatable GTM systems across software companies while preserving each company\u2019s data, sales motion and operating owner.",
+  "accountLabel": "OpCo delivery queue",
+  "workbenchLabel": "Reusable workflow review",
+  "metricsLabel": "Lifecycle impact",
+  "queueIntro": "All operating companies and engagements are fictional. No ASG portfolio customer records, cross-company data access or production system details are used.",
+  "workbenchIntro": "Review the reusable pattern and local exceptions before a proposed deployment. This demo does not connect to Clay or share data between companies.",
+  "firstBuild": "A reusable enrichment-and-handoff pattern",
+  "firstBody": "Define the common field contract, adapt the segment and lifecycle rules, and pair each proposed build with an OpCo owner and a measurable outcome.",
+  "fields": [
+    {
+      "id": "opco",
+      "label": "Operating company and data boundary identified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "motion",
+      "label": "Vertical and sales motion defined",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "contract",
+      "label": "Shared fields and local exceptions documented",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "waterfall",
+      "label": "Enrichment order and credit budget agreed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "impact",
+      "label": "Bowtie stage and outcome measure agreed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "handover",
+      "label": "Local owner and reusable documentation assigned",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "opco",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the operating-company context",
+      "next": "Keep each company\u2019s account records and permissions distinct before reusing a workflow.",
+      "owner": "Portfolio operator"
+    },
+    {
+      "field": "motion",
+      "op": "eq",
+      "value": false,
+      "title": "Adapt the play to the sales motion",
+      "next": "An SMB workflow and an enterprise evaluation have different qualification, timing and buyer needs.",
+      "owner": "OpCo RevOps lead"
+    },
+    {
+      "field": "contract",
+      "op": "eq",
+      "value": false,
+      "title": "Define the reusable data contract",
+      "next": "Reuse the stable schema while documenting local field mappings and exceptions. Do not force inconsistent lifecycle definitions together.",
+      "owner": "GTM engineer"
+    },
+    {
+      "field": "waterfall",
+      "op": "eq",
+      "value": false,
+      "title": "Set the enrichment decision rules",
+      "next": "Reuse known fields first, then apply a bounded provider sequence with source provenance and a budget.",
+      "owner": "Data operator"
+    },
+    {
+      "field": "impact",
+      "op": "eq",
+      "value": false,
+      "title": "Connect the build to a lifecycle outcome",
+      "next": "Choose whether the work supports acquisition, activation, retention or expansion and define the denominator.",
+      "owner": "VP RevOps / OpCo owner"
+    },
+    {
+      "field": "handover",
+      "op": "eq",
+      "value": false,
+      "title": "Prepare the operating handover",
+      "next": "The OpCo needs an owner, failure recovery and a documented pattern that another company can adapt.",
+      "owner": "OpCo RevOps lead"
+    }
+  ],
+  "ready": {
+    "title": "Ready for an OpCo delivery review",
+    "next": "The local RevOps owner can review the schema, enrichment policy, outcome definition and handover before a scoped pilot."
+  },
+  "experiments": [
+    {
+      "name": "Reusable contract with local mapping",
+      "hypothesis": "A common pattern reduces reinvention without erasing business differences.",
+      "control": "One-off workflow per company",
+      "treatment": "Shared contract plus local mappings",
+      "primary": "Accepted deployments with a named operating owner",
+      "guardrail": "Cross-company data mixing and hidden exceptions",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Outcome-linked delivery",
+      "hypothesis": "A lifecycle measure makes the value of a build inspectable.",
+      "control": "Tasks completed per sprint",
+      "treatment": "Bowtie stage and qualified outcome measure",
+      "primary": "Useful outcomes for the agreed cohort",
+      "guardrail": "Activity metrics presented as revenue impact",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Scope with the OpCo operator",
+      "body": "Agree on the sales motion, current systems, lifecycle definitions and one high-value bottleneck.",
+      "measure": "Clear boundary, owner and success measure"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Pilot a documented shared pattern",
+      "body": "Build enrichment and handoff proposals with bounded costs, local mappings and visible exceptions.",
+      "measure": "Accepted records and recoverable failures"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Contribute the proven pattern to the library",
+      "body": "Evaluate the pilot, document tradeoffs and make the next deployment easier without copying private data.",
+      "measure": "Reusable components, local adoption and lifecycle impact"
+    }
+  ],
+  "records": [
+    {
+      "id": "AS-1",
+      "name": "Alder Hospitality Software",
+      "segment": "Hospitality SaaS",
+      "context": "A fictional OpCo needs a mid-market enrichment and seller-handoff workflow.",
+      "question": "Which qualification rule should be shared and which is local?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "opco": true,
+        "motion": true,
+        "contract": true,
+        "waterfall": true,
+        "impact": true,
+        "handover": true
+      }
+    },
+    {
+      "id": "AS-2",
+      "name": "Cedar Service Software",
+      "segment": "Field-service SaaS",
+      "context": "Records from two OpCos were placed in one unrestricted research queue.",
+      "question": "How should the company boundaries be restored?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "opco": false,
+        "motion": true,
+        "contract": true,
+        "waterfall": true,
+        "impact": true,
+        "handover": true
+      }
+    },
+    {
+      "id": "AS-3",
+      "name": "Willow Operations",
+      "segment": "Vertical SaaS",
+      "context": "An SMB play was copied into a longer enterprise buying motion.",
+      "question": "Which buyer, qualification and timing rules need adaptation?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "opco": true,
+        "motion": false,
+        "contract": true,
+        "waterfall": true,
+        "impact": true,
+        "handover": true
+      }
+    },
+    {
+      "id": "AS-4",
+      "name": "Elm Practice Software",
+      "segment": "Practice-management SaaS",
+      "context": "Lifecycle fields have different meanings across the proposed mappings.",
+      "question": "Which definitions are common and which are explicit exceptions?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "opco": true,
+        "motion": true,
+        "contract": false,
+        "waterfall": true,
+        "impact": true,
+        "handover": true
+      }
+    },
+    {
+      "id": "AS-5",
+      "name": "Birch Workflow",
+      "segment": "Vertical SaaS",
+      "context": "The provider waterfall runs even when required fields already exist.",
+      "question": "Which known fields can be reused before spending credits?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "opco": true,
+        "motion": true,
+        "contract": true,
+        "waterfall": false,
+        "impact": true,
+        "handover": true
+      }
+    },
+    {
+      "id": "AS-6",
+      "name": "Juniper Platform",
+      "segment": "Vertical SaaS",
+      "context": "The build has no lifecycle outcome beyond tasks completed.",
+      "question": "Which acquisition, activation or expansion result should it support?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "opco": true,
+        "motion": true,
+        "contract": true,
+        "waterfall": true,
+        "impact": false,
+        "handover": true
+      }
+    }
+  ],
+  "metricsTitle": "Tie each engagement to the lifecycle it is meant to improve.",
+  "metricsIntro": "Illustrative portfolio scorecard; denominators remain specific to each motion.",
+  "metricTable": {
+    "headers": [
+      "Engagement",
+      "Lifecycle stage",
+      "Proposed measure",
+      "Operating owner"
+    ],
+    "rows": [
+      [
+        "Hospitality account enrichment",
+        "Acquisition",
+        "Accepted qualified accounts / researched cohort",
+        "OpCo RevOps"
+      ],
+      [
+        "Service-software onboarding handoff",
+        "Activation",
+        "Accounts reaching agreed first value / onboarded cohort",
+        "Customer success"
+      ],
+      [
+        "Workflow-software health signals",
+        "Retention",
+        "Owned risk reviews / flagged accounts",
+        "Account owner"
+      ],
+      [
+        "Practice-software expansion brief",
+        "Expansion",
+        "Accepted expansion discovery / eligible customers",
+        "Sales / CS"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "These are proposed measurement contracts, not ASG results or claimed CJ deployments.",
+    "Compare similar motions and keep company-specific denominators intact.",
+    "A reusable playbook carries schemas, logic and lessons; it should not carry another company\u2019s private account data."
+  ],
+  "gateHash": "770a1245ee31da1b351bc1f1fd0cbe022006d7bfb113abcf63cb8688c0d4a37d"
+}

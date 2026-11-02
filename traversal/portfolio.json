@@ -1,0 +1,339 @@
+{
+  "slug": "traversal",
+  "company": "Traversal",
+  "role": "Go-To-Market Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/traversal/5e5c26d9-91a1-4ab3-9b58-91e4558344c2",
+  "companyUrl": "https://www.traversal.com/",
+  "portalUrl": "https://cjwheelock.com/traversal/",
+  "resumeFile": "CJ_Wheelock_Traversal_Go-To-Market_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/traversal/5e5c26d9-91a1-4ab3-9b58-91e4558344c2"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.traversal.com/"
+    }
+  ],
+  "workspace": "Technical marketing operations",
+  "title": "Make every technical claim traceable before it becomes an asset.",
+  "intro": "A proposed marketing-agent workbench for Traversal: connect buyer questions to current product evidence, scoped claims and a human review path.",
+  "accountLabel": "Technical content queue",
+  "workbenchLabel": "Claim and asset review",
+  "metricsLabel": "Content-to-pipeline",
+  "queueIntro": "All account and asset examples are synthetic. This portfolio does not investigate real incidents, connect to infrastructure or perform remediation.",
+  "workbenchIntro": "Review evidence and audience fit before proposing content. Generated copy is a draft; local acceptance does not publish anything or grant an agent authority to do so.",
+  "firstBuild": "A grounded technical-content proposal",
+  "firstBody": "Combine approved product context, a technical buyer question and a source-version record so reviewers can verify claims before an asset enters a campaign.",
+  "fields": [
+    {
+      "id": "audience",
+      "label": "Technical buyer and intended question defined",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "source",
+      "label": "Product claim has an approved source and version",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "scope",
+      "label": "Claim stays within the evidence scope",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "context",
+      "label": "Example uses safe synthetic operating context",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "review",
+      "label": "Named technical reviewer assigned",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "cta",
+      "label": "Asset and next action match the buyer stage",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "audience",
+      "op": "eq",
+      "value": false,
+      "title": "Define the technical audience",
+      "next": "Separate an SRE practitioner\u2019s investigation question from a platform leader\u2019s evaluation criteria.",
+      "owner": "Content strategist"
+    },
+    {
+      "field": "source",
+      "op": "eq",
+      "value": false,
+      "title": "Ground the technical claim",
+      "next": "Attach current product evidence. Do not turn a draft or old competitive note into a public capability claim.",
+      "owner": "Product marketing"
+    },
+    {
+      "field": "scope",
+      "op": "eq",
+      "value": false,
+      "title": "Narrow the claim to what is supported",
+      "next": "Avoid universal outage-prevention or remediation promises when the source supports a narrower scenario.",
+      "owner": "Technical reviewer"
+    },
+    {
+      "field": "context",
+      "op": "eq",
+      "value": false,
+      "title": "Remove private operating details",
+      "next": "Use fictional system examples, not customer incident logs, credentials or internal infrastructure details.",
+      "owner": "Content reviewer"
+    },
+    {
+      "field": "review",
+      "op": "eq",
+      "value": false,
+      "title": "Route the asset for technical review",
+      "next": "A generated asset needs an accountable technical reviewer before publication.",
+      "owner": "Marketing owner"
+    },
+    {
+      "field": "cta",
+      "op": "eq",
+      "value": false,
+      "title": "Match the next step to the reader",
+      "next": "Use an educational next step for a learning-stage reader and an evaluation path for an active buyer.",
+      "owner": "Growth marketer"
+    }
+  ],
+  "ready": {
+    "title": "Ready for technical content review",
+    "next": "The named reviewer can inspect the claim, source scope, audience and next action. Publishing remains a separate approved step."
+  },
+  "experiments": [
+    {
+      "name": "Evidence-attached content proposals",
+      "hypothesis": "Sources and scope reduce unsupported technical claims.",
+      "control": "Draft without source trail",
+      "treatment": "Claim, evidence version and explicit limitation",
+      "primary": "Accepted assets per reviewed proposal",
+      "guardrail": "Unsupported or overbroad product claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Buyer-stage content paths",
+      "hypothesis": "A useful next step connects education to qualified interest.",
+      "control": "Same CTA on every asset",
+      "treatment": "Educational or evaluation CTA matched to intent",
+      "primary": "Qualified conversations per engaged account",
+      "guardrail": "Low-quality form fills and misleading attribution",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Build the approved context library",
+      "body": "Work with marketing and technical stakeholders on product sources, competitive evidence and claim boundaries.",
+      "measure": "Source freshness and review ownership"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Pilot a narrow marketing agent",
+      "body": "Generate one asset type with an evidence trail and human review. Measure corrections before expanding formats.",
+      "measure": "Accepted proposals and correction categories"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Connect content to commercial learning",
+      "body": "Track account engagement through qualified conversations without treating impressions as pipeline. Refresh sources and evaluate cost.",
+      "measure": "Useful content, qualified outcomes and review effort"
+    }
+  ],
+  "records": [
+    {
+      "id": "T-1",
+      "name": "Alder Platform",
+      "segment": "Platform leadership",
+      "context": "A synthetic guide explains questions to ask when evaluating incident-investigation tooling.",
+      "question": "Which evidence would help a platform leader evaluate the approach?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "audience": true,
+        "source": true,
+        "scope": true,
+        "context": true,
+        "review": true,
+        "cta": true
+      }
+    },
+    {
+      "id": "T-2",
+      "name": "Cedar Reliability",
+      "segment": "SRE practitioners",
+      "context": "A draft blends executive buying criteria with a troubleshooting tutorial.",
+      "question": "Who is the intended reader and what do they need next?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "audience": false,
+        "source": true,
+        "scope": true,
+        "context": true,
+        "review": true,
+        "cta": true
+      }
+    },
+    {
+      "id": "T-3",
+      "name": "Willow Systems",
+      "segment": "Infrastructure team",
+      "context": "The asset cites an old product note with no approved version.",
+      "question": "Which current source supports the claim?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "audience": true,
+        "source": false,
+        "scope": true,
+        "context": true,
+        "review": true,
+        "cta": true
+      }
+    },
+    {
+      "id": "T-4",
+      "name": "Elm Cloud",
+      "segment": "Platform leadership",
+      "context": "A draft promises that all incidents will be prevented.",
+      "question": "What narrower claim does the evidence support?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "audience": true,
+        "source": true,
+        "scope": false,
+        "context": true,
+        "review": true,
+        "cta": true
+      }
+    },
+    {
+      "id": "T-5",
+      "name": "Birch Engineering",
+      "segment": "SRE practitioners",
+      "context": "The example was copied from a private incident record.",
+      "question": "Can a fictional scenario explain the same idea?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "audience": true,
+        "source": true,
+        "scope": true,
+        "context": false,
+        "review": true,
+        "cta": true
+      }
+    },
+    {
+      "id": "T-6",
+      "name": "Juniper Infrastructure",
+      "segment": "Platform leadership",
+      "context": "A technically grounded asset lacks an assigned reviewer.",
+      "question": "Who can approve the claim before publication?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "audience": true,
+        "source": true,
+        "scope": true,
+        "context": true,
+        "review": false,
+        "cta": true
+      }
+    }
+  ],
+  "metricsTitle": "Separate asset quality, engagement and qualified demand.",
+  "metricsIntro": "Synthetic marketing-agent scorecard for a fixed pilot window.",
+  "metricTable": {
+    "headers": [
+      "Measure",
+      "Illustrative count",
+      "What it establishes"
+    ],
+    "rows": [
+      [
+        "Draft proposals",
+        "30",
+        "Generated work, not published assets"
+      ],
+      [
+        "Technically accepted",
+        "21",
+        "Review acceptance"
+      ],
+      [
+        "Revised for claim scope",
+        "6",
+        "Evidence or wording correction"
+      ],
+      [
+        "Returned for missing source",
+        "3",
+        "Grounding failure"
+      ],
+      [
+        "Engaged target accounts",
+        "40",
+        "Observed campaign engagement"
+      ],
+      [
+        "Qualified conversations",
+        "5",
+        "Commercial outcome requiring separate evidence"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "These numbers are invented and do not represent Traversal performance or customer incident outcomes.",
+    "An asset acceptance rate is not permission for autonomous publication.",
+    "Track source version, reviewer effort and errors alongside cost per accepted proposal."
+  ],
+  "gateHash": "83cf2ebc754a8edc8a53f28faf48325be81387c1c9ba78f3135e634fc0a8df53"
+}

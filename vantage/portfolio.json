@@ -1,0 +1,332 @@
+{
+  "slug": "vantage",
+  "company": "Vantage",
+  "role": "Growth Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/vantage/a2f1c002-5615-4d9b-a992-693f5152ce31",
+  "companyUrl": "https://www.vantage.sh/",
+  "portalUrl": "https://cjwheelock.com/vantage/",
+  "resumeFile": "CJ_Wheelock_Vantage_Growth_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/vantage/a2f1c002-5615-4d9b-a992-693f5152ce31"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.vantage.sh/"
+    }
+  ],
+  "workspace": "FinOps growth operations",
+  "title": "Make infrastructure-cost context useful to the right buyer.",
+  "intro": "A proposed AI-growth workbench for Vantage: connect sourced cloud and AI context to a specific FinOps question, a reviewed campaign proposal and measurable agent quality.",
+  "accountLabel": "FinOps account queue",
+  "workbenchLabel": "Growth-agent review",
+  "metricsLabel": "Quality and unit cost",
+  "queueIntro": "All companies, technology contexts and costs are synthetic. No cloud accounts, billing exports, private infrastructure or savings-plan purchases are accessed.",
+  "workbenchIntro": "Review the buyer, evidence and proposed action before a campaign handoff. The demo does not infer private spend or make a cost-saving guarantee.",
+  "firstBuild": "A FinOps research brief with an evaluation scorecard",
+  "firstBody": "Link a grounded infrastructure question to engineering and finance roles, then measure factual quality, reviewer acceptance and operating cost for each proposed workflow.",
+  "fields": [
+    {
+      "id": "buyer",
+      "label": "Engineering, finance and FinOps roles distinguished",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "stack",
+      "label": "Cloud or AI stack context has a current source",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "question",
+      "label": "Cost-management question is specific",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "product",
+      "label": "Product signal joined to the correct business account",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "proposal",
+      "label": "Campaign proposal has a named reviewer and exact scope",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "evaluation",
+      "label": "Agent quality and operating cost are measured together",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "buyer",
+      "op": "eq",
+      "value": false,
+      "title": "Map the infrastructure-cost buying group",
+      "next": "A developer\u2019s allocation task and a finance leader\u2019s forecast question need different context and next steps.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "stack",
+      "op": "eq",
+      "value": false,
+      "title": "Ground the infrastructure context",
+      "next": "Record public or discovery-supported technology context. Do not infer private usage or spend from a logo list.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "question",
+      "op": "eq",
+      "value": false,
+      "title": "Write a useful FinOps discovery question",
+      "next": "Ask about allocation, governance or forecasting rather than promising savings without a baseline.",
+      "owner": "Technical seller"
+    },
+    {
+      "field": "product",
+      "op": "eq",
+      "value": false,
+      "title": "Validate the account-level signal",
+      "next": "Distinguish test workspaces and individual exploration from a company evaluation.",
+      "owner": "Product analytics"
+    },
+    {
+      "field": "proposal",
+      "op": "eq",
+      "value": false,
+      "title": "Prepare the reviewed campaign proposal",
+      "next": "Attach the audience, asset and destination. A high quality score alone is not approval to launch.",
+      "owner": "Marketing owner"
+    },
+    {
+      "field": "evaluation",
+      "op": "eq",
+      "value": false,
+      "title": "Define the evaluation contract",
+      "next": "Track factual errors, acceptance, retries and operating cost per useful result alongside pipeline outcomes.",
+      "owner": "Growth engineer"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a FinOps growth review",
+    "next": "The reviewer can inspect the account evidence, buyer question and campaign scope. Real infrastructure cost and achievable savings require separate customer evidence."
+  },
+  "experiments": [
+    {
+      "name": "Buyer-specific FinOps context",
+      "hypothesis": "A clear allocation or governance question improves discovery relevance.",
+      "control": "Generic cloud-cost pitch",
+      "treatment": "Sourced stack context and role-specific question",
+      "primary": "Qualified conversations per account",
+      "guardrail": "Invented spend or guaranteed savings",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Quality-adjusted agent evaluation",
+      "hypothesis": "Cost per accepted output is more useful than cost per generated draft.",
+      "control": "Generation volume and raw cost",
+      "treatment": "Acceptance, factual errors, retries and useful-output cost",
+      "primary": "Accepted proposals per operating dollar",
+      "guardrail": "Unsupported claims and reviewer workload",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Map the growth system and buyer questions",
+      "body": "Work with Marketing, Sales and RevOps on current agents, account signals and FinOps discovery needs.",
+      "measure": "Known workflow owners and quality baseline"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Pilot one grounded research agent",
+      "body": "Build evidence-linked proposals with account resolution and explicit review. Instrument factual errors and operating cost.",
+      "measure": "Accepted outputs and cost per useful proposal"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Connect quality to pipeline learning",
+      "body": "Compare account cohorts through qualified conversations, refine the model and document monitoring and recovery.",
+      "measure": "Qualified pipeline, reliability and sustainable operating cost"
+    }
+  ],
+  "records": [
+    {
+      "id": "V-1",
+      "name": "Alder Cloud",
+      "segment": "Cloud software",
+      "context": "A fictional team is reviewing allocation of cloud and AI costs across products.",
+      "question": "How are shared costs assigned to the teams that use them?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "stack": true,
+        "question": true,
+        "product": true,
+        "proposal": true,
+        "evaluation": true
+      }
+    },
+    {
+      "id": "V-2",
+      "name": "Cedar Platform",
+      "segment": "Platform engineering",
+      "context": "The brief targets a developer with an executive budget-governance pitch.",
+      "question": "Which role and decision should the message support?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": false,
+        "stack": true,
+        "question": true,
+        "product": true,
+        "proposal": true,
+        "evaluation": true
+      }
+    },
+    {
+      "id": "V-3",
+      "name": "Willow AI",
+      "segment": "AI software",
+      "context": "The technology list was inferred without a current source.",
+      "question": "Which stack details are verified and what remains unknown?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "stack": false,
+        "question": true,
+        "product": true,
+        "proposal": true,
+        "evaluation": true
+      }
+    },
+    {
+      "id": "V-4",
+      "name": "Elm Data",
+      "segment": "Data infrastructure",
+      "context": "The message promises a percentage saving without a baseline.",
+      "question": "What neutral allocation or forecasting question could replace it?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "stack": true,
+        "question": false,
+        "product": true,
+        "proposal": true,
+        "evaluation": true
+      }
+    },
+    {
+      "id": "V-5",
+      "name": "Birch Systems",
+      "segment": "Cloud software",
+      "context": "A test workspace was scored as a business evaluation.",
+      "question": "Which organization actually owns this activity?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "stack": true,
+        "question": true,
+        "product": false,
+        "proposal": true,
+        "evaluation": true
+      }
+    },
+    {
+      "id": "V-6",
+      "name": "Juniper Engineering",
+      "segment": "Developer platform",
+      "context": "The agent is measured only by output volume and token cost.",
+      "question": "How will useful, accurate proposals and retries be evaluated?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "stack": true,
+        "question": true,
+        "product": true,
+        "proposal": true,
+        "evaluation": false
+      }
+    }
+  ],
+  "metricsTitle": "Measure the cost of useful work, not just generated work.",
+  "metricsIntro": "Illustrative agent-evaluation cohorts; costs exclude human review and are not provider pricing.",
+  "metricTable": {
+    "headers": [
+      "Workflow",
+      "Proposals",
+      "Accepted",
+      "Operating cost",
+      "Cost / accepted"
+    ],
+    "rows": [
+      [
+        "Account research",
+        "40",
+        "30",
+        "$24",
+        "$0.80"
+      ],
+      [
+        "FinOps discovery brief",
+        "30",
+        "24",
+        "$18",
+        "$0.75"
+      ],
+      [
+        "Campaign proposal",
+        "25",
+        "15",
+        "$15",
+        "$1.00"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "All costs and outcomes are synthetic examples, not Vantage results or guaranteed infrastructure savings.",
+    "Include reviewer effort, retry cost and factual-error categories before comparing approaches.",
+    "A cheap draft that invents spend or misidentifies the buyer is not a useful outcome."
+  ],
+  "gateHash": "30e111308b878a2fe69cb8974cbaa72bdc5004e5b8bed0f11bddb62f78766c7f"
+}

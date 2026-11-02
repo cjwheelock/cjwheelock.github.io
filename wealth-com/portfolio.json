@@ -1,0 +1,339 @@
+{
+  "slug": "wealth-com",
+  "company": "Wealth.com",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/wealth-com/c46c1464-d1e3-4fb7-9ace-7f1b9b65774c",
+  "companyUrl": "https://www.wealth.com/",
+  "portalUrl": "https://cjwheelock.com/wealth-com/",
+  "resumeFile": "CJ_Wheelock_Wealth.com_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/wealth-com/c46c1464-d1e3-4fb7-9ace-7f1b9b65774c"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.wealth.com/"
+    }
+  ],
+  "workspace": "Advisor revenue systems",
+  "title": "Keep the booking, the account and the next action in agreement.",
+  "intro": "A proposed integration-quality workbench for Wealth.com, connecting advisory-firm identity, booking events and reviewed CRM updates.",
+  "accountLabel": "Advisor-firm event queue",
+  "workbenchLabel": "Integration preflight",
+  "metricsLabel": "Sync health",
+  "queueIntro": "Fictional advisory organizations and business events only. No client estate documents, tax records, assets or personal financial details are included.",
+  "workbenchIntro": "Inspect a proposed revenue-system update before it propagates. This demo uses local review receipts and never writes to Salesforce or another GTM platform.",
+  "firstBuild": "A replay-safe booking-to-CRM handoff",
+  "firstBody": "Resolve the advisory organization, check the current booking and opportunity state, and attach the event key and recovery owner to the proposed action.",
+  "fields": [
+    {
+      "id": "firm",
+      "label": "Advisor, firm and parent matched",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "eventKey",
+      "label": "Stable source event key recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "state",
+      "label": "Booking and opportunity states agree",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "fields",
+      "label": "Required CRM fields and update owners validated",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "evidence",
+      "label": "AI-generated summary is tied to business evidence",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "failure",
+      "label": "Failure handling and receiving owner assigned",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "firm",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the advisory organization",
+      "next": "Distinguish an advisor, branch and parent firm before assigning an enterprise account.",
+      "owner": "Data steward"
+    },
+    {
+      "field": "eventKey",
+      "op": "eq",
+      "value": false,
+      "title": "Make the event replay-safe",
+      "next": "Record a stable event key so a repeated booking or CRM event does not create another task.",
+      "owner": "Integration operator"
+    },
+    {
+      "field": "state",
+      "op": "eq",
+      "value": false,
+      "title": "Reconcile the lifecycle state",
+      "next": "A canceled meeting, active opportunity and new inquiry require different actions. Refresh the authoritative state.",
+      "owner": "Revenue operations"
+    },
+    {
+      "field": "fields",
+      "op": "eq",
+      "value": false,
+      "title": "Validate the proposed field changes",
+      "next": "Check required values and field ownership before preparing a CRM update.",
+      "owner": "GTM systems owner"
+    },
+    {
+      "field": "evidence",
+      "op": "eq",
+      "value": false,
+      "title": "Review the generated summary",
+      "next": "Keep the summary grounded in the business conversation. Do not add client estate, tax or financial details.",
+      "owner": "Sales reviewer"
+    },
+    {
+      "field": "failure",
+      "op": "eq",
+      "value": false,
+      "title": "Assign recovery and follow-up",
+      "next": "A failed sync needs an owner and a replay plan, while a completed handoff needs a receiving seller.",
+      "owner": "Integration operator"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a revenue-integration review",
+    "next": "The reviewer can inspect the account, event and proposed fields. A repeated event should reuse its decision key rather than create another task."
+  },
+  "experiments": [
+    {
+      "name": "Current-state booking handoff",
+      "hypothesis": "Checking authoritative state reduces incorrect follow-up tasks.",
+      "control": "Booking event alone",
+      "treatment": "Booking plus opportunity-state review",
+      "primary": "Correct handoffs per reviewed event",
+      "guardrail": "Canceled meetings and duplicate tasks",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Evidence-backed business summaries",
+      "hypothesis": "Source-linked summaries improve seller trust.",
+      "control": "Unreferenced generated summary",
+      "treatment": "Business evidence and named reviewer",
+      "primary": "Accepted summaries per reviewed proposal",
+      "guardrail": "Unsupported claims and sensitive client details",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Map the integration layer",
+      "body": "Work with the Director of RevOps on systems, source-of-truth fields, event keys and failure ownership.",
+      "measure": "Documented flows and known data breaks"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Ship one tested automation",
+      "body": "Pilot booking-to-CRM proposals with current-state checks, replay protection and visible recovery.",
+      "measure": "Correct handoffs and duplicate prevention"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Measure reliability and team effort",
+      "body": "Instrument failures and reviewer corrections. Document maintenance and compare before-and-after effort for the same task.",
+      "measure": "Recoverable failures, accepted output and measured effort"
+    }
+  ],
+  "records": [
+    {
+      "id": "W-1",
+      "name": "Alder Advisory",
+      "segment": "RIA",
+      "context": "A fictional demo booking maps to an advisory firm and current opportunity.",
+      "question": "Who owns the business evaluation and next conversation?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "eventKey": true,
+        "state": true,
+        "fields": true,
+        "evidence": true,
+        "failure": true
+      }
+    },
+    {
+      "id": "W-2",
+      "name": "Cedar Wealth Group",
+      "segment": "Multi-office firm",
+      "context": "An advisor branch is incorrectly merged with a parent entity.",
+      "question": "Which organization owns this commercial relationship?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": false,
+        "eventKey": true,
+        "state": true,
+        "fields": true,
+        "evidence": true,
+        "failure": true
+      }
+    },
+    {
+      "id": "W-3",
+      "name": "Willow Financial",
+      "segment": "Advisory firm",
+      "context": "The booking event arrived twice without a stable event key.",
+      "question": "How should the repeated delivery be recognized?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "eventKey": false,
+        "state": true,
+        "fields": true,
+        "evidence": true,
+        "failure": true
+      }
+    },
+    {
+      "id": "W-4",
+      "name": "Elm Advisors",
+      "segment": "RIA",
+      "context": "A cancellation occurred after the original booking event.",
+      "question": "Which current state should determine the next action?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "eventKey": true,
+        "state": false,
+        "fields": true,
+        "evidence": true,
+        "failure": true
+      }
+    },
+    {
+      "id": "W-5",
+      "name": "Birch Planning",
+      "segment": "Advisory firm",
+      "context": "A proposed CRM change lacks an authoritative field owner.",
+      "question": "Which source controls this lifecycle value?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "eventKey": true,
+        "state": true,
+        "fields": false,
+        "evidence": true,
+        "failure": true
+      }
+    },
+    {
+      "id": "W-6",
+      "name": "Juniper Advisory",
+      "segment": "Enterprise firm",
+      "context": "A failed integration has no recovery owner.",
+      "question": "Who will inspect and replay the failed event?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "eventKey": true,
+        "state": true,
+        "fields": true,
+        "evidence": true,
+        "failure": false
+      }
+    }
+  ],
+  "metricsTitle": "A delivered event is not necessarily a correct handoff.",
+  "metricsIntro": "Synthetic integration scorecard distinguishes delivery, validation and useful output.",
+  "metricTable": {
+    "headers": [
+      "Event state",
+      "Count",
+      "Operator action"
+    ],
+    "rows": [
+      [
+        "Received events",
+        "60",
+        "Starting delivery volume"
+      ],
+      [
+        "Duplicate deliveries",
+        "8",
+        "Reuse the existing event key"
+      ],
+      [
+        "Unique events",
+        "52",
+        "Validate current state"
+      ],
+      [
+        "Accepted proposals",
+        "43",
+        "Record reviewer outcome"
+      ],
+      [
+        "Returned for state conflict",
+        "6",
+        "Refresh the source"
+      ],
+      [
+        "Failed validation",
+        "3",
+        "Assign correction and replay"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "Counts are invented and do not describe Wealth.com\u2019s production systems.",
+    "The 43 accepted, six conflicted and three invalid events reconcile to 52 unique events.",
+    "This is revenue operations, not estate, tax or investment advice."
+  ],
+  "gateHash": "a5e24357353da262ddab4b08b426f0933c47ccaad324e5131ddd5997096bab3a"
+}

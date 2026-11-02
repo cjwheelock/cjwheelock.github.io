@@ -1,0 +1,242 @@
+{
+  "slug": "forgepoint",
+  "company": "Forgepoint",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/forgepoint/db69c972-8872-4943-8dc6-960e10a7e603",
+  "companyUrl": "https://forgepoint.ai/",
+  "portalUrl": "https://cjwheelock.com/forgepoint/",
+  "resumeFile": "CJ_Wheelock_Forgepoint_GTM_Engineer.pdf",
+  "notice": "All organizations, account facts, activity and results are synthetic. These are proposed GTM workflows, not deployed employer systems or measured company performance.",
+  "sources": [
+    {
+      "label": "Forgepoint role",
+      "url": "https://jobs.ashbyhq.com/forgepoint/db69c972-8872-4943-8dc6-960e10a7e603"
+    },
+    {
+      "label": "Forgepoint product context",
+      "url": "https://forgepoint.ai/"
+    }
+  ],
+  "workspace": "Manufacturing growth",
+  "title": "Find the shop, understand the quoting bottleneck.",
+  "intro": "A proposed sales workbench for Forgepoint: turn manufacturer research into a specific discovery brief and a pilot the customer can evaluate.",
+  "accountLabel": "Manufacturer map",
+  "workbenchLabel": "Pilot readiness",
+  "metricsLabel": "Quoting opportunity",
+  "queueIntro": "Industry fit is a starting point. A useful brief explains the current quoting process, who owns it and what would make a pilot worth testing.",
+  "workbenchIntro": "Change the workflow evidence and pilot prerequisites. A promising estimate cannot substitute for a confirmed process owner or an approved sample.",
+  "firstBuild": "A quoting-workflow brief that supports founder-led sales",
+  "firstBody": "Connect the shop\u2019s process, quote volume and current tools with an accountable sponsor, an approved sample and clear pilot criteria. Preserve unknowns instead of inventing shop rules.",
+  "fields": [
+    {
+      "id": "process",
+      "label": "Quoting process confirmed with the shop",
+      "kind": "check"
+    },
+    {
+      "id": "sponsor",
+      "label": "Process owner identified",
+      "kind": "check"
+    },
+    {
+      "id": "sample",
+      "label": "Representative sample approved for a pilot",
+      "kind": "check"
+    },
+    {
+      "id": "approver",
+      "label": "Quote approval path documented",
+      "kind": "check"
+    },
+    {
+      "id": "quotes",
+      "label": "RFQs per week",
+      "kind": "number",
+      "max": 500
+    },
+    {
+      "id": "minutes",
+      "label": "Admin minutes per RFQ",
+      "kind": "number",
+      "max": 240
+    }
+  ],
+  "records": [
+    {
+      "id": "F-101",
+      "name": "Alder Precision",
+      "segment": "CNC machining",
+      "context": "The estimator re-enters RFQ details from email before a technical review.",
+      "question": "Which RFQ details delay the first useful quote?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "process": true,
+        "sponsor": true,
+        "sample": true,
+        "approver": true,
+        "quotes": 50,
+        "minutes": 24
+      }
+    },
+    {
+      "id": "F-102",
+      "name": "Birch Castings",
+      "segment": "Metal foundry",
+      "context": "The foundry receives quote requests with incomplete drawings.",
+      "question": "Who owns the clarification loop when a drawing is incomplete?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "process": true,
+        "sponsor": false,
+        "sample": true,
+        "approver": true,
+        "quotes": 35,
+        "minutes": 30
+      }
+    },
+    {
+      "id": "F-103",
+      "name": "Cedar Mold Works",
+      "segment": "Injection molding",
+      "context": "A website describes custom tooling, but quoting volume is an assumption.",
+      "question": "How many requests require manual clarification each week?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "process": false,
+        "sponsor": true,
+        "sample": false,
+        "approver": false,
+        "quotes": 80,
+        "minutes": 20
+      }
+    },
+    {
+      "id": "F-104",
+      "name": "Elm Steel Supply",
+      "segment": "Metal service center",
+      "context": "A sponsor wants a pilot but has not approved a sample or data access.",
+      "question": "What redacted sample can the team approve for evaluating the workflow?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "process": true,
+        "sponsor": true,
+        "sample": false,
+        "approver": true,
+        "quotes": 90,
+        "minutes": 12
+      }
+    },
+    {
+      "id": "F-105",
+      "name": "Linden Fabrication",
+      "segment": "Metal fabricator",
+      "context": "Quote preparation is documented; approval ownership is still unclear.",
+      "question": "Who approves the final commercial quote before it reaches a buyer?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "process": true,
+        "sponsor": true,
+        "sample": true,
+        "approver": false,
+        "quotes": 25,
+        "minutes": 35
+      }
+    },
+    {
+      "id": "F-106",
+      "name": "Willow Fasteners",
+      "segment": "Fasteners",
+      "context": "The current account owner has a complete discovery brief.",
+      "question": "Which sample would represent the normal workload rather than the easiest case?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "process": true,
+        "sponsor": true,
+        "sample": true,
+        "approver": true,
+        "quotes": 70,
+        "minutes": 15
+      }
+    }
+  ],
+  "metricsTitle": "Size the workflow before promising a result.",
+  "metricsIntro": "Estimate administrative effort from a synthetic RFQ cohort. This is workload sizing, not a time-saving claim or a quotation for manufactured parts.",
+  "metricsNotes": [
+    "RFQs per week \u00d7 administrative minutes per RFQ \u00f7 60 = estimated weekly administrative hours.",
+    "A pilot should measure the actual baseline, exception rate, reviewer effort and quote turnaround before forecasting a benefit.",
+    "Scope approval, data access and customer commitments remain human decisions. This portfolio approves none of them."
+  ],
+  "experiments": [
+    {
+      "name": "Process-specific discovery",
+      "hypothesis": "A researched quoting bottleneck makes the first discussion more useful.",
+      "control": "Industry-only introduction",
+      "treatment": "Reviewed process hypothesis and an explicit question",
+      "primary": "Held qualified discovery per target account",
+      "guardrail": "Incorrect process assumptions and unwanted outreach",
+      "allocation": "Assign matched accounts to one variant for a fixed observation window; review uncertainty before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 6,
+      "winsB": 9
+    },
+    {
+      "name": "Pilot acceptance checklist",
+      "hypothesis": "A shared definition of a useful pilot reduces unclear handoffs.",
+      "control": "Free-text handoff",
+      "treatment": "Named sponsor, approved sample and success criteria",
+      "primary": "Pilots with an accepted evaluation plan",
+      "guardrail": "Review burden and unapproved data requests",
+      "allocation": "Assign matched accounts to one variant for a fixed observation window; review uncertainty before expansion.",
+      "nA": 20,
+      "nB": 20,
+      "winsA": 8,
+      "winsB": 12
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Learn one manufacturing segment",
+      "body": "Map the quoting journey with sales. Define account identity, research sources and the discovery brief for one segment.",
+      "measure": "Verified process owners and accepted discovery briefs"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Support founder-led pilots",
+      "body": "Add sample approval, success criteria and proposal follow-up. Keep unresolved access and commercial questions visible.",
+      "measure": "Time to accepted evaluation plan and overdue next steps"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Scale the useful parts",
+      "body": "Compare qualified opportunities by segment and improve CRM deduplication, retry handling and account ownership.",
+      "measure": "Qualified pipeline, research accuracy and workflow adoption"
+    }
+  ],
+  "gateHash": "1d304b3181f8e8788b688d6fcaaeaa81aa73cfad0f105ed591aa474889f5b5f5"
+}

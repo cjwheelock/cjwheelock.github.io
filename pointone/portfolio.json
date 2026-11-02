@@ -1,0 +1,332 @@
+{
+  "slug": "pointone",
+  "company": "PointOne",
+  "role": "GTM Engineer",
+  "roleUrl": "https://www.ycombinator.com/companies/pointone/jobs/lEDIBUL-gtm-engineer",
+  "companyUrl": "https://pointone.com/",
+  "portalUrl": "https://cjwheelock.com/pointone/",
+  "resumeFile": "CJ_Wheelock_PointOne_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://www.ycombinator.com/companies/pointone/jobs/lEDIBUL-gtm-engineer"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://pointone.com/"
+    }
+  ],
+  "workspace": "Legal operations pipeline",
+  "title": "Give legal teams a relevant operating question.",
+  "intro": "A proposed outbound workbench for PointOne, connecting firm-level research with timekeeping and prebill workflow discovery while preserving existing sales context.",
+  "accountLabel": "Law-firm account map",
+  "workbenchLabel": "Legal-ops brief review",
+  "metricsLabel": "Outbound conversion",
+  "queueIntro": "Research fictional firms, offices and professional buying roles. No client matters, billing records, legal advice or claims of missed revenue are used.",
+  "workbenchIntro": "Review a firm-level discovery brief before outreach. System compatibility and process needs must be confirmed during discovery, not inferred from a score.",
+  "firstBuild": "A law-firm operating brief with an owned next step",
+  "firstBody": "Connect firm identity, buying roles and a grounded timekeeping or prebill question to the current seller and sequence state.",
+  "fields": [
+    {
+      "id": "firm",
+      "label": "Firm, office and parent relationships checked",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "operations",
+      "label": "Legal operations or finance buyer role supported",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "workflow",
+      "label": "Timekeeping or prebill workflow question grounded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "system",
+      "label": "Practice-management context marked known or unknown",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "claim",
+      "label": "Personalization avoids confidential matter information",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "sync",
+      "label": "Opportunity and reply state checked before sequencing",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "firm",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the law-firm account",
+      "next": "Do not treat every office as a separate prospect or merge firms based on similar names.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "operations",
+      "op": "eq",
+      "value": false,
+      "title": "Find the operating decision owner",
+      "next": "Research the professional role responsible for timekeeping, billing operations or technology evaluation.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "workflow",
+      "op": "eq",
+      "value": false,
+      "title": "Write a credible workflow question",
+      "next": "Use a sourced operational hypothesis. Do not claim the firm has lost billable time or billing errors without evidence.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "system",
+      "op": "eq",
+      "value": false,
+      "title": "Separate system evidence from assumptions",
+      "next": "Capture the source for the current platform or keep it explicitly unknown for discovery.",
+      "owner": "Technical seller"
+    },
+    {
+      "field": "claim",
+      "op": "eq",
+      "value": false,
+      "title": "Keep the brief at firm level",
+      "next": "Use public business context, never client matters or privileged information, to personalize a conversation.",
+      "owner": "Research reviewer"
+    },
+    {
+      "field": "sync",
+      "op": "eq",
+      "value": false,
+      "title": "Stop duplicate prospecting",
+      "next": "An active evaluation, booked meeting or reply needs the existing owner and a stopped outbound sequence.",
+      "owner": "GTM operator"
+    }
+  ],
+  "ready": {
+    "title": "Ready for legal-operations discovery review",
+    "next": "The seller can review the account evidence and ask about the current workflow. No legal conclusions or billing-performance claims are implied."
+  },
+  "experiments": [
+    {
+      "name": "Workflow-specific legal outreach",
+      "hypothesis": "An operating question is more relevant than generic AI language.",
+      "control": "Generic legal AI pitch",
+      "treatment": "Sourced timekeeping or prebill discovery question",
+      "primary": "Qualified held conversations per firm",
+      "guardrail": "Unsupported revenue or confidential-matter claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Lifecycle-aware outbound",
+      "hypothesis": "Synchronizing replies and opportunities reduces conflicting contact.",
+      "control": "Separate sequence and CRM status",
+      "treatment": "Shared account key and stop-state review",
+      "primary": "Correctly owned follow-up tasks",
+      "guardrail": "Messages after a reply or active evaluation",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Map the legal buying workflow",
+      "body": "Learn which firm roles own timekeeping, billing and technology decisions. Define supported research fields.",
+      "measure": "Correct firm relationships and buyer-role coverage"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build a narrow outbound engine",
+      "body": "Pilot source-backed briefs, enrichment exceptions and lifecycle-aware handoffs with the sales team.",
+      "measure": "Accepted briefs and relevant replies"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Measure through held discovery",
+      "body": "Test segments and messages with consistent account cohorts. Document system maintenance and rep corrections.",
+      "measure": "Qualified pipeline and duplicate-contact rate"
+    }
+  ],
+  "records": [
+    {
+      "id": "P1-1",
+      "name": "Alder Legal Group",
+      "segment": "Multi-office firm",
+      "context": "A fictional operations leader is reviewing time-entry workflow.",
+      "question": "How does time capture move into prebill review?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "operations": true,
+        "workflow": true,
+        "system": true,
+        "claim": true,
+        "sync": true
+      }
+    },
+    {
+      "id": "P1-2",
+      "name": "Cedar Counsel",
+      "segment": "Regional firm",
+      "context": "Two offices were added as unrelated outbound accounts.",
+      "question": "Which firm-level relationship should own this research?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": false,
+        "operations": true,
+        "workflow": true,
+        "system": true,
+        "claim": true,
+        "sync": true
+      }
+    },
+    {
+      "id": "P1-3",
+      "name": "Willow Law",
+      "segment": "Enterprise firm",
+      "context": "A contact title does not establish billing or operations ownership.",
+      "question": "Who can explain the existing operating process?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "operations": false,
+        "workflow": true,
+        "system": true,
+        "claim": true,
+        "sync": true
+      }
+    },
+    {
+      "id": "P1-4",
+      "name": "Elm Partners",
+      "segment": "Specialist firm",
+      "context": "The brief asserts lost revenue without supporting evidence.",
+      "question": "What neutral workflow question could replace that claim?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "operations": true,
+        "workflow": false,
+        "system": true,
+        "claim": true,
+        "sync": true
+      }
+    },
+    {
+      "id": "P1-5",
+      "name": "Birch Legal",
+      "segment": "Regional firm",
+      "context": "The practice-management platform was guessed from a neighboring firm.",
+      "question": "Which system details are confirmed and which remain unknown?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "operations": true,
+        "workflow": true,
+        "system": false,
+        "claim": true,
+        "sync": true
+      }
+    },
+    {
+      "id": "P1-6",
+      "name": "Juniper Counsel",
+      "segment": "Enterprise firm",
+      "context": "An active opportunity exists but a new sequence is queued.",
+      "question": "Which seller should own the next interaction?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "operations": true,
+        "workflow": true,
+        "system": true,
+        "claim": true,
+        "sync": false
+      }
+    }
+  ],
+  "metricsTitle": "Count qualified firm conversations, not message volume.",
+  "metricsIntro": "Synthetic matched cohorts show different outbound approaches over the same observation window.",
+  "metricTable": {
+    "headers": [
+      "Cohort",
+      "Firms",
+      "Replies",
+      "Held discovery",
+      "Qualified opportunities"
+    ],
+    "rows": [
+      [
+        "Generic account summary",
+        "40",
+        "9",
+        "4",
+        "2"
+      ],
+      [
+        "Workflow-specific brief",
+        "40",
+        "12",
+        "6",
+        "3"
+      ],
+      [
+        "Existing evaluation excluded",
+        "8",
+        "Not sequenced",
+        "Existing owner",
+        "Separate cohort"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "These small invented cohorts do not establish causality or PointOne performance.",
+    "Exclude active evaluations before randomizing new-account outreach.",
+    "Keep scheduled meetings, held meetings, qualified opportunities and closed revenue separate."
+  ],
+  "gateHash": "df397cce7d6bf7ee86f0477cd49254da5bab11883fc586838b156f7484df28f6"
+}

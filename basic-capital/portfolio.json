@@ -1,0 +1,339 @@
+{
+  "slug": "basic-capital",
+  "company": "Basic Capital",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/basiccapital/f390b011-38f6-433b-a37c-feb8f00a10a4",
+  "companyUrl": "https://basiccapital.com/",
+  "portalUrl": "https://cjwheelock.com/basic-capital/",
+  "resumeFile": "CJ_Wheelock_Basic_Capital_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/basiccapital/f390b011-38f6-433b-a37c-feb8f00a10a4"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://basiccapital.com/"
+    }
+  ],
+  "workspace": "Employer benefits growth",
+  "title": "Turn employer research into a timely benefits conversation.",
+  "intro": "A proposed outbound operations workbench for Basic Capital, connecting employer identity, benefits buying context and review timing to a reliable sales handoff.",
+  "accountLabel": "Employer research queue",
+  "workbenchLabel": "Benefits outreach review",
+  "metricsLabel": "Sequence outcomes",
+  "queueIntro": "Research the organization and the buying process. Employee balances, individual compensation and investment choices have no place in this account-research demo.",
+  "workbenchIntro": "Check company context, ownership and sequence behavior before proposing outreach. A positive score does not determine retirement-plan suitability or eligibility.",
+  "firstBuild": "A benefits-buyer brief that respects timing",
+  "firstBody": "Combine employer and advisor context with a sourced review window, a practical administration question and a reply-aware handoff.",
+  "fields": [
+    {
+      "id": "employer",
+      "label": "Employer and operating entity matched",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "buyer",
+      "label": "Benefits or finance buying role confirmed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "timing",
+      "label": "Review timing has a dated source",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "question",
+      "label": "Plan-administration discovery question recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "relationship",
+      "label": "Advisor, PEO and existing seller checked",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "sequence",
+      "label": "Reply and meeting stop rules validated",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "employer",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the employer account",
+      "next": "Separate the employer, benefits advisor and PEO before assigning account ownership.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "buyer",
+      "op": "eq",
+      "value": false,
+      "title": "Find the benefits decision owner",
+      "next": "Identify who can discuss the employer\u2019s plan administration process. Do not use employee financial details.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "timing",
+      "op": "eq",
+      "value": false,
+      "title": "Confirm the review window",
+      "next": "A company growth signal does not establish a plan renewal date. Record unknown timing as a discovery question.",
+      "owner": "SDR"
+    },
+    {
+      "field": "question",
+      "op": "eq",
+      "value": false,
+      "title": "Write the practical discovery question",
+      "next": "Ask about onboarding, administration or migration friction without promising returns or plan eligibility.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "relationship",
+      "op": "eq",
+      "value": false,
+      "title": "Preserve the current relationship",
+      "next": "Check the advisor route and active sales owner before launching another sequence.",
+      "owner": "Sales operations"
+    },
+    {
+      "field": "sequence",
+      "op": "eq",
+      "value": false,
+      "title": "Validate the sequence handoff",
+      "next": "A reply or booked conversation must stop the prospecting sequence and create an owned next task.",
+      "owner": "GTM operator"
+    }
+  ],
+  "ready": {
+    "title": "Ready for benefits discovery review",
+    "next": "The seller can review the employer context and ask about administration needs. Plan terms, investment choices and eligibility remain outside this workflow."
+  },
+  "experiments": [
+    {
+      "name": "Review-window relevance",
+      "hypothesis": "A sourced timing signal helps the team start relevant conversations.",
+      "control": "Generic company-growth trigger",
+      "treatment": "Verified review timing and administration question",
+      "primary": "Held employer discovery per starting account",
+      "guardrail": "Invented renewal dates and unsupported financial claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Reply-aware sequence handoff",
+      "hypothesis": "An owned next task prevents duplicate outreach after a response.",
+      "control": "Manual cross-tool updates",
+      "treatment": "Reply state synchronized with the receiving seller",
+      "primary": "Replies with an accepted next task",
+      "guardrail": "Messages sent after reply or stop request",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Map the employer sales motion",
+      "body": "Learn how employers, advisors and PEOs enter the pipeline. Agree on entity keys, timing sources and qualified discovery.",
+      "measure": "Duplicate accounts and accepted buyer briefs"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build the research-to-reply path",
+      "body": "Pilot enrichment and a narrow outbound motion with visible failures and reply suppression.",
+      "measure": "Qualified replies and correct next-task ownership"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve conversion and enable the team",
+      "body": "Compare cohorts through held meetings. Document sequence maintenance and train sellers to correct research.",
+      "measure": "Held qualified discovery and repeat workflow use"
+    }
+  ],
+  "records": [
+    {
+      "id": "BC-1",
+      "name": "Alder Manufacturing",
+      "segment": "Employer",
+      "context": "A finance leader is reviewing benefits administration after hiring growth.",
+      "question": "Which administration task is taking the most effort?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "employer": true,
+        "buyer": true,
+        "timing": true,
+        "question": true,
+        "relationship": true,
+        "sequence": true
+      }
+    },
+    {
+      "id": "BC-2",
+      "name": "Cedar Benefits",
+      "segment": "Advisor",
+      "context": "The record is a benefits advisory firm, not the employer account.",
+      "question": "Which employer relationship does this advisor represent?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "employer": false,
+        "buyer": true,
+        "timing": true,
+        "question": true,
+        "relationship": true,
+        "sequence": true
+      }
+    },
+    {
+      "id": "BC-3",
+      "name": "Willow Design",
+      "segment": "Employer",
+      "context": "A growth announcement exists but the review date was assumed.",
+      "question": "When does the team actually review its benefits provider?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "employer": true,
+        "buyer": true,
+        "timing": false,
+        "question": true,
+        "relationship": true,
+        "sequence": true
+      }
+    },
+    {
+      "id": "BC-4",
+      "name": "Elm Services",
+      "segment": "Employer",
+      "context": "A contact list lacks a benefits or finance decision role.",
+      "question": "Who owns plan administration and evaluation?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "employer": true,
+        "buyer": false,
+        "timing": true,
+        "question": true,
+        "relationship": true,
+        "sequence": true
+      }
+    },
+    {
+      "id": "BC-5",
+      "name": "Birch Logistics",
+      "segment": "Employer",
+      "context": "An advisor and seller may already be coordinating an evaluation.",
+      "question": "Which current relationship should own the next step?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "employer": true,
+        "buyer": true,
+        "timing": true,
+        "question": true,
+        "relationship": false,
+        "sequence": true
+      }
+    },
+    {
+      "id": "BC-6",
+      "name": "Juniper Software",
+      "segment": "Employer",
+      "context": "A reply arrived but sequence stop behavior has not been checked.",
+      "question": "Which action should stop and who receives the reply?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "employer": true,
+        "buyer": true,
+        "timing": true,
+        "question": true,
+        "relationship": true,
+        "sequence": false
+      }
+    }
+  ],
+  "metricsTitle": "Follow the account from enrollment to a held conversation.",
+  "metricsIntro": "Illustrative sequence states use unique employer accounts and a fixed 30-day window.",
+  "metricTable": {
+    "headers": [
+      "Stage",
+      "Unique accounts",
+      "Meaning"
+    ],
+    "rows": [
+      [
+        "Eligible employers",
+        "80",
+        "Research and ownership checks complete"
+      ],
+      [
+        "Replies",
+        "18",
+        "Any human reply, including negative replies"
+      ],
+      [
+        "Positive discovery interest",
+        "10",
+        "Relevant next conversation accepted"
+      ],
+      [
+        "Meetings scheduled",
+        "8",
+        "Calendar commitment only"
+      ],
+      [
+        "Qualified meetings held",
+        "6",
+        "Discovery actually happened"
+      ],
+      [
+        "Stop requests",
+        "3",
+        "Suppressed from further prospecting"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "All counts are synthetic, not Basic Capital results.",
+    "Reply rate is not qualified pipeline. Keep negative replies, stop requests, scheduled meetings and held meetings distinct.",
+    "The demo provides no investment recommendation and makes no claims about retirement returns."
+  ],
+  "gateHash": "12765646ef78af04bed6551d0a1fec22e021ec281732699c4f72f92a7aba5a4c"
+}

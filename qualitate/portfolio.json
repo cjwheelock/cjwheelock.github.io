@@ -1,0 +1,367 @@
+{
+  "slug": "qualitate",
+  "company": "Qualitate",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/qualitate/898778a0-830e-4249-9a9e-1f8bf59d7354",
+  "companyUrl": "https://www.qualitate.io/",
+  "portalUrl": "https://cjwheelock.com/qualitate/",
+  "resumeFile": "CJ_Wheelock_Qualitate_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/qualitate/898778a0-830e-4249-9a9e-1f8bf59d7354"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.qualitate.io/"
+    }
+  ],
+  "workspace": "Research intelligence growth",
+  "title": "Keep the buyer, the expert and the evidence distinct.",
+  "intro": "A proposed revenue-data workbench for Qualitate: classify research buyers, preserve account and contact provenance, and prepare a useful study-discovery handoff.",
+  "accountLabel": "Research buyer map",
+  "workbenchLabel": "Research handoff",
+  "metricsLabel": "Data quality and funnel",
+  "queueIntro": "Investment and corporate strategy teams may buy research, while experts contribute to it. A shared email domain or employer mention is not enough to merge their roles.",
+  "workbenchIntro": "Review role, account identity, source conflict and buyer question. These fictional examples contain no expert transcripts, confidential research or investment recommendations.",
+  "firstBuild": "A buyer brief with a governed identity trail",
+  "firstBody": "Map a research organization and its current question to the right seller while preserving contact roles, source freshness and the reason behind a proposed CRM update.",
+  "fields": [
+    {
+      "id": "contactRole",
+      "label": "Contact role",
+      "kind": "select",
+      "max": 1000000,
+      "options": [
+        "Research buyer",
+        "Expert participant",
+        "Unknown"
+      ]
+    },
+    {
+      "id": "organization",
+      "label": "Buying organization and parent matched",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "conflict",
+      "label": "Conflicting employer or role evidence",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "source",
+      "label": "Contact provenance and source date recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "question",
+      "label": "Specific market or research question recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "salesOwner",
+      "label": "Research buyer owner assigned",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "schema",
+      "label": "Required CRM fields and definitions validated",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "contactRole",
+      "op": "eq",
+      "value": "Expert participant",
+      "title": "Keep the expert pathway separate",
+      "next": "Do not enroll an expert participant in a buyer-sales sequence merely because they appear in the same research ecosystem.",
+      "owner": "Research operations"
+    },
+    {
+      "field": "contactRole",
+      "op": "eq",
+      "value": "Unknown",
+      "title": "Resolve the contact\u2019s role",
+      "next": "Verify whether the person is a research buyer, contributor or another stakeholder before routing.",
+      "owner": "Data owner"
+    },
+    {
+      "field": "organization",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the buying organization",
+      "next": "Confirm the firm, business unit and parent relationship before merging account records.",
+      "owner": "Revenue operations"
+    },
+    {
+      "field": "conflict",
+      "op": "eq",
+      "value": true,
+      "title": "Review conflicting evidence",
+      "next": "Preserve both sources and resolve the current professional role rather than overwriting one with a guess.",
+      "owner": "Data steward"
+    },
+    {
+      "field": "source",
+      "op": "eq",
+      "value": false,
+      "title": "Attach contact provenance",
+      "next": "A usable record needs an accountable source and date, not only a filled email field.",
+      "owner": "Data steward"
+    },
+    {
+      "field": "question",
+      "op": "eq",
+      "value": false,
+      "title": "Capture the research question",
+      "next": "Find which market, buyer behavior or strategic decision the team wants to understand.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "salesOwner",
+      "op": "eq",
+      "value": false,
+      "title": "Assign the buyer handoff",
+      "next": "A qualified research question needs a receiving seller and a clear next conversation.",
+      "owner": "Sales operations"
+    },
+    {
+      "field": "schema",
+      "op": "eq",
+      "value": false,
+      "title": "Validate the CRM field contract",
+      "next": "Keep required values, allowed states and update ownership consistent with the agreed data model.",
+      "owner": "Revenue operations"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a research-buyer handoff",
+    "next": "The seller can inspect the buyer role, organization, evidence and research question. This does not approve study content or expert participation."
+  },
+  "experiments": [
+    {
+      "name": "Role-aware research enrichment",
+      "hypothesis": "Separating buyers and contributors reduces incorrect routing.",
+      "control": "Employer domain only",
+      "treatment": "Verified role and source provenance",
+      "primary": "Correct buyer handoffs per reviewed record",
+      "guardrail": "Expert contacts placed in buyer sequences",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Question-led account briefing",
+      "hypothesis": "A specific research question makes discovery more relevant.",
+      "control": "Firmographic summary",
+      "treatment": "Market question and decision context",
+      "primary": "Qualified research discovery per account",
+      "guardrail": "Unsupported research or investment claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Define the GTM data contract",
+      "body": "Work with Operations and Revenue Operations on buyer roles, account identity and required fields.",
+      "measure": "Role accuracy and merge exceptions"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build observable enrichment",
+      "body": "Add source provenance, conflict review and an owned handoff. Instrument failure and replay behavior.",
+      "measure": "Accepted records and unresolved conflicts"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve the research sales motion",
+      "body": "Compare buyer segments and experiments using agreed qualification and cohort definitions.",
+      "measure": "Qualified pipeline and trustworthy self-serve reporting"
+    }
+  ],
+  "records": [
+    {
+      "id": "Q-1",
+      "name": "Alder Strategy",
+      "segment": "Corporate strategy",
+      "context": "A strategy team wants to understand enterprise software buying criteria.",
+      "question": "Which decision should the research inform?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "contactRole": "Research buyer",
+        "organization": true,
+        "conflict": false,
+        "source": true,
+        "question": true,
+        "salesOwner": true,
+        "schema": true
+      }
+    },
+    {
+      "id": "Q-2",
+      "name": "Cedar Capital",
+      "segment": "Private equity",
+      "context": "A professional is recorded as an expert contributor.",
+      "question": "Which workflow is appropriate for this person\u2019s actual role?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "contactRole": "Expert participant",
+        "organization": true,
+        "conflict": false,
+        "source": true,
+        "question": true,
+        "salesOwner": true,
+        "schema": true
+      }
+    },
+    {
+      "id": "Q-3",
+      "name": "Willow Investments",
+      "segment": "Public equity",
+      "context": "Two sources identify different current firms for a contact.",
+      "question": "Which current professional affiliation is supported?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "contactRole": "Research buyer",
+        "organization": true,
+        "conflict": true,
+        "source": true,
+        "question": true,
+        "salesOwner": true,
+        "schema": true
+      }
+    },
+    {
+      "id": "Q-4",
+      "name": "Elm Research",
+      "segment": "Credit research",
+      "context": "A firmographic record lacks the buyer\u2019s research question.",
+      "question": "Which market behavior does the team need to understand?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "contactRole": "Research buyer",
+        "organization": true,
+        "conflict": false,
+        "source": true,
+        "question": false,
+        "salesOwner": true,
+        "schema": true
+      }
+    },
+    {
+      "id": "Q-5",
+      "name": "Birch Ventures",
+      "segment": "Venture capital",
+      "context": "A contact record has no source or verification date.",
+      "question": "Where did this information come from?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "contactRole": "Research buyer",
+        "organization": true,
+        "conflict": false,
+        "source": false,
+        "question": true,
+        "salesOwner": true,
+        "schema": true
+      }
+    },
+    {
+      "id": "Q-6",
+      "name": "Juniper Group",
+      "segment": "Corporate strategy",
+      "context": "The proposed CRM update uses an undefined lifecycle value.",
+      "question": "Which allowed state should this record use?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "contactRole": "Research buyer",
+        "organization": true,
+        "conflict": false,
+        "source": true,
+        "question": true,
+        "salesOwner": true,
+        "schema": false
+      }
+    }
+  ],
+  "metricsTitle": "A complete field is not always a trustworthy field.",
+  "metricsIntro": "Synthetic record quality and funnel stages. Role accuracy and provenance remain separate from basic completeness.",
+  "metricTable": {
+    "headers": [
+      "Check",
+      "Passing",
+      "Reviewed",
+      "Interpretation"
+    ],
+    "rows": [
+      [
+        "Required fields present",
+        "44",
+        "50",
+        "88% completeness"
+      ],
+      [
+        "Current buyer role verified",
+        "36",
+        "50",
+        "72% role verification"
+      ],
+      [
+        "Source and date present",
+        "40",
+        "50",
+        "80% provenance coverage"
+      ],
+      [
+        "Seller-accepted briefs",
+        "18",
+        "25",
+        "72% handoff acceptance"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "Do not combine expert participants with research buyers when calculating buyer funnel conversion.",
+    "A contact conflict should remain visible until resolved; a higher completeness score does not justify overwriting uncertainty.",
+    "These examples are hypothetical operational records, not real research intelligence or investment analysis."
+  ],
+  "gateHash": "45bb0846c6c0526965add36b8791e7f3407d5a37303cfd924de6a706cd38b75f"
+}

@@ -1,0 +1,334 @@
+{
+  "slug": "grow-therapy",
+  "company": "Grow Therapy",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/grow-therapy/edc00402-3fa2-4a0e-8e47-aacb3d170c58",
+  "companyUrl": "https://growtherapy.com/",
+  "portalUrl": "https://cjwheelock.com/grow-therapy/",
+  "resumeFile": "CJ_Wheelock_Grow_Therapy_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/grow-therapy/edc00402-3fa2-4a0e-8e47-aacb3d170c58"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://growtherapy.com/"
+    }
+  ],
+  "workspace": "EAP partner-system foundation",
+  "title": "Model the partner journey before automating the next step.",
+  "intro": "A proposed systems workbench for Grow Therapy\u2019s EAP motion: connect benefits consultants and employers with clear entity relationships, data ownership and tested handoffs.",
+  "accountLabel": "Partner relationship queue",
+  "workbenchLabel": "EAP system review",
+  "metricsLabel": "Data-contract health",
+  "queueIntro": "Fictional organization-level partner and employer records only. No employee health details, patient referrals, clinical decisions or provider eligibility are included.",
+  "workbenchIntro": "Review the commercial relationship graph and staging checks. This concept supports an employer-benefits sales process; it does not determine anyone\u2019s care or coverage.",
+  "firstBuild": "A tested consultant-to-employer handoff",
+  "firstBody": "Define the organization model and allowed stages, validate duplicate and missing-owner cases, and make both relationship owners visible before automation.",
+  "fields": [
+    {
+      "id": "entities",
+      "label": "Consultant, employer and parent relationships mapped",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "motion",
+      "label": "EAP commercial motion identified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "contract",
+      "label": "Field definitions and source ownership agreed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "scope",
+      "label": "Data access limited to organization-level context",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "sandbox",
+      "label": "Workflow validated in a staging scenario",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "handoff",
+      "label": "Consultant and employer next-action owners assigned",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "entities",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the partner relationship graph",
+      "next": "Keep a benefits consultant, employer and parent distinct before linking an opportunity.",
+      "owner": "Data steward"
+    },
+    {
+      "field": "motion",
+      "op": "eq",
+      "value": false,
+      "title": "Keep the commercial motion explicit",
+      "next": "This pilot covers organization-level EAP evaluation, not patient referral triage or provider credentialing.",
+      "owner": "GTM architecture lead"
+    },
+    {
+      "field": "contract",
+      "op": "eq",
+      "value": false,
+      "title": "Define the data contract",
+      "next": "Document organization keys, allowed stages and authoritative owners before adding automation.",
+      "owner": "GTM systems owner"
+    },
+    {
+      "field": "scope",
+      "op": "eq",
+      "value": false,
+      "title": "Review the data boundary",
+      "next": "Do not place employee health, patient or provider credentialing data in this commercial research workflow.",
+      "owner": "Data governance reviewer"
+    },
+    {
+      "field": "sandbox",
+      "op": "eq",
+      "value": false,
+      "title": "Validate the proposed logic first",
+      "next": "Check duplicate relationships, missing owners and failed syncs before proposing production rollout.",
+      "owner": "GTM engineer"
+    },
+    {
+      "field": "handoff",
+      "op": "eq",
+      "value": false,
+      "title": "Assign both sides of the partner handoff",
+      "next": "Clarify who owns the consultant relationship and who receives the employer evaluation.",
+      "owner": "Partnerships and sales"
+    }
+  ],
+  "ready": {
+    "title": "Ready for an EAP architecture review",
+    "next": "The GTM architecture lead can inspect the relationship model, data contract and staging evidence before approving any production scope."
+  },
+  "experiments": [
+    {
+      "name": "Relationship-aware partner routing",
+      "hypothesis": "An explicit consultant-to-employer link reduces lost ownership.",
+      "control": "Flat company list",
+      "treatment": "Relationship graph and separate next-action owners",
+      "primary": "Correctly owned employer evaluations",
+      "guardrail": "Duplicate relationships and sensitive-data leakage",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Staging before rollout",
+      "hypothesis": "Testing failure cases improves integration reliability.",
+      "control": "Happy-path-only validation",
+      "treatment": "Duplicate, missing-owner and failed-sync scenarios",
+      "primary": "Correct outcomes across agreed test cases",
+      "guardrail": "Untested production changes and silent failures",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Define one commercial motion",
+      "body": "Partner with the GTM Engineering Lead on EAP entities, source ownership and the boundary between commercial and care data.",
+      "measure": "Approved schema and relationship definitions"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build and test in staging",
+      "body": "Implement a narrow partner handoff with duplicate handling, explicit exceptions and observable failures.",
+      "measure": "Correct scenario outcomes and owned exceptions"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Pilot with the commercial team",
+      "body": "Use feedback from consultant and employer owners to improve the workflow. Document monitoring and change review.",
+      "measure": "Accepted evaluations and reliable data movement"
+    }
+  ],
+  "records": [
+    {
+      "id": "GT-1",
+      "name": "Alder Benefits / Cedar Employer",
+      "segment": "Consultant-led EAP",
+      "context": "A fictional consultant introduction maps to a distinct employer evaluation.",
+      "question": "Who owns each side of the partner relationship?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "entities": true,
+        "motion": true,
+        "contract": true,
+        "scope": true,
+        "sandbox": true,
+        "handoff": true
+      }
+    },
+    {
+      "id": "GT-2",
+      "name": "Willow Benefits Group",
+      "segment": "Benefits consultant",
+      "context": "Several employer relationships were merged into one account.",
+      "question": "Which entity keys preserve the separate organizations?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "entities": false,
+        "motion": true,
+        "contract": true,
+        "scope": true,
+        "sandbox": true,
+        "handoff": true
+      }
+    },
+    {
+      "id": "GT-3",
+      "name": "Elm Employer",
+      "segment": "Employer evaluation",
+      "context": "The proposed queue mixes commercial EAP records with patient referral tasks.",
+      "question": "Which system and owner belong to this commercial motion?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "entities": true,
+        "motion": false,
+        "contract": true,
+        "scope": true,
+        "sandbox": true,
+        "handoff": true
+      }
+    },
+    {
+      "id": "GT-4",
+      "name": "Birch Partners",
+      "segment": "Benefits consultant",
+      "context": "Lifecycle values differ between the source and target systems.",
+      "question": "Which shared field definitions govern the handoff?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "entities": true,
+        "motion": true,
+        "contract": false,
+        "scope": true,
+        "sandbox": true,
+        "handoff": true
+      }
+    },
+    {
+      "id": "GT-5",
+      "name": "Juniper Employer",
+      "segment": "Employer evaluation",
+      "context": "The proposed research record includes employee health details.",
+      "question": "How should the organization-level data boundary be restored?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "entities": true,
+        "motion": true,
+        "contract": true,
+        "scope": false,
+        "sandbox": true,
+        "handoff": true
+      }
+    },
+    {
+      "id": "GT-6",
+      "name": "Maple Benefits",
+      "segment": "Benefits consultant",
+      "context": "The workflow has only been tested on a successful single introduction.",
+      "question": "What happens on a duplicate, missing owner or failed sync?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "entities": true,
+        "motion": true,
+        "contract": true,
+        "scope": true,
+        "sandbox": false,
+        "handoff": true
+      }
+    }
+  ],
+  "metricsTitle": "Test the relationship model, not just the happy path.",
+  "metricsIntro": "Synthetic staging cases for an organization-level EAP workflow.",
+  "metricTable": {
+    "headers": [
+      "Scenario",
+      "Expected behavior",
+      "Acceptance check"
+    ],
+    "rows": [
+      [
+        "New consultant introduction",
+        "Create a proposed employer handoff",
+        "Required"
+      ],
+      [
+        "Repeated introduction key",
+        "Reuse the existing relationship",
+        "Required"
+      ],
+      [
+        "Missing employer owner",
+        "Return an owned exception",
+        "Required"
+      ],
+      [
+        "Conflicting parent entity",
+        "Require relationship review",
+        "Required"
+      ],
+      [
+        "Source sync failure",
+        "Preserve state and alert the owner",
+        "Required"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "This is a proposed acceptance checklist, not a report of Grow Therapy\u2019s systems or clinical outcomes.",
+    "A commercial evaluation is not employee enrollment, care access, insurance coverage or a provider credentialing decision.",
+    "Production access and deployment would require the organization\u2019s separate review and standards."
+  ],
+  "gateHash": "6495ec559ca9c0281ba3d5f376386e54804675c83dbf24b84deebc39fad95f5c"
+}

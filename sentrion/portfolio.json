@@ -1,0 +1,391 @@
+{
+  "slug": "sentrion",
+  "company": "Sentrion",
+  "role": "GTM Engineer",
+  "roleUrl": "https://sentrion.ai/careers/gtm-engineer",
+  "companyUrl": "https://sentrion.ai/",
+  "portalUrl": "https://cjwheelock.com/sentrion/",
+  "resumeFile": "CJ_Wheelock_Sentrion_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://sentrion.ai/careers/gtm-engineer"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://sentrion.ai/"
+    }
+  ],
+  "workspace": "Customer implementation",
+  "title": "A useful signal still needs a reliable delivery path.",
+  "intro": "A proposed implementation workbench for Sentrion: turn a customer\u2019s account-intelligence use case into a mapped, testable workflow with visible failures and an operator handover.",
+  "accountLabel": "Implementation queue",
+  "workbenchLabel": "Delivery preflight",
+  "metricsLabel": "Run outcomes",
+  "queueIntro": "Each fictional customer has a target CRM field, an update key and an owner. Inspect how a delivery should behave when input is incomplete or a service returns an error.",
+  "workbenchIntro": "Change the mapping and delivery result. A retry is appropriate for some failures; it cannot repair a missing field or unapproved access.",
+  "firstBuild": "An account-signal delivery runbook",
+  "firstBody": "Map the signal to the customer\u2019s intended task, validate required fields and preserve an event key. Classify exceptions and give an operator a clear next action.",
+  "fields": [
+    {
+      "id": "mapping",
+      "label": "Required source and target fields mapped",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "keyPresent",
+      "label": "Stable account and event key present",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "access",
+      "label": "Approved destination access recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "runState",
+      "label": "Delivery result",
+      "kind": "select",
+      "max": 1000000,
+      "options": [
+        "Ready",
+        "Already delivered",
+        "Rate limited",
+        "Authentication failed",
+        "Invalid payload"
+      ]
+    },
+    {
+      "id": "retryCount",
+      "label": "Retry attempts used",
+      "kind": "number",
+      "max": 10
+    },
+    {
+      "id": "accepted",
+      "label": "Customer acceptance criteria tested",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "runbook",
+      "label": "Operator owner and runbook recorded",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "mapping",
+      "op": "eq",
+      "value": false,
+      "title": "Repair the field mapping",
+      "next": "Missing target fields need a mapping change before another delivery attempt.",
+      "owner": "Implementation owner"
+    },
+    {
+      "field": "keyPresent",
+      "op": "eq",
+      "value": false,
+      "title": "Preserve a stable event key",
+      "next": "Without a key the system cannot reliably distinguish a repeated event from a new update.",
+      "owner": "Integration owner"
+    },
+    {
+      "field": "access",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve destination access",
+      "next": "Confirm the approved destination and permissions with its owner. No credentials are requested in this demo.",
+      "owner": "Access owner"
+    },
+    {
+      "field": "runState",
+      "op": "eq",
+      "value": "Already delivered",
+      "title": "Skip the duplicate event",
+      "next": "The event key already has a delivered receipt. Preserve it and do not create a second CRM update.",
+      "owner": "Delivery log"
+    },
+    {
+      "field": "runState",
+      "op": "eq",
+      "value": "Authentication failed",
+      "title": "Route authentication to the access owner",
+      "next": "Retrying the same request does not repair access. Keep the failed event available for a reviewed replay.",
+      "owner": "Access owner"
+    },
+    {
+      "field": "runState",
+      "op": "eq",
+      "value": "Invalid payload",
+      "title": "Quarantine the invalid payload",
+      "next": "Keep the event key and error details, then correct the mapping before a reviewed replay.",
+      "owner": "Mapping owner"
+    },
+    {
+      "field": "retryCount",
+      "op": "gte",
+      "value": 3,
+      "title": "Escalate exhausted retries",
+      "next": "The illustrative three-attempt budget is exhausted. Move the event to an owned exception queue.",
+      "owner": "Integration operator"
+    },
+    {
+      "field": "runState",
+      "op": "eq",
+      "value": "Rate limited",
+      "title": "Schedule a bounded retry",
+      "next": "Respect the provider response and reuse the original event key. No real request is made.",
+      "owner": "Integration operator"
+    },
+    {
+      "field": "accepted",
+      "op": "eq",
+      "value": false,
+      "title": "Test the customer\u2019s acceptance criterion",
+      "next": "A delivered event is not a useful workflow until the receiving team validates the expected behavior.",
+      "owner": "Customer operator"
+    },
+    {
+      "field": "runbook",
+      "op": "eq",
+      "value": false,
+      "title": "Complete the operator handover",
+      "next": "Record ownership, expected update behavior and recovery steps before rollout.",
+      "owner": "Implementation owner"
+    }
+  ],
+  "ready": {
+    "title": "Ready for operator review",
+    "next": "Mapping, event identity, access and acceptance are recorded. A customer operator can review the proposed rollout and recovery plan."
+  },
+  "records": [
+    {
+      "id": "ST-1",
+      "name": "Alder Security",
+      "segment": "Account intelligence",
+      "context": "A hiring signal updates an existing CRM account brief.",
+      "question": "Which account key should own this update?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "mapping": true,
+        "keyPresent": true,
+        "access": true,
+        "runState": "Ready",
+        "retryCount": 0,
+        "accepted": true,
+        "runbook": true
+      }
+    },
+    {
+      "id": "ST-2",
+      "name": "Cedar Analytics",
+      "segment": "Jobs API",
+      "context": "A repeated event already has a delivery receipt.",
+      "question": "Does the event key match the prior delivered update?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "mapping": true,
+        "keyPresent": true,
+        "access": true,
+        "runState": "Already delivered",
+        "retryCount": 0,
+        "accepted": true,
+        "runbook": true
+      }
+    },
+    {
+      "id": "ST-3",
+      "name": "Elm Operations",
+      "segment": "CRM integration",
+      "context": "A required industry field is missing from the input.",
+      "question": "Should the field be derived, left unknown or rejected?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "mapping": false,
+        "keyPresent": true,
+        "access": true,
+        "runState": "Ready",
+        "retryCount": 0,
+        "accepted": true,
+        "runbook": true
+      }
+    },
+    {
+      "id": "ST-4",
+      "name": "Birch Systems",
+      "segment": "Sales operations",
+      "context": "The destination returned a rate-limit response.",
+      "question": "What retry timing respects the destination limit?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "mapping": true,
+        "keyPresent": true,
+        "access": true,
+        "runState": "Rate limited",
+        "retryCount": 1,
+        "accepted": true,
+        "runbook": true
+      }
+    },
+    {
+      "id": "ST-5",
+      "name": "Willow Software",
+      "segment": "Jobs API",
+      "context": "Three retries have failed for the same event.",
+      "question": "Who owns the terminal exception?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "mapping": true,
+        "keyPresent": true,
+        "access": true,
+        "runState": "Rate limited",
+        "retryCount": 3,
+        "accepted": true,
+        "runbook": true
+      }
+    },
+    {
+      "id": "ST-6",
+      "name": "Juniper Data",
+      "segment": "CRM integration",
+      "context": "The workflow works in a demo but lacks an operator handover.",
+      "question": "Who will investigate and replay failed events?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "mapping": true,
+        "keyPresent": true,
+        "access": true,
+        "runState": "Ready",
+        "retryCount": 0,
+        "accepted": true,
+        "runbook": false
+      }
+    }
+  ],
+  "metricsTitle": "Distinguish delivery, replay and unresolved work.",
+  "metricsIntro": "Synthetic event outcomes for one fixed run window. A skipped duplicate is a successful safeguard, not a second delivery.",
+  "metricTable": {
+    "headers": [
+      "Run key",
+      "Outcome",
+      "Action",
+      "Owner"
+    ],
+    "rows": [
+      [
+        "EV-201",
+        "Delivered",
+        "Keep the receipt",
+        "Customer operator"
+      ],
+      [
+        "EV-201 replay",
+        "Duplicate skipped",
+        "No second update",
+        "Delivery log"
+      ],
+      [
+        "EV-202",
+        "Rate limited",
+        "Retry within attempt budget",
+        "Integration operator"
+      ],
+      [
+        "EV-203",
+        "Invalid payload",
+        "Fix mapping before replay",
+        "Mapping owner"
+      ],
+      [
+        "EV-204",
+        "Attempts exhausted",
+        "Owned exception queue",
+        "Integration operator"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "Use unique event keys as the delivery denominator; separate attempts from events.",
+    "A bounded retry budget needs an explicit owner and a terminal state. It must not silently discard work.",
+    "Validate missing inputs, field changes, duplicate events and service failures before a real rollout."
+  ],
+  "experiments": [
+    {
+      "name": "Task-first implementation brief",
+      "hypothesis": "An agreed customer task helps identify useful fields and acceptance checks.",
+      "control": "Field list only",
+      "treatment": "Task, mapping, owner and acceptance example",
+      "primary": "Workflows accepted without rework",
+      "guardrail": "Scope drift and unnecessary data collection",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 20,
+      "nB": 20,
+      "winsA": 8,
+      "winsB": 12
+    },
+    {
+      "name": "Exception-specific handover",
+      "hypothesis": "Operators resolve failures faster when the runbook identifies the failure class.",
+      "control": "Generic failure notice",
+      "treatment": "Error class, event key and recovery owner",
+      "primary": "Exceptions resolved in a fixed window",
+      "guardrail": "Unreviewed replays",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 30,
+      "nB": 30,
+      "winsA": 14,
+      "winsB": 19
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Map a customer task",
+      "body": "Observe one customer workflow and document the input, destination, update semantics and success example.",
+      "measure": "Mapping gaps and acceptance criteria"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Ship reliable delivery",
+      "body": "Add event keys, exception routes, bounded retries and representative failure tests.",
+      "measure": "Unique delivery outcomes and unresolved events"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Make handover repeatable",
+      "body": "Document rollout and recovery, collect operator feedback and feed recurring gaps back to product.",
+      "measure": "Operator adoption and repeated failure classes"
+    }
+  ],
+  "gateHash": "c50b785c6948c929e6267a6ba5d78a3f570451122814a0f5c9f8b4ce846ab8d8"
+}

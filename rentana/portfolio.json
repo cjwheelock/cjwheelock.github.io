@@ -1,0 +1,334 @@
+{
+  "slug": "rentana",
+  "company": "Rentana",
+  "role": "Go-to-Market Engineer, Revenue Operations",
+  "roleUrl": "https://www.rentana.io/careers/go-to-market-engineer-revenue-operations",
+  "companyUrl": "https://www.rentana.io/",
+  "portalUrl": "https://cjwheelock.com/rentana/",
+  "resumeFile": "CJ_Wheelock_Rentana_Go-to-Market_Engineer,_Revenue_Operations.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://www.rentana.io/careers/go-to-market-engineer-revenue-operations"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.rentana.io/"
+    }
+  ],
+  "workspace": "Property-operator revenue systems",
+  "title": "Connect the portfolio to the right commercial relationship.",
+  "intro": "A proposed GTM operations workbench for Rentana: map owners, operators and properties before enriching accounts, building audiences or assigning pipeline ownership.",
+  "accountLabel": "Operator relationship map",
+  "workbenchLabel": "Account and audience review",
+  "metricsLabel": "Revenue data quality",
+  "queueIntro": "All companies and portfolio relationships are fictional. No tenant records, rent recommendations, housing eligibility or property-level pricing decisions appear here.",
+  "workbenchIntro": "Review the business relationship and audience rules. The demo supports software sales operations, not rental pricing or housing decisions.",
+  "firstBuild": "A clean operator record with explicit exclusions",
+  "firstBody": "Resolve ownership and management relationships, preserve current account books and return import-ready research with a clear stage and next action.",
+  "fields": [
+    {
+      "id": "structure",
+      "label": "Owner, operator and property relationships mapped",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio scope has a current source",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "role",
+      "label": "Revenue, asset or operating buyer role supported",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "territory",
+      "label": "Territory and book ownership rules reconciled",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "exclusions",
+      "label": "Audience exclusions and existing customers checked",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "stage",
+      "label": "Stage evidence and next action recorded",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "structure",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the real-estate account structure",
+      "next": "A property owner, third-party manager and operating brand can be different entities. Preserve the relationship graph.",
+      "owner": "Data steward"
+    },
+    {
+      "field": "portfolio",
+      "op": "eq",
+      "value": false,
+      "title": "Verify the portfolio context",
+      "next": "Do not turn a stale property count or acquisition rumor into a current account fact.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "role",
+      "op": "eq",
+      "value": false,
+      "title": "Find the relevant business role",
+      "next": "Connect the portfolio question to the person responsible for the operating workflow.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "territory",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve account assignment",
+      "next": "Check the parent relationship and existing book before assigning a new property-level lead.",
+      "owner": "Sales operations"
+    },
+    {
+      "field": "exclusions",
+      "op": "eq",
+      "value": false,
+      "title": "Apply the audience exclusions",
+      "next": "Keep customers, active opportunities and stopped contacts out of an unrelated new-logo sequence.",
+      "owner": "Marketing operations"
+    },
+    {
+      "field": "stage",
+      "op": "eq",
+      "value": false,
+      "title": "Make the pipeline stage inspectable",
+      "next": "Record the business milestone, next step and receiving owner rather than relying on a filled stage field.",
+      "owner": "Account owner"
+    }
+  ],
+  "ready": {
+    "title": "Ready for an operator-account review",
+    "next": "The seller can review the relationship graph and operating question. Audience enrollment and production CRM updates remain separate reviewed actions."
+  },
+  "experiments": [
+    {
+      "name": "Relationship-aware enrichment",
+      "hypothesis": "Mapping owner and operator separately reduces misrouted accounts.",
+      "control": "Company-name match only",
+      "treatment": "Owner, operator and property relationships",
+      "primary": "Correct account assignments per reviewed record",
+      "guardrail": "False merges and duplicate parent accounts",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Exclusions before audience expansion",
+      "hypothesis": "A maintained exclusion contract improves campaign quality.",
+      "control": "Append all enriched contacts",
+      "treatment": "Customer, opportunity and stop-state checks",
+      "primary": "Eligible records accepted by sales",
+      "guardrail": "Existing customers added to cold outreach",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Define the account and territory model",
+      "body": "Partner with Sales, Marketing and CS on owner/operator relationships, book assignment and stage criteria.",
+      "measure": "Duplicate accounts and assignment conflicts"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build clean, import-ready records",
+      "body": "Pilot sourced enrichment, validation and living audience exclusions. Make failed records easy to inspect and correct.",
+      "measure": "Accepted records and exclusion accuracy"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Turn support requests into better systems",
+      "body": "Use repeated CRM questions to prioritize structural fixes. Maintain dashboards and train the team on operating definitions.",
+      "measure": "Pipeline hygiene, repeat issues and team adoption"
+    }
+  ],
+  "records": [
+    {
+      "id": "RE-1",
+      "name": "Alder Residential",
+      "segment": "Owner-operator",
+      "context": "A fictional operator manages a documented multifamily portfolio.",
+      "question": "Which team owns revenue reporting across the portfolio?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "structure": true,
+        "portfolio": true,
+        "role": true,
+        "territory": true,
+        "exclusions": true,
+        "stage": true
+      }
+    },
+    {
+      "id": "RE-2",
+      "name": "Cedar Management",
+      "segment": "Third-party manager",
+      "context": "The management company and property owner were merged.",
+      "question": "Which entity owns the software evaluation?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "structure": false,
+        "portfolio": true,
+        "role": true,
+        "territory": true,
+        "exclusions": true,
+        "stage": true
+      }
+    },
+    {
+      "id": "RE-3",
+      "name": "Willow Properties",
+      "segment": "Real-estate owner",
+      "context": "The portfolio size comes from an old acquisition announcement.",
+      "question": "What current source supports the portfolio scope?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "structure": true,
+        "portfolio": false,
+        "role": true,
+        "territory": true,
+        "exclusions": true,
+        "stage": true
+      }
+    },
+    {
+      "id": "RE-4",
+      "name": "Elm Living",
+      "segment": "Owner-operator",
+      "context": "A property lead conflicts with the existing parent-account book.",
+      "question": "Which owner should coordinate the conversation?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "structure": true,
+        "portfolio": true,
+        "role": true,
+        "territory": false,
+        "exclusions": true,
+        "stage": true
+      }
+    },
+    {
+      "id": "RE-5",
+      "name": "Birch Communities",
+      "segment": "Existing customer",
+      "context": "An enriched contact entered the new-logo audience despite an active relationship.",
+      "question": "Which customer or opportunity exclusion should apply?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "structure": true,
+        "portfolio": true,
+        "role": true,
+        "territory": true,
+        "exclusions": false,
+        "stage": true
+      }
+    },
+    {
+      "id": "RE-6",
+      "name": "Juniper Operations",
+      "segment": "Third-party manager",
+      "context": "The opportunity stage lacks a business milestone or next action.",
+      "question": "What evidence supports the stage and follow-up?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "structure": true,
+        "portfolio": true,
+        "role": true,
+        "territory": true,
+        "exclusions": true,
+        "stage": false
+      }
+    }
+  ],
+  "metricsTitle": "Clean records are a maintained operating system.",
+  "metricsIntro": "Synthetic audit of one hundred business records.",
+  "metricTable": {
+    "headers": [
+      "Audit category",
+      "Passing records",
+      "Open exceptions"
+    ],
+    "rows": [
+      [
+        "Owner/operator relationship",
+        "82",
+        "18"
+      ],
+      [
+        "Current portfolio source",
+        "76",
+        "24"
+      ],
+      [
+        "Territory ownership",
+        "90",
+        "10"
+      ],
+      [
+        "Audience exclusion check",
+        "94",
+        "6"
+      ],
+      [
+        "Stage and next-action evidence",
+        "68",
+        "32"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "These invented records do not describe Rentana\u2019s customers or production CRM.",
+    "A property count is not a unique account count. Preserve entity-level denominators.",
+    "The demo makes no rental-pricing, tenant-selection or housing-eligibility recommendation."
+  ],
+  "gateHash": "645f2668a5683eaa282585905fe9fc99c9d7d75d603da37aa961e06695e87bc5"
+}

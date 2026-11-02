@@ -1,0 +1,377 @@
+{
+  "slug": "petra-labs",
+  "company": "Petra Labs",
+  "role": "Growth Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/petra-labs/8eb1abd1-1de6-4559-8110-6338e6a345f5",
+  "companyUrl": "https://www.petralabs.com/",
+  "portalUrl": "https://cjwheelock.com/petra-labs/",
+  "resumeFile": "CJ_Wheelock_Petra_Labs_Growth_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/petra-labs/8eb1abd1-1de6-4559-8110-6338e6a345f5"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.petralabs.com/"
+    }
+  ],
+  "workspace": "AI search services growth",
+  "title": "Turn AI-search interest into an evaluable business question.",
+  "intro": "A proposed growth workbench for Petra Labs: develop evidence-labeled enterprise opportunities, connect educational content to consultations and scope useful service engagements.",
+  "accountLabel": "Enterprise opportunities",
+  "workbenchLabel": "Consultation readiness",
+  "metricsLabel": "Evidence and attribution",
+  "queueIntro": "An observed answer is a sample, not a complete view of AI search. Record the prompt scope, observation window and what the account team can actually infer.",
+  "workbenchIntro": "Change the evidence and service prerequisites. Keep a sampled visibility issue, a buyer-confirmed need and a measured business outcome distinct.",
+  "firstBuild": "An evidence-labeled consultation brief",
+  "firstBody": "Pair a bounded AI-search observation with a CMO-level discovery question, an accountable buyer and a scoped evaluation. Explain what remains unmeasured.",
+  "fields": [
+    {
+      "id": "promptScope",
+      "label": "Prompt set, model and observation window recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "evidence",
+      "label": "Evidence type",
+      "kind": "select",
+      "max": 1000000,
+      "options": [
+        "Unverified hypothesis",
+        "Sampled observation",
+        "Repeated observation"
+      ]
+    },
+    {
+      "id": "buyer",
+      "label": "Marketing decision owner identified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "businessQuestion",
+      "label": "Business question recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "causalClaim",
+      "label": "Unsupported causal revenue claim",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "scope",
+      "label": "Services scope and success criterion outlined",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "deliveryOwner",
+      "label": "Delivery owner and capacity reviewed",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "promptScope",
+      "op": "eq",
+      "value": false,
+      "title": "Define the observation scope",
+      "next": "Record prompts, model, market and time window before comparing visibility or drawing conclusions.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "evidence",
+      "op": "eq",
+      "value": "Unverified hypothesis",
+      "title": "Collect a bounded observation",
+      "next": "Label the hypothesis and obtain a reproducible example before presenting it as a discovered issue.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "causalClaim",
+      "op": "eq",
+      "value": true,
+      "title": "Separate correlation from impact",
+      "next": "A change in answer visibility does not by itself prove incremental traffic, pipeline or revenue.",
+      "owner": "Analytics reviewer"
+    },
+    {
+      "field": "buyer",
+      "op": "eq",
+      "value": false,
+      "title": "Identify the marketing decision owner",
+      "next": "Find who owns the business question and can evaluate an appropriate services engagement.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "businessQuestion",
+      "op": "eq",
+      "value": false,
+      "title": "Connect the observation to a business question",
+      "next": "An interesting answer sample needs a relevant buyer decision before it becomes a consultation.",
+      "owner": "Growth owner"
+    },
+    {
+      "field": "scope",
+      "op": "eq",
+      "value": false,
+      "title": "Outline the service evaluation",
+      "next": "Define a scoped engagement, useful measurement and explicit limitations. Do not treat a services engagement as a self-serve SaaS trial.",
+      "owner": "Solutions lead"
+    },
+    {
+      "field": "deliveryOwner",
+      "op": "eq",
+      "value": false,
+      "title": "Review delivery capacity",
+      "next": "Coordinate the proposed work with the delivery team before promising an engagement timeline.",
+      "owner": "Delivery lead"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a scoped consultation",
+    "next": "A reviewer can connect the bounded observation to a buyer question and proposed services evaluation. The observation alone proves no commercial outcome."
+  },
+  "records": [
+    {
+      "id": "PL-1",
+      "name": "Alder Travel",
+      "segment": "Consumer brand",
+      "context": "A defined set of comparison prompts produces inconsistent brand mentions.",
+      "question": "Which customer questions matter most to the marketing team?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "promptScope": true,
+        "evidence": "Repeated observation",
+        "buyer": true,
+        "businessQuestion": true,
+        "causalClaim": false,
+        "scope": true,
+        "deliveryOwner": true
+      }
+    },
+    {
+      "id": "PL-2",
+      "name": "Cedar Software",
+      "segment": "Enterprise software",
+      "context": "One interesting answer was captured without a model or date.",
+      "question": "Can the observation be reproduced within a defined scope?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "promptScope": false,
+        "evidence": "Repeated observation",
+        "buyer": true,
+        "businessQuestion": true,
+        "causalClaim": false,
+        "scope": true,
+        "deliveryOwner": true
+      }
+    },
+    {
+      "id": "PL-3",
+      "name": "Willow Goods",
+      "segment": "Consumer products",
+      "context": "A researcher suspects a visibility gap but has no saved observation.",
+      "question": "What bounded prompt set could test the hypothesis?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "promptScope": true,
+        "evidence": "Unverified hypothesis",
+        "buyer": true,
+        "businessQuestion": true,
+        "causalClaim": false,
+        "scope": true,
+        "deliveryOwner": true
+      }
+    },
+    {
+      "id": "PL-4",
+      "name": "Elm Learning",
+      "segment": "Education services",
+      "context": "A brief treats a sampled visibility change as proven revenue growth.",
+      "question": "Which observed commercial events can actually be linked?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "promptScope": true,
+        "evidence": "Repeated observation",
+        "buyer": true,
+        "businessQuestion": true,
+        "causalClaim": true,
+        "scope": true,
+        "deliveryOwner": true
+      }
+    },
+    {
+      "id": "PL-5",
+      "name": "Juniper Commerce",
+      "segment": "Retail",
+      "context": "The marketing buyer wants a consultation but no service scope is outlined.",
+      "question": "What small evaluation could answer the buyer\u2019s question?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "promptScope": true,
+        "evidence": "Repeated observation",
+        "buyer": true,
+        "businessQuestion": true,
+        "causalClaim": false,
+        "scope": false,
+        "deliveryOwner": true
+      }
+    },
+    {
+      "id": "PL-6",
+      "name": "Birch Systems",
+      "segment": "Enterprise software",
+      "context": "The proposed work has not been checked against delivery capacity.",
+      "question": "Who can review the scope and timing before a proposal?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "promptScope": true,
+        "evidence": "Repeated observation",
+        "buyer": true,
+        "businessQuestion": true,
+        "causalClaim": false,
+        "scope": true,
+        "deliveryOwner": false
+      }
+    }
+  ],
+  "metricsTitle": "Make attribution assumptions visible.",
+  "metricsIntro": "Compare a synthetic educational-content cohort with consultations and qualified services opportunities. Keep observed activity separate from inferred influence.",
+  "channels": [
+    {
+      "name": "AI-search research note",
+      "spend": 1400,
+      "accounts": 60,
+      "meetings": 7,
+      "qualified": 3
+    },
+    {
+      "name": "Marketing leadership roundtable",
+      "spend": 2800,
+      "accounts": 24,
+      "meetings": 8,
+      "qualified": 4
+    },
+    {
+      "name": "Referral education brief",
+      "spend": 500,
+      "accounts": 18,
+      "meetings": 5,
+      "qualified": 3
+    }
+  ],
+  "metricTable": {
+    "headers": [
+      "Evidence",
+      "What it supports",
+      "What it does not prove"
+    ],
+    "rows": [
+      [
+        "Sampled answer mentions",
+        "Presence in that recorded sample",
+        "Overall market visibility"
+      ],
+      [
+        "Repeated bounded observations",
+        "A pattern in the defined sample",
+        "Incremental revenue"
+      ],
+      [
+        "Tracked consultation request",
+        "An observed conversion event",
+        "Exclusive content causality"
+      ],
+      [
+        "Buyer-reported influence",
+        "A stated contribution to the journey",
+        "A complete attribution model"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "Use the same prompt set, model and observation window when describing a change.",
+    "Qualified service opportunities need a buyer, problem, scope and delivery path. Traffic alone is not services pipeline.",
+    "The invented spend figures exclude delivery costs and are not service prices, margins or promises of AI-search results."
+  ],
+  "experiments": [
+    {
+      "name": "Evidence-labeled educational brief",
+      "hypothesis": "Clear limitations make a research-led consultation more credible.",
+      "control": "Broad AI-search claims",
+      "treatment": "Bounded example, evidence and buyer question",
+      "primary": "Qualified consultations per target account",
+      "guardrail": "Unsupported causality and selective examples",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Services readiness before proposal",
+      "hypothesis": "A shared scope and delivery check reduce ambiguous proposals.",
+      "control": "Proposal on interest alone",
+      "treatment": "Buyer question, scope, measurement and capacity",
+      "primary": "Proposals with an accepted evaluation plan",
+      "guardrail": "Unscoped work",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 20,
+      "nB": 20,
+      "winsA": 8,
+      "winsB": 12
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Learn the services buyer",
+      "body": "Study founder-led discovery, buyer questions and delivery requirements. Define a reproducible research brief.",
+      "measure": "Accepted buyer questions and source coverage"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Connect education to consultation",
+      "body": "Test an evidence-labeled asset with a bounded account cohort and measure held consultations.",
+      "measure": "Qualified conversations and attribution completeness"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Build a repeatable growth system",
+      "body": "Automate the useful research and handoff steps while preserving review, delivery capacity and measurement limits.",
+      "measure": "Qualified services pipeline and accepted scope"
+    }
+  ],
+  "gateHash": "55e51a33057fc6f8dc5e188603b4414ebbec92c57fbee1820a54bbd3ccb04a7e"
+}

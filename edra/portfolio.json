@@ -1,0 +1,332 @@
+{
+  "slug": "edra",
+  "company": "Edra",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/edra/a85223f1-dd24-426c-be18-4073d3f9337d",
+  "companyUrl": "https://www.edra.ai/",
+  "portalUrl": "https://cjwheelock.com/edra/",
+  "resumeFile": "CJ_Wheelock_Edra_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/edra/a85223f1-dd24-426c-be18-4073d3f9337d"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.edra.ai/"
+    }
+  ],
+  "workspace": "Enterprise growth plays",
+  "title": "Build the play around a credible question and an owned reply.",
+  "intro": "A proposed enterprise-play workbench for Edra: turn sourced process hypotheses into coordinated AE and BDR experiments, then evaluate qualified outcomes.",
+  "accountLabel": "Enterprise play queue",
+  "workbenchLabel": "Play launch review",
+  "metricsLabel": "Play decisions",
+  "queueIntro": "These fictional organizations illustrate research about business processes. No internal tickets, messages, customer systems or process data are accessed.",
+  "workbenchIntro": "Review the account hypothesis, buying group and follow-up plan before proposing a play. This local demo sends no messages and operates no customer agents.",
+  "firstBuild": "An evidence-backed play the AE helps shape",
+  "firstBody": "Connect an enterprise process question with a dated why-now signal, an agreed buying group and an explicit follow-up owner before launch.",
+  "fields": [
+    {
+      "id": "process",
+      "label": "Enterprise process hypothesis is specific",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "signal",
+      "label": "Why-now signal has a dated business source",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "committee",
+      "label": "Buying group and missing roles mapped",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "message",
+      "label": "Message ties evidence to a credible question",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "alignment",
+      "label": "AE and BDR agree on the play and follow-up",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "success",
+      "label": "Scale and stop criteria agreed before the test",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "process",
+      "op": "eq",
+      "value": false,
+      "title": "Name the operating process",
+      "next": "Frame a support, IT service or operational knowledge problem rather than a broad AI-transformation claim.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "signal",
+      "op": "eq",
+      "value": false,
+      "title": "Ground the why-now hypothesis",
+      "next": "Separate a public organizational change from confirmed demand for process automation.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "committee",
+      "op": "eq",
+      "value": false,
+      "title": "Map the buying group",
+      "next": "Record the operating sponsor, technical reviewer and missing roles without inventing contacts.",
+      "owner": "Account executive"
+    },
+    {
+      "field": "message",
+      "op": "eq",
+      "value": false,
+      "title": "Rewrite the account-specific message",
+      "next": "Make the link from evidence to discovery explicit. Do not claim to know the prospect\u2019s internal process failures.",
+      "owner": "GTM engineer"
+    },
+    {
+      "field": "alignment",
+      "op": "eq",
+      "value": false,
+      "title": "Agree on follow-up before launch",
+      "next": "Confirm the account list, receiving owner and reply handling before generating campaign activity.",
+      "owner": "Sales leader"
+    },
+    {
+      "field": "success",
+      "op": "eq",
+      "value": false,
+      "title": "Define the experiment decision",
+      "next": "Choose a qualified-outcome metric and limits for negative replies, incorrect research and team workload.",
+      "owner": "Growth owner"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a coordinated play review",
+    "next": "The AE and BDR can review the hypothesis, audience and follow-up plan. Launch and scaling decisions remain with the responsible team."
+  },
+  "experiments": [
+    {
+      "name": "Process-specific enterprise messaging",
+      "hypothesis": "A credible operating question improves discovery quality.",
+      "control": "General AI automation pitch",
+      "treatment": "Sourced process hypothesis and buying-group question",
+      "primary": "Qualified opportunities per original account cohort",
+      "guardrail": "Incorrect personalization and unsupported internal-process claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Sales-aligned play design",
+      "hypothesis": "Agreeing on follow-up before launch turns relevant replies into owned next steps.",
+      "control": "Marketing launches then assigns replies",
+      "treatment": "AE/BDR plan agreed before the test",
+      "primary": "Qualified replies with an accepted next action",
+      "guardrail": "Unworked replies and seller capacity",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Choose a process and buying group",
+      "body": "Work with sales on a narrow enterprise hypothesis, source contract and qualification definition.",
+      "measure": "Accepted hypotheses and account ownership"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Run one coordinated play",
+      "body": "Build research and message proposals with evidence attached. Agree on follow-up and stop conditions before launch.",
+      "measure": "Relevant replies and owned next steps"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Scale or retire with evidence",
+      "body": "Review qualified opportunities, negative signals and operating effort by cohort. Keep the playbook and research current.",
+      "measure": "Qualified pipeline and cost of maintaining the play"
+    }
+  ],
+  "records": [
+    {
+      "id": "ED-1",
+      "name": "Alder Services",
+      "segment": "Enterprise support",
+      "context": "A fictional company is consolidating support operations after an acquisition.",
+      "question": "How does process knowledge move across the combined team?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "process": true,
+        "signal": true,
+        "committee": true,
+        "message": true,
+        "alignment": true,
+        "success": true
+      }
+    },
+    {
+      "id": "ED-2",
+      "name": "Cedar Commerce",
+      "segment": "IT service management",
+      "context": "The brief says AI transformation without naming an operating process.",
+      "question": "Which repeated process would be worth understanding first?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "process": false,
+        "signal": true,
+        "committee": true,
+        "message": true,
+        "alignment": true,
+        "success": true
+      }
+    },
+    {
+      "id": "ED-3",
+      "name": "Willow Software",
+      "segment": "Technical support",
+      "context": "The why-now line is based on an undated assumption.",
+      "question": "What current business source supports this timing?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "process": true,
+        "signal": false,
+        "committee": true,
+        "message": true,
+        "alignment": true,
+        "success": true
+      }
+    },
+    {
+      "id": "ED-4",
+      "name": "Elm Industries",
+      "segment": "Shared services",
+      "context": "Only an executive sponsor is mapped; technical review ownership is missing.",
+      "question": "Who understands the operating systems and process constraints?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "process": true,
+        "signal": true,
+        "committee": false,
+        "message": true,
+        "alignment": true,
+        "success": true
+      }
+    },
+    {
+      "id": "ED-5",
+      "name": "Birch Systems",
+      "segment": "IT operations",
+      "context": "A message claims to know internal failure rates.",
+      "question": "What evidence-based question could replace that unsupported claim?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "process": true,
+        "signal": true,
+        "committee": true,
+        "message": false,
+        "alignment": true,
+        "success": true
+      }
+    },
+    {
+      "id": "ED-6",
+      "name": "Juniper Group",
+      "segment": "Enterprise support",
+      "context": "The campaign is ready but no BDR has accepted reply ownership.",
+      "question": "Who will act on relevant replies and with what next step?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "process": true,
+        "signal": true,
+        "committee": true,
+        "message": true,
+        "alignment": false,
+        "success": true
+      }
+    }
+  ],
+  "metricsTitle": "A play earns expansion through qualified outcomes.",
+  "metricsIntro": "Illustrative decision ledger; each cohort uses the same observation window.",
+  "metricTable": {
+    "headers": [
+      "Play",
+      "Accounts",
+      "Relevant replies",
+      "Qualified opportunities",
+      "Decision"
+    ],
+    "rows": [
+      [
+        "Support-consolidation hypothesis",
+        "40",
+        "10",
+        "4",
+        "Continue a controlled test"
+      ],
+      [
+        "Broad AI-transformation message",
+        "40",
+        "6",
+        "1",
+        "Revise the hypothesis"
+      ],
+      [
+        "Process-owner introduction",
+        "30",
+        "8",
+        "3",
+        "Review buying-group coverage"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "All counts and decisions are synthetic, not Edra performance.",
+    "A small sample is directional. Review account selection, timing and reply quality before claiming causality.",
+    "Scale decisions should include negative replies, source accuracy and AE/BDR capacity, not only response rate."
+  ],
+  "gateHash": "191edb7deb112c146db9f6d81999a0e7cb5600079cdd5714106c7d147be9561e"
+}

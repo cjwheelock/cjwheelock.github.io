@@ -1,0 +1,278 @@
+{
+  "slug": "pigment",
+  "company": "Pigment",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.lever.co/pigment/9aae74f6-96df-4e17-a100-5ed76c1ce8d5",
+  "companyUrl": "https://www.pigment.com/",
+  "portalUrl": "https://cjwheelock.com/pigment/",
+  "resumeFile": "CJ_Wheelock_Pigment_GTM_Engineer.pdf",
+  "notice": "All organizations, account facts, activity and results are synthetic. These are proposed GTM workflows, not deployed employer systems or measured company performance.",
+  "sources": [
+    {
+      "label": "Pigment role",
+      "url": "https://jobs.lever.co/pigment/9aae74f6-96df-4e17-a100-5ed76c1ce8d5"
+    },
+    {
+      "label": "Pigment product context",
+      "url": "https://www.pigment.com/"
+    }
+  ],
+  "workspace": "GTM product operations",
+  "title": "A handoff the next team can actually use.",
+  "intro": "A proposed workbench for Pigment\u2019s 70% internal AI and 30% pipeline remit: make AE-to-CS handoffs complete, then connect adoption and market experiments to outcomes.",
+  "accountLabel": "Handoff queue",
+  "workbenchLabel": "CS acceptance",
+  "metricsLabel": "Adoption and pipeline",
+  "queueIntro": "A closed deal is not a complete implementation brief. Keep the customer\u2019s planning outcome, data ownership and sales commitments attached to the handoff.",
+  "workbenchIntro": "Change the handoff inputs or test an expansion hypothesis. Usage is context; a new business need and an accountable owner are still required.",
+  "firstBuild": "A reviewed AE-to-CS handoff",
+  "firstBody": "Give the receiving team the planning use case, named customer data owner, promised scope and agreed success measure. Measure acceptance and repeat use of the internal workflow.",
+  "fields": [
+    {
+      "id": "mode",
+      "label": "Workflow",
+      "kind": "select",
+      "options": [
+        "New customer handoff",
+        "Expansion review"
+      ]
+    },
+    {
+      "id": "goal",
+      "label": "Customer planning outcome agreed",
+      "kind": "check"
+    },
+    {
+      "id": "dataOwner",
+      "label": "Customer data owner identified",
+      "kind": "check"
+    },
+    {
+      "id": "commitments",
+      "label": "Sales commitments documented",
+      "kind": "check"
+    },
+    {
+      "id": "csOwner",
+      "label": "Receiving CS owner assigned",
+      "kind": "check"
+    },
+    {
+      "id": "need",
+      "label": "Additional planning need confirmed",
+      "kind": "check"
+    },
+    {
+      "id": "sponsor",
+      "label": "Expansion sponsor engaged",
+      "kind": "check"
+    }
+  ],
+  "records": [
+    {
+      "id": "PIG-101",
+      "name": "Orchid Software",
+      "segment": "FP&A",
+      "context": "The finance team needs a shared revenue plan and a documented data owner.",
+      "question": "What decision will the new planning workflow improve?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "mode": "New customer handoff",
+        "goal": true,
+        "dataOwner": true,
+        "commitments": true,
+        "csOwner": true,
+        "need": false,
+        "sponsor": false
+      }
+    },
+    {
+      "id": "PIG-102",
+      "name": "Cobalt Retail",
+      "segment": "Workforce planning",
+      "context": "The outcome is agreed but nobody owns the HR source export.",
+      "question": "Who will own the source data and resolve definition changes?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "mode": "New customer handoff",
+        "goal": true,
+        "dataOwner": false,
+        "commitments": true,
+        "csOwner": true,
+        "need": false,
+        "sponsor": false
+      }
+    },
+    {
+      "id": "PIG-103",
+      "name": "Harbor Services",
+      "segment": "Revenue planning",
+      "context": "Sales notes mention an accelerated timeline with incomplete scope detail.",
+      "question": "Which timeline and integration promises did the customer accept?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "mode": "New customer handoff",
+        "goal": true,
+        "dataOwner": true,
+        "commitments": false,
+        "csOwner": true,
+        "need": false,
+        "sponsor": false
+      }
+    },
+    {
+      "id": "PIG-104",
+      "name": "Maple Media",
+      "segment": "FP&A",
+      "context": "High activity has been recorded, but no additional use case is confirmed.",
+      "question": "Does the customer have another planning problem they want to solve?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "mode": "Expansion review",
+        "goal": true,
+        "dataOwner": true,
+        "commitments": true,
+        "csOwner": true,
+        "need": false,
+        "sponsor": false
+      }
+    },
+    {
+      "id": "PIG-105",
+      "name": "Tern Logistics",
+      "segment": "Workforce planning",
+      "context": "The customer describes a new planning team but no sponsor is engaged.",
+      "question": "Who owns the decision to extend this workflow?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "mode": "Expansion review",
+        "goal": true,
+        "dataOwner": true,
+        "commitments": true,
+        "csOwner": true,
+        "need": true,
+        "sponsor": false
+      }
+    },
+    {
+      "id": "PIG-106",
+      "name": "Larch Commerce",
+      "segment": "Revenue planning",
+      "context": "The finance sponsor wants to explore an adjacent revenue-planning need.",
+      "question": "Which acceptance criteria would make a discovery conversation useful?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "mode": "Expansion review",
+        "goal": true,
+        "dataOwner": true,
+        "commitments": true,
+        "csOwner": true,
+        "need": true,
+        "sponsor": true
+      }
+    }
+  ],
+  "metricsTitle": "Measure internal adoption alongside qualified pipeline.",
+  "metricsIntro": "Illustrative weekly product-use data and a fixed North American account cohort. Product adoption and pipeline creation remain separate measures.",
+  "adoption": {
+    "eligible": 24,
+    "active": 18,
+    "repeat": 12,
+    "proposed": 20,
+    "accepted": 15
+  },
+  "channels": [
+    {
+      "name": "NA planning workshop",
+      "spend": 2400,
+      "accounts": 60,
+      "meetings": 10,
+      "qualified": 4
+    },
+    {
+      "name": "Finance trigger campaign",
+      "spend": 1800,
+      "accounts": 80,
+      "meetings": 8,
+      "qualified": 3
+    }
+  ],
+  "metricsNotes": [
+    "Weekly active users / eligible users measures reach; repeat users / active users measures repeat use.",
+    "Accepted handoffs / proposed handoffs measures the receiving team\u2019s response, not customer success.",
+    "Campaign spend / qualified opportunities is a pipeline efficiency indicator. It is not customer acquisition cost without acquired customers and complete costs."
+  ],
+  "experiments": [
+    {
+      "name": "Structured AE-to-CS brief",
+      "hypothesis": "Explicit customer outcomes and commitments reduce returned handoffs.",
+      "control": "Free-text closed-won note",
+      "treatment": "Structured brief reviewed by CS",
+      "primary": "Handoffs accepted without rework",
+      "guardrail": "Missing commitments and time spent reviewing",
+      "allocation": "Assign matched accounts to one variant for a fixed observation window; review uncertainty before expansion.",
+      "nA": 25,
+      "nB": 25,
+      "winsA": 14,
+      "winsB": 19
+    },
+    {
+      "name": "NA planning trigger",
+      "hypothesis": "A specific planning change helps sellers prepare relevant discovery.",
+      "control": "Generic segment campaign",
+      "treatment": "Reviewed planning trigger and use-case question",
+      "primary": "Qualified opportunities per account",
+      "guardrail": "Wrong timing and opt-outs",
+      "allocation": "Assign matched accounts to one variant for a fixed observation window; review uncertainty before expansion.",
+      "nA": 60,
+      "nB": 60,
+      "winsA": 4,
+      "winsB": 6
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Discover the internal product",
+      "body": "Observe AE and CS handoffs. Choose one repeated failure and define acceptance with the receiving team.",
+      "measure": "Return reasons, baseline review time and eligible users"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Ship and observe adoption",
+      "body": "Pilot the brief, collect corrections and keep AI-generated suggestions reviewable. Run one small NA campaign.",
+      "measure": "Weekly and repeat use, qualified pipeline and opt-outs"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve from real outcomes",
+      "body": "Refine internal workflows using adoption evidence and customer outcomes. Expand only experiments that survive a useful observation window.",
+      "measure": "Workflow retention, rework and qualified pipeline influence"
+    }
+  ],
+  "gateHash": "958e74797dbf9fe4d91f5cc897303f55a39106aa411c0248f2e680b334f2b18c"
+}

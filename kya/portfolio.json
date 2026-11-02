@@ -1,0 +1,351 @@
+{
+  "slug": "kya",
+  "company": "Kya",
+  "role": "GTM Engineer",
+  "roleUrl": "https://www.kyahq.com/careers/gtm-engineer",
+  "companyUrl": "https://www.kyahq.com/",
+  "portalUrl": "https://cjwheelock.com/kya/",
+  "resumeFile": "CJ_Wheelock_Kya_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://www.kyahq.com/careers/gtm-engineer"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.kyahq.com/"
+    }
+  ],
+  "workspace": "Customer lifecycle growth",
+  "title": "Choose the next move from the customer\u2019s actual stage.",
+  "intro": "A proposed customer-zero workbench for Kya: use product milestones and account context to distinguish onboarding help, adoption work and a justified expansion discussion.",
+  "accountLabel": "Lifecycle accounts",
+  "workbenchLabel": "Next-action review",
+  "metricsLabel": "Activation and expansion",
+  "queueIntro": "Product activity, customer value and buying intent are related but different signals. Preserve the customer\u2019s existing owner and current unresolved work.",
+  "workbenchIntro": "Change the account\u2019s lifecycle stage and evidence. High usage alone should not turn an onboarding problem into an upsell action.",
+  "firstBuild": "A lifecycle brief with the reason attached",
+  "firstBody": "Combine the first-value milestone, unresolved blockers, account ownership and a confirmed additional need. Let a person review the proposed next conversation.",
+  "fields": [
+    {
+      "id": "stage",
+      "label": "Lifecycle stage",
+      "kind": "select",
+      "max": 1000000,
+      "options": [
+        "Onboarding",
+        "Adoption",
+        "Expansion"
+      ]
+    },
+    {
+      "id": "firstValue",
+      "label": "Agreed first-value milestone reached",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "blocker",
+      "label": "Unresolved customer blocker",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "owner",
+      "label": "Existing account owner assigned",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "need",
+      "label": "Additional business need confirmed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "sponsor",
+      "label": "Expansion sponsor identified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "feedback",
+      "label": "Product feedback item captured",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "owner",
+      "op": "eq",
+      "value": false,
+      "title": "Assign the relationship owner",
+      "next": "Customer work needs one accountable owner across Sales and Customer Success.",
+      "owner": "Customer Success"
+    },
+    {
+      "field": "blocker",
+      "op": "eq",
+      "value": true,
+      "title": "Resolve the customer blocker first",
+      "next": "Do not turn unresolved onboarding or adoption friction into an expansion pitch.",
+      "owner": "Customer Success"
+    },
+    {
+      "field": "firstValue",
+      "op": "eq",
+      "value": false,
+      "title": "Help the account reach first value",
+      "next": "Focus the next action on the agreed customer milestone rather than raw activity counts.",
+      "owner": "Onboarding owner"
+    },
+    {
+      "field": "need",
+      "op": "eq",
+      "value": false,
+      "title": "Explore the next useful outcome",
+      "next": "Keep the conversation focused on adoption until a real additional business need is confirmed.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "sponsor",
+      "op": "eq",
+      "value": false,
+      "title": "Identify the sponsor for the new need",
+      "next": "A new use case needs a person who can validate its value and coordinate the next step.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "feedback",
+      "op": "eq",
+      "value": false,
+      "title": "Capture the product learning",
+      "next": "Customer-zero work should produce a specific feedback item the product team can evaluate.",
+      "owner": "Product liaison"
+    }
+  ],
+  "ready": {
+    "title": "Ready for an account-owner review",
+    "next": "The owner can review the achieved milestone, additional need and product feedback before choosing the next customer conversation."
+  },
+  "experiments": [
+    {
+      "name": "Milestone-based onboarding follow-up",
+      "hypothesis": "A concrete customer outcome produces more useful help than a generic check-in.",
+      "control": "Calendar-based follow-up",
+      "treatment": "Unfinished milestone and known blocker",
+      "primary": "Accounts reaching first value in the window",
+      "guardrail": "Unwanted messages and unresolved issues",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Need-confirmed expansion review",
+      "hypothesis": "Expansion conversations are more relevant when a new need is verified.",
+      "control": "Usage threshold alone",
+      "treatment": "Usage plus confirmed need and sponsor",
+      "primary": "Accepted expansion discovery per reviewed account",
+      "guardrail": "Premature upsell and customer friction",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Map the lifecycle",
+      "body": "Agree on onboarding, first value, adoption and expansion definitions with Sales, CS and Product.",
+      "measure": "Stage consistency and known owner coverage"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Run the internal pilot",
+      "body": "Build reviewable next-action briefs and collect customer-zero product feedback.",
+      "measure": "Accepted actions, first value and repeated blockers"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve the full handoff",
+      "body": "Connect feedback to product changes and evaluate the lifecycle workflow with fixed cohorts.",
+      "measure": "Adoption, owner continuity and qualified expansion"
+    }
+  ],
+  "records": [
+    {
+      "id": "K-1",
+      "name": "Alder Cloud",
+      "segment": "Expansion",
+      "context": "The customer reached first value and describes a second team\u2019s use case.",
+      "question": "What new outcome does the second team need?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "stage": "Expansion",
+        "firstValue": true,
+        "blocker": false,
+        "owner": true,
+        "need": true,
+        "sponsor": true,
+        "feedback": true
+      }
+    },
+    {
+      "id": "K-2",
+      "name": "Cedar Studio",
+      "segment": "Onboarding",
+      "context": "The account is active but has not achieved its agreed first milestone.",
+      "question": "What prevents the first useful outcome?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "stage": "Onboarding",
+        "firstValue": false,
+        "blocker": false,
+        "owner": true,
+        "need": false,
+        "sponsor": true,
+        "feedback": true
+      }
+    },
+    {
+      "id": "K-3",
+      "name": "Willow Systems",
+      "segment": "Adoption",
+      "context": "High activity coexists with an unresolved workflow issue.",
+      "question": "Which blocker needs attention before a commercial discussion?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "stage": "Adoption",
+        "firstValue": true,
+        "blocker": true,
+        "owner": true,
+        "need": true,
+        "sponsor": true,
+        "feedback": true
+      }
+    },
+    {
+      "id": "K-4",
+      "name": "Elm Design",
+      "segment": "Adoption",
+      "context": "Usage is healthy but no additional business need is known.",
+      "question": "What outcome would make continued adoption more useful?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "stage": "Adoption",
+        "firstValue": true,
+        "blocker": false,
+        "owner": true,
+        "need": false,
+        "sponsor": true,
+        "feedback": true
+      }
+    },
+    {
+      "id": "K-5",
+      "name": "Birch Software",
+      "segment": "Expansion",
+      "context": "A new use case exists but its sponsor is unknown.",
+      "question": "Who can confirm the value and coordinate the next step?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "stage": "Expansion",
+        "firstValue": true,
+        "blocker": false,
+        "owner": true,
+        "need": true,
+        "sponsor": false,
+        "feedback": true
+      }
+    },
+    {
+      "id": "K-6",
+      "name": "Juniper Analytics",
+      "segment": "Expansion",
+      "context": "The internal workflow revealed a rough edge that was not documented.",
+      "question": "What concrete feedback should reach the product team?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "stage": "Expansion",
+        "firstValue": true,
+        "blocker": false,
+        "owner": true,
+        "need": true,
+        "sponsor": true,
+        "feedback": false
+      }
+    }
+  ],
+  "metricsTitle": "Activation and expansion need separate evidence.",
+  "metricsIntro": "One synthetic starting cohort, with lifecycle milestones kept distinct.",
+  "metricTable": {
+    "headers": [
+      "Stage",
+      "Accounts",
+      "Definition"
+    ],
+    "rows": [
+      [
+        "Started onboarding",
+        "30",
+        "Entered the fixed cohort"
+      ],
+      [
+        "Reached first value",
+        "22",
+        "Agreed milestone observed"
+      ],
+      [
+        "Repeated meaningful use",
+        "16",
+        "Returned to the useful workflow"
+      ],
+      [
+        "Confirmed additional need",
+        "7",
+        "Discovery validated a new outcome"
+      ],
+      [
+        "Accepted expansion discussion",
+        "4",
+        "Owner and sponsor agreed next step"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "Use the original cohort for overall activation and the relevant prior stage for a conditional conversion rate.",
+    "Usage is not revenue, and an accepted expansion discussion is not a closed sale.",
+    "Customer-zero feedback should identify a reproducible issue or improvement, not merely count agent activity."
+  ],
+  "gateHash": "43ebdf71fe23c32cc6b0da92755b267cf2bb4ace5fb011f45d4d8e1bcb388087"
+}

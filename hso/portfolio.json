@@ -1,0 +1,328 @@
+{
+  "slug": "hso",
+  "company": "HSO",
+  "role": "Marketing GTM Engineer",
+  "roleUrl": "https://www.hso.com/careers/vacancies/marketing-gtm-engineer/?c=1",
+  "companyUrl": "https://www.hso.com/",
+  "portalUrl": "https://cjwheelock.com/hso/",
+  "resumeFile": "CJ_Wheelock_HSO_Marketing_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://www.hso.com/careers/vacancies/marketing-gtm-engineer/?c=1"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.hso.com/"
+    }
+  ],
+  "workspace": "Alliance-led marketing operations",
+  "title": "Connect industry context, alliance ownership and seller action.",
+  "intro": "A proposed marketing-technology workbench for HSO: turn an industry account hypothesis into a governed, alliance-aware seller handoff.",
+  "accountLabel": "Industry account queue",
+  "workbenchLabel": "Alliance handoff review",
+  "metricsLabel": "Seller activation",
+  "queueIntro": "Fictional enterprise accounts and Microsoft-solution hypotheses only. These scenarios are not HSO customer projects or claims of CJ\u2019s platform-administration experience.",
+  "workbenchIntro": "Review the account evidence, alliance relationship and proposed CRM fields before preparing a seller action. No connected CRM or campaign is changed.",
+  "firstBuild": "An alliance-aware account brief",
+  "firstBody": "Join sourced industry context with a reviewed solution question, current partner and seller ownership, and a measurable next task.",
+  "fields": [
+    {
+      "id": "industry",
+      "label": "Industry and business-process question grounded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "solution",
+      "label": "Relevant Microsoft solution context supported",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "alliance",
+      "label": "Alliance and direct-sales ownership aligned",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "fields",
+      "label": "CRM and enrichment field definitions validated",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "content",
+      "label": "Proposed asset and claims reviewed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "seller",
+      "label": "Seller activation task has an owner and measure",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "industry",
+      "op": "eq",
+      "value": false,
+      "title": "Define the industry use case",
+      "next": "Connect the account to a specific operating challenge rather than a generic digital-transformation pitch.",
+      "owner": "Industry marketer"
+    },
+    {
+      "field": "solution",
+      "op": "eq",
+      "value": false,
+      "title": "Verify the solution context",
+      "next": "Record what is known about the business application or cloud need without assuming a current platform or implementation scope.",
+      "owner": "Solution marketing"
+    },
+    {
+      "field": "alliance",
+      "op": "eq",
+      "value": false,
+      "title": "Coordinate the alliance relationship",
+      "next": "Preserve Microsoft alliance context and current seller ownership before creating another handoff.",
+      "owner": "Alliance owner"
+    },
+    {
+      "field": "fields",
+      "op": "eq",
+      "value": false,
+      "title": "Validate the cross-platform data contract",
+      "next": "Agree on account keys, lifecycle values and authoritative fields before a proposed Dynamics 365 update.",
+      "owner": "Marketing operations"
+    },
+    {
+      "field": "content",
+      "op": "eq",
+      "value": false,
+      "title": "Review the account-specific asset",
+      "next": "Use approved evidence and an accountable reviewer for personalization and solution claims.",
+      "owner": "Content reviewer"
+    },
+    {
+      "field": "seller",
+      "op": "eq",
+      "value": false,
+      "title": "Make the handoff actionable",
+      "next": "Attach a specific next task and an agreed useful-output measure so the seller can act and provide feedback.",
+      "owner": "Sales enablement"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a marketing-to-seller review",
+    "next": "The alliance and seller owners can review the account brief, proposed asset and next action. Solution scope still requires discovery."
+  },
+  "experiments": [
+    {
+      "name": "Industry-specific seller activation",
+      "hypothesis": "A focused business-process question makes the handoff more useful.",
+      "control": "Generic solution overview",
+      "treatment": "Industry context, evidence and next task",
+      "primary": "Seller-accepted briefs per target account",
+      "guardrail": "Unsupported implementation or platform claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Alliance-aware routing",
+      "hypothesis": "Preserving partner ownership reduces duplicate work.",
+      "control": "Independent direct and alliance queues",
+      "treatment": "Shared account key and relationship review",
+      "primary": "Correctly owned follow-up tasks",
+      "guardrail": "Partner conflicts and attribution double counting",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Map the marketing technology and buyer journey",
+      "body": "Work with Marketing, Sales and alliance stakeholders on data definitions, handoffs and recurring manual tasks.",
+      "measure": "Known integrations and owned process gaps"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build one reviewed seller-activation workflow",
+      "body": "Pilot sourced research and proposed CRM updates with clear review, failures and documentation.",
+      "measure": "Useful briefs and correct data movement"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Measure and extend the useful patterns",
+      "body": "Compare demand and alliance cohorts through qualified discovery. Reuse documented patterns across industry teams.",
+      "measure": "Qualified outcomes, adoption and maintenance effort"
+    }
+  ],
+  "records": [
+    {
+      "id": "HS-1",
+      "name": "Alder Manufacturing",
+      "segment": "Manufacturing",
+      "context": "A fictional enterprise is reviewing planning and service-process coordination.",
+      "question": "Which operating process is driving the technology discussion?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "industry": true,
+        "solution": true,
+        "alliance": true,
+        "fields": true,
+        "content": true,
+        "seller": true
+      }
+    },
+    {
+      "id": "HS-2",
+      "name": "Cedar Advisory",
+      "segment": "Professional services",
+      "context": "The brief proposes transformation without naming a business process.",
+      "question": "Which specific workflow would make discovery useful?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "industry": false,
+        "solution": true,
+        "alliance": true,
+        "fields": true,
+        "content": true,
+        "seller": true
+      }
+    },
+    {
+      "id": "HS-3",
+      "name": "Willow Distribution",
+      "segment": "Retail and distribution",
+      "context": "The current Microsoft application footprint was assumed.",
+      "question": "Which solution context is sourced and what remains unknown?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "industry": true,
+        "solution": false,
+        "alliance": true,
+        "fields": true,
+        "content": true,
+        "seller": true
+      }
+    },
+    {
+      "id": "HS-4",
+      "name": "Elm Engineering",
+      "segment": "Architecture and engineering",
+      "context": "An alliance introduction overlaps an active direct-sales relationship.",
+      "question": "Which partner and seller should coordinate the next step?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "industry": true,
+        "solution": true,
+        "alliance": false,
+        "fields": true,
+        "content": true,
+        "seller": true
+      }
+    },
+    {
+      "id": "HS-5",
+      "name": "Birch Services",
+      "segment": "Professional services",
+      "context": "The proposed lifecycle value is not part of the shared CRM contract.",
+      "question": "Which field definition should govern the update?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "industry": true,
+        "solution": true,
+        "alliance": true,
+        "fields": false,
+        "content": true,
+        "seller": true
+      }
+    },
+    {
+      "id": "HS-6",
+      "name": "Juniper Industrial",
+      "segment": "Manufacturing",
+      "context": "A personalized asset includes an unreviewed capability claim.",
+      "question": "Who can validate the source and scope before use?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "industry": true,
+        "solution": true,
+        "alliance": true,
+        "fields": true,
+        "content": false,
+        "seller": true
+      }
+    }
+  ],
+  "metricsTitle": "Measure whether the seller can use the work.",
+  "metricsIntro": "Illustrative marketing and alliance handoff scorecard.",
+  "metricTable": {
+    "headers": [
+      "Motion",
+      "Proposed briefs",
+      "Seller accepted",
+      "Held qualified discovery"
+    ],
+    "rows": [
+      [
+        "Industry ABM",
+        "40",
+        "28",
+        "8"
+      ],
+      [
+        "Alliance-introduced accounts",
+        "25",
+        "20",
+        "7"
+      ],
+      [
+        "Seller activation pilot",
+        "30",
+        "21",
+        "6"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "Counts are synthetic and do not represent HSO results.",
+    "A partner-influenced opportunity is not automatically partner-sourced revenue.",
+    "Track rejected briefs, incorrect solution assumptions and reviewer effort alongside conversion."
+  ],
+  "gateHash": "4b209612838cf6ef42318c564f55626b06fa97fb4745853833b3dbf55f5463b3"
+}

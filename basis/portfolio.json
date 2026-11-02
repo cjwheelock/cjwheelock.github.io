@@ -1,0 +1,334 @@
+{
+  "slug": "basis",
+  "company": "Basis",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/basis-ai/9a6ccd36-3fe4-4e49-b81e-a9f934d9ec01",
+  "companyUrl": "https://www.getbasis.ai/",
+  "portalUrl": "https://cjwheelock.com/basis/",
+  "resumeFile": "CJ_Wheelock_Basis_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/basis-ai/9a6ccd36-3fe4-4e49-b81e-a9f934d9ec01"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.getbasis.ai/"
+    }
+  ],
+  "workspace": "Accounting-firm growth systems",
+  "title": "Connect the accounting workflow to a trustworthy growth record.",
+  "intro": "A proposed growth-data workbench for Basis: research the firm\u2019s practice area and operating question, then keep acquisition and lifecycle definitions consistent.",
+  "accountLabel": "Accounting practice map",
+  "workbenchLabel": "Firm-to-pipeline review",
+  "metricsLabel": "Acquisition and lifecycle",
+  "queueIntro": "Fictional accounting firms and work-product questions only. No client ledgers, tax returns, audit evidence or accounting advice are included.",
+  "workbenchIntro": "Prepare an evidence-based commercial brief and data contract. A fit hypothesis does not establish accounting accuracy, compliance or an automated review conclusion.",
+  "firstBuild": "A practice-aware growth record",
+  "firstBody": "Join firm research, a concrete work-product question and sponsor context to consistent lifecycle states across acquisition and sales systems.",
+  "fields": [
+    {
+      "id": "firm",
+      "label": "Accounting firm and service line mapped",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "workflow",
+      "label": "Specific accounting work-product question recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "timing",
+      "label": "Evaluation timing confirmed or explicitly unknown",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "sponsor",
+      "label": "Operational sponsor and reviewer roles identified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "lifecycle",
+      "label": "CRM, marketing and finance lifecycle definitions aligned",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "attribution",
+      "label": "Source and influence attribution kept distinct",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "firm",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the firm and practice",
+      "next": "Distinguish client accounting services, tax, audit and corporate accounting before proposing a workflow.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "workflow",
+      "op": "eq",
+      "value": false,
+      "title": "Name the accounting workflow",
+      "next": "Ask which preparation, reconciliation or review task matters instead of assuming every practice has the same bottleneck.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "timing",
+      "op": "eq",
+      "value": false,
+      "title": "Keep seasonal timing evidence-based",
+      "next": "Do not infer readiness from the calendar alone. Preserve the source or ask when the team can evaluate a change.",
+      "owner": "SDR"
+    },
+    {
+      "field": "sponsor",
+      "op": "eq",
+      "value": false,
+      "title": "Map the implementation and review roles",
+      "next": "A useful evaluation needs both an operating sponsor and someone who understands the review standard.",
+      "owner": "Technical seller"
+    },
+    {
+      "field": "lifecycle",
+      "op": "eq",
+      "value": false,
+      "title": "Repair the lifecycle contract",
+      "next": "Define lead, qualified opportunity, customer and expansion states before synchronizing systems.",
+      "owner": "Revenue operations"
+    },
+    {
+      "field": "attribution",
+      "op": "eq",
+      "value": false,
+      "title": "Preserve the acquisition evidence",
+      "next": "Record the original source and later touches separately instead of awarding every channel the same opportunity.",
+      "owner": "Growth operations"
+    }
+  ],
+  "ready": {
+    "title": "Ready for accounting-workflow discovery review",
+    "next": "The seller can review the practice context, timing and sponsor questions. Product fit and accounting review requirements still need discovery."
+  },
+  "experiments": [
+    {
+      "name": "Practice-specific discovery",
+      "hypothesis": "A relevant accounting work product makes the conversation more useful.",
+      "control": "Generic accounting AI message",
+      "treatment": "CAS, tax or audit workflow question",
+      "primary": "Qualified discovery per firm",
+      "guardrail": "Unsupported accuracy or compliance claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Acquisition quality by original source",
+      "hypothesis": "Source and influence separation makes channel decisions more reliable.",
+      "control": "Every touch receives sourced credit",
+      "treatment": "One original source with separately recorded influence",
+      "primary": "Qualified opportunities per eligible account",
+      "guardrail": "Double counting and incomplete lifecycle joins",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Define the first growth data model",
+      "body": "Agree with Sales and RevOps on firm entities, practice segments, lifecycle states and acquisition attribution.",
+      "measure": "Join accuracy and shared definitions"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Ship one repeatable acquisition motion",
+      "body": "Build research and enrichment for a narrow practice segment. Keep unknowns visible and close the loop with sales.",
+      "measure": "Accepted briefs and qualified conversations"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Compare growth loops and maintain the stack",
+      "body": "Evaluate outbound and paid cohorts with consistent definitions. Document build-versus-buy decisions and system ownership.",
+      "measure": "Qualified pipeline, acquisition cost and maintenance effort"
+    }
+  ],
+  "records": [
+    {
+      "id": "B-1",
+      "name": "Alder Accounting",
+      "segment": "Client accounting services",
+      "context": "A fictional practice is reviewing month-end preparation work.",
+      "question": "Which preparation or reconciliation step creates review rework?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "workflow": true,
+        "timing": true,
+        "sponsor": true,
+        "lifecycle": true,
+        "attribution": true
+      }
+    },
+    {
+      "id": "B-2",
+      "name": "Cedar Partners",
+      "segment": "Tax practice",
+      "context": "The firm is classified only as accounting with no service-line detail.",
+      "question": "Which practice would sponsor an evaluation?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": false,
+        "workflow": true,
+        "timing": true,
+        "sponsor": true,
+        "lifecycle": true,
+        "attribution": true
+      }
+    },
+    {
+      "id": "B-3",
+      "name": "Willow Advisory",
+      "segment": "CAS and advisory",
+      "context": "The brief claims a bottleneck without a specific work product.",
+      "question": "What task could the team show in discovery?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "workflow": false,
+        "timing": true,
+        "sponsor": true,
+        "lifecycle": true,
+        "attribution": true
+      }
+    },
+    {
+      "id": "B-4",
+      "name": "Elm Audit",
+      "segment": "Audit practice",
+      "context": "Evaluation readiness was inferred solely from a seasonal calendar.",
+      "question": "When can the team actually review a workflow change?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "workflow": true,
+        "timing": false,
+        "sponsor": true,
+        "lifecycle": true,
+        "attribution": true
+      }
+    },
+    {
+      "id": "B-5",
+      "name": "Birch Accountants",
+      "segment": "Regional firm",
+      "context": "The operating sponsor is known but the review role is missing.",
+      "question": "Who defines an acceptable review-ready output?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "workflow": true,
+        "timing": true,
+        "sponsor": false,
+        "lifecycle": true,
+        "attribution": true
+      }
+    },
+    {
+      "id": "B-6",
+      "name": "Juniper Finance",
+      "segment": "Corporate accounting",
+      "context": "The same opportunity is counted as sourced by paid search and outbound.",
+      "question": "What was the original source and which touches influenced it?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "firm": true,
+        "workflow": true,
+        "timing": true,
+        "sponsor": true,
+        "lifecycle": true,
+        "attribution": false
+      }
+    }
+  ],
+  "metricsTitle": "Use one lifecycle contract across acquisition and revenue.",
+  "metricsIntro": "Illustrative definitions expose where a growth system can quietly double count.",
+  "metricTable": {
+    "headers": [
+      "State",
+      "Minimum evidence",
+      "Authoritative owner"
+    ],
+    "rows": [
+      [
+        "Researched account",
+        "Firm identity and practice source",
+        "Research operations"
+      ],
+      [
+        "Qualified discovery",
+        "Relevant workflow, sponsor and next step",
+        "Sales"
+      ],
+      [
+        "Opportunity",
+        "Agreed sales-stage criteria",
+        "Sales / RevOps"
+      ],
+      [
+        "Customer",
+        "Executed commercial status in source system",
+        "Finance / RevOps"
+      ],
+      [
+        "Expansion signal",
+        "Existing customer plus confirmed new scope",
+        "Account owner"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "The table proposes a data contract; it is not a description of Basis\u2019s internal systems.",
+    "Record first source, later influence and closed revenue separately.",
+    "Synthetic accounting examples demonstrate commercial discovery, not accounting advice or client-work automation."
+  ],
+  "gateHash": "ceee05e66f7ee3d08460d9fcfb22b3e8ece86b610cdac947c535295065386d5d"
+}

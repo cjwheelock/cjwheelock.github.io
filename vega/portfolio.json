@@ -1,0 +1,253 @@
+{
+  "slug": "vega",
+  "company": "Vega",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/vegatech/9cf6e4fd-5063-4744-adac-d7d837c45b45",
+  "companyUrl": "https://www.vegaclaims.com/",
+  "portalUrl": "https://cjwheelock.com/vega/",
+  "resumeFile": "CJ_Wheelock_Vega_GTM_Engineer.pdf",
+  "workspace": "Claims-market coverage",
+  "title": "Know the account. See the opening.",
+  "intro": "A proposed revenue workspace for Vega: map carriers, MGAs and self-insured organizations, preserve buying-committee coverage and turn verified changes into timely seller actions.",
+  "notice": "All organizations, committee coverage, dates and signals are synthetic. This workspace supports account research and sales timing only. It does not process individual claims or make coverage, liability or payout decisions.",
+  "accountLabel": "Market map",
+  "workbenchLabel": "Timing workbench",
+  "metricsLabel": "Field follow-through",
+  "records": [
+    {
+      "id": "V-101",
+      "name": "Cedar Mutual",
+      "segment": "Carrier",
+      "region": "Northeast",
+      "signal": "RFP window",
+      "age": 3,
+      "identity": true,
+      "stop": false,
+      "existing": "Maya",
+      "days": 45,
+      "verified": true,
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "stage": 2,
+      "context": "A claims-service review is expected within the next quarter.",
+      "source": "Synthetic procurement notice",
+      "question": "Who owns the claims-service review, and when are requirements finalized?"
+    },
+    {
+      "id": "V-102",
+      "name": "Harbor Programs",
+      "segment": "MGA",
+      "region": "West",
+      "signal": "New program launch",
+      "age": 5,
+      "identity": true,
+      "stop": false,
+      "existing": "Unassigned",
+      "days": 60,
+      "verified": true,
+      "committee": [
+        true,
+        false,
+        false
+      ],
+      "stage": 1,
+      "context": "A new commercial-auto program may need claims capacity and reporting.",
+      "source": "Synthetic program announcement",
+      "question": "What claims-service requirements must be ready before the program launches?"
+    },
+    {
+      "id": "V-103",
+      "name": "Willow Logistics",
+      "segment": "Self-insured",
+      "region": "South",
+      "signal": "Contract renewal",
+      "age": 8,
+      "identity": true,
+      "stop": false,
+      "existing": "Leo",
+      "days": 240,
+      "verified": true,
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "stage": 1,
+      "context": "The current service contract has a later renewal window.",
+      "source": "Synthetic reviewed account notes",
+      "question": "When should the team begin reviewing alternatives ahead of renewal?"
+    },
+    {
+      "id": "V-104",
+      "name": "Elm Specialty",
+      "segment": "Carrier",
+      "region": "Midwest",
+      "signal": "Claims leadership change",
+      "age": 2,
+      "identity": true,
+      "stop": false,
+      "existing": "Maya",
+      "days": 30,
+      "verified": false,
+      "committee": [
+        false,
+        true,
+        false
+      ],
+      "stage": 0,
+      "context": "A third-party report suggests a leadership change that has not been corroborated.",
+      "source": "Synthetic unconfirmed directory update",
+      "question": "Can an official source verify the new claims leader and remit?"
+    },
+    {
+      "id": "V-105",
+      "name": "Maple Risk Partners",
+      "segment": "Broker",
+      "region": "Northeast",
+      "signal": "Conference conversation",
+      "age": 4,
+      "identity": true,
+      "stop": false,
+      "existing": "Leo",
+      "days": 20,
+      "verified": true,
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "stage": 3,
+      "context": "An event conversation identified a carrier introduction to explore.",
+      "source": "Synthetic reviewed conference notes",
+      "question": "Which client program would benefit from a joint discovery conversation?"
+    },
+    {
+      "id": "V-106",
+      "name": "Tern Captive",
+      "segment": "Self-insured",
+      "region": "West",
+      "signal": "Contract renewal",
+      "age": 70,
+      "identity": true,
+      "stop": false,
+      "existing": "Unassigned",
+      "days": 75,
+      "verified": true,
+      "committee": [
+        true,
+        false,
+        true
+      ],
+      "stage": 1,
+      "context": "A renewal date came from an old account record.",
+      "source": "Synthetic stale CRM note",
+      "question": "Is the renewal date still accurate and who can confirm it?"
+    },
+    {
+      "id": "V-107",
+      "name": "Birch Underwriting",
+      "segment": "MGA",
+      "region": "South",
+      "signal": "RFP window",
+      "age": 3,
+      "identity": false,
+      "stop": false,
+      "existing": "Unassigned",
+      "days": 35,
+      "verified": true,
+      "committee": [
+        true,
+        true,
+        false
+      ],
+      "stage": 0,
+      "context": "Two similarly named entities could own the program.",
+      "source": "Synthetic conflicting organization records",
+      "question": "Which legal entity owns the program and vendor process?"
+    },
+    {
+      "id": "V-108",
+      "name": "Larch Fleet",
+      "segment": "Self-insured",
+      "region": "Midwest",
+      "signal": "Conference conversation",
+      "age": 2,
+      "identity": true,
+      "stop": true,
+      "existing": "Maya",
+      "days": 10,
+      "verified": true,
+      "committee": [
+        true,
+        true,
+        true
+      ],
+      "stage": 1,
+      "context": "The contact declined further prospecting after an event.",
+      "source": "Synthetic event follow-up preference",
+      "question": "Preserve the preference and review any existing relationship with the owner."
+    }
+  ],
+  "experiments": [
+    {
+      "name": "Committee coverage before outreach",
+      "hypothesis": "A reviewed map of claims, operations and procurement makes discovery more useful.",
+      "control": "One contact and a company description",
+      "treatment": "Verified roles, coverage gaps and a specific discovery question",
+      "primary": "Qualified discovery conversations per account",
+      "guardrail": "Wrong-role contacts and opt-outs",
+      "allocation": "Compare matched carrier and MGA cohorts",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 6,
+      "winsB": 9
+    },
+    {
+      "name": "Conference follow-through",
+      "hypothesis": "A clear owner and agreed next step reduce forgotten event conversations.",
+      "control": "Imported attendee list",
+      "treatment": "Reviewed notes, deduplication and owner acceptance",
+      "primary": "Held follow-up conversations within the observation window",
+      "guardrail": "Duplicate contact and unwanted follow-up",
+      "allocation": "Assign at account level to avoid overlapping rep outreach",
+      "nA": 30,
+      "nB": 30,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Build a finite market map",
+      "body": "Agree on the carrier, MGA, broker and self-insured universe. Define account identity, buying roles and source freshness with sales. Pilot one segment.",
+      "measure": "Account coverage, verified buying roles and research gaps"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Connect changes to owned actions",
+      "body": "Add verified renewal, RFP and program-launch signals. Preserve the existing account owner and build a conference follow-up queue with acceptance receipts.",
+      "measure": "Fresh signals, accepted actions and duplicate outreach avoided"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Support the long buying cycle",
+      "body": "Schedule re-engagement from a known review window rather than a generic cadence. Compare qualified conversations and progress by cohort with sales leadership.",
+      "measure": "Held discovery, committee coverage and next-step completion"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Vega GTM Engineer role",
+      "url": "https://jobs.ashbyhq.com/vegatech/9cf6e4fd-5063-4744-adac-d7d837c45b45"
+    },
+    {
+      "label": "Vega claims and customer context",
+      "url": "https://www.vegaclaims.com/"
+    }
+  ],
+  "gateHash": "12830c16521e375e9fada5b989122a7e935dc88aa56af36cb60582993f2b6f74"
+}

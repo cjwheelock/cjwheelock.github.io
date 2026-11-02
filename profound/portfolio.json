@@ -1,0 +1,231 @@
+{
+  "slug": "profound",
+  "company": "Profound",
+  "role": "GTM Engineer, Pre-Sales",
+  "roleUrl": "https://www.tryprofound.com/careers/eb407179-297d-4cd8-8e85-0b9bb8ab53d9",
+  "companyUrl": "https://www.tryprofound.com/",
+  "portalUrl": "https://cjwheelock.com/profound/",
+  "resumeFile": "CJ_Wheelock_Profound_GTM_Engineer_Pre_Sales.pdf",
+  "workspace": "Pre-sales intelligence",
+  "title": "Give each signal a defensible next step.",
+  "intro": "A proposed workflow for Profound\u2019s pre-sales team: separate buying intent from noise, resolve account identity and route a useful brief to a rep who can act.",
+  "notice": "All accounts, events, scores and outcomes are synthetic. This is an internal GTM workflow proposal, not Profound product data or measured company performance.",
+  "accountLabel": "Signal queue",
+  "workbenchLabel": "Routing lab",
+  "metricsLabel": "Pipeline quality",
+  "records": [
+    {
+      "id": "P-101",
+      "name": "Cobalt Travel",
+      "segment": "Enterprise",
+      "region": "East",
+      "signal": "Demo request",
+      "age": 2,
+      "identity": true,
+      "stop": false,
+      "existing": "Unassigned",
+      "visits": 5,
+      "stage": 3,
+      "context": "Marketing operations wants to connect AI-search reporting with campaign planning.",
+      "source": "Synthetic demo form",
+      "question": "Which AI-search questions would change your next campaign decision?"
+    },
+    {
+      "id": "P-102",
+      "name": "Cedar Retail",
+      "segment": "Mid-market",
+      "region": "West",
+      "signal": "Pricing review",
+      "age": 3,
+      "identity": true,
+      "stop": false,
+      "existing": "Unassigned",
+      "visits": 7,
+      "stage": 2,
+      "context": "A team is comparing AI visibility tools; evaluation ownership is not established.",
+      "source": "Synthetic first-party pricing event",
+      "question": "Who owns the evaluation and what would a useful first result look like?"
+    },
+    {
+      "id": "P-103",
+      "name": "Tern Software",
+      "segment": "Enterprise",
+      "region": "East",
+      "signal": "Content visit",
+      "age": 1,
+      "identity": true,
+      "stop": false,
+      "existing": "Unassigned",
+      "visits": 95,
+      "stage": 0,
+      "context": "Heavy content activity with no stated evaluation or buying timeframe.",
+      "source": "Synthetic content events",
+      "question": "Is this research for an active project or general learning?"
+    },
+    {
+      "id": "P-104",
+      "name": "Moss Home",
+      "segment": "Mid-market",
+      "region": "East",
+      "signal": "Demo request",
+      "age": 4,
+      "identity": false,
+      "stop": false,
+      "existing": "Unassigned",
+      "visits": 3,
+      "stage": 0,
+      "context": "An agency submitted a form on behalf of an unverified brand.",
+      "source": "Synthetic form with an unresolved brand relationship",
+      "question": "Which legal account and brand should own this evaluation?"
+    },
+    {
+      "id": "P-105",
+      "name": "Lumen Tools",
+      "segment": "Enterprise",
+      "region": "West",
+      "signal": "Demo request",
+      "age": 40,
+      "identity": true,
+      "stop": false,
+      "existing": "Unassigned",
+      "visits": 8,
+      "stage": 1,
+      "context": "An old request resurfaced during a backfill.",
+      "source": "Synthetic backfilled form event",
+      "question": "Is the project still active, and is the original request current?"
+    },
+    {
+      "id": "P-106",
+      "name": "Birch Finance",
+      "segment": "Enterprise",
+      "region": "East",
+      "signal": "Pricing review",
+      "age": 1,
+      "identity": true,
+      "stop": false,
+      "existing": "Alex",
+      "visits": 12,
+      "stage": 4,
+      "context": "An existing opportunity received fresh evaluation activity.",
+      "source": "Synthetic pricing event joined to an open opportunity",
+      "question": "What changed since the account owner\u2019s last conversation?"
+    },
+    {
+      "id": "P-107",
+      "name": "Sable Commerce",
+      "segment": "Mid-market",
+      "region": "West",
+      "signal": "Demo request",
+      "age": 1,
+      "identity": true,
+      "stop": true,
+      "existing": "Unassigned",
+      "visits": 9,
+      "stage": 1,
+      "context": "A later reply requested no further prospecting contact.",
+      "source": "Synthetic communication preference record",
+      "question": "Preserve the request and let an existing owner review any relationship."
+    },
+    {
+      "id": "P-108",
+      "name": "Pine Media",
+      "segment": "Enterprise",
+      "region": "West",
+      "signal": "Event conversation",
+      "age": 7,
+      "identity": true,
+      "stop": false,
+      "existing": "Unassigned",
+      "visits": 4,
+      "stage": 2,
+      "context": "An event conversation raised questions about citations and content planning.",
+      "source": "Synthetic reviewed event notes",
+      "question": "Which team would act on an AI-search visibility gap?"
+    }
+  ],
+  "reps": [
+    {
+      "name": "Alex",
+      "segment": "Enterprise",
+      "region": "East",
+      "available": 2
+    },
+    {
+      "name": "Riley",
+      "segment": "Enterprise",
+      "region": "West",
+      "available": 0
+    },
+    {
+      "name": "Sam",
+      "segment": "Mid-market",
+      "region": "East",
+      "available": 3
+    },
+    {
+      "name": "Jordan",
+      "segment": "Mid-market",
+      "region": "West",
+      "available": 1
+    }
+  ],
+  "experiments": [
+    {
+      "name": "Intent over volume",
+      "hypothesis": "Explicit evaluation signals produce more useful rep conversations than a page-view threshold.",
+      "control": "Prioritize raw visit count",
+      "treatment": "Prioritize reviewed intent and current account context",
+      "primary": "Qualified opportunities per eligible account",
+      "guardrail": "Missed high-intent accounts and review time",
+      "allocation": "Randomize eligible accounts within segment and region",
+      "nA": 80,
+      "nB": 80,
+      "winsA": 9,
+      "winsB": 13
+    },
+    {
+      "name": "Evidence in the rep brief",
+      "hypothesis": "A source and discovery question reduce time spent reconstructing context.",
+      "control": "Name and score only",
+      "treatment": "Intent reason, source, owner and discovery question",
+      "primary": "Accepted rep handoffs within one business day",
+      "guardrail": "Incorrect personalization and unwanted outreach",
+      "allocation": "Compare matched rep queues with a fixed observation window",
+      "nA": 50,
+      "nB": 50,
+      "winsA": 29,
+      "winsB": 36
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Trace the entry paths",
+      "body": "Map forms, events and outbound responses with sales. Agree on identity keys, intent definitions and an exception queue. Ship one reviewed rep brief.",
+      "measure": "Source accuracy, missing identities and rep acceptance"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Make routing dependable",
+      "body": "Add territory, company-size and capacity rules. Preserve existing ownership, make retries safe and keep rejected handoffs visible.",
+      "measure": "Misroutes, duplicate assignments and time to acceptance"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Test pipeline quality",
+      "body": "Compare intent rules against the existing process using account-level cohorts. Separate held meetings and qualified opportunities from activity volume.",
+      "measure": "Qualified pipeline, rep usage and enrichment cost per useful brief"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Profound pre-sales role",
+      "url": "https://www.tryprofound.com/careers/eb407179-297d-4cd8-8e85-0b9bb8ab53d9"
+    },
+    {
+      "label": "Profound platform",
+      "url": "https://www.tryprofound.com/"
+    }
+  ],
+  "gateHash": "393e6b93c534bd595443e41918ce3951d1e2f45785d1732a48662455914c0888"
+}

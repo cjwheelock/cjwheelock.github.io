@@ -1,0 +1,277 @@
+{
+  "slug": "carbon-arc",
+  "company": "Carbon Arc",
+  "role": "GTM Engineer",
+  "roleUrl": "https://wellfound.com/jobs/4658889-gtm-engineer",
+  "companyUrl": "https://www.carbonarc.co/",
+  "portalUrl": "https://cjwheelock.com/carbon-arc/",
+  "resumeFile": "CJ_Wheelock_Carbon_Arc_GTM_Engineer.pdf",
+  "notice": "All organizations, account facts, activity and results are synthetic. These are proposed GTM workflows, not deployed employer systems or measured company performance.",
+  "sources": [
+    {
+      "label": "Carbon Arc role",
+      "url": "https://wellfound.com/jobs/4658889-gtm-engineer"
+    },
+    {
+      "label": "Carbon Arc product context",
+      "url": "https://www.carbonarc.co/"
+    }
+  ],
+  "workspace": "Data product activation",
+  "title": "From a business question to a useful first result.",
+  "intro": "A proposed GTM workbench for Carbon Arc: qualify a data use case, make onboarding prerequisites visible and route technical exceptions to the right owner.",
+  "accountLabel": "Use-case queue",
+  "workbenchLabel": "Activation preflight",
+  "metricsLabel": "Activation and support",
+  "queueIntro": "A promising use case still needs a verified data match, an understood schema and an approved path to access. Track these steps independently from sales interest.",
+  "workbenchIntro": "Test a synthetic onboarding plan and budget estimate. No provider is connected, no data is retrieved and no rights or contractual permissions are granted here.",
+  "firstBuild": "A first-useful-result checklist",
+  "firstBody": "Attach the customer question, dataset coverage, schema mapping, access approval and spend guardrail to one onboarding record. Route missing prerequisites and failed requests explicitly.",
+  "fields": [
+    {
+      "id": "fit",
+      "label": "Dataset coverage checked against the use case",
+      "kind": "check"
+    },
+    {
+      "id": "access",
+      "label": "Access and usage approval recorded in scenario",
+      "kind": "check"
+    },
+    {
+      "id": "schema",
+      "label": "Schema and entity mapping validated",
+      "kind": "check"
+    },
+    {
+      "id": "sample",
+      "label": "Sample result reviewed with the customer",
+      "kind": "check"
+    },
+    {
+      "id": "requestError",
+      "label": "Latest request result",
+      "kind": "select",
+      "options": [
+        "No error",
+        "Authentication failure",
+        "Rate limited",
+        "Schema mismatch"
+      ]
+    },
+    {
+      "id": "requests",
+      "label": "Planned requests",
+      "kind": "number",
+      "max": 10000
+    },
+    {
+      "id": "unit",
+      "label": "Illustrative dollars per request",
+      "kind": "number",
+      "max": 10
+    },
+    {
+      "id": "budget",
+      "label": "Illustrative approved budget in dollars",
+      "kind": "number",
+      "max": 10000
+    }
+  ],
+  "records": [
+    {
+      "id": "C-101",
+      "name": "Alder Commerce",
+      "segment": "Retail intelligence",
+      "context": "The customer wants a repeatable regional demand comparison.",
+      "question": "Which entity, geography and time window must the first result cover?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "fit": true,
+        "access": true,
+        "schema": true,
+        "sample": true,
+        "requestError": "No error",
+        "requests": 100,
+        "unit": 0.5,
+        "budget": 75
+      }
+    },
+    {
+      "id": "C-102",
+      "name": "Birch Research",
+      "segment": "Research operations",
+      "context": "The data appears relevant but usage approval is not recorded.",
+      "question": "Who can confirm the approved use and access scope?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "fit": true,
+        "access": false,
+        "schema": true,
+        "sample": true,
+        "requestError": "No error",
+        "requests": 80,
+        "unit": 0.5,
+        "budget": 75
+      }
+    },
+    {
+      "id": "C-103",
+      "name": "Cedar Analytics",
+      "segment": "Business analytics",
+      "context": "The sample schema differs from the expected account identifier.",
+      "question": "Which entity mapping needs review before the next request?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "fit": true,
+        "access": true,
+        "schema": false,
+        "sample": false,
+        "requestError": "Schema mismatch",
+        "requests": 100,
+        "unit": 0.5,
+        "budget": 75
+      }
+    },
+    {
+      "id": "C-104",
+      "name": "Elm Brands",
+      "segment": "Consumer research",
+      "context": "The proposed query volume exceeds the scenario budget.",
+      "question": "What smaller validated sample would answer the first question?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "fit": true,
+        "access": true,
+        "schema": true,
+        "sample": true,
+        "requestError": "No error",
+        "requests": 400,
+        "unit": 0.5,
+        "budget": 75
+      }
+    },
+    {
+      "id": "C-105",
+      "name": "Juniper Planning",
+      "segment": "Operations analytics",
+      "context": "The first query fails authentication; the customer needs an access owner.",
+      "question": "Which approved account owns the request and its permissions?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "fit": true,
+        "access": true,
+        "schema": true,
+        "sample": false,
+        "requestError": "Authentication failure",
+        "requests": 100,
+        "unit": 0.5,
+        "budget": 75
+      }
+    },
+    {
+      "id": "C-106",
+      "name": "Larch Insights",
+      "segment": "Business analytics",
+      "context": "A validated request encountered a provider rate limit.",
+      "question": "What retry timing and request key prevent duplicate work?",
+      "source": "Synthetic discovery notes and account research",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "Account owner",
+      "values": {
+        "fit": true,
+        "access": true,
+        "schema": true,
+        "sample": true,
+        "requestError": "Rate limited",
+        "requests": 100,
+        "unit": 0.5,
+        "budget": 75
+      }
+    }
+  ],
+  "metricsTitle": "Activation is more than creating an account.",
+  "metricsIntro": "A fixed synthetic onboarding cohort separates access, useful results and repeat use. Support routing preserves the error class instead of retrying everything.",
+  "activation": {
+    "enrolled": 20,
+    "approved": 16,
+    "firstResult": 12,
+    "repeat": 7
+  },
+  "metricsNotes": [
+    "The first useful result is validated against the customer\u2019s stated question, not merely an HTTP success.",
+    "Authentication failures go to the access owner; schema mismatches go to mapping review; rate limits use bounded retries and an idempotency key.",
+    "The preflight uses invented unit costs for explanation. These are not Carbon Arc prices, paid API calls, financial advice or a promise of access."
+  ],
+  "experiments": [
+    {
+      "name": "Use-case acceptance before onboarding",
+      "hypothesis": "An explicit first-result question reduces unclear activation goals.",
+      "control": "Generic onboarding checklist",
+      "treatment": "Coverage, entity, time-window and useful-result definition",
+      "primary": "Customers with a validated first result",
+      "guardrail": "Wrong data match and unapproved access",
+      "allocation": "Assign matched accounts to one variant for a fixed observation window; review uncertainty before expansion.",
+      "nA": 20,
+      "nB": 20,
+      "winsA": 9,
+      "winsB": 13
+    },
+    {
+      "name": "Exception-specific support queue",
+      "hypothesis": "A clear error class gets issues to the appropriate owner.",
+      "control": "One shared failed-request queue",
+      "treatment": "Access, schema and rate-limit routes",
+      "primary": "Resolved cases within a fixed observation window",
+      "guardrail": "Repeated requests and unresolved ownership",
+      "allocation": "Assign matched accounts to one variant for a fixed observation window; review uncertainty before expansion.",
+      "nA": 30,
+      "nB": 30,
+      "winsA": 16,
+      "winsB": 21
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Define useful activation",
+      "body": "Map one use case from discovery through approved access and a validated first result. Agree on owners and instrumentation.",
+      "measure": "Prerequisite gaps and time to first useful result"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build reliable exception handling",
+      "body": "Capture request keys, error classes and bounded retry state. Make access and schema issues owned review tasks.",
+      "measure": "Resolution time and duplicate requests avoided"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Connect activation to retention",
+      "body": "Compare repeat use and customer questions by cohort. Improve the onboarding and support workflow using observed evidence.",
+      "measure": "Repeat use, support burden and validated customer outcomes"
+    }
+  ],
+  "gateHash": "05257067e83676040bc91b128c559f4916381231890b7a09c3b914083f401d05"
+}

@@ -1,0 +1,359 @@
+{
+  "slug": "replay",
+  "company": "Replay",
+  "role": "GTM Engineer",
+  "roleUrl": "https://www.replay.ai/careers/roles/937c1413-4b78-4a5e-a722-dc15be86e5f3",
+  "companyUrl": "https://www.replay.ai/",
+  "portalUrl": "https://cjwheelock.com/replay/",
+  "resumeFile": "CJ_Wheelock_Replay_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://www.replay.ai/careers/roles/937c1413-4b78-4a5e-a722-dc15be86e5f3"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.replay.ai/"
+    }
+  ],
+  "workspace": "Enterprise data growth",
+  "title": "Qualify the company before making assumptions about its data.",
+  "intro": "A proposed sourcing workbench for Replay: organize enterprise research around operating history, relevant systems and the right business owner, then hand off a grounded discovery brief.",
+  "accountLabel": "Company sourcing queue",
+  "workbenchLabel": "Discovery qualification",
+  "metricsLabel": "Qualified lead operations",
+  "queueIntro": "Public company context can support discovery. It does not establish ownership, licensing rights, permitted uses, data value or the absence of sensitive information.",
+  "workbenchIntro": "Review fit and provenance before a seller conversation. This portfolio never exports data, assigns a valuation or authorizes licensing.",
+  "firstBuild": "A data-opportunity discovery brief",
+  "firstBody": "Research an organization\u2019s operating context, record what is known and unknown, and route legal, privacy and technical questions to their responsible reviewers.",
+  "fields": [
+    {
+      "id": "operating",
+      "label": "Operating history and company segment researched",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "systems",
+      "label": "Relevant system categories identified from a source",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "source",
+      "label": "Research provenance recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "buyer",
+      "label": "Appropriate business decision owner identified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "rights",
+      "label": "Data rights status",
+      "kind": "select",
+      "max": 1000000,
+      "options": [
+        "Unknown",
+        "Requires specialist review",
+        "Reviewed in scenario"
+      ]
+    },
+    {
+      "id": "sensitive",
+      "label": "Potential sensitive-data issue flagged",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "relationship",
+      "label": "Existing account ownership checked",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "operating",
+      "op": "eq",
+      "value": false,
+      "title": "Research the operating context",
+      "next": "Establish a company-level fit hypothesis without assuming how much usable data exists.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "systems",
+      "op": "eq",
+      "value": false,
+      "title": "Identify relevant system categories",
+      "next": "Use a public source or discovery question; do not request or infer private data access.",
+      "owner": "Technical seller"
+    },
+    {
+      "field": "source",
+      "op": "eq",
+      "value": false,
+      "title": "Attach research provenance",
+      "next": "A company attribute needs a source and date before it supports personalization.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "buyer",
+      "op": "eq",
+      "value": false,
+      "title": "Find the appropriate business owner",
+      "next": "Identify who can discuss the company\u2019s operating context and route specialist questions.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "sensitive",
+      "op": "eq",
+      "value": true,
+      "title": "Route the issue to specialist review",
+      "next": "Do not treat de-identification as assumed or promise that data is safe to license. No data is collected here.",
+      "owner": "Privacy and legal reviewers"
+    },
+    {
+      "field": "rights",
+      "op": "eq",
+      "value": "Requires specialist review",
+      "title": "Keep rights review explicit",
+      "next": "A seller must not substitute a fit score for an appropriate rights and permitted-use review.",
+      "owner": "Legal reviewer"
+    },
+    {
+      "field": "relationship",
+      "op": "eq",
+      "value": false,
+      "title": "Preserve the existing account relationship",
+      "next": "Check ownership and active conversations before creating a duplicate outreach motion.",
+      "owner": "Sales operations"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a company-level discovery review",
+    "next": "The seller can ask a grounded operating-context question. Unknown rights, data value and permitted uses remain unresolved; this is not licensing approval."
+  },
+  "experiments": [
+    {
+      "name": "Context-rich company sourcing",
+      "hypothesis": "A grounded operating question creates more relevant discovery.",
+      "control": "Headcount-only targeting",
+      "treatment": "Operating history, system categories and a business question",
+      "primary": "Qualified held conversations per account",
+      "guardrail": "Unsupported data-value or rights claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Owned lead handoff",
+      "hypothesis": "A seller can act when fit, evidence and unresolved questions travel together.",
+      "control": "Enriched contact only",
+      "treatment": "Source-backed brief with owner and review flags",
+      "primary": "Accepted qualified leads per reviewed company",
+      "guardrail": "Duplicates and unresolved specialist issues",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Define a qualified sourcing record",
+      "body": "Agree with AEs and SDRs on company fit, data provenance and the boundary between discovery and specialist review.",
+      "measure": "Accepted leads and unknown-field coverage"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build the reliable research path",
+      "body": "Add deduplication, owned handoffs and visible pipeline failures. Keep outreach preferences and current relationships intact.",
+      "measure": "System uptime, duplicate prevention and accepted briefs"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Connect infrastructure to outcomes",
+      "body": "Compare sourced cohorts through held discovery and qualified opportunities, and improve tools using rep feedback.",
+      "measure": "Qualified leads, conversion and team adoption"
+    }
+  ],
+  "records": [
+    {
+      "id": "R-1",
+      "name": "Alder Software",
+      "segment": "Enterprise software",
+      "context": "Public sources describe a mature software business and several operating systems.",
+      "question": "Which business owner can discuss the relevant operating context?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "operating": true,
+        "systems": true,
+        "source": true,
+        "buyer": true,
+        "rights": "Unknown",
+        "sensitive": false,
+        "relationship": true
+      }
+    },
+    {
+      "id": "R-2",
+      "name": "Cedar Services",
+      "segment": "Professional services",
+      "context": "A company list has no dated evidence about operations.",
+      "question": "What public context supports this account hypothesis?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "operating": true,
+        "systems": true,
+        "source": false,
+        "buyer": true,
+        "rights": "Unknown",
+        "sensitive": false,
+        "relationship": true
+      }
+    },
+    {
+      "id": "R-3",
+      "name": "Willow Commerce",
+      "segment": "Commerce",
+      "context": "The discovery note raises a sensitive-data question.",
+      "question": "Which specialist should review the issue before any data request?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "operating": true,
+        "systems": true,
+        "source": true,
+        "buyer": true,
+        "rights": "Unknown",
+        "sensitive": true,
+        "relationship": true
+      }
+    },
+    {
+      "id": "R-4",
+      "name": "Elm Logistics",
+      "segment": "Logistics",
+      "context": "Contractual rights questions need review.",
+      "question": "Who can evaluate permitted uses and ownership?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "operating": true,
+        "systems": true,
+        "source": true,
+        "buyer": true,
+        "rights": "Requires specialist review",
+        "sensitive": false,
+        "relationship": true
+      }
+    },
+    {
+      "id": "R-5",
+      "name": "Birch Systems",
+      "segment": "Enterprise software",
+      "context": "A system category was inferred without evidence.",
+      "question": "What source or discovery question can confirm the category?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "operating": true,
+        "systems": false,
+        "source": true,
+        "buyer": true,
+        "rights": "Unknown",
+        "sensitive": false,
+        "relationship": true
+      }
+    },
+    {
+      "id": "R-6",
+      "name": "Juniper Operations",
+      "segment": "Business services",
+      "context": "An active account conversation may already exist.",
+      "question": "Which seller owns the relationship?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "operating": true,
+        "systems": true,
+        "source": true,
+        "buyer": true,
+        "rights": "Unknown",
+        "sensitive": false,
+        "relationship": false
+      }
+    }
+  ],
+  "metricsTitle": "Qualified sourcing is a sequence of observable states.",
+  "metricsIntro": "Synthetic operational counts keep research volume separate from accepted leads and licensing outcomes.",
+  "metricTable": {
+    "headers": [
+      "Stage",
+      "Count",
+      "Definition"
+    ],
+    "rows": [
+      [
+        "Companies researched",
+        "100",
+        "Original reviewed cohort"
+      ],
+      [
+        "Source-backed fit briefs",
+        "62",
+        "Minimum research contract met"
+      ],
+      [
+        "Seller-accepted leads",
+        "35",
+        "Receiving seller accepts next step"
+      ],
+      [
+        "Held qualified discovery",
+        "12",
+        "Business context and next step confirmed"
+      ],
+      [
+        "Specialist review needed",
+        "5",
+        "Open review flag, not an approved transaction"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "A seller-accepted lead is not proof of data ownership, permitted use, value or a completed license.",
+    "Count unique companies and preserve the account key across enrichment and outbound systems.",
+    "Track failed or stale research jobs as operational exceptions instead of silently counting them as complete."
+  ],
+  "gateHash": "bd6ea834e6e1885a8b03a495f9238d3d542cd1754bd5b8fdca1e869e31a99ff9"
+}

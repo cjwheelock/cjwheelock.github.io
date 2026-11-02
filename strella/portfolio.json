@@ -1,0 +1,328 @@
+{
+  "slug": "strella",
+  "company": "Strella",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/strella/4e85b569-463c-461f-b318-45ff31f79e4e",
+  "companyUrl": "https://www.strella.io/",
+  "portalUrl": "https://cjwheelock.com/strella/",
+  "resumeFile": "CJ_Wheelock_Strella_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/strella/4e85b569-463c-461f-b318-45ff31f79e4e"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.strella.io/"
+    }
+  ],
+  "workspace": "Research-led customer growth",
+  "title": "Turn a business decision into a useful research conversation.",
+  "intro": "A proposed GTM workbench for Strella: connect research-buyer signals to a clear decision, the right relationship owner and an appropriate next conversation.",
+  "accountLabel": "Research decision queue",
+  "workbenchLabel": "Buyer and study review",
+  "metricsLabel": "Research demand signals",
+  "queueIntro": "All organizations and research needs are fictional. No participant transcripts, private interview responses or personal research data are used.",
+  "workbenchIntro": "Review who buys the research, what decision it informs and whether sales or CS owns the relationship. A signal is a discovery prompt, not a validated insight.",
+  "firstBuild": "A research-decision brief that survives the handoff",
+  "firstBody": "Attach the buyer\u2019s decision, timing, evidence and existing relationship to the account so sales and CS can ask a relevant question.",
+  "fields": [
+    {
+      "id": "buyer",
+      "label": "Research buyer distinguished from interview participant",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "question",
+      "label": "Business research decision and timing recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "signal",
+      "label": "Buying signal has a dated source",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "scope",
+      "label": "Research method and support needs kept open",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "relationship",
+      "label": "Sales and CS ownership reconciled",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "quality",
+      "label": "Unresolved customer issue reviewed before expansion",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "buyer",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the person\u2019s role",
+      "next": "An interview participant is not automatically a buyer. Keep contributor and customer records in separate workflows.",
+      "owner": "Data steward"
+    },
+    {
+      "field": "question",
+      "op": "eq",
+      "value": false,
+      "title": "Identify the research decision",
+      "next": "Ask what product, brand or customer decision the team needs to make and when it matters.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "signal",
+      "op": "eq",
+      "value": false,
+      "title": "Validate the signal",
+      "next": "A product launch or event interaction suggests a question; it does not prove budget or purchase intent.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "scope",
+      "op": "eq",
+      "value": false,
+      "title": "Clarify the research scope",
+      "next": "Record whether the team wants software, research support or both without promising a study outcome.",
+      "owner": "Account owner"
+    },
+    {
+      "field": "relationship",
+      "op": "eq",
+      "value": false,
+      "title": "Preserve the current customer relationship",
+      "next": "Route an existing customer\u2019s new research need to the appropriate owner rather than a cold sequence.",
+      "owner": "Revenue operations"
+    },
+    {
+      "field": "quality",
+      "op": "eq",
+      "value": false,
+      "title": "Address the customer issue first",
+      "next": "A new study signal should not hide an unresolved delivery or support concern.",
+      "owner": "Customer success"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a research-decision review",
+    "next": "The account owner can clarify the decision, research scope and timing. Study design and findings remain separate from this commercial workflow."
+  },
+  "experiments": [
+    {
+      "name": "Decision-led research discovery",
+      "hypothesis": "A specific business decision makes outreach more relevant.",
+      "control": "Generic research-platform pitch",
+      "treatment": "Decision, timing and research-method question",
+      "primary": "Qualified research conversations per account",
+      "guardrail": "Invented intent and unsupported study claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Customer-aware expansion signals",
+      "hypothesis": "CS can act on new research needs when account health travels with the signal.",
+      "control": "Usage spike alone",
+      "treatment": "New decision plus relationship and issue context",
+      "primary": "CS-accepted expansion discovery",
+      "guardrail": "Unresolved issues and duplicate outreach",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Define the research-buyer signal",
+      "body": "Work with Sales, Marketing and CS on buyer roles, research decisions and ownership boundaries.",
+      "measure": "Correct roles and accepted briefs"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Pilot research and handoff automation",
+      "body": "Connect dated signals to an owned discovery brief, with explicit exceptions for participants and existing customers.",
+      "measure": "Relevant replies and corrected records"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve the full customer lifecycle",
+      "body": "Measure acquisition and repeat-study discovery separately. Expand the plays that produce useful conversations and customer value.",
+      "measure": "Qualified pipeline and CS-accepted research needs"
+    }
+  ],
+  "records": [
+    {
+      "id": "S-1",
+      "name": "Alder Consumer",
+      "segment": "Consumer brand",
+      "context": "A fictional team is testing a new product concept before launch.",
+      "question": "Which decision should the research help the team make?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "question": true,
+        "signal": true,
+        "scope": true,
+        "relationship": true,
+        "quality": true
+      }
+    },
+    {
+      "id": "S-2",
+      "name": "Cedar Interview Panel",
+      "segment": "Research participation",
+      "context": "An interview participant was added to a buyer audience.",
+      "question": "Which role does this record actually represent?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": false,
+        "question": true,
+        "signal": true,
+        "scope": true,
+        "relationship": true,
+        "quality": true
+      }
+    },
+    {
+      "id": "S-3",
+      "name": "Willow Product",
+      "segment": "Software product",
+      "context": "The account brief mentions research but no business decision.",
+      "question": "What decision and deadline make this work relevant?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "question": false,
+        "signal": true,
+        "scope": true,
+        "relationship": true,
+        "quality": true
+      }
+    },
+    {
+      "id": "S-4",
+      "name": "Elm Brand",
+      "segment": "Consumer brand",
+      "context": "An undated campaign mention was treated as active purchase intent.",
+      "question": "What does the current source support?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "question": true,
+        "signal": false,
+        "scope": true,
+        "relationship": true,
+        "quality": true
+      }
+    },
+    {
+      "id": "S-5",
+      "name": "Birch Experience",
+      "segment": "Customer experience",
+      "context": "An existing customer\u2019s next study was routed to cold outbound.",
+      "question": "Which CS or sales owner should receive the new need?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "question": true,
+        "signal": true,
+        "scope": true,
+        "relationship": false,
+        "quality": true
+      }
+    },
+    {
+      "id": "S-6",
+      "name": "Juniper Insights",
+      "segment": "Research team",
+      "context": "A new study request arrives alongside an unresolved support issue.",
+      "question": "What should customer success resolve before expansion?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "question": true,
+        "signal": true,
+        "scope": true,
+        "relationship": true,
+        "quality": false
+      }
+    }
+  ],
+  "metricsTitle": "Separate new demand from an existing customer\u2019s next study.",
+  "metricsIntro": "Invented weekly signal review with explicit relationship context.",
+  "metricTable": {
+    "headers": [
+      "Signal class",
+      "Reviewed accounts",
+      "Accepted discovery briefs",
+      "Held conversations"
+    ],
+    "rows": [
+      [
+        "New product or concept decision",
+        "30",
+        "18",
+        "6"
+      ],
+      [
+        "Event or website interest",
+        "25",
+        "10",
+        "3"
+      ],
+      [
+        "Existing customer\u2019s new research need",
+        "15",
+        "11",
+        "5"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "These numbers illustrate workflow measurement, not Strella research quality or commercial results.",
+    "Interview completion, customer insight and qualified sales opportunity are different outcomes.",
+    "Preserve participant roles and customer-support context before creating a new action."
+  ],
+  "gateHash": "50253fb9bffb140e8ee78ce0149923ef3c32301dc9dc64833a38481a70ba23d5"
+}

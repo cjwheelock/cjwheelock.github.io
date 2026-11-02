@@ -1,0 +1,334 @@
+{
+  "slug": "adyen",
+  "company": "Adyen",
+  "role": "GTM Engineer",
+  "roleUrl": "https://careers.adyen.com/de_DE/vacancies/7939712-gtm-engineer",
+  "companyUrl": "https://www.adyen.com/",
+  "portalUrl": "https://cjwheelock.com/adyen/",
+  "resumeFile": "CJ_Wheelock_Adyen_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://careers.adyen.com/de_DE/vacancies/7939712-gtm-engineer"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.adyen.com/"
+    }
+  ],
+  "workspace": "Commercial workflow operations",
+  "title": "Build the smallest tool that makes the handoff dependable.",
+  "intro": "A proposed internal-tool workbench for Adyen: define the commercial task, check existing platform capabilities and protect field ownership before proposing a CRM handoff.",
+  "accountLabel": "Commercial request queue",
+  "workbenchLabel": "Internal-tool preflight",
+  "metricsLabel": "Reliability and adoption",
+  "queueIntro": "Fictional merchant-level business context only. No payment credentials, cardholder records, underwriting decisions or money movement occur in this portfolio.",
+  "workbenchIntro": "Inspect data ownership and source freshness before a proposed update. This local tool records review receipts and does not connect to Salesforce, Marketo or a payments system.",
+  "firstBuild": "A reviewed commercial handoff with a source snapshot",
+  "firstBody": "Start with one recurring sales or account-management task, expose stale-field conflicts and return a clear next owner instead of silently overwriting CRM data.",
+  "fields": [
+    {
+      "id": "merchant",
+      "label": "Merchant, platform and operating entity distinguished",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "request",
+      "label": "Commercial request has a defined user and outcome",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "native",
+      "label": "Existing CRM or marketing capability evaluated",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "contract",
+      "label": "Source fields and update ownership agreed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "version",
+      "label": "Source snapshot is current and conflict-free",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "reviewer",
+      "label": "Receiving team and reviewer assigned",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "merchant",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the commercial account",
+      "next": "A platform and its merchants are different entities. Preserve the account relationship before routing a request.",
+      "owner": "Data steward"
+    },
+    {
+      "field": "request",
+      "op": "eq",
+      "value": false,
+      "title": "Define the internal user\u2019s task",
+      "next": "Identify which sales, support or account-management task needs a tool and how success will be observed.",
+      "owner": "Business owner"
+    },
+    {
+      "field": "native",
+      "op": "eq",
+      "value": false,
+      "title": "Check the existing capability first",
+      "next": "Use native workflow features when they meet the need. Document the specific gap before proposing a separate app.",
+      "owner": "Business Technology"
+    },
+    {
+      "field": "contract",
+      "op": "eq",
+      "value": false,
+      "title": "Agree on the data contract",
+      "next": "Define authoritative fields, allowed states and update ownership before joining CRM and marketing data.",
+      "owner": "Revenue operations"
+    },
+    {
+      "field": "version",
+      "op": "eq",
+      "value": false,
+      "title": "Review the changed source record",
+      "next": "Do not overwrite a newer owner or lifecycle state with a stale snapshot. Refresh and compare before proposing an update.",
+      "owner": "Integration operator"
+    },
+    {
+      "field": "reviewer",
+      "op": "eq",
+      "value": false,
+      "title": "Name the receiving team",
+      "next": "The internal tool needs an accountable reviewer and a supported handoff, not another unowned queue.",
+      "owner": "Commercial operations"
+    }
+  ],
+  "ready": {
+    "title": "Ready for an internal-workflow pilot review",
+    "next": "The business owner can review the proposed tool and handoff. Any production integration, access or write policy would be separately defined and tested."
+  },
+  "experiments": [
+    {
+      "name": "Task-first internal tooling",
+      "hypothesis": "A narrow workflow earns repeat use more reliably than a broad dashboard.",
+      "control": "General-purpose request dashboard",
+      "treatment": "One task with a clear receiving team",
+      "primary": "Repeat use among eligible commercial users",
+      "guardrail": "Support burden and duplicated native capability",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Visible stale-field conflicts",
+      "hypothesis": "Comparing source snapshots prevents incorrect proposed updates.",
+      "control": "Last-write-wins proposal",
+      "treatment": "Current version and field-owner review",
+      "primary": "Correct proposals per reviewed request",
+      "guardrail": "Stale owner or lifecycle overwrite",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Observe the commercial task",
+      "body": "Partner with sales, support and account management. Identify the gap in existing tools and agree on success measures.",
+      "measure": "Baseline effort and native capability gaps"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build a narrow, observable pilot",
+      "body": "Implement the source contract, conflict review and receiving-team handoff with explicit failure handling.",
+      "measure": "Correct proposals and recoverable failures"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Measure adoption and maintainability",
+      "body": "Use feedback and repeat use to improve the workflow. Document ownership, monitoring and rollback before wider use.",
+      "measure": "Adoption, correction rate and support effort"
+    }
+  ],
+  "records": [
+    {
+      "id": "A-1",
+      "name": "Alder Commerce",
+      "segment": "Retail merchant",
+      "context": "A fictional seller needs an owned technical-discovery handoff.",
+      "question": "What information does the receiving team need to act?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "merchant": true,
+        "request": true,
+        "native": true,
+        "contract": true,
+        "version": true,
+        "reviewer": true
+      }
+    },
+    {
+      "id": "A-2",
+      "name": "Cedar Platform",
+      "segment": "SaaS platform",
+      "context": "A platform account was confused with one of its merchants.",
+      "question": "Which commercial entity owns this request?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "merchant": false,
+        "request": true,
+        "native": true,
+        "contract": true,
+        "version": true,
+        "reviewer": true
+      }
+    },
+    {
+      "id": "A-3",
+      "name": "Willow Travel",
+      "segment": "Travel merchant",
+      "context": "A requested custom page duplicates an existing CRM workflow.",
+      "question": "What user need does the existing capability fail to meet?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "merchant": true,
+        "request": true,
+        "native": false,
+        "contract": true,
+        "version": true,
+        "reviewer": true
+      }
+    },
+    {
+      "id": "A-4",
+      "name": "Elm Media",
+      "segment": "Digital content",
+      "context": "CRM and marketing disagree about lifecycle ownership.",
+      "question": "Which system owns the authoritative state?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "merchant": true,
+        "request": true,
+        "native": true,
+        "contract": false,
+        "version": true,
+        "reviewer": true
+      }
+    },
+    {
+      "id": "A-5",
+      "name": "Birch Market",
+      "segment": "Marketplace",
+      "context": "The account owner changed after the proposal snapshot.",
+      "question": "Which fields changed and who should review the conflict?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "merchant": true,
+        "request": true,
+        "native": true,
+        "contract": true,
+        "version": false,
+        "reviewer": true
+      }
+    },
+    {
+      "id": "A-6",
+      "name": "Juniper Retail",
+      "segment": "Retail merchant",
+      "context": "The request is valid but the receiving team is unassigned.",
+      "question": "Who accepts the technical-discovery handoff?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "merchant": true,
+        "request": true,
+        "native": true,
+        "contract": true,
+        "version": true,
+        "reviewer": false
+      }
+    }
+  ],
+  "metricsTitle": "Operational quality and user value belong on the same page.",
+  "metricsIntro": "Synthetic internal-tool pilot measures keep adoption separate from integration correctness.",
+  "metricTable": {
+    "headers": [
+      "Measure",
+      "Observed example",
+      "Denominator"
+    ],
+    "rows": [
+      [
+        "Weekly active users",
+        "18",
+        "24 eligible users"
+      ],
+      [
+        "Repeat users",
+        "12",
+        "18 active users"
+      ],
+      [
+        "Accepted handoff proposals",
+        "34",
+        "40 reviewed requests"
+      ],
+      [
+        "Stale-source conflicts caught",
+        "5",
+        "40 reviewed requests"
+      ],
+      [
+        "Unresolved failures",
+        "1",
+        "40 reviewed requests"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "These are illustrative operating counts, not Adyen results or a claim about CJ\u2019s prior enterprise deployments.",
+    "Catching a conflict is useful; silently overwriting it is not a successful integration.",
+    "No payment transaction, account eligibility decision or financial recommendation is made here."
+  ],
+  "gateHash": "97179b6076deb02761f9bffe4f54360b7aa39a739664ae46070bd2b68da91766"
+}

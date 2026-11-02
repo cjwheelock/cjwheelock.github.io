@@ -1,0 +1,328 @@
+{
+  "slug": "ease-health",
+  "company": "Ease Health",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/ease-health/68ca15ac-1330-4287-bdbd-90b0bb8fd4df/",
+  "companyUrl": "https://easehealth.com/",
+  "portalUrl": "https://cjwheelock.com/ease-health/",
+  "resumeFile": "CJ_Wheelock_Ease_Health_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/ease-health/68ca15ac-1330-4287-bdbd-90b0bb8fd4df/"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://easehealth.com/"
+    }
+  ],
+  "workspace": "Behavioral health growth",
+  "title": "Reach the organization with a relevant operational question.",
+  "intro": "A proposed B2B growth workbench for Ease Health: segment provider organizations, identify an operational buyer and compare channels on qualified conversations.",
+  "accountLabel": "Provider organizations",
+  "workbenchLabel": "Campaign readiness",
+  "metricsLabel": "Qualified pipeline",
+  "queueIntro": "Research organizations and administrative workflows. These examples contain no patient records, clinical profiles or individual health information.",
+  "workbenchIntro": "Check organizational fit, decision ownership and evidence before preparing a campaign. A provider\u2019s service category does not establish an operational pain point.",
+  "firstBuild": "A provider-organization campaign brief",
+  "firstBody": "Connect a behavioral health organization\u2019s operating model with a relevant CRM, EHR or billing discovery question. Keep inferred needs separate from confirmed customer statements.",
+  "fields": [
+    {
+      "id": "orgFit",
+      "label": "Behavioral health organization fit verified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "adminBuyer",
+      "label": "Administrative decision owner identified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "workflow",
+      "label": "Operational question grounded in a source",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "need",
+      "label": "Need evidence",
+      "kind": "select",
+      "max": 1000000,
+      "options": [
+        "Hypothesis only",
+        "Public operational signal",
+        "Confirmed discovery"
+      ]
+    },
+    {
+      "id": "claim",
+      "label": "Unsubstantiated clinical or financial outcome claim",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "channel",
+      "label": "Outbound owner and follow-up path recorded",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "orgFit",
+      "op": "eq",
+      "value": false,
+      "title": "Verify the organization segment",
+      "next": "Confirm the organization provides the relevant services; do not target individuals based on health information.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "claim",
+      "op": "eq",
+      "value": true,
+      "title": "Remove the unsupported outcome claim",
+      "next": "A campaign must not promise clinical results or reimbursement gains without appropriate support.",
+      "owner": "Content reviewer"
+    },
+    {
+      "field": "adminBuyer",
+      "op": "eq",
+      "value": false,
+      "title": "Find the operational decision owner",
+      "next": "Identify the person responsible for the administrative process, not a patient or clinical profile.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "workflow",
+      "op": "eq",
+      "value": false,
+      "title": "Ground the discovery question",
+      "next": "Use a source about the organization\u2019s operations and label anything not confirmed.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "need",
+      "op": "eq",
+      "value": "Hypothesis only",
+      "title": "Research before personalization",
+      "next": "Treat the proposed pain point as a question. Do not write it as a known fact about the provider.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "channel",
+      "op": "eq",
+      "value": false,
+      "title": "Assign the follow-up path",
+      "next": "The campaign needs an owner for replies, stop requests and qualified conversations.",
+      "owner": "Growth operator"
+    }
+  ],
+  "ready": {
+    "title": "Ready for B2B campaign review",
+    "next": "A reviewer can inspect the organization, operational question, evidence and follow-up owner. Public signals remain hypotheses until discovery confirms the need."
+  },
+  "records": [
+    {
+      "id": "EH-1",
+      "name": "Alder Behavioral Group",
+      "segment": "Multi-site outpatient",
+      "context": "The operations lead describes separate intake and billing tools.",
+      "question": "Where does information need to be re-entered between teams?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "orgFit": true,
+        "adminBuyer": true,
+        "workflow": true,
+        "need": "Confirmed discovery",
+        "claim": false,
+        "channel": true
+      }
+    },
+    {
+      "id": "EH-2",
+      "name": "Cedar Recovery Network",
+      "segment": "Residential programs",
+      "context": "A public expansion suggests additional administrative coordination.",
+      "question": "How will new locations share administrative workflows?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "orgFit": true,
+        "adminBuyer": true,
+        "workflow": true,
+        "need": "Public operational signal",
+        "claim": false,
+        "channel": true
+      }
+    },
+    {
+      "id": "EH-3",
+      "name": "Birch Care Partners",
+      "segment": "Intensive outpatient",
+      "context": "The researcher assumes the organization needs a new EHR.",
+      "question": "Which administrative process is actually creating friction?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "orgFit": true,
+        "adminBuyer": true,
+        "workflow": true,
+        "need": "Hypothesis only",
+        "claim": false,
+        "channel": true
+      }
+    },
+    {
+      "id": "EH-4",
+      "name": "Willow Wellness Group",
+      "segment": "Outpatient group",
+      "context": "A source describes expansion but the administrative buyer is unknown.",
+      "question": "Who owns platform evaluation across locations?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "orgFit": true,
+        "adminBuyer": false,
+        "workflow": true,
+        "need": "Confirmed discovery",
+        "claim": false,
+        "channel": true
+      }
+    },
+    {
+      "id": "EH-5",
+      "name": "Juniper Services",
+      "segment": "Residential programs",
+      "context": "The draft promises a financial improvement that has not been demonstrated.",
+      "question": "What supported operational question can replace the promise?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "orgFit": true,
+        "adminBuyer": true,
+        "workflow": true,
+        "need": "Confirmed discovery",
+        "claim": true,
+        "channel": true
+      }
+    },
+    {
+      "id": "EH-6",
+      "name": "Elm Behavioral Partners",
+      "segment": "Multi-site outpatient",
+      "context": "Research is useful but reply ownership is not assigned.",
+      "question": "Who will receive and qualify campaign replies?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "orgFit": true,
+        "adminBuyer": true,
+        "workflow": true,
+        "need": "Confirmed discovery",
+        "claim": false,
+        "channel": false
+      }
+    }
+  ],
+  "metricsTitle": "Measure qualified conversations, not just form fills.",
+  "metricsIntro": "A fixed synthetic account cohort separates campaign response from a held, qualified sales conversation.",
+  "channels": [
+    {
+      "name": "Multi-site provider research",
+      "spend": 1600,
+      "accounts": 80,
+      "meetings": 10,
+      "qualified": 4
+    },
+    {
+      "name": "Operations webinar",
+      "spend": 2400,
+      "accounts": 40,
+      "meetings": 9,
+      "qualified": 5
+    },
+    {
+      "name": "Workflow education content",
+      "spend": 900,
+      "accounts": 100,
+      "meetings": 5,
+      "qualified": 2
+    }
+  ],
+  "metricsNotes": [
+    "Qualified opportunities require an agreed organizational need and a legitimate next step. A form fill is not automatically qualified.",
+    "Keep the initial account cohort and observation window fixed when comparing channels.",
+    "These invented figures describe B2B marketing only, not patient outcomes, claims processing or actual Ease performance."
+  ],
+  "experiments": [
+    {
+      "name": "Operationally specific landing page",
+      "hypothesis": "A clear administrative workflow attracts more relevant discovery.",
+      "control": "Generic AI platform page",
+      "treatment": "Segment-specific workflow question and limitations",
+      "primary": "Qualified held conversations per account",
+      "guardrail": "Unsupported outcomes and audience mismatch",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Relevant follow-up context",
+      "hypothesis": "A reviewed operational brief helps the receiving seller ask a useful question.",
+      "control": "Contact details only",
+      "treatment": "Organization context, source and next question",
+      "primary": "Accepted seller handoffs",
+      "guardrail": "Wrong ownership and stop requests",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Choose one provider segment",
+      "body": "Define organization-level fit, source quality, buyer roles and qualification with sales.",
+      "measure": "Reviewed accounts and accepted research"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Connect channel to outcome",
+      "body": "Instrument campaign, meeting and opportunity stages; test one landing-page message with a clear denominator.",
+      "measure": "Qualified conversations and return reasons"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve the repeatable path",
+      "body": "Refine targeting and handoffs using sales feedback. Expand only after a complete observation window.",
+      "measure": "Qualified pipeline and reliable follow-up"
+    }
+  ],
+  "gateHash": "474381c9d273dafe54fb0bd27ae2cc5a4ea0e46d96dc541ee067f5290c9c4613"
+}

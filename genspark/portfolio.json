@@ -1,0 +1,352 @@
+{
+  "slug": "genspark",
+  "company": "Genspark",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/genspark/2b417e14-217c-4d55-ba5b-62467bc67d88",
+  "companyUrl": "https://www.genspark.ai/",
+  "portalUrl": "https://cjwheelock.com/genspark/",
+  "resumeFile": "CJ_Wheelock_Genspark_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/genspark/2b417e14-217c-4d55-ba5b-62467bc67d88"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.genspark.ai/"
+    }
+  ],
+  "workspace": "GTM agent operations",
+  "title": "Start with a proposal the team can inspect.",
+  "intro": "A proposed agent-operations workbench for Genspark: connect product-qualified signals to a versioned definition, an evidence snapshot and an accountable human reviewer.",
+  "accountLabel": "Product-qualified accounts",
+  "workbenchLabel": "Proposal preflight",
+  "metricsLabel": "Agent scorecards",
+  "queueIntro": "Product activity only becomes a qualified signal after account identity and metric definitions are agreed. A personal workspace, a test account and a business account are different cases.",
+  "workbenchIntro": "Inspect a proposed CRM handoff before any write. This local demo never changes a CRM, ad account or email system and grants no automatic-action permission.",
+  "firstBuild": "A PQL proposal with its evidence attached",
+  "firstBody": "Join a verified business account to meaningful product activity, preserve current ownership and log the definition version, proposed action and review outcome.",
+  "fields": [
+    {
+      "id": "business",
+      "label": "Business account distinguished from personal or test use",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "definition",
+      "label": "PQL definition version approved by stakeholders",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "usage",
+      "label": "Meaningful product milestone observed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "billing",
+      "label": "Billing context reconciled with the account",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "owner",
+      "label": "Existing CRM owner and opportunity checked",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "snapshot",
+      "label": "Evidence snapshot and decision key recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "approver",
+      "label": "Named human approver assigned",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "business",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the workspace context",
+      "next": "Do not treat a personal or internal test workspace as a business buying signal.",
+      "owner": "Data owner"
+    },
+    {
+      "field": "definition",
+      "op": "eq",
+      "value": false,
+      "title": "Agree on the PQL definition",
+      "next": "A metric needs a shared definition before it becomes an automated qualification rule.",
+      "owner": "GTM Engineering"
+    },
+    {
+      "field": "usage",
+      "op": "eq",
+      "value": false,
+      "title": "Look for meaningful product value",
+      "next": "Raw visits alone do not establish a product-qualified account. Confirm the agreed milestone.",
+      "owner": "Product analytics"
+    },
+    {
+      "field": "billing",
+      "op": "eq",
+      "value": false,
+      "title": "Reconcile billing context",
+      "next": "Match plan and account identity before interpreting a product signal or preparing an expansion action.",
+      "owner": "Data owner"
+    },
+    {
+      "field": "owner",
+      "op": "eq",
+      "value": false,
+      "title": "Preserve current ownership",
+      "next": "Check active opportunities and account ownership before proposing another handoff.",
+      "owner": "Revenue operations"
+    },
+    {
+      "field": "snapshot",
+      "op": "eq",
+      "value": false,
+      "title": "Record the decision evidence",
+      "next": "Attach the input snapshot, definition version and stable key so a reviewer can reconstruct the proposal.",
+      "owner": "Agent operator"
+    },
+    {
+      "field": "approver",
+      "op": "eq",
+      "value": false,
+      "title": "Name the human approver",
+      "next": "Propose mode needs an accountable reviewer. Acceptance history alone is not permission for an automatic write.",
+      "owner": "GTM Engineering"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a human-reviewed proposal",
+    "next": "The reviewer can inspect the evidence and proposed handoff. Any later automation policy would require separate scope, evaluation and approval."
+  },
+  "experiments": [
+    {
+      "name": "Evidence attached to PQL proposals",
+      "hypothesis": "Reviewers can distinguish real usage signals from noisy activity.",
+      "control": "Score without evidence",
+      "treatment": "Versioned definition and input snapshot",
+      "primary": "Accepted proposals per reviewed account",
+      "guardrail": "False positives and missed existing ownership",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Narrow agent before broad automation",
+      "hypothesis": "One accountable motion is easier to evaluate and maintain.",
+      "control": "Broad agent remit",
+      "treatment": "PQL proposals with one owner and metric",
+      "primary": "Useful proposals per unit of operating cost",
+      "guardrail": "Error recovery and reviewer workload",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Agree on the data definitions",
+      "body": "Map CRM, product and billing entities. Define PQL, qualification and attribution before writing automation.",
+      "measure": "Join quality and agreed metric definitions"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Ship in propose mode",
+      "body": "Build one narrow workflow with a human reviewer, decision snapshots and explicit failure handling.",
+      "measure": "Acceptance, corrections and cost per useful outcome"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Turn evidence into a reference workflow",
+      "body": "Evaluate the pilot with the GTM Engineering lead. Document architecture, limitations and the conditions for any policy change.",
+      "measure": "Repeat use, error recovery and reproducible demo quality"
+    }
+  ],
+  "records": [
+    {
+      "id": "GS-1",
+      "name": "Alder Studio",
+      "segment": "Business workspace",
+      "context": "Several teammates complete the agreed collaboration milestone.",
+      "question": "What problem led the team to this workflow?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": true,
+        "definition": true,
+        "usage": true,
+        "billing": true,
+        "owner": true,
+        "snapshot": true,
+        "approver": true
+      }
+    },
+    {
+      "id": "GS-2",
+      "name": "Cedar Sandbox",
+      "segment": "Internal testing",
+      "context": "High activity comes from an internal evaluation workspace.",
+      "question": "Is this actual customer usage or a test?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": false,
+        "definition": true,
+        "usage": true,
+        "billing": true,
+        "owner": true,
+        "snapshot": true,
+        "approver": true
+      }
+    },
+    {
+      "id": "GS-3",
+      "name": "Willow Analytics",
+      "segment": "Business workspace",
+      "context": "The scoring definition changed but the proposal lacks a version.",
+      "question": "Which definition produced this qualification?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": true,
+        "definition": false,
+        "usage": true,
+        "billing": true,
+        "owner": true,
+        "snapshot": true,
+        "approver": true
+      }
+    },
+    {
+      "id": "GS-4",
+      "name": "Elm Design",
+      "segment": "Business workspace",
+      "context": "Many visits occurred but the agreed product milestone did not.",
+      "question": "What evidence indicates a useful product outcome?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": true,
+        "definition": true,
+        "usage": false,
+        "billing": true,
+        "owner": true,
+        "snapshot": true,
+        "approver": true
+      }
+    },
+    {
+      "id": "GS-5",
+      "name": "Birch Research",
+      "segment": "Business workspace",
+      "context": "Usage and billing records point to different organizations.",
+      "question": "Which account owns the subscription and workspace?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": true,
+        "definition": true,
+        "usage": true,
+        "billing": false,
+        "owner": true,
+        "snapshot": true,
+        "approver": true
+      }
+    },
+    {
+      "id": "GS-6",
+      "name": "Juniper Media",
+      "segment": "Business workspace",
+      "context": "A useful proposal has no accountable reviewer.",
+      "question": "Who can accept or return this proposed action?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "business": true,
+        "definition": true,
+        "usage": true,
+        "billing": true,
+        "owner": true,
+        "snapshot": true,
+        "approver": false
+      }
+    }
+  ],
+  "metricsTitle": "One motion, one review trail, one cost denominator.",
+  "metricsIntro": "Illustrative agent evaluations. Acceptance is useful feedback, not blanket authority to make external changes.",
+  "metricTable": {
+    "headers": [
+      "Motion",
+      "Reviewed proposals",
+      "Accepted",
+      "Illustrative operating cost",
+      "Cost / accepted"
+    ],
+    "rows": [
+      [
+        "PQL handoff",
+        "40",
+        "30",
+        "$18",
+        "$0.60"
+      ],
+      [
+        "Call preparation",
+        "25",
+        "20",
+        "$10",
+        "$0.50"
+      ],
+      [
+        "Transcript field suggestion",
+        "30",
+        "18",
+        "$9",
+        "$0.50"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "Costs are invented examples, not Genspark prices or a complete model of labor and infrastructure.",
+    "Track returned proposals by error class, not only the aggregate acceptance rate.",
+    "Every external action needs the appropriate policy and owner; this portfolio only records local review receipts."
+  ],
+  "gateHash": "6c905c2f577bceff1010c46c4a91657426876b0521bf420986f04e628a98feaf"
+}

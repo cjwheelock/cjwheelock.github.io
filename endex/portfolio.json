@@ -1,0 +1,340 @@
+{
+  "slug": "endex",
+  "company": "Endex",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/endex/6296f647-14a7-4d63-aae6-337cc55c50ca/",
+  "companyUrl": "https://endex.ai/",
+  "portalUrl": "https://cjwheelock.com/endex/",
+  "resumeFile": "CJ_Wheelock_Endex_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/endex/6296f647-14a7-4d63-aae6-337cc55c50ca/"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://endex.ai/"
+    }
+  ],
+  "workspace": "Finance-workflow growth",
+  "title": "Connect the finance task to the right sales motion.",
+  "intro": "A proposed revenue-orchestration workbench for Endex: match finance buyers to concrete document and analysis workflows, then resolve channel ownership before a handoff.",
+  "accountLabel": "Finance buyer queue",
+  "workbenchLabel": "Workflow-to-pipeline review",
+  "metricsLabel": "Conversion bridge",
+  "queueIntro": "All finance teams and workflow scenarios are fictional. The demo contains no investment recommendations, transaction advice or confidential models.",
+  "workbenchIntro": "Review workflow relevance, evidence and channel ownership. A product-usage event or public signal does not by itself establish a qualified deal.",
+  "firstBuild": "A finance-workflow brief with one next owner",
+  "firstBody": "Connect the team\u2019s recurring Excel, document or presentation task to a grounded why-now hypothesis, qualification criteria and an unambiguous seller handoff.",
+  "fields": [
+    {
+      "id": "vertical",
+      "label": "Finance team and use case distinguished",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "workflow",
+      "label": "Document or analysis workflow question recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "signal",
+      "label": "Source and timing of buying signal recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "ownership",
+      "label": "Inbound, outbound and partner ownership reconciled",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "stage",
+      "label": "Qualification and next-stage requirements agreed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "handoff",
+      "label": "Receiving seller and next task assigned",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "vertical",
+      "op": "eq",
+      "value": false,
+      "title": "Identify the actual finance workflow",
+      "next": "Separate a private-equity research task, investment-banking presentation and corporate-finance model instead of using one generic finance pitch.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "workflow",
+      "op": "eq",
+      "value": false,
+      "title": "Name the work to be improved",
+      "next": "Ground the brief in an Excel, document or presentation task without requesting confidential files.",
+      "owner": "Technical seller"
+    },
+    {
+      "field": "signal",
+      "op": "eq",
+      "value": false,
+      "title": "Attach the why-now evidence",
+      "next": "Keep a public signal distinct from confirmed evaluation interest. Record what still needs discovery.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "ownership",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the channel collision",
+      "next": "Preserve a partner introduction or existing opportunity instead of assigning a second seller.",
+      "owner": "Revenue operations"
+    },
+    {
+      "field": "stage",
+      "op": "eq",
+      "value": false,
+      "title": "Define the qualification step",
+      "next": "Document business context, sponsor and next action before advancing a lead based on activity alone.",
+      "owner": "Sales lead"
+    },
+    {
+      "field": "handoff",
+      "op": "eq",
+      "value": false,
+      "title": "Give the brief an accountable owner",
+      "next": "A useful account brief needs a receiving seller and a concrete follow-up task.",
+      "owner": "GTM operator"
+    }
+  ],
+  "ready": {
+    "title": "Ready for finance-workflow discovery review",
+    "next": "The seller can review the task hypothesis, signal evidence and agreed next step. Any product fit or evaluation scope still requires discovery."
+  },
+  "experiments": [
+    {
+      "name": "Task-specific finance discovery",
+      "hypothesis": "A concrete work product helps the buyer assess relevance.",
+      "control": "Broad AI productivity pitch",
+      "treatment": "Team-specific model, memo or presentation question",
+      "primary": "Qualified discovery per original account",
+      "guardrail": "Unsupported performance or investment claims",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "One owner across channels",
+      "hypothesis": "Resolving partner and inbound overlap reduces lead rework.",
+      "control": "Independent channel queues",
+      "treatment": "Unified account key and relationship-aware routing",
+      "primary": "Accepted handoffs within the agreed service window",
+      "guardrail": "Partner conflicts and duplicated outreach",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Define the finance buyer and pipeline states",
+      "body": "Work with the CEO and GTM team on use-case segments, qualification and channel ownership.",
+      "measure": "Accepted definitions and baseline conversion"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build one workflow-to-pipeline motion",
+      "body": "Join research and product context to a reviewed brief. Instrument failed joins and routing conflicts.",
+      "measure": "Useful briefs and correct handoff ownership"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve the full conversion path",
+      "body": "Compare vertical and channel cohorts through held discovery and qualified opportunities. Expand only after learning from losses.",
+      "measure": "Stage conversion and qualified pipeline by source"
+    }
+  ],
+  "records": [
+    {
+      "id": "E-1",
+      "name": "Alder Capital",
+      "segment": "Private equity",
+      "context": "A fictional investment team prepares recurring screening memos.",
+      "question": "Where does source gathering become repetitive document work?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "vertical": true,
+        "workflow": true,
+        "signal": true,
+        "ownership": true,
+        "stage": true,
+        "handoff": true
+      }
+    },
+    {
+      "id": "E-2",
+      "name": "Cedar Advisory",
+      "segment": "Investment banking",
+      "context": "The brief uses generic finance language without a specific work product.",
+      "question": "Which model, memo or presentation task matters most?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "vertical": true,
+        "workflow": false,
+        "signal": true,
+        "ownership": true,
+        "stage": true,
+        "handoff": true
+      }
+    },
+    {
+      "id": "E-3",
+      "name": "Willow Industries",
+      "segment": "Corporate finance",
+      "context": "A hiring signal was treated as confirmed evaluation interest.",
+      "question": "What does the source actually establish?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "vertical": true,
+        "workflow": true,
+        "signal": false,
+        "ownership": true,
+        "stage": true,
+        "handoff": true
+      }
+    },
+    {
+      "id": "E-4",
+      "name": "Elm Partners",
+      "segment": "Private equity",
+      "context": "A partner introduction overlaps a fresh inbound request.",
+      "question": "Who owns the existing relationship and next step?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "vertical": true,
+        "workflow": true,
+        "signal": true,
+        "ownership": false,
+        "stage": true,
+        "handoff": true
+      }
+    },
+    {
+      "id": "E-5",
+      "name": "Birch Financial",
+      "segment": "Finance team",
+      "context": "Activity is high but qualification criteria are undefined.",
+      "question": "What evidence is needed before advancing the account?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "vertical": true,
+        "workflow": true,
+        "signal": true,
+        "ownership": true,
+        "stage": false,
+        "handoff": true
+      }
+    },
+    {
+      "id": "E-6",
+      "name": "Juniper Holdings",
+      "segment": "Corporate finance",
+      "context": "A useful brief has no receiving seller or follow-up task.",
+      "question": "Who will turn this context into a conversation?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "vertical": true,
+        "workflow": true,
+        "signal": true,
+        "ownership": true,
+        "stage": true,
+        "handoff": false
+      }
+    }
+  ],
+  "metricsTitle": "Show exactly where the original cohort leaves the funnel.",
+  "metricsIntro": "Illustrative stages preserve the starting cohort and identify the next diagnostic question.",
+  "metricTable": {
+    "headers": [
+      "Stage",
+      "Accounts",
+      "Conversion from previous stage",
+      "Review question"
+    ],
+    "rows": [
+      [
+        "Eligible account signals",
+        "100",
+        "Starting cohort",
+        "Was account identity correct?"
+      ],
+      [
+        "Accepted seller handoffs",
+        "60",
+        "60%",
+        "Why were 40 returned?"
+      ],
+      [
+        "Discovery scheduled",
+        "24",
+        "40%",
+        "Did the message reach the right buyer?"
+      ],
+      [
+        "Discovery held",
+        "18",
+        "75%",
+        "Why did six not occur?"
+      ],
+      [
+        "Qualified opportunities",
+        "9",
+        "50%",
+        "Was the workflow and sponsor a fit?"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "All numbers are synthetic and do not represent Endex performance.",
+    "Channel influence is not the same as sourced pipeline. Preserve partner introductions and existing account ownership.",
+    "Keep the original cohort intact when diagnosing funnel losses; removing returned leads would inflate conversion."
+  ],
+  "gateHash": "41eb44757c9395de16b6862b6c444d055d16715deda47f315e6ab0172dbc13ea"
+}

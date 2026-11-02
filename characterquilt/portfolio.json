@@ -1,0 +1,334 @@
+{
+  "slug": "characterquilt",
+  "company": "CharacterQuilt",
+  "role": "Go-to-Market Engineer",
+  "roleUrl": "https://www.ycombinator.com/companies/characterquilt/jobs/NkPK05W-go-to-market-engineer",
+  "companyUrl": "https://www.characterquilt.com/",
+  "portalUrl": "https://cjwheelock.com/characterquilt/",
+  "resumeFile": "CJ_Wheelock_CharacterQuilt_Go-to-Market_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://www.ycombinator.com/companies/characterquilt/jobs/NkPK05W-go-to-market-engineer"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.characterquilt.com/"
+    }
+  ],
+  "workspace": "Distribution agent operations",
+  "title": "Give the reviewer a concrete proposal and a verifiable outcome.",
+  "intro": "A proposed GTM engineering workbench for CharacterQuilt: connect buying signals to a specific campaign bottleneck, an inspectable proposal and an execution-proof plan.",
+  "accountLabel": "Distribution opportunity queue",
+  "workbenchLabel": "Campaign proposal review",
+  "metricsLabel": "Execution quality",
+  "queueIntro": "All accounts, campaigns and approvals are synthetic. This local portfolio never opens a customer tool, launches a campaign, changes an ad budget or sends a message.",
+  "workbenchIntro": "Inspect the intended audience, asset, destination and evidence. The approval checkbox models a fictional review state and grants no real permission.",
+  "firstBuild": "A distribution play with proof at every handoff",
+  "firstBody": "Start with one customer bottleneck, prepare the exact campaign proposal, check destination state and define the evidence that would confirm completion.",
+  "fields": [
+    {
+      "id": "signal",
+      "label": "Buying signal has a dated source",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "bottleneck",
+      "label": "Campaign bottleneck and target user defined",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "artifact",
+      "label": "Reviewable campaign proposal is complete",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "approval",
+      "label": "Named reviewer has approved the exact proposal in the scenario",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "state",
+      "label": "Destination and existing campaign state checked",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "proof",
+      "label": "Outcome verification and recovery plan defined",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "signal",
+      "op": "eq",
+      "value": false,
+      "title": "Ground the distribution signal",
+      "next": "Connect a real business event to a credible marketing-operations question rather than invented intent.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "bottleneck",
+      "op": "eq",
+      "value": false,
+      "title": "Name the customer\u2019s execution bottleneck",
+      "next": "Identify the coordination or tool-handoff problem worth demonstrating instead of promising broad autonomous marketing.",
+      "owner": "Sales engineer"
+    },
+    {
+      "field": "artifact",
+      "op": "eq",
+      "value": false,
+      "title": "Prepare the actual proposal",
+      "next": "The reviewer needs the intended audience, asset, destination and next action before approving a campaign.",
+      "owner": "GTM builder"
+    },
+    {
+      "field": "approval",
+      "op": "eq",
+      "value": false,
+      "title": "Keep the proposal awaiting review",
+      "next": "A generic instruction or earlier version does not approve a changed audience, asset or destination.",
+      "owner": "Campaign reviewer"
+    },
+    {
+      "field": "state",
+      "op": "eq",
+      "value": false,
+      "title": "Reconcile the destination state",
+      "next": "Check whether the intended campaign or action already exists before proposing another execution.",
+      "owner": "Agent operator"
+    },
+    {
+      "field": "proof",
+      "op": "eq",
+      "value": false,
+      "title": "Define the proof of execution",
+      "next": "Record what successful completion looks like and how uncertain or partial outcomes will be inspected before retry.",
+      "owner": "Agent operator"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a simulated execution review",
+    "next": "The proposal and verification plan can be inspected. This portfolio only records a local review receipt; no campaign is executed."
+  },
+  "experiments": [
+    {
+      "name": "Concrete proposals before agent action",
+      "hypothesis": "A reviewable audience, asset and destination reduces execution ambiguity.",
+      "control": "High-level campaign instruction",
+      "treatment": "Exact proposal with named reviewer",
+      "primary": "Correctly reviewed proposals",
+      "guardrail": "Changed scope after approval and missing destination context",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Proof before retry",
+      "hypothesis": "Checking the original outcome prevents duplicate campaign actions.",
+      "control": "Retry after an uncertain response",
+      "treatment": "Inspect destination state and recorded evidence",
+      "primary": "Resolved outcomes without duplicate actions",
+      "guardrail": "Unverified completion and repeated sends",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Choose a real distribution bottleneck",
+      "body": "Work with the founder and customers to identify a narrow campaign workflow and its commercial success measure.",
+      "measure": "Clear user, target action and baseline"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build a proposal-and-proof loop",
+      "body": "Connect research and scoring to a reviewable campaign proposal. Test missing approval, changed state and uncertain outcomes.",
+      "measure": "Correct review behavior and reconstructable outcomes"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Turn the useful play into a reusable system",
+      "body": "Instrument qualified pipeline and execution quality. Document scope, failures and customer feedback before expanding.",
+      "measure": "Commercial usefulness and reliable repeatability"
+    }
+  ],
+  "records": [
+    {
+      "id": "CQ-1",
+      "name": "Alder Marketing",
+      "segment": "Enterprise marketing",
+      "context": "A fictional team needs a coordinated account-specific campaign across existing tools.",
+      "question": "Which tool handoff creates the most delay?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "signal": true,
+        "bottleneck": true,
+        "artifact": true,
+        "approval": true,
+        "state": true,
+        "proof": true
+      }
+    },
+    {
+      "id": "CQ-2",
+      "name": "Cedar Software",
+      "segment": "B2B SaaS",
+      "context": "The account\u2019s buying signal has no dated source.",
+      "question": "What business event supports this campaign hypothesis?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "signal": false,
+        "bottleneck": true,
+        "artifact": true,
+        "approval": true,
+        "state": true,
+        "proof": true
+      }
+    },
+    {
+      "id": "CQ-3",
+      "name": "Willow Enterprise",
+      "segment": "Enterprise marketing",
+      "context": "The proposed demo does not identify a specific campaign bottleneck.",
+      "question": "What customer task would the software make easier?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "signal": true,
+        "bottleneck": false,
+        "artifact": true,
+        "approval": true,
+        "state": true,
+        "proof": true
+      }
+    },
+    {
+      "id": "CQ-4",
+      "name": "Elm Growth",
+      "segment": "B2B marketing",
+      "context": "The campaign asset changed after the recorded review.",
+      "question": "Which exact proposal has the reviewer approved?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "signal": true,
+        "bottleneck": true,
+        "artifact": true,
+        "approval": false,
+        "state": true,
+        "proof": true
+      }
+    },
+    {
+      "id": "CQ-5",
+      "name": "Birch Systems",
+      "segment": "B2B SaaS",
+      "context": "A campaign may already exist in the intended destination.",
+      "question": "What does the current destination state show?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "signal": true,
+        "bottleneck": true,
+        "artifact": true,
+        "approval": true,
+        "state": false,
+        "proof": true
+      }
+    },
+    {
+      "id": "CQ-6",
+      "name": "Juniper Marketing",
+      "segment": "Enterprise marketing",
+      "context": "The plan has no success evidence or recovery procedure.",
+      "question": "How will an uncertain result be reconciled before retry?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "signal": true,
+        "bottleneck": true,
+        "artifact": true,
+        "approval": true,
+        "state": true,
+        "proof": false
+      }
+    }
+  ],
+  "metricsTitle": "Execution quality is part of the commercial result.",
+  "metricsIntro": "Synthetic campaign-proposal ledger separates review from execution claims.",
+  "metricTable": {
+    "headers": [
+      "State",
+      "Illustrative count",
+      "Meaning"
+    ],
+    "rows": [
+      [
+        "Proposals prepared",
+        "30",
+        "Reviewable artifacts created"
+      ],
+      [
+        "Approved in scenario",
+        "20",
+        "Specific proposal reviewed"
+      ],
+      [
+        "Returned for scope change",
+        "6",
+        "Review must be renewed"
+      ],
+      [
+        "Held for destination conflict",
+        "4",
+        "Existing state needs inspection"
+      ],
+      [
+        "Real campaigns launched",
+        "0",
+        "This portfolio is local only"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "The counts are invented and do not describe CharacterQuilt\u2019s production agents.",
+    "A local review receipt is not proof that an external campaign was launched.",
+    "Commercial measurement should connect a verified action to qualified outcomes, not count attempted clicks as completion."
+  ],
+  "gateHash": "e40c8b966bad05d138789b96254470c2a5e97294c3e131f32653de78fb829ceb"
+}

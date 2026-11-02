@@ -1,0 +1,339 @@
+{
+  "slug": "concourse-government-software",
+  "company": "Concourse",
+  "role": "Founding GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/concoursetech/f9199b51-d3b3-4a17-9eda-989fe3aae43f",
+  "companyUrl": "https://concoursetech.com/",
+  "portalUrl": "https://cjwheelock.com/concourse-government-software/",
+  "resumeFile": "CJ_Wheelock_Concourse_Founding_GTM_Engineer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/concoursetech/f9199b51-d3b3-4a17-9eda-989fe3aae43f"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://concoursetech.com/"
+    }
+  ],
+  "workspace": "Public-sector account development",
+  "title": "Understand the agency, the workflow and the path to a conversation.",
+  "intro": "A proposed account-development workbench for Concourse\u2019s government software business, built around public institutions and their administrative workflows.",
+  "accountLabel": "Agency opportunity map",
+  "workbenchLabel": "Public-sector brief",
+  "metricsLabel": "Agency coverage",
+  "queueIntro": "Public-sector buying context comes from agency structure, planning documents and procurement pathways. It should not be reduced to a generic company headcount score.",
+  "workbenchIntro": "Prepare a sourced agency brief and a next discovery question. This is commercial research about software needs, not procurement advice or a purchase authorization.",
+  "firstBuild": "An agency brief the AE can act on",
+  "firstBody": "Connect a named operating unit and administrative workflow to a dated public planning signal, open procurement questions and coordinated sales ownership.",
+  "fields": [
+    {
+      "id": "agency",
+      "label": "Agency, jurisdiction and operating unit resolved",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "workflow",
+      "label": "Specific administrative workflow identified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "budget",
+      "label": "Budget or planning signal has a public source",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "path",
+      "label": "Procurement route and uncertainty recorded",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "contact",
+      "label": "Appropriate public business contact route identified",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "coordination",
+      "label": "AE and SDR ownership agreed",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "agency",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the public institution",
+      "next": "A city, county and special district with similar names are distinct organizations. Preserve the agency key.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "workflow",
+      "op": "eq",
+      "value": false,
+      "title": "Name the agency workflow",
+      "next": "Use a sourced permitting, grants, utilities or records workflow rather than generic government modernization language.",
+      "owner": "Account researcher"
+    },
+    {
+      "field": "budget",
+      "op": "eq",
+      "value": false,
+      "title": "Verify the planning signal",
+      "next": "Record the date, fiscal context and source. A budget line alone does not establish an available purchase.",
+      "owner": "Public-sector researcher"
+    },
+    {
+      "field": "path",
+      "op": "eq",
+      "value": false,
+      "title": "Clarify the procurement route",
+      "next": "Capture known procurement steps and unresolved questions for the account owner. Do not infer an exemption or authority to buy.",
+      "owner": "Account executive"
+    },
+    {
+      "field": "contact",
+      "op": "eq",
+      "value": false,
+      "title": "Use the agency\u2019s business contact route",
+      "next": "Identify the relevant office and its public professional contact channel. Avoid unrelated personal information.",
+      "owner": "SDR"
+    },
+    {
+      "field": "coordination",
+      "op": "eq",
+      "value": false,
+      "title": "Coordinate the agency handoff",
+      "next": "Check current agency conversations and agree which AE and SDR own the next step.",
+      "owner": "Sales operations"
+    }
+  ],
+  "ready": {
+    "title": "Ready for an agency discovery review",
+    "next": "The AE can review the workflow hypothesis, public sources and open procurement questions before deciding on the appropriate next conversation."
+  },
+  "experiments": [
+    {
+      "name": "Workflow-specific agency research",
+      "hypothesis": "A precise administrative workflow produces more relevant discovery.",
+      "control": "Broad modernization pitch",
+      "treatment": "Sourced workflow and agency context",
+      "primary": "Held agency discovery per researched institution",
+      "guardrail": "Unsupported procurement or budget assumptions",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Coordinated agency coverage",
+      "hypothesis": "One agreed account owner reduces overlapping outreach.",
+      "control": "Separate AE and outsourced SDR lists",
+      "treatment": "Shared agency key and next-action owner",
+      "primary": "Accepted agency briefs",
+      "guardrail": "Duplicate contact and conflicting account ownership",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Define the agency research contract",
+      "body": "Map jurisdictions, operating units, public sources and ownership with the sales team.",
+      "measure": "Correct entity matching and source coverage"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Pilot one public-sector workflow",
+      "body": "Choose a permitting or grants segment. Build dated research briefs and coordinate AE/SDR follow-through.",
+      "measure": "Accepted briefs and held discovery"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Expand repeatable coverage",
+      "body": "Add adjacent agencies only after validating the research and handoff process. Track source refresh and procurement unknowns.",
+      "measure": "Qualified agency pipeline and research maintenance effort"
+    }
+  ],
+  "records": [
+    {
+      "id": "CG-1",
+      "name": "Alder County Permitting",
+      "segment": "County",
+      "context": "A fictional planning document describes a permitting intake review.",
+      "question": "Where does the current intake process create rework?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "agency": true,
+        "workflow": true,
+        "budget": true,
+        "path": true,
+        "contact": true,
+        "coordination": true
+      }
+    },
+    {
+      "id": "CG-2",
+      "name": "Cedar Water District",
+      "segment": "Special district",
+      "context": "The record was merged with a nearby city of the same name.",
+      "question": "Which public institution owns the utility workflow?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "agency": false,
+        "workflow": true,
+        "budget": true,
+        "path": true,
+        "contact": true,
+        "coordination": true
+      }
+    },
+    {
+      "id": "CG-3",
+      "name": "Willow City Grants",
+      "segment": "City",
+      "context": "The brief references modernization but omits the actual grants process.",
+      "question": "Which application, review or reporting step needs attention?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "agency": true,
+        "workflow": false,
+        "budget": true,
+        "path": true,
+        "contact": true,
+        "coordination": true
+      }
+    },
+    {
+      "id": "CG-4",
+      "name": "Elm County Records",
+      "segment": "County",
+      "context": "A budget reference lacks its fiscal year and source.",
+      "question": "What is funded, proposed or still unknown?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "agency": true,
+        "workflow": true,
+        "budget": false,
+        "path": true,
+        "contact": true,
+        "coordination": true
+      }
+    },
+    {
+      "id": "CG-5",
+      "name": "Birch Township",
+      "segment": "Town",
+      "context": "A purchase route was assumed from another jurisdiction.",
+      "question": "What steps apply to this specific agency?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "agency": true,
+        "workflow": true,
+        "budget": true,
+        "path": false,
+        "contact": true,
+        "coordination": true
+      }
+    },
+    {
+      "id": "CG-6",
+      "name": "Juniper School District",
+      "segment": "K\u201312 district",
+      "context": "Two sellers are researching the same institution independently.",
+      "question": "Who should coordinate the next conversation?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "agency": true,
+        "workflow": true,
+        "budget": true,
+        "path": true,
+        "contact": true,
+        "coordination": false
+      }
+    }
+  ],
+  "metricsTitle": "Coverage is useful when the buying path is understood.",
+  "metricsIntro": "Synthetic agency research distinguishes a sourced signal from qualified demand.",
+  "metricTable": {
+    "headers": [
+      "Coverage check",
+      "Complete",
+      "Reviewed cohort"
+    ],
+    "rows": [
+      [
+        "Agency and operating unit",
+        "45",
+        "50 institutions"
+      ],
+      [
+        "Workflow hypothesis with source",
+        "34",
+        "50 institutions"
+      ],
+      [
+        "Dated planning signal",
+        "28",
+        "50 institutions"
+      ],
+      [
+        "Procurement unknowns recorded",
+        "40",
+        "50 institutions"
+      ],
+      [
+        "AE-accepted discovery brief",
+        "22",
+        "50 institutions"
+      ],
+      [
+        "Qualified discovery held",
+        "7",
+        "50 institutions"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "Counts are illustrative and do not represent Concourse customers, government purchasing commitments or CJ\u2019s outcomes.",
+    "A public budget or RFP is a research signal, not proof of an awarded contract.",
+    "The finance-AI company named Concourse is a separate employer with a separate portfolio."
+  ],
+  "gateHash": "eace5f2a0ec0fd606af9fc3d8175623426cccc645608e87e6bf9dc50dac2175f"
+}

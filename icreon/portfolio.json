@@ -1,0 +1,371 @@
+{
+  "slug": "icreon",
+  "company": "Icreon",
+  "role": "Agentic Growth Marketer",
+  "roleUrl": "https://icreonny.applytojob.com/apply/PPqlxamCCC/GTM-Engineer",
+  "companyUrl": "https://www.icreon.com/",
+  "portalUrl": "https://cjwheelock.com/icreon/",
+  "resumeFile": "CJ_Wheelock_Icreon_Agentic_Growth_Marketer.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://icreonny.applytojob.com/apply/PPqlxamCCC/GTM-Engineer"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://www.icreon.com/"
+    }
+  ],
+  "workspace": "Digital services growth",
+  "title": "Give every pursuit a reason, an audience and a next action.",
+  "intro": "A proposed growth workbench for Icreon: connect named-account research, reviewed content and sales follow-through to qualified enterprise opportunities.",
+  "accountLabel": "Named-account pursuits",
+  "workbenchLabel": "Asset review",
+  "metricsLabel": "Pursuit outcomes",
+  "queueIntro": "Organize a digital-services pursuit around a concrete business question. Separate a website observation from a buyer-confirmed project and keep the sales owner visible.",
+  "workbenchIntro": "Check whether an AI-assisted asset has a defined buyer, sourced claim, human reviewer and a useful next action before it enters a campaign.",
+  "firstBuild": "A reviewed account-to-content workflow",
+  "firstBody": "Translate account research into a useful digital-experience question, a targeted content brief and a tracked seller handoff. Count accepted opportunities separately from clicks.",
+  "fields": [
+    {
+      "id": "buyer",
+      "label": "Buyer role and intended audience defined",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "problem",
+      "label": "Specific digital experience or commerce question",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "source",
+      "label": "Supporting research attached",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "reviewed",
+      "label": "Human review complete",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "claims",
+      "label": "Claims and examples checked",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "cta",
+      "label": "Next action matches the buyer journey",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "salesOwner",
+      "label": "Sales owner and pursuit key assigned",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "buyer",
+      "op": "eq",
+      "value": false,
+      "title": "Define the audience",
+      "next": "Choose the buyer role and decision this asset should help. One asset cannot speak to every stakeholder equally.",
+      "owner": "Marketing owner"
+    },
+    {
+      "field": "problem",
+      "op": "eq",
+      "value": false,
+      "title": "State the business question",
+      "next": "Use a concrete digital experience, commerce or data problem; avoid generic AI transformation claims.",
+      "owner": "Pursuit strategist"
+    },
+    {
+      "field": "source",
+      "op": "eq",
+      "value": false,
+      "title": "Attach the research",
+      "next": "Preserve the source and date behind the account context before using it for personalization.",
+      "owner": "Research owner"
+    },
+    {
+      "field": "reviewed",
+      "op": "eq",
+      "value": false,
+      "title": "Review the asset with a person",
+      "next": "AI-generated copy needs editorial and account-context review before publication or outreach.",
+      "owner": "Content reviewer"
+    },
+    {
+      "field": "claims",
+      "op": "eq",
+      "value": false,
+      "title": "Check the claims",
+      "next": "Remove unsupported outcomes, invented references and statements that overstate the evidence.",
+      "owner": "Content reviewer"
+    },
+    {
+      "field": "cta",
+      "op": "eq",
+      "value": false,
+      "title": "Choose a useful next action",
+      "next": "Align the next step with the buyer\u2019s stage, such as a diagnostic conversation or a relevant case discussion.",
+      "owner": "Marketing owner"
+    },
+    {
+      "field": "salesOwner",
+      "op": "eq",
+      "value": false,
+      "title": "Assign the pursuit owner",
+      "next": "Connect the asset to a known account and seller so replies and qualified interest have a destination.",
+      "owner": "Sales operations"
+    }
+  ],
+  "ready": {
+    "title": "Ready for campaign review",
+    "next": "Audience, problem, evidence, review and next action are explicit. The sales owner can approve how this asset supports the pursuit."
+  },
+  "records": [
+    {
+      "id": "IC-1",
+      "name": "Alder Industrial",
+      "segment": "Manufacturing",
+      "context": "A distributor catalog makes product discovery difficult in the fictional brief.",
+      "question": "Which buyer task is hardest to complete today?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "problem": true,
+        "source": true,
+        "reviewed": true,
+        "claims": true,
+        "cta": true,
+        "salesOwner": true
+      }
+    },
+    {
+      "id": "IC-2",
+      "name": "Cedar Association",
+      "segment": "Membership organizations",
+      "context": "The account team sees an opportunity to improve member onboarding.",
+      "question": "What membership step would a diagnostic help explain?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "problem": true,
+        "source": false,
+        "reviewed": true,
+        "claims": true,
+        "cta": true,
+        "salesOwner": true
+      }
+    },
+    {
+      "id": "IC-3",
+      "name": "Willow Commerce",
+      "segment": "Retail",
+      "context": "An AI-generated brief has not been checked by the account team.",
+      "question": "Which claims need validation before the asset is shared?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "problem": true,
+        "source": true,
+        "reviewed": false,
+        "claims": true,
+        "cta": true,
+        "salesOwner": true
+      }
+    },
+    {
+      "id": "IC-4",
+      "name": "Elm Services",
+      "segment": "Professional services",
+      "context": "The draft promises an unsupported percentage gain.",
+      "question": "What evidence can substantiate the claim or replace it?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "problem": true,
+        "source": true,
+        "reviewed": true,
+        "claims": false,
+        "cta": true,
+        "salesOwner": true
+      }
+    },
+    {
+      "id": "IC-5",
+      "name": "Juniper Equipment",
+      "segment": "Manufacturing",
+      "context": "The asset explains a problem but has no next step.",
+      "question": "What small, useful action fits this buyer\u2019s stage?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "problem": true,
+        "source": true,
+        "reviewed": true,
+        "claims": true,
+        "cta": false,
+        "salesOwner": true
+      }
+    },
+    {
+      "id": "IC-6",
+      "name": "Birch Network",
+      "segment": "Financial services",
+      "context": "A useful research note lacks an assigned sales owner.",
+      "question": "Who owns the relationship and resulting replies?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "buyer": true,
+        "problem": true,
+        "source": true,
+        "reviewed": true,
+        "claims": true,
+        "cta": true,
+        "salesOwner": false
+      }
+    }
+  ],
+  "metricsTitle": "Keep content engagement and sales qualification distinct.",
+  "metricsIntro": "Synthetic named-account cohorts connect an educational asset to held discovery and qualified work. Influenced pipeline is not automatically sourced pipeline.",
+  "channels": [
+    {
+      "name": "Commerce modernization brief",
+      "spend": 1800,
+      "accounts": 50,
+      "meetings": 7,
+      "qualified": 3
+    },
+    {
+      "name": "Digital experience roundtable",
+      "spend": 3200,
+      "accounts": 30,
+      "meetings": 10,
+      "qualified": 4
+    },
+    {
+      "name": "Data and AI research note",
+      "spend": 1200,
+      "accounts": 70,
+      "meetings": 5,
+      "qualified": 2
+    }
+  ],
+  "metricTable": {
+    "headers": [
+      "Pursuit",
+      "First recorded touch",
+      "Content contribution",
+      "Sales status"
+    ],
+    "rows": [
+      [
+        "IC-1",
+        "Seller introduction",
+        "Commerce discovery brief",
+        "Qualified discovery"
+      ],
+      [
+        "IC-2",
+        "Roundtable",
+        "Follow-up diagnostic",
+        "Held meeting"
+      ],
+      [
+        "IC-3",
+        "Existing relationship",
+        "Research note",
+        "No new opportunity"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "Attach a stable pursuit key and a consistent observation window to each content interaction.",
+    "Keep sourced, influenced and existing-relationship pipeline separate. Do not add them together as independent revenue.",
+    "Include human research and content production cost before treating channel spend as total acquisition cost."
+  ],
+  "experiments": [
+    {
+      "name": "Buyer-specific research brief",
+      "hypothesis": "A concrete digital business question leads to more useful discovery.",
+      "control": "Broad capabilities deck",
+      "treatment": "Sourced buyer question and relevant diagnostic",
+      "primary": "Qualified discovery per named account",
+      "guardrail": "Unsupported personalization",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Sales-reviewed content handoff",
+      "hypothesis": "A receiving seller can act faster when the content\u2019s purpose is explicit.",
+      "control": "Asset link only",
+      "treatment": "Buyer, claim sources, next step and owner",
+      "primary": "Accepted seller handoffs",
+      "guardrail": "Review burden and unused assets",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Learn the pursuit motion",
+      "body": "Align with the Marketing Head and sales on account tiers, buyer problems and qualification.",
+      "measure": "Accepted account briefs and shared stage definitions"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build the content-to-sales path",
+      "body": "Create a sourced asset brief with human review and a stable pursuit key. Instrument replies and held discovery.",
+      "measure": "Asset use, response ownership and qualified conversations"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Improve by pipeline evidence",
+      "body": "Compare cohorts with sales and refine the content that supports genuine project discussions.",
+      "measure": "Qualified pipeline and clear attribution boundaries"
+    }
+  ],
+  "gateHash": "4d41af1523c423bbf643bc44c76154656bc67610608ea8e49af9abb7562723bf"
+}

@@ -1,0 +1,339 @@
+{
+  "slug": "verse-medical",
+  "company": "Verse Medical",
+  "role": "Revenue Operations Analyst",
+  "roleUrl": "https://jobs.ashbyhq.com/versemedical/a2550b65-4c07-41c6-9f38-db598bd831f0",
+  "companyUrl": "https://versemedical.com/",
+  "portalUrl": "https://cjwheelock.com/verse-medical/",
+  "resumeFile": "CJ_Wheelock_Verse_Medical_Revenue_Operations_Analyst.pdf",
+  "notice": "All organizations, inputs, activity and results are synthetic. This proposed workflow is not a connected employer system or measured company performance.",
+  "sources": [
+    {
+      "label": "Official role",
+      "url": "https://jobs.ashbyhq.com/versemedical/a2550b65-4c07-41c6-9f38-db598bd831f0"
+    },
+    {
+      "label": "Company product context",
+      "url": "https://versemedical.com/"
+    }
+  ],
+  "workspace": "Health-system revenue operations",
+  "title": "One health system. Many locations. One explainable pipeline.",
+  "intro": "A proposed revenue-operations workbench for Verse Medical: map health-system relationships, resolve commercial ownership and inspect the evidence behind pipeline movement.",
+  "accountLabel": "Health-system opportunity map",
+  "workbenchLabel": "Pipeline inspection",
+  "metricsLabel": "Forecast movement",
+  "queueIntro": "All health systems, locations and commercial opportunities are fictional. No patient, medical-order, coverage or clinical data is used.",
+  "workbenchIntro": "Review entity relationships, stage evidence and forecast timing. This is a commercial pipeline model, not a patient referral or equipment-eligibility workflow.",
+  "firstBuild": "A location-aware pipeline inspection view",
+  "firstBody": "Connect health-system and location records to ownership, stage evidence and an explicit reason for every forecast change.",
+  "fields": [
+    {
+      "id": "hierarchy",
+      "label": "Health system, location and business source mapped",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "territory",
+      "label": "Territory and current account ownership reconciled",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "stage",
+      "label": "Opportunity stage has supporting business evidence",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "closeDate",
+      "label": "Close date and next activity reviewed",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "source",
+      "label": "Pipeline source and influence recorded separately",
+      "kind": "check",
+      "max": 1000000
+    },
+    {
+      "id": "privacy",
+      "label": "Commercial record excludes patient or order data",
+      "kind": "check",
+      "max": 1000000
+    }
+  ],
+  "rules": [
+    {
+      "field": "hierarchy",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the health-system hierarchy",
+      "next": "One health system can contain many locations and business referral sources. Keep those relationships distinct.",
+      "owner": "Revenue data owner"
+    },
+    {
+      "field": "territory",
+      "op": "eq",
+      "value": false,
+      "title": "Resolve the territory conflict",
+      "next": "Preserve the health-system relationship while assigning the location\u2019s appropriate commercial owner.",
+      "owner": "Sales operations"
+    },
+    {
+      "field": "stage",
+      "op": "eq",
+      "value": false,
+      "title": "Validate the opportunity stage",
+      "next": "Record the commercial milestone and next step before advancing the opportunity.",
+      "owner": "Account executive"
+    },
+    {
+      "field": "closeDate",
+      "op": "eq",
+      "value": false,
+      "title": "Review the forecast timing",
+      "next": "An old close date without a next step needs an owner\u2019s review, not an automatic roll-forward.",
+      "owner": "Forecast owner"
+    },
+    {
+      "field": "source",
+      "op": "eq",
+      "value": false,
+      "title": "Reconcile pipeline attribution",
+      "next": "A location-level source may contribute to a system-level deal. Preserve both without double counting revenue.",
+      "owner": "Revenue operations"
+    },
+    {
+      "field": "privacy",
+      "op": "eq",
+      "value": false,
+      "title": "Keep the pipeline record commercial",
+      "next": "Use organizational buying context, not patient records, medical necessity or equipment-order details.",
+      "owner": "Data reviewer"
+    }
+  ],
+  "ready": {
+    "title": "Ready for a commercial pipeline review",
+    "next": "The account and forecast owners can inspect the relationship, stage evidence and next action. Forecast movement should remain distinct from revenue actuals."
+  },
+  "experiments": [
+    {
+      "name": "Location-aware ownership review",
+      "hypothesis": "Explicit health-system relationships reduce duplicate opportunities.",
+      "control": "Flat logo-based account list",
+      "treatment": "System, location and source hierarchy",
+      "primary": "Correctly owned opportunities",
+      "guardrail": "Double-counted pipeline and lost parent relationships",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Evidence in pipeline reviews",
+      "hypothesis": "A specific next step and movement reason improve forecast discussions.",
+      "control": "Amount and close-date report",
+      "treatment": "Stage evidence plus change reason",
+      "primary": "Opportunities with a supported next action",
+      "guardrail": "Automatic date roll-forward and invented explanations",
+      "allocation": "Use matched account cohorts and a fixed observation window. Review uncertainty and selection effects before expansion.",
+      "nA": 40,
+      "nB": 40,
+      "winsA": 8,
+      "winsB": 11
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Map the commercial entities and definitions",
+      "body": "Work with RevOps and Sales on health-system, location and source relationships. Agree on stage and forecast definitions.",
+      "measure": "Hierarchy accuracy and metric reconciliation"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Build an inspectable pipeline view",
+      "body": "Add ownership checks, stale-date exceptions and a movement ledger that preserves the original snapshot.",
+      "measure": "Owned exceptions and explained forecast movement"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Connect reporting to operating action",
+      "body": "Turn recurring review questions into tested workflows and concise account briefs. Keep Finance and Sales on the same definitions.",
+      "measure": "Pipeline hygiene, follow-up completion and forecast explainability"
+    }
+  ],
+  "records": [
+    {
+      "id": "VM-1",
+      "name": "Alder Health / North Campus",
+      "segment": "Health system location",
+      "context": "A fictional location-level evaluation belongs to a broader system relationship.",
+      "question": "Which location and system owners should coordinate the next step?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "hierarchy": true,
+        "territory": true,
+        "stage": true,
+        "closeDate": true,
+        "source": true,
+        "privacy": true
+      }
+    },
+    {
+      "id": "VM-2",
+      "name": "Cedar Health Network",
+      "segment": "Health system",
+      "context": "Several locations were merged into one unstructured account note.",
+      "question": "Which relationships need explicit records?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "hierarchy": false,
+        "territory": true,
+        "stage": true,
+        "closeDate": true,
+        "source": true,
+        "privacy": true
+      }
+    },
+    {
+      "id": "VM-3",
+      "name": "Willow Community / East Site",
+      "segment": "Health system location",
+      "context": "Territory rules conflict with an existing system-level owner.",
+      "question": "Who owns the location action and the parent relationship?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "hierarchy": true,
+        "territory": false,
+        "stage": true,
+        "closeDate": true,
+        "source": true,
+        "privacy": true
+      }
+    },
+    {
+      "id": "VM-4",
+      "name": "Elm Post-Acute Group",
+      "segment": "Post-acute partner",
+      "context": "The opportunity stage advanced without a supported milestone.",
+      "question": "Which business event justifies this stage?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "hierarchy": true,
+        "territory": true,
+        "stage": false,
+        "closeDate": true,
+        "source": true,
+        "privacy": true
+      }
+    },
+    {
+      "id": "VM-5",
+      "name": "Birch Health / Central",
+      "segment": "Health system location",
+      "context": "The close date passed and no next activity is recorded.",
+      "question": "What evidence supports the next forecast period?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "hierarchy": true,
+        "territory": true,
+        "stage": true,
+        "closeDate": false,
+        "source": true,
+        "privacy": true
+      }
+    },
+    {
+      "id": "VM-6",
+      "name": "Juniper Health System",
+      "segment": "Health system",
+      "context": "One system-level opportunity is attributed as new revenue to several sources.",
+      "question": "How should source and influence be kept distinct?",
+      "source": "Synthetic research and discovery record",
+      "identity": true,
+      "stop": false,
+      "age": 5,
+      "owner": "GTM review owner",
+      "values": {
+        "hierarchy": true,
+        "territory": true,
+        "stage": true,
+        "closeDate": true,
+        "source": false,
+        "privacy": true
+      }
+    }
+  ],
+  "metricsTitle": "Reconcile the forecast before explaining it.",
+  "metricsIntro": "A synthetic forecast bridge separates new opportunities, amount changes and timing movement.",
+  "metricTable": {
+    "headers": [
+      "Movement",
+      "Illustrative value",
+      "Definition"
+    ],
+    "rows": [
+      [
+        "Opening period pipeline",
+        "$500,000",
+        "Original snapshot"
+      ],
+      [
+        "New qualified pipeline",
+        "+$120,000",
+        "Entered this period"
+      ],
+      [
+        "Amount adjustments",
+        "\u2212$20,000",
+        "Changed value on existing opportunities"
+      ],
+      [
+        "Pushed to later period",
+        "\u2212$90,000",
+        "Timing change, not lost revenue"
+      ],
+      [
+        "Closed lost",
+        "\u2212$30,000",
+        "Lost opportunity value"
+      ],
+      [
+        "Closing period pipeline",
+        "$480,000",
+        "Reconciled ending snapshot"
+      ]
+    ]
+  },
+  "metricsNotes": [
+    "All values are invented commercial examples, not Verse Medical results.",
+    "Opening 500,000 + new 120,000 \u2212 adjustments 20,000 \u2212 pushed 90,000 \u2212 lost 30,000 = closing 480,000.",
+    "Pipeline, forecast, bookings, collected revenue and commission credit require separate definitions."
+  ],
+  "gateHash": "6918cb42e9642bc2a29841914873c02982ee1c8dfa403a9daece3461e13f0c53"
+}
