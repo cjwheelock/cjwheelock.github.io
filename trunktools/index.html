@@ -9,6 +9,7 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231f201d'/%3E%3Ctext x='32' y='41' font-family='Arial, sans-serif' font-size='25' font-weight='700' text-anchor='middle' fill='%23f7f7f3'%3ECJ%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="app.css?v=8">
     <link rel="stylesheet" href="fieldreports.css?v=1">
+    <link rel="stylesheet" href="demand-plan.css?v=1">
   </head>
   <body class="locked">
     <!-- Password gate -->
@@ -75,6 +76,9 @@
         <button class="nav-btn" data-view="roadmap">
           <svg viewBox="0 0 24 24"><path d="M4 6h10M4 12h16M4 18h7"/></svg>30-day roadmap
         </button>
+        <button class="nav-btn plan-nav" data-view="demand-plan" aria-controls="view-demand-plan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4M4 20h16M8 15l4-5 4 2 4-7"/></svg><span>Demand Gen &amp;<br class="plan-nav-break"> Attribution Plan</span>
+        </button>
         <div class="side-foot">
           Built by <b>CJ Wheelock</b> for the Founding GTM Engineer role.<br>
           <a href="https://cjwheelock.com">cjwheelock.com</a>
@@ -113,7 +117,7 @@
             <div class="card resume-company">
               <div class="card-h"><h3>OMG Goals Incorporated</h3><span class="tag accent">Public benefit corporation</span></div>
               <p>I started OMG Goals Incorporated to help young adults build more fulfilling lives. The projects below put that mission into practice through real-world activities, exploration and shared experiences.</p>
-              <p>I use AI to move from product strategy to working software, then measure and improve the result. My work spans the apps people use, the data behind them and the commercial workflows that help them grow.</p>
+              <p>I use MCP-connected tools, coordinated research agents and bounded feedback loops to move from product strategy to working software. My work spans the apps people use, the data behind them and the commercial workflows that help them grow.</p>
             </div>
 
             <div class="resume-heading"><h2>Projects under that mission</h2><span class="meta">What each does · what I built · tools and tradeoffs</span></div>
@@ -127,8 +131,8 @@
               <p class="resume-requirement"><b>Technical challenge:</b> turn scattered websites, calendars and social listings into trustworthy local recommendations, then make that inventory fast and useful in a mobile app.</p>
 
               <div class="resume-accomplishment">
-                <h3>1. Built a source-backed extraction pipeline</h3>
-                <p>I separated source discovery, evidence collection, model extraction and validation. Category-specific searches find the right sources; code handles recurrence, geography and deduplication. Budget limits, bounded retries and resumable jobs keep collection manageable.</p>
+                <h3>1. Built a bounded AI extraction pipeline</h3>
+                <p>I separated source discovery, evidence collection, model extraction and validation. Category-specific searches find the right sources; code handles recurrence, geography and deduplication. Database leases and job locks, budgets, bounded retries and publication checks keep the production pipeline resumable and controlled.</p>
                 <ol class="pipeline resume-pipeline" aria-label="Hey Sammy extraction stages">
                   <li class="pipe-step"><div class="n">01</div><b>Discover</b><span>Find relevant sources by city and activity category.</span></li>
                   <li class="pipe-step"><div class="n">02</div><b>Collect evidence</b><span>Rank sources, fetch pages and retain useful evidence.</span></li>
@@ -148,12 +152,18 @@
                 <p>I evaluated DeepSeek, GLM and Qwen through OpenRouter, and tested Monid/TinyFish retrieval. I compared completed extraction, source grounding, valid structured output and total workflow cost. Exa was researched as an optional source-coverage fallback.</p>
                 <p class="resume-note">A cheaper Long Beach configuration reached $0.55 in production-equivalent cost versus a prior known cost above $1.35, but its grounding was weaker. I kept that quality tradeoff explicit instead of treating lower spend as proof of an equivalent replacement.</p>
               </div>
+              <div class="resume-accomplishment">
+                <h3>4. Used PostHog MCP in the measurement loop</h3>
+                <p>In August 2026, I used PostHog MCP for analytics queries, funnels and trends on Hey Sammy. That gave me a way to inspect product behavior through connected tools and use the findings to guide the next improvement.</p>
+                <p class="resume-note">The durable collection system is a bounded production pipeline. Serper is a configured third-party capability; I did not build a custom MCP server or a self-training production swarm.</p>
+              </div>
               <dl class="resume-tools">
+                <div><dt>MCP &amp; loop</dt><dd>PostHog MCP · analytics queries, funnels and trends · reviewed improvement decisions</dd></div>
                 <div><dt>App</dt><dd>React Native · Expo · TypeScript · Supabase · RevenueCat · PostHog</dd></div>
                 <div><dt>Collection</dt><dd>OpenRouter · DeepSeek · OpenAI models · Serper · ScaleDown · Apify</dd></div>
                 <div><dt>Compared / researched</dt><dd>GLM · Qwen · Monid/TinyFish · Exa</dd></div>
               </dl>
-              <div class="resume-relevance"><b>Relevant to Trunk:</b> sourced account research, enrichment, qualification, cost control and fast access to reliable context.</div>
+              <div class="resume-relevance"><b>Relevant to Trunk:</b> I’d apply source-backed research and an MCP-assisted measurement loop to account briefs, enrichment quality and demand-gen experiments, with cost and publication checks.</div>
             </article>
 
             <article class="card resume-project" aria-labelledby="sidequest-project-title">
@@ -189,10 +199,16 @@
               </div>
               <dl class="resume-tools">
                 <div><dt>App</dt><dd>React Native · Expo · TypeScript · Supabase · RevenueCat · PostHog</dd></div>
+                <div><dt>MCP</dt><dd>Supabase MCP · SQL and Edge Function inspection</dd></div>
                 <div><dt>Operations</dt><dd>React · Node.js · SQLite · CSV imports · signed-event receipts</dd></div>
                 <div><dt>Android setup</dt><dd>Firebase Cloud Messaging · Expo notifications. Configured with a successful debug build; server credentials and delivery verification were pending at that setup checkpoint.</dd></div>
               </dl>
-              <div class="resume-relevance"><b>Relevant to Trunk:</b> reliable internal tools, recoverable workflows, commercial data quality and measurement of cost and user behavior.</div>
+              <div class="resume-accomplishment">
+                <h3>4. Coordinated research agents with a compiler and QA</h3>
+                <p>I used Supabase MCP to inspect SQL and Edge Functions. For enterprise prospect research, I coordinated four researchers across 20 accounts, followed by compiler and QA work. A separate three-worker city-content effort remained testing-only.</p>
+                <p class="resume-note">This is agent-swarm experience in bounded research and development: orchestration, shared schemas and review. The local partnership CRM and testing-only content work retain their stated deployment limits.</p>
+              </div>
+              <div class="resume-relevance"><b>Relevant to Trunk:</b> coordinated account-research agents, deterministic merging, owned exceptions and recoverable internal tools—followed by measurement and rep feedback.</div>
             </article>
 
             <article class="card resume-project" aria-labelledby="dancers-project-title">
@@ -221,13 +237,18 @@
                 <div><dt>Commercial workflows</dt><dd>Stripe · Resend · notification jobs · signed webhooks</dd></div>
                 <div><dt>Prepared integration</dt><dd>Twilio SMS, pending provider activation</dd></div>
               </dl>
-              <div class="resume-relevance"><b>Relevant to Trunk:</b> lead handoffs, approval flows, quote-to-cash dependencies and recovery when an external service fails.</div>
+              <div class="resume-accomplishment">
+                <h3>4. Ran parallel research with provenance and QA</h3>
+                <p>I coordinated six parallel research batches with a common schema, deduplication, provenance and QA. The research dataset grew from 105 to 223 records and later 416 records; those counts are records, not unique verified people.</p>
+                <p>I also used Instantly and Gmail connected tools for campaign review and sent-message reconciliation. Those are connected-tool workflows, not custom MCP servers I authored.</p>
+              </div>
+              <div class="resume-relevance"><b>Relevant to Trunk:</b> a research swarm can prepare account-specific mock implementations; source validation, duplicate checks, approval and sent-message reconciliation keep the outreach loop accountable.</div>
             </article>
 
             <div class="card resume-summary mt">
               <div class="card-h"><h3>What connects the work</h3></div>
               <p>I’ve been an SDR and run successful outbound campaigns. I combine that sales experience with the ability to build the data, software and operating workflows behind a product.</p>
-              <p>Using AI well has meant setting a clear constraint, comparing real outputs and removing unnecessary work. I want the same discipline at Trunk: useful tools, credible evidence and fast iteration with the people using them.</p>
+              <p>My operating loop is observe → validate → decide → act within bounds → measure → improve. MCP gives an agent access to approved tools; coordinated agents divide bounded work; an accountable owner reviews claims and consequential actions. I want the same discipline at Trunk: useful tools, credible evidence and iteration with the people using them.</p>
             </div>
 
 
@@ -561,6 +582,202 @@
             </div>
           </section>
 
+          <!-- DEMAND GEN & ATTRIBUTION PLAN -->
+          <section class="view demand-plan" id="view-demand-plan" data-title="Demand Gen &amp; Attribution Plan" data-crumb="Build" aria-labelledby="plan-title">
+            <div class="plan-hero">
+              <div class="plan-eyebrow">First project · CJ Wheelock</div>
+              <h2 id="plan-title" tabindex="-1">Give buyers something useful.<br>Measure what moves the deal.</h2>
+              <p>My proposal for improving demand generation and attribution at Trunk Tools: start better conversations, connect the evidence, and test what creates qualified pipeline.</p>
+              <div class="plan-meta"><span class="plan-status proposed">Proposed plan</span><span>Research checked November 2, 2026</span></div>
+            </div>
+
+            <div class="plan-summary">
+              <article><span class="plan-number">01</span><h3>Show the possibility</h3><p>A relevant mock implementation gives the buyer something concrete to react to.</p></article>
+              <article><span class="plan-number">02</span><h3>Connect the journey</h3><p>Join accounts, campaigns, conversations, qualified opportunities and revenue.</p></article>
+              <article><span class="plan-number">03</span><h3>Test the contribution</h3><p>Use observed evidence, buyer reports and experiments together.</p></article>
+            </div>
+
+            <nav class="plan-jumps" aria-label="Plan sections">
+              <button type="button" data-plan-jump="plan-outreach">The outreach play</button>
+              <button type="button" data-plan-jump="plan-channels">Channel plan</button>
+              <button type="button" data-plan-jump="plan-measurement">Attribution</button>
+              <button type="button" data-plan-jump="plan-vendors">Tool choice</button>
+              <button type="button" data-plan-jump="plan-roadmap">90-day delivery</button>
+              <button type="button" data-plan-jump="plan-sources">Sources &amp; assumptions</button>
+            </nav>
+
+            <div class="plan-evidence-note">
+              <span class="plan-status verified">Public evidence</span>
+              <p>A Trunk Tools BDR posting names <b>HubSpot</b>, and the company publishes a construction-AI evaluation guide. That supports a HubSpot-first discovery session; it does not establish the current edition, configuration or full stack. <a href="https://trunktools.com/careers/11da904b-71cd-4258-9cdf-95281a96a6b1/" target="_blank" rel="noopener">BDR role ↗</a> · <a href="https://trunktools.com/blog/how-to-evaluate-construction-ai/" target="_blank" rel="noopener">Buyer guide ↗</a></p>
+            </div>
+
+            <div class="plan-section" id="plan-outreach">
+              <div class="plan-section-head"><div><span class="plan-kicker">01 / Demand generation</span><h3 tabindex="-1">Lead with a mock implementation</h3></div><span class="plan-status proposed">My proposed play</span></div>
+              <div class="plan-feature">
+                <div class="plan-feature-main">
+                  <p class="plan-lede">I would start by building something useful for the account before asking for its time.</p>
+                  <p>A personalized dashboard or mock implementation can make an abstract AI pitch tangible. The rep then has a reason to call: “We built something for you. Did you see it? What would actually be useful?”</p>
+                  <p>That is the approach I have been using in my own outreach: research the company, build a tailored experience, and use it to start a practical conversation. This dashboard helped start ours. It is a hypothesis worth testing for Trunk Tools, not evidence of proven conversion lift.</p>
+                </div>
+                <aside class="plan-callout" aria-label="Proposed call opener">
+                  <span class="plan-kicker">A consultative call opener</span>
+                  <blockquote>“We built a small mockup for your team. Did you get a chance to see it? We made a few assumptions based on what is public, so I would love to know what we got wrong. Where does this kind of work slow your team down today?”</blockquote>
+                  <p>Proposed wording · Send the artifact before using this opener. Ask about the workflow; let the buyer correct the assumptions.</p>
+                </aside>
+              </div>
+
+              <div class="plan-flow" aria-label="Mock implementation workflow">
+                <div><b>Research</b><span>Public company, project and tool context, with sources.</span></div>
+                <div><b>Build the mock</b><span>A relevant workflow, clearly synthetic examples and visible assumptions.</span></div>
+                <div><b>Review &amp; approve</b><span>Check relevance, facts, claims, privacy and the outreach draft.</span></div>
+                <div><b>Consult &amp; learn</b><span>Use buyer feedback to improve the artifact and the next conversation.</span></div>
+              </div>
+
+              <details class="plan-detail"><summary><span><b>What each artifact should contain</b><small>Useful personalization with clear boundaries</small></span></summary><div class="plan-detail-body">
+                <ul><li><b>Public context:</b> company name, cited projects and documented tools. If a tool or project detail is uncertain, label it as an assumption or leave it out.</li><li><b>One relevant workflow:</b> a mock of how a team could use Trunk Tools, with conspicuous “synthetic example” labels on invented records and outputs.</li><li><b>A useful question:</b> ask which workflow is painful, where the mock misses, and what would make it worth trying.</li><li><b>Accurate boundaries:</b> public research and a proposed implementation—not access to their documents, an installed integration, or a functioning production deployment.</li></ul>
+                <p>Use a reusable rendering framework, not a bespoke software project per prospect. Automate research collection, source checking and draft assembly where reliable. An accountable owner approves the facts, positioning, artifact and send. A seller reviews the account context before calling.</p>
+              </div></details>
+
+              <details class="plan-detail"><summary><span><b>Sample first-touch emails</b><small>Proposed templates · not sent</small></span></summary><div class="plan-detail-body">
+                <p><b>Subject:</b> A quick idea for [Company]</p>
+                <div class="plan-two"><div class="plan-mini"><h4>Link-first</h4><p>Hi [First name],</p><p>I put together a small mockup of how [specific workflow] could look for your team, based on [verified public context]. It uses sample data, not your project information.</p><p>Here it is: [approved branded link].</p><p>Is this close to something your team deals with, or would a different workflow be more useful?</p><p>[Rep name]</p></div><div class="plan-mini"><h4>Reply-first</h4><p>Hi [First name],</p><p>I put together a small mockup of how [specific workflow] could look for your team, based on [verified public context]. It uses sample data, not your project information.</p><p>Want me to send it over? I would also be curious if a different workflow would be more useful.</p><p>[Rep name]</p></div></div>
+                <p>Review the account facts and placeholders before approval. Use approved branded destinations and normal authentication; avoid shorteners or tracking tricks.</p>
+              </div></details>
+
+              <details class="plan-detail"><summary><span><b>Test link-first against permission-first</b><small>Qualified conversations and pipeline are the outcomes</small></span></summary><div class="plan-detail-body">
+                <div class="plan-two"><div class="plan-mini"><span class="plan-status proposed">Variant A</span><h4>A relevant link in the first email</h4><p>Brief context, the specific problem explored and a link to the mock. Keep the destination recognizable and explain why it is relevant.</p></div><div class="plan-mini"><span class="plan-status proposed">Variant B</span><h4>Ask permission, then share</h4><p>Use the same account relevance and offer. Ask whether they want to see the mock; share it after a reply.</p></div></div>
+                <p><b>Design:</b> randomize at account level within comparable segments; keep all contacts at an account in one arm, with equivalent research, personalization and follow-up. Analyze original assignment, so reply-first nonresponders stay in the denominator. Define qualification, sample size, evaluation window and stopping rules before sending.</p>
+                <p><b>Primary decision:</b> compare qualified conversations per assigned eligible account. Review reply quality, qualified meetings and accepted opportunities at comparable maturity, then pipeline and wins over an appropriate lag. Scale only if improvement justifies artifact production and rep effort at acceptable delivery and safety outcomes.</p>
+                <p><b>Deliverability caveat:</b> links can affect filtering and buyer trust; the effect depends on the sender, destination and message. It is worth testing, not assuming every link hurts delivery. Monitor bounces, spam complaints and opt-outs. Separate scanner/bot visits from likely human engagement; opens and clicks alone are not success and do not establish inbox placement.</p>
+                <p><b>Interpretation:</b> A versus B tests packaging of the same offer. To estimate the added value of the mock itself, add a standard-outreach control only when volume supports it. Treat small enterprise samples as directional learning.</p>
+              </div></details>
+            </div>
+
+            <div class="plan-section" id="plan-channels">
+              <div class="plan-section-head"><div><span class="plan-kicker">02 / Channel plan</span><h3 tabindex="-1">Connect the activity already happening</h3></div><span class="plan-status verified">Public activity verified</span></div>
+              <p class="plan-section-intro">Trunk Tools already publishes content and customer proof, runs webinars and community events, and hires for outbound. I’d connect those motions to accounts, owners and outcomes—not assume we need to start them from scratch.</p>
+              <div class="plan-channel-grid">
+                <article class="plan-channel-card"><span class="plan-kicker">The centerpiece</span><h4>Personalized mock implementations</h4><p>Public account context → useful mock → relevant email → consultative call → scoped working session.</p><span class="plan-status proposed">Test the offer</span></article>
+                <article class="plan-channel-card"><span class="plan-kicker">Connect existing demand</span><h4>Event &amp; webinar follow-through</h4><p>Topic, attendance and questions → account match → owner → relevant proof → held meeting and evaluation outcome.</p><span class="plan-status proposed">Test the handoff</span></article>
+                <article class="plan-channel-card"><span class="plan-kicker">A complementary offer</span><h4>2027 AI readiness session</h4><p>One costly workflow → baseline and sponsor → security prerequisites → measurable pilot and decision date.</p><span class="plan-status proposed">Test qualified interest</span></article>
+              </div>
+              <details class="plan-detail"><summary><span><b>Existing channels: what the public record shows</b><small>Activity is verified; performance requires internal access</small></span></summary><div class="plan-detail-body">
+                <ul><li><b>Webinars:</b> six on-demand sessions from March–August 2026 cover submittals, drawing reviews, RFIs, demos, differentiation and AI education. The August 20 “No BS AI” session pairs CPO Chris Boyd with product marketer David Smolker; the May 13 drawing-review session includes HITT Senior Project Manager Josue Paredes. <a href="https://trunktools.com/events/?tab=on-demand" target="_blank" rel="noopener">On-demand library ↗</a> · <a href="https://trunktools.com/events/no-bs-ai-plain-english-primer/" target="_blank" rel="noopener">No BS AI ↗</a> · <a href="https://trunktools.com/events/from-bulletin-drop-to-action-drawing-reviews/" target="_blank" rel="noopener">Practitioner session ↗</a></li><li><b>Field and community events:</b> the directory lists Autodesk University September 15, an AU after-party September 16, Hammertech community and Blueprint events September 22, and a Groundbreak after-party October 21, 2026. All are past as of November 2, even where the site groups them under “Upcoming.” An after-party does not establish sponsorship. <a href="https://trunktools.com/events/" target="_blank" rel="noopener">Event directory ↗</a></li><li><b>Content:</b> guides include a buyer questionnaire, generic/PMS AI comparisons, build-versus-buy, an AI maturity diagnostic and a contract-review tool. The blog contains workflow templates, comparisons and product/customer news. This proves publishing activity, not rankings, traffic or ROI. <a href="https://trunktools.com/guides/" target="_blank" rel="noopener">Guides ↗</a> · <a href="https://trunktools.com/blog/" target="_blank" rel="noopener">Blog ↗</a></li><li><b>Outbound and routing:</b> the BDR role names calls, email, lists, research, nurture, AE partnership and HubSpot. The GTM Engineer role prioritizes marketing/demand generation and signal → enrichment → scoring → routing. Its Clay, Claude, Chat and Zapier examples are qualification examples, not proof of the installed stack. <a href="https://trunktools.com/careers/11da904b-71cd-4258-9cdf-95281a96a6b1/" target="_blank" rel="noopener">BDR role ↗</a> · <a href="https://trunktools.com/careers/4cc452cf-f01f-49e3-92b3-95f0a7943d98/" target="_blank" rel="noopener">GTM Engineer role ↗</a></li></ul>
+                <p>The registration hostname does not identify the underlying marketing platform. Current automation, sequencing, analytics, warehouse, attribution tooling and channel economics still need discovery.</p>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>Make event interest useful to the account owner</b><small>A handoff hypothesis to validate, not a diagnosed failure</small></span></summary><div class="plan-detail-body">
+                <p>Normalize registration, attendance, questions and topic separately. Resolve the existing account, open deal, territory and current owner; attach an approved proof asset that matches the role and workflow. Propose a relevant next step, then record the held meeting, qualification, evaluation and opportunity outcome.</p>
+                <p>I’d compare this handoff with the current process before assuming leads are being lost. Badge scans, registrations and gated recordings are engagement signals; they are not all equally qualified. Ungated case-study downloads do not automatically identify a contact.</p>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>Turn the budget-readiness article into a working session</b><small>A practical second offer alongside the personalized mock</small></span></summary><div class="plan-detail-body">
+                <p>The October 19 article, “How to evaluate construction AI before your 2027 budget locks,” already connects operations, executives, finance, IT and legal to a real-document working session. I’d make that journey measurable and use it where the account’s timing fits.</p>
+                <ol><li>Choose one costly document or coordination workflow and identify the champion and sponsor.</li><li>Agree a baseline, authorized sanitized or synthetic documents, and security/integration prerequisites.</li><li>Set measurable pilot criteria, a decision date and project-to-enterprise expansion criteria.</li></ol>
+                <p>Trunk Tools’ enablement offer includes governance, education, champions, executive advisory and forward-deployed experts. Build readiness and adoption into the evaluation. <a href="https://trunktools.com/blog/how-to-evaluate-construction-ai/" target="_blank" rel="noopener">2027 evaluation guide ↗</a> · <a href="https://trunktools.com/ai-enablement/" target="_blank" rel="noopener">Enablement ↗</a></p>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>Distribute customer proof by role and workflow</b><small>Vendor-published examples, not promised savings</small></span></summary><div class="plan-detail-body">
+                <dl class="plan-definitions"><div><dt>PE / submittals</dt><dd><b>Torcon:</b> a two-project pilot; the case study reports 453 TrunkText hours across four full months and separately about 46 hours across 64 submittal reviews. Keep those measures separate. <a href="https://trunktools.com/customers/case-study-how-torcon-project-team-save-time-reduce-risk/" target="_blank" rel="noopener">Torcon ↗</a></dd></div><div><dt>Field adoption</dt><dd><b>AMLI:</b> reported 1–2 hours per field user daily, with SMS and cited answers. Use it to discuss adoption and the field workflow, not to promise the same result. <a href="https://trunktools.com/customers/case-study-how-amli-residential-builds-smarter-w-trunk-tools/" target="_blank" rel="noopener">AMLI ↗</a></dd></div><div><dt>Operations / Autodesk</dt><dd><b>Cleveland:</b> four projects, 790+ reported hours and $60k+ estimated savings in Autodesk Forma workflows. <a href="https://trunktools.com/customers/case-study-cleveland-construction-sped-up-submittal-reviews-with-trunk-tools/" target="_blank" rel="noopener">Cleveland ↗</a></dd></div><div><dt>Pilot to enterprise</dt><dd><b>Gilbane:</b> a $456M project pilot followed by about ten additional jobsites. This supports an expansion hypothesis; it is not a universal progression rate. <a href="https://trunktools.com/customers/trunk-tools-case-study-with-gilbane/" target="_blank" rel="noopener">Gilbane ↗</a></dd></div></dl>
+                <p class="plan-caption">These are company-published customer stories, not independently audited savings. Use their context and limitations in the artifact and the call.</p>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>Ecosystem, search and selective paid tests</b><small>Expand a supported motion only after baseline economics</small></span></summary><div class="plan-detail-body">
+                <p><b>Verified starting point:</b> at Autodesk University on September 15, Cleveland executive Elliot Christiansen and Sarah Buchner discussed AI workflows atop Autodesk Forma. Develop useful practitioner content and community follow-through around evidenced relationships. <a href="https://trunktools.com/newsroom/trunk-tools-highlighted-autodesk-university-2026/" target="_blank" rel="noopener">AU session ↗</a></p>
+                <p><b>Proposed tests:</b> extend useful search content around real workflow questions; consider paid search, LinkedIn targeting and retargeting only after audience, consent, creative and qualified-opportunity economics are understood. Their current use, spend and ROI are unverified. No budget recommendation is justified yet.</p>
+                <p>Do not infer a current Procore partnership or co-marketing program from an integration FAQ; access and commercial status require confirmation.</p>
+              </div></details>
+              <div class="plan-principle"><b>Map the buying group and the project-to-enterprise journey.</b><span>Field champion → operational sponsor → executive/economic buyer, with IT, security, legal and procurement involved as needed. Proposed lifecycle: target account → relevant engagement → buying-group conversation → live-project evaluation → workflow result → opportunity/win → expansion. Validate the actual CRM stages. Public pricing is based on construction volume with unlimited seats/usage, so expansion should center on projects and adoption, not paid seats. <a href="https://trunktools.com/" target="_blank" rel="noopener">Buyer roles ↗</a> · <a href="https://trunktools.com/pricing/" target="_blank" rel="noopener">Pricing model ↗</a></span></div>
+            </div>
+
+            <div class="plan-section" id="plan-measurement">
+              <div class="plan-section-head"><div><span class="plan-kicker">03 / Attribution design</span><h3 tabindex="-1">Three lenses, one account journey</h3></div><span class="plan-status proposed">Proposed architecture</span></div>
+              <p class="plan-section-intro">I’d begin with shared revenue definitions and the data the team already owns. Keep HubSpot as the operational record if discovery confirms it is the current CRM, then add only the measurement layer we need.</p>
+              <div class="plan-lenses">
+                <article><span class="plan-lens-icon" aria-hidden="true">1</span><h4>Observed</h4><p>What did we record?</p><small>Timestamped touches, campaign IDs, source evidence, account/contact/deal links and consent state.</small></article>
+                <article><span class="plan-lens-icon" aria-hidden="true">2</span><h4>Reported</h4><p>What does the buyer say?</p><small>Ask what created awareness and what prompted action. Keep verbatim answers separate from normalized or AI-interpreted categories.</small></article>
+                <article><span class="plan-lens-icon" aria-hidden="true">3</span><h4>Experimental</h4><p>What additional demand did we cause?</p><small>Account holdouts or practical lift tests, with outcomes, sample requirements, lag and stopping rules defined in advance.</small></article>
+              </div>
+              <div class="plan-principle"><b>Attribution is a model of credit, not proof of causation.</b><span>Show the lenses together. Do not add overlapping channel-influenced pipeline into a company total. Revenue allocations should reconcile, but reconciliation does not make the weights causal. <a href="https://support.google.com/google-ads/answer/14102450?hl=en" target="_blank" rel="noopener">Google on incrementality ↗</a></span></div>
+
+              <details class="plan-detail"><summary><span><b>The minimum measurement layer</b><small>Identity, stages, costs and offline touchpoints</small></span></summary><div class="plan-detail-body">
+                <dl class="plan-definitions"><div><dt>Canonical IDs</dt><dd>Account, contact, opportunity, campaign, event and experiment assignment. Preserve parent/subsidiary/project relationships and association dates; domain-only matching can merge the wrong construction entities.</dd></div><div><dt>Meaningful stages</dt><dd>Invited → registered → attended → engaged → meeting booked → meeting held → sales accepted → qualified opportunity → pilot → proposal → won/lost. Badge scans and opens are not qualified pipeline.</dd></div><div><dt>Revenue &amp; cost</dt><dd>Agree the qualification and value basis with Sales. Snapshot stage, date and amount changes; deduplicate merged/reopened deals. Show media-only and fully loaded costs, including events, travel, production and partners.</dd></div><div><dt>Offline coverage</dt><dd>Campaign-specific event IDs, QR/UTM links, attendance imports and referral records. Reconcile imported, web and CRM touches so one interaction is not counted twice.</dd></div></dl>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>Data contract, model definitions and quality tests</b><small>A reproducible record behind every reported number</small></span></summary><div class="plan-detail-body">
+                <p><b>Flow:</b> permissioned touches + spend → raw events → validated identity/campaign mapping → HubSpot account/contact/opportunity associations → versioned descriptive models → reconciled decisions. Add a warehouse or vendor only when a demonstrated gap justifies it.</p>
+                <p><b>Event contract:</b> event ID, source system and record, occurred_at and ingested_at in UTC, event type, campaign ID, verified entity IDs, consent state, UTM categories, evidence reference and schema version. Retention and deletion obligations still apply to raw events. Never put personal data or secrets in URLs.</p>
+                <p><b>Definitions:</b> sourced uses one agreed operational rule; influenced is an overlapping opportunity association; incremental requires a counterfactual experiment. Show first recorded eligible touch, last eligible pre-opportunity touch, simple fractional credit, self-report and operational source side by side. Expose model version, lookback, eligibility, currency and refresh time.</p>
+                <p><b>Tests:</b> duplicate events/actions, late ingestion, suppression, parent/subsidiary identity, registration versus attendance, missing UTMs, CRM cohort totals, fractional allocations, influenced overlap, daylight-saving changes and deletion propagation. Reconcile uncertain writes before retrying; test a kill switch and failure recovery.</p>
+                <p>Current baselines are <b>not measured here</b>. Internal access is required. Preserve unknowns rather than filling reports with invented numbers.</p>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>Quality, privacy and operating ownership</b><small>Make uncertainty and collection limits visible</small></span></summary><div class="plan-detail-body">
+                <ul><li><b>Quality dashboard:</b> source coverage, unmatched accounts, stale syncs, late events, duplicate rate, consent exclusions and spend reconciliation. Incomplete data is not zero activity.</li><li><b>Identity:</b> an identified account is not proof that a named employee visited. Keep probabilistic matches and extracted/inferred evidence visibly distinct.</li><li><b>Collection:</b> apply the company’s consent and legal requirements, retention limits, deletion propagation and least privilege. Minimize transcript/email fields shared with vendors; inspect DPA, subprocessors and model-training terms.</li><li><b>Operating loop:</b> ingest → validate → analyze → propose a bounded test → approve → launch → wait for mature outcomes → refine. Automate reconciliation and alerts; keep named owners for spending, CRM writes and external actions.</li></ul>
+                <p>Cookieless tracking does not automatically remove consent requirements or guarantee complete coverage. Use actual sync exclusions when minimizing collection, not just exclusions from later processing. <a href="https://help.factors.ai/en/articles/7261985-hubspot-integration" target="_blank" rel="noopener">Factors sync controls ↗</a> · <a href="https://docs.hockeystack.com/integrations/other/vector" target="_blank" rel="noopener">Identity limitation ↗</a> · <a href="https://docs.hockeystack.com/technical-details/tracking/how-does-tracking-work" target="_blank" rel="noopener">Consent behavior ↗</a></p>
+              </div></details>
+            </div>
+
+            <div class="plan-section" id="plan-vendors">
+              <div class="plan-section-head"><div><span class="plan-kicker">04 / Tool decision</span><h3 tabindex="-1">Evaluate one specialist against the baseline</h3></div><span class="plan-status proposed">Conditional shortlist</span></div>
+              <p class="plan-section-intro">My initial shortlist is <b>Upside and Dreamdata</b>, for different gaps. First check native HubSpot. Then run the same historical journeys through the baseline and one finalist; buy only if it improves trusted decisions enough to justify the cost.</p>
+              <div class="plan-two">
+                <article class="plan-vendor-highlight"><span class="plan-kicker">When conversations are missing</span><h4>Upside</h4><p>Interesting for referrals, introductions, calls and other under-recorded relationship channels. Its evidence model and MCP access fit the agent discussion.</p><a href="https://www.upside.tech/" target="_blank" rel="noopener">Product evidence ↗</a></article>
+                <article class="plan-vendor-highlight"><span class="plan-kicker">When channel reporting is the gap</span><h4>Dreamdata</h4><p>A candidate for repeatable account journeys, channel-to-pipeline analytics and paid-media activation with a structured HubSpot data model.</p><a href="https://docs.dreamdata.io/article/rholhyxnwo-hubspot-integration" target="_blank" rel="noopener">Connector evidence ↗</a></article>
+              </div>
+              <p class="plan-caption">Capabilities below come from official vendor documentation. Fit assessments are proposals. None of these vendors has been connected or purchased for this plan.</p>
+
+              <details class="plan-detail"><summary><span><b>Upside · communication-rich account histories</b><small>Tracked, extracted and inferred evidence must stay distinct</small></span></summary><div class="plan-detail-body">
+                <p>Upside is a GTM software/data platform at <b>upside.tech</b>, distinct from the consumer cashback business. Pipedash combines recorded touches with communication-derived information and inferred explanations; account histories and citations are central to its positioning.</p>
+                <p>Its published attribution analysis uses a selected set of 13 customer companies, not a randomized experiment. Inspectable citations help us challenge a model; they do not establish that a touch caused a deal. Compare its explanations against buyer interviews and controlled tests.</p>
+                <p><b>Diligence:</b> no public price verified. Confirm exact HubSpot objects, call platform, event imports, backfill, exports and retention. Start with read-only analytical access. Its beta API documents changing endpoints and no guaranteed SLAs; keep CRM and budget-write permissions out of the initial pilot.</p>
+                <div class="plan-source-links"><a href="https://www.upside.tech/platform/dashboard" target="_blank" rel="noopener">Account explorer ↗</a><a href="https://www.upside.tech/research/the-untracked-half-zero-sum-b2b-attribution" target="_blank" rel="noopener">Methodology &amp; limits ↗</a><a href="https://docs.upside.tech/docs/mcp-setup" target="_blank" rel="noopener">MCP ↗</a><a href="https://docs.upside.tech/docs/upside-api" target="_blank" rel="noopener">Beta API ↗</a></div>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>Dreamdata · channel-to-pipeline measurement</b><small>HubSpot journeys and additional marketing events</small></span></summary><div class="plan-detail-body">
+                <p>Its HubSpot connector maps companies, contacts and deals into journeys. Event Builder supports marketing-event participation, calls, meetings, notes and forms; additional activity/events depend on the plan.</p>
+                <p><b>Cost and scope:</b> a free foundational plan is available; paid attribution is custom-priced, with activation and warehouse add-ons. The free plan’s two months of history is too short by itself for long enterprise buying journeys. Confirm historical coverage and required add-ons in the quote.</p>
+                <div class="plan-source-links"><a href="https://dreamdata.io/pricing" target="_blank" rel="noopener">Pricing ↗</a><a href="https://docs.dreamdata.io/article/rholhyxnwo-hubspot-integration" target="_blank" rel="noopener">HubSpot connector ↗</a><a href="https://docs.dreamdata.io/article/0eyxs33mrb-create-additional-events-in-dreamdata" target="_blank" rel="noopener">Event Builder ↗</a></div>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>HockeyStack &amp; Factors · alternatives by bottleneck</b><small>Flexible journeys versus account identification and activation</small></span></summary><div class="plan-detail-body">
+                <h4>HockeyStack</h4><p>Consider when flexible journey analysis, account analytics and cross-system reporting are the priority. It documents HubSpot companies, contacts, deals and engagements with daily CRM sync, custom Snowflake ingestion and company/contact writeback workflows.</p><p>Pricing is demo/quote-led. Confirm modules, refresh cadence, export access and custom integration fees; do not rely on old Academy pricing.</p>
+                <div class="plan-source-links"><a href="https://www.hockeystack.com/pricing" target="_blank" rel="noopener">Pricing ↗</a><a href="https://docs.hockeystack.com/integrations/crms/hubspot" target="_blank" rel="noopener">HubSpot ↗</a><a href="https://docs.hockeystack.com/integrations/analytics-and-data-warehouse/snowflake" target="_blank" rel="noopener">Snowflake ↗</a><a href="https://docs.hockeystack.com/account-intelligence/workflows/nodes/destinations/hubspot" target="_blank" rel="noopener">Writeback ↗</a></div>
+                <h4>Factors.ai</h4><p>Consider when account identification and LinkedIn/Google activation are the first bottleneck. Its HubSpot Basic connector pulls companies/deals; Growth adds contacts, forms, campaigns, engagements and lists.</p><p>Public pricing at research: Lite $199/month after trial; Basic $6k/year; Growth $20k/year; Enterprise $36k+/year. Confirm attribution/module limits, volumes and contract terms before comparing totals.</p>
+                <div class="plan-source-links"><a href="https://www.factors.ai/pricing" target="_blank" rel="noopener">Pricing ↗</a><a href="https://help.factors.ai/en/articles/7261985-hubspot-integration" target="_blank" rel="noopener">HubSpot objects ↗</a></div>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>Native CRM, enterprise suites or a thin data layer</b><small>Use the existing estate before creating a new one</small></span></summary><div class="plan-detail-body">
+                <dl class="plan-definitions"><div><dt>Native HubSpot</dt><dd>Check the current subscription and record associations first. Contact-, deal-create and deal-revenue attribution are documented; deal/revenue reporting requires Marketing Hub Enterprise. Current models include first/last touch, linear, time decay and empirical. <a href="https://knowledge.hubspot.com/reports/understand-attribution-reporting" target="_blank" rel="noopener">Definitions ↗</a> · <a href="https://knowledge.hubspot.com/reports/create-attribution-reports" target="_blank" rel="noopener">Report setup ↗</a></dd></div><div><dt>Salesforce Campaign Influence</dt><dd>Relevant if Salesforce is already the CRM or a migration is justified separately. Standard association depends on campaign membership and opportunity contact roles. Member status alone does not restrict native influence; invited and attended need distinct operating definitions. <a href="https://help.salesforce.com/s/articleView?id=sales.campaigns_influence_customizable_understanding.htm&amp;language=en_US&amp;type=5" target="_blank" rel="noopener">How it works ↗</a></dd></div><div><dt>Adobe Marketo Measure</dt><dd>A candidate for an existing Adobe/Salesforce/Dynamics estate, not the default HubSpot-first answer. Ultimate can ingest broader CRM data but differs materially, including no direct CRM touchpoint writeback and limits on some ABM ML services. HubSpot-hosted form tracking is not native HubSpot CRM support. <a href="https://experienceleague.adobe.com/en/docs/marketo-measure/using/introduction-to-marketo-measure/overview-resources/marketo-measure-framework" target="_blank" rel="noopener">Framework ↗</a> · <a href="https://experienceleague.adobe.com/en/docs/marketo-measure/using/marketo-measure-ultimate/marketo-measure-ultimate-overview" target="_blank" rel="noopener">Ultimate ↗</a></dd></div><div><dt>Thin SQL + BI layer</dt><dd>A proposed option: append-only touch, spend and stage tables; deterministic joins; versioned definitions and reconciliation checks. Budget for connectors, backfills, schema changes and an owner. Build account/project/pilot logic that is specific to the business; avoid casually rebuilding a commercial identity graph.</dd></div></dl>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>A buying test with acceptance gates</b><small>20–30 representative journeys, one baseline, one finalist</small></span></summary><div class="plan-detail-body">
+                <p>Select won, lost and open journeys across partner, event, paid and inbound paths. Include changed employers, duplicate records, multi-contact deals and known offline touches.</p>
+                <ul><li>Reconcile CRM deal totals and source-system spend.</li><li>Inspect identity merges and credit allocations; separate observed, extracted and inferred touches.</li><li>Prove attendance, timestamps, historical backfill and late ingestion on the sample.</li><li>Test consent/deletion handling, exports, connector errors and ownership.</li><li>Identify the decision improved: audience, campaign, budget test or experiment stop—not just another dashboard.</li></ul>
+                <p>Buy if additional trusted decisions and operating time saved justify implementation and annual cost. Otherwise retain the thin layer and revisit when volume or complexity warrants it.</p>
+              </div></details>
+            </div>
+
+            <div class="plan-section" id="plan-roadmap">
+              <div class="plan-section-head"><div><span class="plan-kicker">05 / Delivery &amp; ownership</span><h3 tabindex="-1">A useful first ten days. A measured 90 days.</h3></div><span class="plan-status proposed">Proposed sequence</span></div>
+              <div class="plan-timeline">
+                <article><span class="plan-kicker">Days 1–30</span><h4>Establish &amp; launch</h4><p>Agree definitions and baseline. Launch the personalized-dashboard pilot and a complementary budget-readiness journey. Establish identity/event QA and initial source/influence views.</p><small><b>Acceptance:</b> sample opportunities trace to evidence; replay is idempotent; suppression and ownership tests pass.</small></article>
+                <article><span class="plan-kicker">Days 31–60</span><h4>Connect &amp; compare</h4><p>Implement signal → enrich → score → route with bounded research agents. Compare cohorts, learn from rep rejections and evaluate one vendor against actual gaps.</p><small><b>Acceptance:</b> each action has provenance, status and owner; totals reconcile; low confidence escalates; a negative result is still interpretable.</small></article>
+                <article><span class="plan-kicker">Days 61–90</span><h4>Scale what holds up</h4><p>Scale only the supported motion. Use holdouts where feasible, improve buying-group coverage, and make the build/buy/keep decision with an operating runbook.</p><small><b>Acceptance:</b> evidence changes a real decision; failure recovery works; someone besides the builder can run the workflow.</small></article>
+              </div>
+              <p class="plan-caption">This is a delivery sequence, not a guaranteed revenue timeline. Enterprise outcomes may mature after day 90.</p>
+              <details class="plan-detail"><summary><span><b>The first ten working days</b><small>Discovery → definitions → low-risk quick win → dry run</small></span></summary><div class="plan-detail-body">
+                <dl class="plan-definitions"><div><dt>Days 1–2</dt><dd>Interview stakeholders; inspect won, lost and stalled journeys; define sales-accepted qualification and the business decision attribution should improve.</dd></div><div><dt>Days 3–4</dt><dd>Map HubSpot objects and ownership, campaign IDs, offline capture, source preservation and data gaps. Baseline quality.</dd></div><div><dt>Days 5–6</dt><dd>Agree sourced versus influenced rules, the event contract and a focused pilot.</dd></div><div><dt>Days 7–8</dt><dd>Ship a low-risk quick win such as event capture/routing or unassigned demo-request handling. Backfill only defensible records.</dd></div><div><dt>Days 9–10</dt><dd>Dry-run representative journeys. Deliver a scorecard, runbook, named owner and backup.</dd></div></dl>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>A bounded agent loop with accountable owners</b><small>Parallel research, deterministic validation and human promotion gates</small></span></summary><div class="plan-detail-body">
+                <p>I’d use a small, coordinated agent swarm for approved public account, workflow and customer-proof research. Each worker returns the same schema with citations. Deterministic merging and evidence checks precede owner routing; rep feedback becomes a held-out evaluation before a workflow change is promoted.</p>
+                <p><b>Loop:</b> observe → validate → decide → act within bounds → measure → improve. This is a controlled operating loop, not autonomous self-training.</p>
+                <p><b>Controls:</b> duplicate/customer/open-opportunity checks, suppression, territories, freshness, action IDs, rate limits, bounded retries and logs. Put human gates on claims, uncertain identity, unusual personalization, permissions, budget and sensitive materials—not every lookup. Assign an owner, backup and incident path.</p>
+              </div></details>
+              <details class="plan-detail"><summary><span><b>The scorecard and discovery conversation</b><small>Questions for Kevin and Ryan before committing scope</small></span></summary><div class="plan-detail-body">
+                <p><b>Outcomes:</b> accepted opportunities per eligible account, qualified meetings held, pilot progression, new-logo versus expansion, complete spend/cost, stage aging and data coverage/freshness.</p>
+                <p><b>Guardrails:</b> complaints, opt-outs, wrong personalization, duplicate outreach, rep rejection, delivery quality and operating effort.</p>
+                <ul><li>What qualifies as accepted pipeline, and which attribution decision needs to improve?</li><li>Which segments adopt best, and how does a project evaluation become an enterprise relationship?</li><li>Where do stages stall, and how are event participation and referrals currently recorded?</li><li>How trustworthy are source fields, account associations and cost data today?</li><li>Which stack, access, consent and vendor constraints shape the first pilot?</li></ul>
+              </div></details>
+            </div>
+
+            <div class="plan-section plan-sources" id="plan-sources">
+              <div class="plan-section-head"><div><span class="plan-kicker">Evidence &amp; scope</span><h3 tabindex="-1">What is known, proposed and still to learn</h3></div></div>
+              <div class="plan-three"><div><span class="plan-status verified">Public evidence</span><p>Linked official company and vendor sources support the specific claims beside them. Vendor capabilities and pricing were checked November 2, 2026 and need confirmation at purchase.</p></div><div><span class="plan-status proposed">Proposed</span><p>The playbooks, architecture, evaluation criteria and experiment design are my recommendations. They are not installed systems or promised results.</p></div><div><span class="plan-status unknown">Discovery needed</span><p>Current stack, CRM edition, spend, conversion rates, attribution coverage, consent setup and channel ROI require access and a conversation with the team.</p></div></div>
+              <p class="plan-caption">This strategic plan is separate from the sample operating metrics elsewhere in this concept. No production integrations, vendor purchases, outreach sends or permission changes have been performed.</p>
+            </div>
+          </section>
+
           <!-- AGENTS -->
           <section class="view" id="view-agents" data-title="Agents & stack" data-crumb="Build">
             <div class="view-intro">
@@ -630,5 +847,6 @@
     <script src="access-alert.js?v=1"></script>
     <script src="app.js?v=8"></script>
     <script src="fieldreports.js?v=1"></script>
+    <script src="demand-plan.js?v=1"></script>
   </body>
 </html>

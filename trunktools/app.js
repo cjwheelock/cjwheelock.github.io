@@ -731,6 +731,8 @@
       "- **SideQuest:** I built product and content-delivery workflows, a partnership CRM and analytics. Moving artwork on demand reduced a local app bundle from 406.2 MB to 213.9 MB. A later image-encoding candidate measured 171.3 MB locally; these are not Apple download sizes.\n" +
       "- **Hire Line Dancers:** I built marketplace workflows involving applications, approval-based billing, private inquiries, notification jobs and delivery recovery.\n" +
       "- **Campaign production:** I use AI for video editing, captions, UI overlays and repeatable revisions as well as strategy and dashboards.\n" +
+      "- **MCP and coordinated agents:** I used PostHog MCP for Hey Sammy analytics and Supabase MCP for SideQuest SQL and Edge Function inspection. I coordinated bounded research swarms with shared schemas, compiler/QA steps and human review, including six Hire Line Dancers batches and four SideQuest researchers across 20 accounts.\n" +
+      "My improvement loop is observe, validate, decide, act within bounds, measure and improve. That is orchestration with accountable review, not a self-training production swarm or a custom MCP server I authored.\n" +
       "### Why it fits this role\n" +
       "I can talk to the rep, identify the bottleneck, build the workflow and inspect the result. I understand why an account brief needs credible evidence, why a lead needs a clear owner and why an attractive dashboard still needs correct definitions.\n" +
       "I also challenge AI’s overhead. Lower cost, smaller binaries and fewer requests matter only when the quality and user experience hold up. The AI-native résumé above shows the decisions, measurements and implementation checkpoints.\n" +

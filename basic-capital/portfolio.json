@@ -335,5 +335,6 @@
     "Reply rate is not qualified pipeline. Keep negative replies, stop requests, scheduled meetings and held meetings distinct.",
     "The demo provides no investment recommendation and makes no claims about retirement returns."
   ],
-  "gateHash": "12765646ef78af04bed6551d0a1fec22e021ec281732699c4f72f92a7aba5a4c"
+  "gateHash": "12765646ef78af04bed6551d0a1fec22e021ec281732699c4f72f92a7aba5a4c",
+  "aiApplication": "At Basic Capital, I would use coordinated research agents to assemble employer, advisor and benefits-review context, then validate timing and identity before a handoff. The loop would measure qualified conversations and corrections, with an owner approving outreach."
 }

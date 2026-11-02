@@ -355,5 +355,6 @@
     "Count unique companies and preserve the account key across enrichment and outbound systems.",
     "Track failed or stale research jobs as operational exceptions instead of silently counting them as complete."
   ],
-  "gateHash": "bd6ea834e6e1885a8b03a495f9238d3d542cd1754bd5b8fdca1e869e31a99ff9"
+  "gateHash": "bd6ea834e6e1885a8b03a495f9238d3d542cd1754bd5b8fdca1e869e31a99ff9",
+  "aiApplication": "At Replay, I would coordinate public-source research around a concrete data-opportunity question, keeping unknowns explicit. A bounded review loop would route privacy, legal and technical exceptions to their owners before any proposed external action."
 }

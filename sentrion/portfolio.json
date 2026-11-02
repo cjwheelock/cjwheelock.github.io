@@ -387,5 +387,6 @@
       "measure": "Operator adoption and repeated failure classes"
     }
   ],
-  "gateHash": "c50b785c6948c929e6267a6ba5d78a3f570451122814a0f5c9f8b4ce846ab8d8"
+  "gateHash": "c50b785c6948c929e6267a6ba5d78a3f570451122814a0f5c9f8b4ce846ab8d8",
+  "aiApplication": "At Sentrion, I would apply durable pipeline and MCP inspection patterns to signal delivery: validate required fields, retain an event key and classify exceptions. The operating loop would test replay, failure recovery and owner response before broader activation."
 }

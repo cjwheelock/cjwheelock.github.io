@@ -348,5 +348,6 @@
     "Track returned proposals by error class, not only the aggregate acceptance rate.",
     "Every external action needs the appropriate policy and owner; this portfolio only records local review receipts."
   ],
-  "gateHash": "6c905c2f577bceff1010c46c4a91657426876b0521bf420986f04e628a98feaf"
+  "gateHash": "6c905c2f577bceff1010c46c4a91657426876b0521bf420986f04e628a98feaf",
+  "aiApplication": "At Genspark, I would connect MCP tool-use experience with bounded agent proposals: preserve a product-signal snapshot and definition version, validate account ownership, and have an accountable reviewer approve the next action. Feedback would improve a held-out evaluation set."
 }

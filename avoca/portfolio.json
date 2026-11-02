@@ -335,5 +335,6 @@
     "Track brand-level and location-level counts separately to avoid overstating market coverage.",
     "Stop requests and active relationships take priority over any new prospecting proposal."
   ],
-  "gateHash": "559a9e450ce5cf238e9dfbad35b20dcc12b3bc8d000ceb8ea19532771a21175f"
+  "gateHash": "559a9e450ce5cf238e9dfbad35b20dcc12b3bc8d000ceb8ea19532771a21175f",
+  "aiApplication": "At Avoca, I would coordinate research agents around service brands, locations and operating context, validate the merged record, and use rep feedback to improve the call or booking brief. MCP-enabled inspection would use only the team’s approved tools."
 }

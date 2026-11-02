@@ -7,8 +7,8 @@
               <p class="resume-requirement"><b>Technical challenge:</b> turn scattered websites, calendars and social listings into trustworthy local recommendations, then make that inventory fast and useful in a mobile app.</p>
 
               <div class="resume-accomplishment">
-                <h3>1. Built a source-backed extraction pipeline</h3>
-                <p>I separated source discovery, evidence collection, model extraction and validation. Category-specific searches find the right sources; code handles recurrence, geography and deduplication. Budget limits, bounded retries and resumable jobs keep collection manageable.</p>
+                <h3>1. Built a bounded AI extraction pipeline</h3>
+                <p>I separated source discovery, evidence collection, model extraction and validation. Category-specific searches find the right sources; code handles recurrence, geography and deduplication. Database leases and job locks, budgets, bounded retries and publication checks keep the production pipeline resumable and controlled.</p>
                 <ol class="pipeline resume-pipeline" aria-label="Hey Sammy extraction stages">
                   <li class="pipe-step"><div class="n">01</div><b>Discover</b><span>Find relevant sources by city and activity category.</span></li>
                   <li class="pipe-step"><div class="n">02</div><b>Collect evidence</b><span>Rank sources, fetch pages and retain useful evidence.</span></li>
@@ -28,7 +28,13 @@
                 <p>I evaluated DeepSeek, GLM and Qwen through OpenRouter, and tested Monid/TinyFish retrieval. I compared completed extraction, source grounding, valid structured output and total workflow cost. Exa was researched as an optional source-coverage fallback.</p>
                 <p class="resume-note">A cheaper Long Beach configuration reached $0.55 in production-equivalent cost versus a prior known cost above $1.35, but its grounding was weaker. I kept that quality tradeoff explicit instead of treating lower spend as proof of an equivalent replacement.</p>
               </div>
+              <div class="resume-accomplishment">
+                <h3>4. Used PostHog MCP in the measurement loop</h3>
+                <p>In August 2026, I used PostHog MCP for analytics queries, funnels and trends on Hey Sammy. That gave me a way to inspect product behavior through connected tools and use the findings to guide the next improvement.</p>
+                <p class="resume-note">The durable collection system is a bounded production pipeline. Serper is a configured third-party capability; I did not build a custom MCP server or a self-training production swarm.</p>
+              </div>
               <dl class="resume-tools">
+                <div><dt>MCP &amp; loop</dt><dd>PostHog MCP · analytics queries, funnels and trends · reviewed improvement decisions</dd></div>
                 <div><dt>App</dt><dd>React Native · Expo · TypeScript · Supabase · RevenueCat · PostHog</dd></div>
                 <div><dt>Collection</dt><dd>OpenRouter · DeepSeek · OpenAI models · Serper · ScaleDown · Apify</dd></div>
                 <div><dt>Compared / researched</dt><dd>GLM · Qwen · Monid/TinyFish · Exa</dd></div>
@@ -69,9 +75,15 @@
               </div>
               <dl class="resume-tools">
                 <div><dt>App</dt><dd>React Native · Expo · TypeScript · Supabase · RevenueCat · PostHog</dd></div>
+                <div><dt>MCP</dt><dd>Supabase MCP · SQL and Edge Function inspection</dd></div>
                 <div><dt>Operations</dt><dd>React · Node.js · SQLite · CSV imports · signed-event receipts</dd></div>
                 <div><dt>Android setup</dt><dd>Firebase Cloud Messaging · Expo notifications. Configured with a successful debug build; server credentials and delivery verification were pending at that setup checkpoint.</dd></div>
               </dl>
+              <div class="resume-accomplishment">
+                <h3>4. Coordinated research agents with a compiler and QA</h3>
+                <p>I used Supabase MCP to inspect SQL and Edge Functions. For enterprise prospect research, I coordinated four researchers across 20 accounts, followed by compiler and QA work. A separate three-worker city-content effort remained testing-only.</p>
+                <p class="resume-note">This is agent-swarm experience in bounded research and development: orchestration, shared schemas and review. The local partnership CRM and testing-only content work retain their stated deployment limits.</p>
+              </div>
               <div class="resume-relevance" data-project-relevance="sidequest"></div>
             </article>
 
@@ -101,5 +113,10 @@
                 <div><dt>Commercial workflows</dt><dd>Stripe · Resend · notification jobs · signed webhooks</dd></div>
                 <div><dt>Prepared integration</dt><dd>Twilio SMS, pending provider activation</dd></div>
               </dl>
+              <div class="resume-accomplishment">
+                <h3>4. Ran parallel research with provenance and QA</h3>
+                <p>I coordinated six parallel research batches with a common schema, deduplication, provenance and QA. The research dataset grew from 105 to 223 records and later 416 records; those counts are records, not unique verified people.</p>
+                <p>I also used Instantly and Gmail connected tools for campaign review and sent-message reconciliation. Those are connected-tool workflows, not custom MCP servers I authored.</p>
+              </div>
               <div class="resume-relevance" data-project-relevance="dancers"></div>
             </article>

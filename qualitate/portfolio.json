@@ -363,5 +363,6 @@
     "A contact conflict should remain visible until resolved; a higher completeness score does not justify overwriting uncertainty.",
     "These examples are hypothetical operational records, not real research intelligence or investment analysis."
   ],
-  "gateHash": "45bb0846c6c0526965add36b8791e7f3407d5a37303cfd924de6a706cd38b75f"
+  "gateHash": "45bb0846c6c0526965add36b8791e7f3407d5a37303cfd924de6a706cd38b75f",
+  "aiApplication": "At Qualitate, I would coordinate research-organization and contact-role evidence in a shared schema, then use approved-tool inspection to check identity and source freshness. Reviewer acceptance and rejected CRM proposals would guide the next bounded improvement."
 }

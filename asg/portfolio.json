@@ -330,5 +330,6 @@
     "Compare similar motions and keep company-specific denominators intact.",
     "A reusable playbook carries schemas, logic and lessons; it should not carry another company\u2019s private account data."
   ],
-  "gateHash": "770a1245ee31da1b351bc1f1fd0cbe022006d7bfb113abcf63cb8688c0d4a37d"
+  "gateHash": "770a1245ee31da1b351bc1f1fd0cbe022006d7bfb113abcf63cb8688c0d4a37d",
+  "aiApplication": "At ASG, I would use a shared research schema and coordinated agents to prepare repeatable enrichment patterns, then adapt each loop to the portfolio company’s lifecycle, operating owner and measurable outcome."
 }

@@ -330,5 +330,6 @@
     "Catching a conflict is useful; silently overwriting it is not a successful integration.",
     "No payment transaction, account eligibility decision or financial recommendation is made here."
   ],
-  "gateHash": "97179b6076deb02761f9bffe4f54360b7aa39a739664ae46070bd2b68da91766"
+  "gateHash": "97179b6076deb02761f9bffe4f54360b7aa39a739664ae46070bd2b68da91766",
+  "aiApplication": "At Adyen, I would apply MCP tool-use experience and bounded agent orchestration to one recurring commercial handoff: inspect the source state, surface stale-field conflicts, propose an owner and measure reviewer acceptance before expanding permissions."
 }

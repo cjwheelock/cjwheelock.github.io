@@ -328,5 +328,6 @@
     "Include reviewer effort, retry cost and factual-error categories before comparing approaches.",
     "A cheap draft that invents spend or misidentifies the buyer is not a useful outcome."
   ],
-  "gateHash": "30e111308b878a2fe69cb8974cbaa72bdc5004e5b8bed0f11bddb62f78766c7f"
+  "gateHash": "30e111308b878a2fe69cb8974cbaa72bdc5004e5b8bed0f11bddb62f78766c7f",
+  "aiApplication": "At Vantage, I would coordinate infrastructure research with an evidence schema for engineering and finance buyers. The loop would evaluate factual quality, reviewer acceptance and operating cost; MCP-enabled inspection would stay within approved data access."
 }

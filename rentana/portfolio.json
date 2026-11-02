@@ -330,5 +330,6 @@
     "A property count is not a unique account count. Preserve entity-level denominators.",
     "The demo makes no rental-pricing, tenant-selection or housing-eligibility recommendation."
   ],
-  "gateHash": "645f2668a5683eaa282585905fe9fc99c9d7d75d603da37aa961e06695e87bc5"
+  "gateHash": "645f2668a5683eaa282585905fe9fc99c9d7d75d603da37aa961e06695e87bc5",
+  "aiApplication": "At Rentana, I would use coordinated research agents to resolve owner-manager relationships and explicit exclusions before an import proposal. The loop would preserve current account books, validate duplicates and measure accepted records and useful next actions."
 }

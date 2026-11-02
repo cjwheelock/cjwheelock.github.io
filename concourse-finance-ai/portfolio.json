@@ -303,5 +303,6 @@
       "measure": "Accepted evaluations and reasons for delay"
     }
   ],
-  "gateHash": "028160a8becc0bdfb639081102f2213bbe354f80b1668bd48462f6e8084f603a"
+  "gateHash": "028160a8becc0bdfb639081102f2213bbe354f80b1668bd48462f6e8084f603a",
+  "aiApplication": "At Concourse’s finance AI business, I would use bounded research agents for CFO-team context and MCP-style approved-tool inspection for a reconciled demo. The evaluation loop would check calculation lineage and reviewer acceptance before any customer-facing claim."
 }

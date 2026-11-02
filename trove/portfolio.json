@@ -328,5 +328,6 @@
     "The milestone is collection organization, not a purchase or spending target.",
     "A cohort difference needs uncertainty, acquisition mix and support context before it supports a rollout decision."
   ],
-  "gateHash": "8ff41179a7f6c20b5bba5773c05936eba98c8d1f97918ec4ffcdf252b27d84bb"
+  "gateHash": "8ff41179a7f6c20b5bba5773c05936eba98c8d1f97918ec4ffcdf252b27d84bb",
+  "aiApplication": "At Trove, I would apply MCP-assisted funnel analysis and bounded pipeline patterns to activation cohorts: define a useful non-purchase milestone, deduplicate events and route support blockers. Experiments would evaluate the onboarding change with clear ownership."
 }
