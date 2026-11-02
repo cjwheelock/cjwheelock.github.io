@@ -1,0 +1,212 @@
+{
+  "slug": "forus",
+  "company": "Forus",
+  "role": "GTM Engineer",
+  "roleUrl": "https://jobs.ashbyhq.com/forus/cefc1591-57f4-482e-9ba6-b57f8d2912e2",
+  "companyUrl": "https://forus.com/company",
+  "portalUrl": "https://cjwheelock.com/forus/",
+  "title": "From provider research to an accepted handoff",
+  "intro": "A proposed growth workflow for Forus: establish the practice and its affiliations, resolve ownership, and give the rep enough evidence to take the next useful step.",
+  "records": [
+    {
+      "id": "F-101",
+      "name": "Cedar Specialty Group",
+      "specialty": "Rheumatology",
+      "region": "Northeast",
+      "stage": 1,
+      "identity": true,
+      "specialtyVerified": true,
+      "ageDays": 4,
+      "owner": "Unassigned",
+      "affiliationConflict": false,
+      "stop": false,
+      "signal": "New office listed on the practice website",
+      "question": "Who coordinates medication access across the new and existing locations?",
+      "source": "Synthetic practice website snapshot"
+    },
+    {
+      "id": "F-102",
+      "name": "Harbor Digestive Care",
+      "specialty": "Gastroenterology",
+      "region": "Northeast",
+      "stage": 2,
+      "identity": true,
+      "specialtyVerified": true,
+      "ageDays": 6,
+      "owner": "Maya \u2022 Growth",
+      "affiliationConflict": false,
+      "stop": false,
+      "signal": "A new location shares a parent practice with an existing CRM account",
+      "question": "Does the current practice owner cover this location too?",
+      "source": "Synthetic CRM affiliation record"
+    },
+    {
+      "id": "F-103",
+      "name": "Juniper Skin Partners",
+      "specialty": "Dermatology",
+      "region": "Midwest",
+      "stage": 0,
+      "identity": true,
+      "specialtyVerified": true,
+      "ageDays": 2,
+      "owner": "Unassigned",
+      "affiliationConflict": true,
+      "stop": false,
+      "signal": "Two sources disagree on the parent organization",
+      "question": "Which organization owns the practice today?",
+      "source": "Conflicting synthetic directory snapshots"
+    },
+    {
+      "id": "F-104",
+      "name": "Maple Neurology",
+      "specialty": "Neurology",
+      "region": "West",
+      "stage": 1,
+      "identity": true,
+      "specialtyVerified": false,
+      "ageDays": 48,
+      "owner": "Unassigned",
+      "affiliationConflict": false,
+      "stop": false,
+      "signal": "The latest specialty and practice source is stale",
+      "question": "Is the practice specialty and administrative contact still current?",
+      "source": "Synthetic public directory snapshot"
+    },
+    {
+      "id": "F-105",
+      "name": "Willow Arthritis Clinic",
+      "specialty": "Rheumatology",
+      "region": "South",
+      "stage": 3,
+      "identity": true,
+      "specialtyVerified": true,
+      "ageDays": 3,
+      "owner": "Leo \u2022 Growth",
+      "affiliationConflict": false,
+      "stop": false,
+      "signal": "A practice completed onboarding; first workflow use is not yet recorded",
+      "question": "What is preventing the office team from completing its first workflow?",
+      "source": "Synthetic practice-level onboarding event"
+    },
+    {
+      "id": "F-106",
+      "name": "Larch Dermatology",
+      "specialty": "Dermatology",
+      "region": "Northeast",
+      "stage": 4,
+      "identity": true,
+      "specialtyVerified": true,
+      "ageDays": 1,
+      "owner": "Maya \u2022 Growth",
+      "affiliationConflict": false,
+      "stop": false,
+      "signal": "The practice reached the defined activation milestone",
+      "question": "Which setup step was most useful, and where did the team still need help?",
+      "source": "Synthetic practice-level activation event"
+    },
+    {
+      "id": "F-107",
+      "name": "Elm Specialty Associates",
+      "specialty": "Gastroenterology",
+      "region": "Midwest",
+      "stage": 0,
+      "identity": false,
+      "specialtyVerified": true,
+      "ageDays": 7,
+      "owner": "Unassigned",
+      "affiliationConflict": false,
+      "stop": false,
+      "signal": "An intake record has a practice name but no verified organization identifier",
+      "question": "Which verified practice record should this contact belong to?",
+      "source": "Synthetic inbound form record"
+    },
+    {
+      "id": "F-108",
+      "name": "Birch Neurology Group",
+      "specialty": "Neurology",
+      "region": "South",
+      "stage": 1,
+      "identity": true,
+      "specialtyVerified": true,
+      "ageDays": 5,
+      "owner": "Leo \u2022 Growth",
+      "affiliationConflict": false,
+      "stop": true,
+      "signal": "The administrative contact asked to stop prospecting outreach",
+      "question": "Preserve the stop request and let the account owner review any existing relationship.",
+      "source": "Synthetic communication preference record"
+    }
+  ],
+  "experiments": [
+    {
+      "name": "Practice-specific opening",
+      "hypothesis": "A verified practice trigger makes the first conversation more useful.",
+      "control": "General practice introduction",
+      "treatment": "Reviewed specialty and practice context",
+      "primary": "Accepted qualified conversations per contacted practice",
+      "guardrail": "Incorrect affiliation and opt-out rates",
+      "allocation": "Randomize by practice, not individual contact",
+      "nA": 80,
+      "nB": 80,
+      "winsA": 8,
+      "winsB": 11
+    },
+    {
+      "name": "Owner acceptance receipt",
+      "hypothesis": "An explicit accept-or-return step reduces unattended handoffs.",
+      "control": "Assignment without acknowledgement",
+      "treatment": "Owner acceptance with reason for returned records",
+      "primary": "Accepted handoffs within one business day",
+      "guardrail": "Duplicate assignments and rep review burden",
+      "allocation": "Compare matched growth-team queues",
+      "nA": 60,
+      "nB": 60,
+      "winsA": 39,
+      "winsB": 48
+    },
+    {
+      "name": "First-workflow guidance",
+      "hypothesis": "A specific onboarding next step helps a practice reach activation.",
+      "control": "General onboarding reminder",
+      "treatment": "Office-team checklist for the missing setup step",
+      "primary": "Activated practices within a fixed observation window",
+      "guardrail": "Support burden and unwanted reminders",
+      "allocation": "Randomize eligible practices after onboarding",
+      "nA": 50,
+      "nB": 50,
+      "winsA": 20,
+      "winsB": 25
+    }
+  ],
+  "roadmap": [
+    {
+      "period": "First 30 days",
+      "title": "Learn the workflow and ship one useful queue",
+      "body": "Shadow growth reps, agree on practice identity and ownership rules, and compare a bounded research-and-handoff pilot with the manual process.",
+      "measure": "Research accuracy, review time and accepted handoffs"
+    },
+    {
+      "period": "Days 31\u201360",
+      "title": "Connect evidence to everyday rep work",
+      "body": "Add a reviewed CRM destination, duplicate protection, error recovery and an owner receipt. Train a small group, collect returned-record reasons and refine the workflow.",
+      "measure": "Repeat usage, duplicate writes and time to an accepted next step"
+    },
+    {
+      "period": "Days 61\u201390",
+      "title": "Measure practice activation and scale what works",
+      "body": "Run a practice-level experiment with an agreed activation event. Separate adoption from outcome, review costs and retire steps that do not help the team.",
+      "measure": "Activated practices, cost per useful action and sustained team adoption"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Forus GTM Engineer role",
+      "url": "https://jobs.ashbyhq.com/forus/cefc1591-57f4-482e-9ba6-b57f8d2912e2"
+    },
+    {
+      "label": "Forus company and provider-network context",
+      "url": "https://forus.com/company"
+    }
+  ],
+  "gateHash": "99e3692d708da2b7986ec64ac89dd985174d3184fae06bdb1aedcf98abc028f8"
+}
