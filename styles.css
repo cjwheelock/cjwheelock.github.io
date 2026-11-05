@@ -500,6 +500,12 @@ footer a {
   gap: 0.4rem 1.25rem;
 }
 
+.footer-social-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
 footer .instagram-profile-link {
   width: 2.5rem;
   height: 2.5rem;
