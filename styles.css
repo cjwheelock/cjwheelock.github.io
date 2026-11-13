@@ -327,6 +327,11 @@ h2 {
   object-position: 75% center;
 }
 
+.project-media-linedancers img {
+  object-fit: cover;
+  object-position: center 40%;
+}
+
 .project-details {
   display: grid;
   gap: 0.35rem;
