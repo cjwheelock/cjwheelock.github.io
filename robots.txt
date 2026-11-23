@@ -7,3 +7,4 @@ Disallow: /august/
 Disallow: /siro/
 Disallow: /dualentry/
 Disallow: /langchain/
+Disallow: /cognition/
