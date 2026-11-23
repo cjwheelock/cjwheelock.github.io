@@ -3,7 +3,7 @@
    Only the password gate calls this hook; no pageviews or visitor profiles. */
 (function () {
   "use strict";
-  var companies = ["clay", "modal", "decagon", "baseten", "hearth", "watershed", "august", "siro", "dualentry", "langchain"];
+  var companies = ["clay", "decagon", "hearth", "watershed", "august", "siro", "dualentry", "langchain"];
   var pending = new Set();
   var attempted = new Set();
   var allowedHost = window.location.hostname === "cjwheelock.com" ||
@@ -46,7 +46,7 @@
       if (!Number.isFinite(start) || accessTime < start) return;
 
       // Reuse the existing public, ingestion-only project configuration.
-      response = await window.fetch("/trunktools/access-alert-config.json", {
+      response = await window.fetch("/gtm/access-alert-ingestion.json", {
         credentials: "omit", cache: "no-store"
       });
       if (!response.ok) return;

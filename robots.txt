@@ -1,8 +1,6 @@
 User-agent: *
 Disallow: /clay/
-Disallow: /modal/
 Disallow: /decagon/
-Disallow: /baseten/
 Disallow: /hearth/
 Disallow: /watershed/
 Disallow: /august/
