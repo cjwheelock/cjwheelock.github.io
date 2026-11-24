@@ -242,6 +242,30 @@ h2 {
   text-wrap: balance;
 }
 
+.company-intro {
+  margin-bottom: 1rem;
+  scroll-margin-top: 1rem;
+}
+
+.company-intro h3 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  line-height: 1.15;
+}
+
+.company-mission {
+  max-width: 34rem;
+  margin: 0.55rem 0 0;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+.company-projects-label {
+  margin: 1.25rem 0 0;
+  font-weight: 600;
+}
+
 .project-list {
   margin: 0;
   padding-left: 1.4rem;
@@ -362,6 +386,16 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2.75rem 1.5rem;
+}
+
+.company-videos {
+  margin-top: 2rem;
+}
+
+.company-videos h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.35;
 }
 
 .media-embed {
